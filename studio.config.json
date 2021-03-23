@@ -1,0 +1,23 @@
+{
+  "packages": {
+    "menu": [
+      "www",
+      [
+        "template",
+        [
+          "navbar",
+          "kickstart",
+          "hero",
+          "promise",
+          "benefits",
+          "compatibility",
+          "faq",
+          "pricing",
+          "proof",
+          "startnow",
+          "otherproducts"
+        ]
+      ]
+    ]
+  }
+}

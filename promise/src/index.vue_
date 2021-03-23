@@ -1,0 +1,38 @@
+<script></script>
+<template>
+  <section class="bg-black text-gray-100 sm:p-10">
+
+    {{group('Main title lorem ipsum')}}
+
+    {{feature('Collaborate Instantly','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu velit eu tellus
+    scelerisque porttitor. Nullam
+    dictum finibus quam, in mollis nisi rhoncus at. Nulla lacinia, ipsum non',{label:'Discover', href:'#'}, '')}}
+
+    {{feature('Integrates into your workflow','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu velit
+    eu
+    tellus
+    scelerisque porttitor. Nullam
+    dictum finibus quam, in mollis nisi rhoncus at. Nulla lacinia, ipsum non',{label:'View Documentation',href: '#'},
+    '')}}
+
+
+    {{group('Main title lorem ipsum')}}
+
+    {{feature('Code review visually','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu velit eu tellus
+    scelerisque porttitor. Nullam
+    dictum finibus quam, in mollis nisi rhoncus at. Nulla lacinia, ipsum non',{label:'Ask a demo', href:'#'}, '',
+    true)}}
+
+    {{feature('Documentation out of the box','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu velit eu
+    tellus
+    scelerisque porttitor. Nullam
+    dictum finibus quam, in mollis nisi rhoncus at. Nulla lacinia, ipsum non',{label:'Discover Pricing',href: '#'},
+    '', true)}}
+
+    {{feature('100% standard Web development','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu velit
+    eu
+    tellus
+    scelerisque porttitor. Nullam
+    dictum finibus quam, in mollis nisi rhoncus at. Nulla lacinia, ipsum non',{label:'Start', href:'#'}, '', true)}}
+  </section>
+</template>
