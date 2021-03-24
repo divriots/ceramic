@@ -1,4 +1,7 @@
 {
- "name": "@divriots/ceramic",
- "version": "0.0.0"
+  "name": "@divriots/ceramic",
+  "version": "0.0.0",
+  "dependencies": {
+    "vue": "^3.0.7"
+  }
 }

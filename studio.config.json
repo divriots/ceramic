@@ -1,7 +1,17 @@
 {
   "packages": {
     "menu": [
-      "www",
+      [
+        "components",
+        [
+          "card",
+          "navbar",
+          "kickstart",
+          "hero",
+          "header",
+          "footer"
+        ]
+      ],
       [
         "template",
         [
@@ -15,9 +25,11 @@
           "pricing",
           "proof",
           "startnow",
-          "otherproducts"
+          "otherproducts",
+          "www"
         ]
-      ]
+      ],
+      "tailwind"
     ]
   }
 }
