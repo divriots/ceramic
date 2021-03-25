@@ -14,8 +14,10 @@
           "navbar",
           "kickstart",
           "hero",
-          "header",
-          "footer"
+          "footer",
+          "twitter",
+          "discord",
+          "dropdown"
         ]
       ],
       [
