@@ -20,7 +20,7 @@ const props = {
 };
 
 export const large = () => ({
-  components: { Actu },
+  components: { Card },
   setup() {
     return { props };
   },
@@ -28,7 +28,7 @@ export const large = () => ({
 });
 
 export const small = () => ({
-  components: { Actu },
+  components: { Card },
   setup() {
     return { props };
   },
