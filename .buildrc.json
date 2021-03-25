@@ -1,13 +1,9 @@
 {
   "hooks": {
-    "postbuild": [
+    "prebuild": [
       {
-        "path": "www/doc/*.asdf",
-        "source": "@components-studio/gqio.studio-njk-compiler"
-      },
-      {
-        "path": "www/doc/*.asdf",
-        "source": "@components-studio/gqio.studio-tw-compiler@0.0.2"
+        "path": "**/src/*.vue",
+        "source": "@components-studio/gqio.studio-tw-compiler@0.0.5"
       }
     ]
   }
