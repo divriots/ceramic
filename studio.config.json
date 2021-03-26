@@ -11,10 +11,6 @@
         "components",
         [
           "card",
-          "navbar",
-          "kickstart",
-          "hero",
-          "footer",
           "twitter",
           "discord",
           "dropdown"
@@ -23,7 +19,16 @@
       [
         "template",
         [
+          "navbar",
+          "hero",
+          "kickstart",
           "promise",
+          "footer"
+        ]
+      ],
+      [
+        "inprogress",
+        [
           "benefits",
           "compatibility",
           "faq",
@@ -34,7 +39,12 @@
           "www"
         ]
       ],
-      "tailwind"
+      [
+        "infrastructure",
+        [
+          "tailwind"
+        ]
+      ]
     ]
   }
 }
