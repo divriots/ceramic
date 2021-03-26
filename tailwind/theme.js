@@ -15,7 +15,7 @@ export const theme = {
             textDecoration: "underline",
             "&:hover": {
               opacity: 1,
-              color: colors.teal[600],
+              color: colors.primary,
             },
           },
           b: {
