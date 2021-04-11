@@ -11,6 +11,7 @@
         "components",
         [
           "card",
+          "price",
           "twitter",
           "discord",
           "dropdown"
