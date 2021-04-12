@@ -1,5 +1,9 @@
 <script>
-  export default {};
+  import Twitter from '../../twitter/dist/index.vue'
+  import Discord from '../../discord/dist/index.vue'
+  export default {
+    components: {Twitter,Discord}
+  };
 </script>
 <template>
   <footer>
@@ -18,12 +22,11 @@
     </div>
     <div class="bg-white">
       <nav class="mx-auto max-w-7xl grid sm:grid-cols-3 p-6">
-        <span class="inline-flex">
+        <span class="inline-flex items-center">
         <span>By <a class="text-primary" href="https://divriots.com" name="left">&lt;divriots&gt;</a></span>
-        <Twitter compact />
-        <Discord compact />
+        <Twitter />
+        <Discord />
         </span>
-        <Logo compact />
         <span class="inline-flex"><slot name="left"></slot></span>
       </nav>
     </div>
