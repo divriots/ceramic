@@ -4,7 +4,13 @@
       [
         "tokens",
         [
-          "colors"
+          "colors",
+          "typography",
+          "border",
+          "opacity",
+          "shadows",
+          "spacing",
+          "z-index"
         ]
       ],
       [
@@ -36,8 +42,7 @@
           "pricing",
           "proof",
           "startnow",
-          "otherproducts",
-          "www"
+          "otherproducts"
         ]
       ],
       [

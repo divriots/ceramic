@@ -1,6 +1,6 @@
 <script>
-import Feature from "./feature.vue";
-import Group from "./group.vue";
+import Feature from './feature.vue';
+import Group from './group.vue';
 
 export default {
   components: { Feature, Group },
