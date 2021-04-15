@@ -32,13 +32,13 @@
       </div>
     </div>
     <div class="relative hidden md:grid gap-4 pt-16 pb-32 px-4 items-center w-96">
-      <div class="absolute bg-gray-800 w-2/3 top-0 bottom-16 left-1/6 rounded-lg z-auto">
-      </div>
+      <div class="absolute bg-gray-800 w-2/3 top-0 bottom-16 left-1/6 rounded-lg z-auto"></div>
       <div class="z-10 rounded-full bg-teal-500 py-3 px-8 text-white text-left">
         Hello, I'm a H1 title
       </div>
       <div class="z-10 rounded-full bg-teal-200 py-3 px-8 text-gray-500 text-left">
-        &lt;and here> <span class="text-black font-bold">is the</span> &lt;/code>
+        &lt;and here>
+        <span class="text-black font-bold">is the</span> &lt;/code>
       </div>
       <div class="z-10 rounded-full bg-white py-3 px-8 text-primary mx-16">
         No more error

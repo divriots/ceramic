@@ -1,2 +1,2 @@
-import { theme } from "./tailwind/theme.js";
-export default { theme };
+import { config } from './tailwind/src/config';
+export default config;

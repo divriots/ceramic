@@ -7,17 +7,24 @@
 </script>
 <template>
   <footer>
-    <div class="mx-auto max-w-7xl grid sm:place-items-center sm:grid-cols-2 py-24 px-4 w-auto text-left">
-      <h1 class="flex-grow text-4xl max-w-68 ">
-        Chocolate <br/>milk <span class="text-primary">newsletter</span>
+    <div
+      class="mx-auto max-w-7xl grid sm:place-items-center sm:grid-cols-2 py-24 px-4 w-auto text-left"
+    >
+      <h1 class="flex-grow text-4xl max-w-68">
+        Chocolate <br />milk <span class="text-primary">newsletter</span>
       </h1>
       <form class="inline-flex flex-col gap-4 mt-4 sm:flex-row">
         <input
-        type="email"
-        class="bg-transparent border-b-1 border-gray text-gray"
-        placeholder="Enter your e-mail"
-      />
-        <button type="submit" class="self-start text-white bg-primary rounded-lg shadow px-4 py-2">Subscribe</button>
+          type="email"
+          class="bg-transparent border-b-1 border-gray text-gray"
+          placeholder="Enter your e-mail"
+        />
+        <button
+          type="submit"
+          class="self-start text-white bg-primary rounded-lg shadow px-4 py-2"
+        >
+          Subscribe
+        </button>
       </form>
     </div>
     <div class="bg-white">

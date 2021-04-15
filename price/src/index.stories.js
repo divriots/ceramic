@@ -1,29 +1,29 @@
-import Price from "./index.vue";
-import "./index.vue.css";
-import "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
+import Price from './index.vue';
+import './index.vue.css';
+import 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css';
 
 export default {
   parameters: {
-    layout: "centered",
-    backgrounds: { default: "black" },
+    layout: 'centered',
+    backgrounds: { default: 'black' },
   },
 };
 
 const props = {
-  title: "Free",
-  legend: "Open source and Prototyping",
+  title: 'Free',
+  legend: 'Open source and Prototyping',
   features: [
     {
-      description: "Full-featured IDE",
+      description: 'Full-featured IDE',
     },
     {
-      description: "Public components",
+      description: 'Public components',
     },
     {
-      description: "Sync to Github public repos",
+      description: 'Sync to Github public repos',
     },
     {
-      description: "Publish public packages under <code>@wcd</code> scope",
+      description: 'Publish public packages under <code>@wcd</code> scope',
     },
     {
       description:
@@ -31,9 +31,9 @@ const props = {
     },
   ],
   action: {
-    label: "Sign up",
-    url: "/signup",
-    type: "outline",
+    label: 'Sign up',
+    url: '/signup',
+    type: 'outline',
   },
 };
 

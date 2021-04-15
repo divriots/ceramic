@@ -1,9 +1,9 @@
 <script>
-  export default {};
+export default {};
 </script>
 <template>
   <section class="my-10 text-center">
-    <h2 class="font-semibold  mx-auto text-3xl">
+    <h2 class="font-semibold mx-auto text-3xl">
       Kickstart with one of our <span class="text-primary">stater-kits</span>
     </h2>
     <p class="mt-8 max-w-sm mx-auto text-sm text-gray-600">
