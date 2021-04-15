@@ -7,8 +7,6 @@ import { shadows } from '../../shadows';
 import { spacing } from '../../spacing';
 import { zIndex } from '../../z-index';
 
-console.log(colors);
-
 const typographyExtension = {
   extend: {
     typography: {
