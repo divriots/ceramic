@@ -1,5 +1,5 @@
 ```js script
-import { theme as partialTheme } from '~/tailwind';
+import { theme, setup } from '~/tailwind';
 import '@divriots/dockit-core/tailwind-showcases';
 import { html } from 'lit-html';
 ```
@@ -10,7 +10,7 @@ import { html } from 'lit-html';
 <dockit-tailwind-showcases
 showcase-key="backgroundColor"
 component-class="shadow-xl h-24 w-24 rounded-sm"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```
 
@@ -21,7 +21,7 @@ component-class="shadow-xl h-24 w-24 rounded-sm"
 showcase-key="borderColor"
 component-class="shadow-xl h-24 w-24 border-4 rounded-sm"
 checkered-background="false"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```
 
@@ -30,6 +30,6 @@ checkered-background="false"
 ```html:html
 <dockit-tailwind-showcases
 showcase-key="textColor"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```

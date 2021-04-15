@@ -1,4 +1,4 @@
-export default {
+export const zIndex = {
   zIndex: {
     auto: 'auto',
     '0': '0',

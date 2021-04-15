@@ -1,13 +1,8 @@
 import { setup as setupTwind } from 'twind/shim';
-import { config } from './config';
-import { silent } from 'twind';
-import typographyPlugin from 'windicss/plugin/typography';
 import resolveConfig from 'tailwindcss/resolveConfig';
+import { config } from './config';
 
-export const resolvedConfig = resolveConfig({
-  mode: silent,
-  plugins: [typographyPlugin()],
-  ...config,
-});
+export const setup = () => setupTwind(config);
+setup(); // this must be called until we have a provider
 
-export const setup = () => setupTwind(resolvedConfig as any);
+export const resolvedConfig = resolveConfig(config);

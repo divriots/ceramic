@@ -1,4 +1,4 @@
-export default {
+export const typography = {
   fontFamily: {
     sans: ['"Segoe UI"', 'Roboto', '"Helvetica Neue"'],
     serif: ['Georgia', 'Cambria', '"Times New Roman"'],

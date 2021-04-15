@@ -1,6 +1,6 @@
 import windiColors from 'windicss/colors';
 
-export default {
+export const colors = {
   colors: {
     transparent: '#00000000',
     primary: '#5866CD',

@@ -1,5 +1,5 @@
 ```js script
-import { partialTheme } from '~/tailwind';
+import { theme } from '~/tailwind';
 import '@divriots/dockit-core/tailwind-showcases';
 import { html } from 'lit-html';
 ```
@@ -9,7 +9,7 @@ import { html } from 'lit-html';
 ```html:html
 <dockit-tailwind-showcases
 showcase-key="fontFamily"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```
 
@@ -18,7 +18,7 @@ showcase-key="fontFamily"
 ```html:html
 <dockit-tailwind-showcases
 showcase-key="fontSize"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```
 
@@ -27,7 +27,7 @@ showcase-key="fontSize"
 ```html:html
 <dockit-tailwind-showcases
 showcase-key="fontWeight"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```
 
@@ -36,7 +36,7 @@ showcase-key="fontWeight"
 ```html:html
 <dockit-tailwind-showcases
 showcase-key="letterSpacing"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```
 
@@ -46,6 +46,6 @@ showcase-key="letterSpacing"
 <dockit-tailwind-showcases
 showcase-key="lineHeight"
 long-text="true"
-.theme=${partialTheme}>
+.theme=${theme}>
 </dockit-tailwind-showcases>
 ```

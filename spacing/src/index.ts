@@ -1,4 +1,4 @@
-export default {
+export const spacing = {
   spacing: {
     px: '1px',
     '0': '0',

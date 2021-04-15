@@ -1,4 +1,4 @@
-export default {
+export const border = {
   borderRadius: {
     sm: '0.125rem',
     md: '0.375rem',
