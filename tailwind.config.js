@@ -1,5 +1,3 @@
 import { theme } from "./tailwind/theme.js";
-export default { theme };i
-
-
+export default { theme };
 
