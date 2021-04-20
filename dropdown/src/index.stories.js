@@ -1,11 +1,11 @@
-import Dropdown from "./index.vue";
-import "./index.vue.css";
-import "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
+import Dropdown from './index.vue';
+import './index.vue.css';
+import 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css';
 
 export default {
   parameters: {
-    layout: "centered",
-    backgrounds: { default: "#F3F4F6" },
+    layout: 'centered',
+    backgrounds: { default: '#F3F4F6' },
   },
 };
 
