@@ -3,7 +3,7 @@
     "postbuild": [
       {
         "path": "**/dist/*.vue",
-        "source": "@components-studio/gqio.studio-tw-compiler@0.0.5"
+        "source": "@divriots/studio-tw-compiler"
       }
     ]
   }
