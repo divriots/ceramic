@@ -2,7 +2,7 @@
   "hooks": {
     "postbuild": [
       {
-        "path": "**/dist/*.vue",
+        "path": "**/*.{html,css,js}",
         "source": "@divriots/studio-tw-compiler"
       }
     ]
