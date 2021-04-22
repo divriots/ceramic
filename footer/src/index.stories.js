@@ -1,6 +1,5 @@
 import Footer from './index.vue';
-import './index.vue.css';
-import 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css';
+import '~/tailwind.css';
 
 export default {
   parameters: {
