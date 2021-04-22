@@ -1,5 +1,5 @@
 import Twitter from './index.vue';
-import 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css';
+import '~/tailwind.css';
 
 export const twiter = () => ({
   components: { Twitter },
