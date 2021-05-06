@@ -1,5 +1,5 @@
-import Price from './index.vue';
-import '~/tailwind.css';
+import Price from '../src/index.vue';
+import '~/tailwind/src/styles.css';
 
 export default {
   parameters: {

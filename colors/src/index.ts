@@ -1,4 +1,4 @@
-import windiColors from 'windicss/colors';
+import windiColors from 'tailwindcss/colors';
 
 export const colors = {
   colors: {
