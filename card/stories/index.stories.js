@@ -1,5 +1,5 @@
-import Card from './index.vue';
-import '~/tailwind.css';
+import Card from '../src/index.vue';
+import '~/tailwind/src/styles.css';
 
 export default {
   parameters: {

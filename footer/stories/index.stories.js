@@ -1,5 +1,5 @@
-import Footer from './index.vue';
-import '~/tailwind.css';
+import Footer from '../src/index.vue';
+import '~/tailwind/src/styles.css';
 
 export default {
   parameters: {

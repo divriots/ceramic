@@ -1,5 +1,5 @@
-import Dropdown from './index.vue';
-import '~/tailwind.css';
+import Dropdown from '../src/index.vue';
+import '~/tailwind/src/styles.css';
 
 export default {
   parameters: {
