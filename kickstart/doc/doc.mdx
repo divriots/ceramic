@@ -1,5 +1,6 @@
-import { mdx } from '@mdx-js/vue';
-import Kickstart from '../dist/index.vue';
+import { mdx } from '@mdx-js/react';
+import Kickstart from '../dist/index';
 import '~/tailwind/src/styles.css';
+import kits from '../doc/starterkit-list';
 
-<Kickstart />
+<Kickstart kits={kits} />
