@@ -17,6 +17,7 @@
         "components",
         [
           "card",
+          "logo",
           "price",
           "twitter",
           "discord",
@@ -28,26 +29,26 @@
         [
           "navbar",
           "hero",
-          "kickstart",
+          "highlight",
           "promise",
+          "compatibility",
+          "explore",
+          "pricing",
+          "faq",
+          "kickstart",
           "footer"
         ]
       ],
       [
         "inprogress",
         [
-          "benefits",
-          "compatibility",
-          "faq",
-          "pricing",
-          "proof",
-          "startnow",
           "otherproducts"
         ]
       ],
       [
         "infrastructure",
         [
+          "config",
           "tailwind"
         ]
       ]

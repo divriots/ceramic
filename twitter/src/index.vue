@@ -13,7 +13,7 @@
 <script>
   export default {
   props: {
-    href: {type :String, default: '#'}
+    href: { type: String, default: '#' },
   },
 };
 </script>

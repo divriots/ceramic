@@ -1,20 +1,21 @@
 import React from 'react';
 import Menu from '../../dropdown/src/index';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import kits from '../../config/src/starter-kits';
 
 const StarterKit = ({ name, href, imgSrc }) => (
   <Menu.Item
     as="a"
     href={href}
     key={name}
-    className="text-primary inline-flex p-2"
+    className="text-primary inline-flex p-2 gap-2"
   >
-    <img src={imgSrc} />
+    <img className="w-8 h-8" src={imgSrc} />
     <span>{name}</span>
   </Menu.Item>
 );
 
-export default ({ kits }) => (
+export default () => (
   <section className="sm:p-10 justify-center items-center flex flex-col md:flex-row bg-black-default text-white gap-8 md:gap-16">
     <div className="max-w-md p-10 bg-primary rounded-lg flex-grow grid justify-center">
       <Menu>
@@ -26,7 +27,7 @@ export default ({ kits }) => (
           StarterKits
         </Menu.Button>
         <Menu.Items
-          className="py-2 px-4 w-56 bg-black-default divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="py-2 px-4 w-56 bg-black-default rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           static
         >
           {kits.map((s, index) => (

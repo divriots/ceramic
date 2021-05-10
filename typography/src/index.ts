@@ -11,6 +11,7 @@ export const typography = {
     xl: '1.25rem',
     '2xl': '1.5rem',
     '3xl': '1.875rem',
+    '4xl': '2rem',
   },
   fontWeight: {
     light: '200',

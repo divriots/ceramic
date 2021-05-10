@@ -3,7 +3,7 @@ import '~/tailwind/src/styles.css';
 
 export default {
   parameters: {
-    backgrounds: { default: '#F3F4F6' },
+    // backgrounds: { default: '#F3F4F6' },
   },
 };
 export const story1 = () => ({
