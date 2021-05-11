@@ -12,8 +12,8 @@ const CardKit = ({
   backgroundColor,
 }) => (
   <div
-    className="text-left flex flex-col text-white rounded-lg gap-4 p-6"
-    style={{ height: '420px', width: '280px', backgroundColor }}
+    className="text-left flex flex-col text-white rounded-lg gap-4 p-6 w-64 sm:w-80"
+    style={{ height: '420px', backgroundColor }}
   >
     <img className="h-40 w-full" src={thumbSrc} />
     <img className="h-8 w-8" src={imgSrc} />
@@ -34,7 +34,7 @@ export default () => (
     </h2>
     <p className="text-sm text-gray-mid">asdfasdfa sdfasdfasdfasf</p>
     <div className="bg-black-divriots py-48 mt-48 overflow-hidden">
-      <div className="scrollable-horizontal max-w-full p-16 absolute bottom-0 gap-16">
+      <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 gap-16">
         {kits
           .filter(({ highlight }) => !highlight)
           .map((kit, idx) => (
