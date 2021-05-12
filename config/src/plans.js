@@ -1,43 +1,48 @@
 export const groups = {
   collaboration: 'Collaboration',
-  integration: 'Integration',
+  source_control: 'Source Control',
+  package_registry: 'Package Registry',
   support: 'Support',
   premium: 'Premium',
 };
 
 export const features = {
-  editors: {
-    group: groups.collaboration,
-    label: 'Editors per project',
-  },
   viewers: {
     group: groups.collaboration,
     restriction: 'Unlimited',
     label: 'Viewers per project',
+  },
+  editors: {
+    group: groups.collaboration,
+    label: 'Editors per project',
   },
   projects: {
     group: groups.collaboration,
     label: 'Public/private projects',
   },
   github: {
-    group: groups.integration,
+    group: groups.source_control,
     label: 'Github integration',
   },
   gitlab: {
-    group: groups.integration,
+    group: groups.source_control,
     label: 'Gitlab integration',
   },
   bitbucket: {
-    group: groups.integration,
+    group: groups.source_control,
     label: 'BitBucket integration',
   },
   publish_public: {
-    group: groups.integration,
-    label: 'Publish to @ds-dev',
+    group: groups.package_registry,
+    label: 'Publish NPM w/ @ds-dev',
   },
-  publish_custom: {
-    group: groups.integration,
-    label: 'Publish to any package registry, any visibility',
+  publish_custom_registry: {
+    group: groups.package_registry,
+    label: 'Publish to any package registry',
+  },
+  publish_private: {
+    group: groups.package_registry,
+    label: 'Publish private/public',
   },
   support_community: {
     group: groups.support,
@@ -84,6 +89,8 @@ export const Free = {
       ...features.projects,
     },
     features.github,
+    features.gitlab,
+    features.bitbucket,
     features.publish_public,
     features.support_community,
   ],
@@ -112,9 +119,8 @@ export const Pro = {
       restriction: 'Up to 5',
       ...features.projects,
     },
-    features.gitlab,
-    features.bitbucket,
-    features.publish_custom,
+    features.publish_custom_registry,
+    features.publish_private,
     features.support_email,
   ],
   action: {
