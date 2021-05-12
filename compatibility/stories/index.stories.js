@@ -1,7 +1,4 @@
-import Compatibility from '../src/index.vue';
+import Compatibility from '../src/index.svelte';
 import '~/tailwind/src/styles.css';
 
-export const story1 = () => ({
-  components: { Compatibility },
-  template: `<Compatibility/>`,
-});
+export const story1 = () => Compatibility;

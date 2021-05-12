@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative overflow-hidden">
+  <footer class="gradient relative overflow-hidden">
     <div class="mx-auto max-w-7xl grid sm:place-items-center sm:grid-cols-2 py-24 px-4 w-auto text-left">
       <h1 class="flex-grow text-4xl max-w-68">
         Chocolate <br />milk <span class="text-primary">newsletter</span>
@@ -12,7 +12,7 @@
         />
         <button
           type="submit"
-          class="self-start text-white bg-primary rounded-lg shadow px-4 py-2"
+          class="self-start text-white bg-primary rounded-md shadow px-4 py-2 hover:underline"
         >
           Subscribe
         </button>
@@ -38,27 +38,14 @@ export default {
 };
 </script>
 <style scoped>
-  footer:before {
+  .gradient:before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 768px;
+    height: 100%;
     left: 0px;
     top: 0;
     z-index: -1;
-    background: linear-gradient(171.93deg, #F3F4F6 17.92%, rgba(255, 255, 255, 0) 119.69%), linear-gradient(58.46deg, #5866CD 35.31%, #38EAC5 84.04%);
-  }
-
-  footer:after {
-    content: '';
-    position: absolute;
-    position: absolute;
-    width: 100%;
-    height: 1096px;
-    left: 0;
-    top: 0;
-
-    background: linear-gradient(182.05deg, #F3F4F6 12.18%, rgba(255, 255, 255, 0) 51.24%), linear-gradient(57.05deg, #5866CD 40.6%, #5866CD 40.61%, #2EA28A 88.18%);
-    mix-blend-mode: saturation;
+    background: linear-gradient(180deg, #F3F4F6 20%, rgba(255, 255, 255, 0) 180%), linear-gradient(58.46deg, #6373e6 35.31%, #84e6fb 84.04%);
   }
 </style>

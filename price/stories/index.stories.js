@@ -1,45 +1,33 @@
 import Price from '../src/index.vue';
 import '~/tailwind/src/styles.css';
+import plans from '../../config/src/plans';
 
 export default {
   parameters: {
     layout: 'centered',
-    backgrounds: { default: 'black' },
+    // backgrounds: { default: 'black' },
+  },
+  args: {
+    components: { Price },
+    template: `<Price v-bind="props" class="w-80 bg-primary text-white"/>`,
   },
 };
 
-const props = {
-  title: 'Free',
-  legend: 'Open source and Prototyping',
-  features: [
-    {
-      description: 'Full-featured IDE',
-    },
-    {
-      description: 'Public components',
-    },
-    {
-      description: 'Sync to Github public repos',
-    },
-    {
-      description: 'Publish public packages under <code>@wcd</code> scope',
-    },
-    {
-      description:
-        "<a class='icon' href='https://discord.gg/z7JUzhn'>Community support</a>",
-    },
-  ],
-  action: {
-    label: 'Sign up',
-    url: '/signup',
-    type: 'outline',
-  },
-};
-
-export const def = () => ({
-  components: { Price },
+export const def = (args) => ({
   setup() {
-    return { props };
+    return { props: plans[0] };
   },
-  template: `<Price v-bind="props"/>`,
+  ...args,
+});
+export const pro = (args) => ({
+  setup() {
+    return { props: plans[1] };
+  },
+  ...args,
+});
+export const enterprise = (args) => ({
+  setup() {
+    return { props: plans[2] };
+  },
+  ...args,
 });
