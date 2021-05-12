@@ -25,7 +25,7 @@
         ]
       ],
       [
-        "template",
+        "templates",
         [
           "navbar",
           "hero",
@@ -33,16 +33,10 @@
           "promise",
           "compatibility",
           "explore",
-          "pricing",
+          "memberships",
           "faq",
           "kickstart",
           "footer"
-        ]
-      ],
-      [
-        "inprogress",
-        [
-          "otherproducts"
         ]
       ],
       [
@@ -50,6 +44,12 @@
         [
           "config",
           "tailwind"
+        ]
+      ],
+      [
+        "todo",
+        [
+          "otherproducts"
         ]
       ]
     ]

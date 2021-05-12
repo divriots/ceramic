@@ -9,7 +9,7 @@ export default {
   };
 </script>
 <template>
-  <section class="bg-black-divriots text-white sm:p-10">
+  <section class="bg-black-divriots text-white p-10">
     <component :is="Group" v-for="(featureGroup,idx) in featureGroups" :key="featureGroup.group"
       :title="featureGroup.title">
       <component :is="Feature" v-for="feature of featureGroup.features" v-bind="feature" :reverse="idx%2!==0">

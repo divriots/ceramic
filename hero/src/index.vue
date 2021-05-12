@@ -11,19 +11,19 @@
             <span class="block xl:inline text-primary">Design System</span>
             <span class="block xl:inline">Developer & designer side</span>
           </h1>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+          <p class="mt-3 text-base text-gray-mid sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             This is a very long description
           </p>
-          <div class="flex mt-4">
+          <div class="flex mt-4 gap-2">
             <div class="rounded-lg shadow">
               <a href="#"
-                class="w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary">
+                class="w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-primary hover:underline">
                 Start now
               </a>
             </div>
             <div>
               <a href="#"
-                class="w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-primary hover:bg-indigo-200">
+                class="w-full flex items-center justify-center px-8 py-3 text-base font-medium text-primary hover:underline">
                 Discover
               </a>
             </div>

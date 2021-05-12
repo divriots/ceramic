@@ -16,7 +16,7 @@ const StarterKit = ({ name, href, imgSrc }) => (
 );
 
 export default () => (
-  <section className="sm:p-10 justify-center items-center flex flex-col md:flex-row bg-black-default text-white gap-8 md:gap-16">
+  <section className="p-4 sm:p-10 justify-center items-center flex flex-col md:flex-row bg-black-default text-white gap-8 md:gap-16">
     <div className="max-w-md p-10 bg-primary rounded-lg flex-grow grid justify-center">
       <Menu>
         <Menu.Button className="inline-flex w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
@@ -36,7 +36,7 @@ export default () => (
         </Menu.Items>
       </Menu>
     </div>
-    <div className="max-w-md text-left">
+    <div className="max-w-md text-left p-4">
       <h2 className="font-semibold mx-auto text-3xl">
         Kickstart with one of our{' '}
         <span className="text-primary">stater-kits</span>
