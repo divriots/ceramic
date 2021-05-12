@@ -1,7 +1,6 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid';
-import faq, { excerpt, title } from '../../config/src/faq';
 
 export const FAQ = ({ question, answer, defaultOpen }) => (
   <Disclosure defaultOpen={defaultOpen}>
@@ -28,7 +27,7 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
   </Disclosure>
 );
 
-export default () => (
+export default ({ excerpt, title, faq }) => (
   <section className="mx-auto p-4 grid md:grid-cols-2 max-w-4xl w-full gap-8">
     <div>
       <h2 className="text-4xl">{title}</h2>

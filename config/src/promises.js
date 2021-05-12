@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Main title',
-    features: [
+    promises: [
       {
         title: 'Colllaborate instantly',
         description:
@@ -32,11 +32,13 @@ export default [
   },
   {
     title: 'Main title',
-    features: [
+    promises: [
       {
         title: 'Code review visually',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat amet, odio aliquet ut scelerisque id sit elementum. Turpis dignissim ligula vel dolor integer ac molestie.',
+        description: `Instantly - no build time - no deploy time</br>
+        Compare visually before you push your PR.</br>
+        Review PRs visually with no build time.</br>
+        Code review on the move - mobile preview`,
         img: {
           src: '#',
           backgroundColor: '#21d3b0',
@@ -61,8 +63,8 @@ export default [
       },
       {
         title: '100% standard Web development',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat amet, odio aliquet ut scelerisque id sit elementum. Turpis dignissim ligula vel dolor integer ac molestie.',
+        description: `Just supercharge your development toolbelt.<br/>
+        No lock-in`,
         img: {
           src: '#',
           backgroundColor: '#ff9423',

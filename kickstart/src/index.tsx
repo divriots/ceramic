@@ -8,7 +8,7 @@ const StarterKit = ({ name, href, imgSrc }) => (
     as="a"
     href={href}
     key={name}
-    className="text-primary inline-flex p-2 gap-2"
+    className="inline-flex items-center p-2 gap-2"
   >
     <img className="w-8 h-8" src={imgSrc} />
     <span>{name}</span>

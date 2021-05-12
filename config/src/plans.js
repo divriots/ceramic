@@ -1,104 +1,150 @@
-export default [
-  {
-    title: 'Free',
-    legend: 'Open source and Prototyping',
-    price: {
-      value: '0',
-      currency: 'USD',
-      symbol: '$',
-    },
-    features: [
-      {
-        icon: '/assets/icons/check.svg',
-        description: 'Full-featured IDE',
-      },
-      {
-        icon: '/assets/icons/infinity.svg',
-        description: 'Public components',
-      },
-      {
-        icon: '/assets/icons/github.svg',
-        description: 'Sync to Github and GitLab public repos',
-      },
-      {
-        icon: '/assets/icons/npm.svg',
-        description: 'Publish public packages under <code>@wcd</code> scope',
-      },
-      {
-        icon: '/assets/logo/grey/discord.svg',
-        description:
-          "<a class='icon' href='https://discord.gg/z7JUzhn'>Community support</a>",
-      },
-    ],
-    action: {
-      label: 'Sign up',
-      url: '/signup',
-      type: 'outline',
-    },
+export const groups = {
+  collaboration: 'Collaboration',
+  source_control: 'Source Control',
+  package_registry: 'Package Registry',
+  support: 'Support',
+  premium: 'Premium',
+};
+
+export const features = {
+  viewers: {
+    group: groups.collaboration,
+    restriction: 'Unlimited',
+    label: 'Viewers per project',
   },
-  {
-    title: 'Pro',
-    price: {
-      value: '29',
-      symbol: '$',
-      currency: 'USD',
-      unit: 'Editor',
-    },
-    includes: 'All Free features',
-    features: [
-      {
-        icon: '/assets/icons/infinity.svg',
-        description: 'Private component',
-      },
-      {
-        icon: '/assets/icons/npm.svg',
-        description: 'Publish public packages under your name or your scope',
-      },
-      {
-        icon: '/assets/icons/check.svg',
-        description:
-          "Badge <span class='badge bg-accent text-white'>ENTHUSIAST</span>",
-      },
-    ],
-    action: {
-      label: 'Subscribe',
-      url: '/signup/ENTHUSIAST',
-      type: 'primary',
-    },
+  editors: {
+    group: groups.collaboration,
+    label: 'Editors per project',
   },
-  {
-    title: 'Enterprise',
-    includes: 'All pro features',
-    features: [
-      {
-        icon: '/assets/icons/github.svg',
-        description: 'Sync to Github and GitLab private repos',
-      },
-      {
-        icon: '/assets/icons/npm.svg',
-        description: 'Publish private packages',
-      },
-      {
-        icon: '/assets/icons/check.svg',
-        description: 'Publish to any registry',
-      },
-      {
-        icon: '/assets/icons/pro-support.svg',
-        description: 'Email support',
-      },
-      {
-        icon: '/assets/icons/check.svg',
-        description:
-          "Badge <span class='badge bg-accent text-white'>PRO</span>",
-      },
-    ],
-    price: {
-      value: 'On Demand',
-    },
-    action: {
-      label: 'Contact us',
-      url: '#',
-      type: 'primary',
-    },
+  projects: {
+    group: groups.collaboration,
+    label: 'Public/private projects',
   },
-];
+  github: {
+    group: groups.source_control,
+    label: 'Github integration',
+  },
+  gitlab: {
+    group: groups.source_control,
+    label: 'Gitlab integration',
+  },
+  bitbucket: {
+    group: groups.source_control,
+    label: 'BitBucket integration',
+  },
+  publish_public: {
+    group: groups.package_registry,
+    label: 'Publish NPM w/ @ds-dev',
+  },
+  publish_custom_registry: {
+    group: groups.package_registry,
+    label: 'Publish to any package registry',
+  },
+  publish_private: {
+    group: groups.package_registry,
+    label: 'Publish private/public',
+  },
+  support_community: {
+    group: groups.support,
+    label: `<a class='icon' href='https://discord.gg/z7JUzhn'>Community support</a>`,
+  },
+  support_email: {
+    group: groups.support,
+    label: `Email support`,
+  },
+  support_sla: {
+    group: groups.support,
+    label: `Premium support with SLA`,
+  },
+  ci_cd: {
+    group: groups.premium,
+    label: 'Continuous Integration/Delivery',
+  },
+  matrix_testing: {
+    group: groups.premium,
+    label: 'Test matrix automation',
+  },
+  advanced_user_management: {
+    group: groups.premium,
+    label: 'Advanced User Management (RBAC, SSO)',
+  },
+};
+
+export const Free = {
+  title: 'Free',
+  legend: 'Open source and Prototyping',
+  price: {
+    value: '0',
+    currency: 'USD',
+    symbol: '$',
+  },
+  additionalFeatures: [
+    features.viewers,
+    {
+      restriction: 'Up to 3',
+      ...features.editors,
+    },
+    {
+      restriction: 'Up to 2',
+      ...features.projects,
+    },
+    features.github,
+    features.gitlab,
+    features.bitbucket,
+    features.publish_public,
+    features.support_community,
+  ],
+  action: {
+    label: 'Sign up',
+    url: '/signup',
+    type: 'outline',
+  },
+};
+
+export const Pro = {
+  title: 'Pro',
+  price: {
+    value: '29',
+    symbol: '$',
+    currency: 'USD',
+    unit: 'Editor',
+  },
+  inherits: Free,
+  additionalFeatures: [
+    {
+      restriction: 'Unlimited',
+      ...features.editors,
+    },
+    {
+      restriction: 'Up to 5',
+      ...features.projects,
+    },
+    features.publish_custom_registry,
+    features.publish_private,
+    features.support_email,
+  ],
+  action: {
+    label: 'Subscribe',
+    url: '/signup/ENTHUSIAST',
+    type: 'primary',
+  },
+};
+
+export const Enterprise = {
+  title: 'Enterprise',
+  inherits: Pro,
+  additionalFeatures: [
+    features.matrix_testing,
+    features.ci_cd,
+    features.support_sla,
+    features.advanced_user_management,
+  ],
+  price: {
+    value: 'On Demand',
+  },
+  action: {
+    label: 'Contact us',
+    url: '#',
+    type: 'primary',
+  },
+};

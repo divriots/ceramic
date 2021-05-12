@@ -1,6 +1,6 @@
 import Price from '../src/index.vue';
 import '~/tailwind/src/styles.css';
-import plans from '../../config/src/plans';
+import { Free, Pro, Enterprise } from '../../config/src/plans';
 
 export default {
   parameters: {
@@ -15,19 +15,19 @@ export default {
 
 export const def = (args) => ({
   setup() {
-    return { props: plans[0] };
+    return { props: Free };
   },
   ...args,
 });
 export const pro = (args) => ({
   setup() {
-    return { props: plans[1] };
+    return { props: Pro };
   },
   ...args,
 });
 export const enterprise = (args) => ({
   setup() {
-    return { props: plans[2] };
+    return { props: Enterprise };
   },
   ...args,
 });

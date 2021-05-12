@@ -1,8 +1,8 @@
 <script>
-  import plans from '../../config/src/plans';
+  import {Free, Pro, Enterprise} from '../../config/src/plans';
 import Price from '../../price/src/index.vue';
   export default {
-    data(){ return { plans}},
+    data(){ return { plans: [Free, Pro, Enterprise]}},
     setup(){return { Price}}
   };
 </script>
@@ -15,7 +15,7 @@ import Price from '../../price/src/index.vue';
         </component>
       </div>
     </div>
-    <a class="flex text-primary justify-center text-3xl p-8 mt-8 hover:underline" href="/pricing">See more features</a>
+    <slot></slot>
   </section>
 </template>
 
@@ -24,7 +24,7 @@ import Price from '../../price/src/index.vue';
     content: '';
     position: absolute;
     width: 100%;
-    height: 60%;
+    height: 500px;
     left: 0px;
     top: 0;
     z-index: -1;
