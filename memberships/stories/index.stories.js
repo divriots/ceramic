@@ -1,7 +1,14 @@
-import Pricing from '../src/index.vue';
+import Memberships from '../src/Memberships.vue';
+import Features from '../src/Features.vue';
+
 import '~/tailwind/src/styles.css';
 
-export const story1 = () => ({
-  components: { Pricing },
-  template: `<Pricing/>`,
+export const memberships = () => ({
+  components: { Memberships },
+  template: `<Memberships/>`,
+});
+
+export const features = () => ({
+  components: { Features },
+  template: `<Features/>`,
 });

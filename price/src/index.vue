@@ -4,7 +4,8 @@ export default {
   props: {
     title: { type: String },
     legend: { type: String },
-    features: { type: Array },
+    inherits: { type: Object },
+    additionalFeatures: { type: Array },
     price: { type: Object },
     action: { type: Object },
   },
@@ -52,13 +53,23 @@ export default {
 </header>
 {{ legend }}
 <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8">
-  <li class="mb-4 flex items-start text-left" v-for="feature of features">
+  <li class="mb-4 flex items-start text-left" v-if="inherits">
     <div class="flex-shrink-0">
       <svg class="h-6 w-6 text-teal-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
       </svg>
     </div>
-    <p class="ml-3 text-base font-medium" v-html="feature.description"></p>
+    <p class="ml-3 text-base font-medium">
+      All <b>{{ inherits.title }}</b> features</p>
+  </li>
+  <li class="mb-4 flex items-start text-left" v-for="feature of additionalFeatures">
+    <div class="flex-shrink-0">
+      <svg class="h-6 w-6 text-teal-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+    <p class="ml-3 text-base font-medium" v-html="(feature.restriction ? feature.restriction + ' ':'') + feature.label">
+    </p>
   </li>
 </ul>
 

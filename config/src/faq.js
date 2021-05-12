@@ -1,4 +1,4 @@
-export default [
+export const landingFAQ = [
   {
     question: 'Is avasdasvavdas asdf asdfwrff ?',
     answer: 'aerfsdcddawqefacdac',
@@ -16,6 +16,22 @@ export default [
     answer: 'aerfsdcddawqefacdac',
   },
 ];
+export const pricingFAQ = [
+  {
+    question: 'Is avasdasvavdas asdf asdfwrff ?',
+    answer: 'aerfsdcddawqefacdac',
+  },
+  {
+    question: 'Is avasdasvavdas asdf asdfwrff ?',
+    answer: 'aerfsdcddawqefacdac',
+  },
+  {
+    question: 'Is avasdasvavdas asdf asdfwrff ?',
+    answer: 'aerfsdcddawqefacdac',
+  },
 
-export const title = 'F.A.Q.';
-export const excerpt = 'Lorem ipsum';
+  {
+    question: 'Is avasdasvavdas asdf asdfwrff ?',
+    answer: 'aerfsdcddawqefacdac',
+  },
+];
