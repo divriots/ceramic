@@ -8,8 +8,8 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-left">
           <h1 class="text-4xl font-bold tracking-tight text-black-default sm:text-5xl md:text-5xl">
-            <span class="block xl:inline text-primary">Design System</span>
-            <span class="block xl:inline">Developer & designer side</span>
+            <span class="block text-primary">Design System</span>
+            <span class="block">Developer & designer side</span>
           </h1>
           <p class="mt-3 text-base text-gray-mid sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             This is a very long description
