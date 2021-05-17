@@ -1,8 +1,6 @@
 export const typography = {
   fontFamily: {
-    sans: ['"Segoe UI"', 'Roboto', '"Helvetica Neue"'],
-    serif: ['Georgia', 'Cambria', '"Times New Roman"'],
-    mono: ['Menlo', 'Monaco', 'Consolas'],
+    'space-mono': ['Space Mono'],
   },
   fontSize: {
     sm: '0.875rem',
