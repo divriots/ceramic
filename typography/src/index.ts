@@ -1,6 +1,6 @@
 export const typography = {
   fontFamily: {
-    'space-mono': ['Space Mono'],
+    'space-mono': ["'Space Mono'"],
   },
   fontSize: {
     sm: '0.875rem',
