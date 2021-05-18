@@ -3,7 +3,6 @@
     <i class="codicon codicon-close"></i>
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
-        <!-- Mobile menu button-->
         <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
           <label
             for="navexpander"
@@ -30,8 +29,7 @@
             </svg>
           </label>
         </div>
-        <component :is="Logo"></component>
-
+        <component :is="Logo" class="text-xl">Design-Systems.dev</component>
         <div class="hidden md:block md:ml-6">
           <div class="flex">
             <a href="/blog"
@@ -44,33 +42,12 @@
             <component :is="Twitter"></component>
           </div>
         </div>
-        <!-- Profile dropdown -->
-        <!-- <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <details class="ml-3 relative">
-            <summary
-              class="bg-gray-800 text-white px-4 py-2 flex text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-              id="user-menu" aria-expanded="false" aria-haspopup="true">
-              <span class="sr-only">Open user menu</span>
-              Studio
-            </summary>
-            <div
-              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-20"
-              role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your
-                Profile</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
-            </div>
-          </details>
-        </div> -->
       </div>
     </div>
 
-    <!-- Mobile menu -->
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="/blog" class="bg-gray-300 text-black block px-3 py-2 rounded-md text-base font-medium">Blog</a>
         <a href="/docs"
           class="text-gray-700 hover:bg-gray-200 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Documentation</a>

@@ -12,7 +12,7 @@
         <path fill="#226798"
           d="M12.083 36h3c0-11.56 9.362-20.934 20.917-20.956v-3.001C22.788 12.065 12.083 22.783 12.083 36z" />
       </svg>
-      <span class="text-xl">Design-Systems.dev</span>
+      <span><slot></slot></span>
     </a>
   </div>
 </template>

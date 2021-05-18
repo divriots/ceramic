@@ -1,41 +1,34 @@
 const assetRef = (asset) =>
   new URL(asset, 'https://design-systems.dev/assets/').href;
 
-const integrations = [
+export default [
   {
-    name: 'git',
-    logo: assetRef('logo/git.svg'),
+    name: 'lit',
+    logo: assetRef('lib/lit.svg'),
   },
   {
-    name: 'github',
-    logo: assetRef('logo/github.svg'),
+    name: 'vue',
+    logo: assetRef('lib/vuejs.svg'),
   },
   {
-    name: 'gitlab',
-    logo: assetRef('logo/gitlab.svg'),
+    name: 'react',
+    logo: assetRef('lib/react.svg'),
   },
   {
-    name: 'npm',
-    logo: assetRef('logo/npm.svg'),
+    name: 'angular',
+    logo: assetRef('lib/angular.svg'),
   },
   {
-    name: 'netlify',
-    logo: assetRef('logo/netlify.svg'),
+    name: 'svelte',
+    logo: assetRef('lib/svelte.svg'),
   },
   {
-    name: 'storybook',
-    logo: assetRef('logo/storybook.svg'),
+    name: 'preact',
+    logo: assetRef('lib/preact.svg'),
   },
-];
-
-const languages = [
   {
     name: 'typescript',
     logo: assetRef('lang/ts.svg'),
-  },
-  {
-    name: 'less',
-    logo: assetRef('lang/less.svg'),
   },
   {
     name: 'sass',
@@ -46,17 +39,6 @@ const languages = [
     logo: assetRef('lang/markdown.svg'),
   },
   {
-    name: 'wasm',
-    logo: assetRef('lang/wasm.svg'),
-  },
-];
-
-const compilers = [
-  {
-    name: 'svelte',
-    logo: assetRef('lib/svelte.svg'),
-  },
-  {
     name: 'stencil',
     logo: assetRef('lib/stencil.svg'),
   },
@@ -65,28 +47,39 @@ const compilers = [
     logo: assetRef('lib/lwc.svg'),
   },
   {
-    name: 'angular',
-    logo: assetRef('lib/angular.svg'),
+    name: 'storybook',
+    logo: assetRef('logo/storybook.svg'),
+  },
+  {
+    name: 'less',
+    logo: assetRef('lang/less.svg'),
   },
   {
     name: 'riotjs',
     logo: assetRef('lib/riotjs.svg'),
   },
+  {
+    name: 'wasm',
+    logo: assetRef('lang/wasm.svg'),
+  },
+  // {
+  //   name: 'git',
+  //   logo: assetRef('logo/git.svg'),
+  // },
+  // {
+  //   name: 'github',
+  //   logo: assetRef('logo/github.svg'),
+  // },
+  // {
+  //   name: 'gitlab',
+  //   logo: assetRef('logo/gitlab.svg'),
+  // },
+  // {
+  //   name: 'npm',
+  //   logo: assetRef('logo/npm.svg'),
+  // },
+  // {
+  //   name: 'netlify',
+  //   logo: assetRef('logo/netlify.svg'),
+  // },
 ];
-
-const libraries = [
-  {
-    name: 'lit',
-    logo: assetRef('lib/lit.svg'),
-  },
-  {
-    name: 'preact',
-    logo: assetRef('lib/preact.svg'),
-  },
-  {
-    name: 'react',
-    logo: assetRef('lib/react.svg'),
-  },
-];
-
-export default [...integrations, ...compilers, ...libraries, ...languages];

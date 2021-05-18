@@ -72,14 +72,13 @@ export const features = {
 
 export const Free = {
   title: 'Free',
-  legend: 'Open source and Prototyping',
+  legend: 'Discover Backlight',
   price: {
     value: '0',
     currency: 'USD',
     symbol: '$',
   },
   additionalFeatures: [
-    features.viewers,
     {
       restriction: 'Up to 3',
       ...features.editors,
@@ -88,6 +87,7 @@ export const Free = {
       restriction: 'Up to 2',
       ...features.projects,
     },
+    features.viewers,
     features.github,
     features.gitlab,
     features.bitbucket,
@@ -136,8 +136,8 @@ export const Enterprise = {
   additionalFeatures: [
     features.matrix_testing,
     features.ci_cd,
-    features.support_sla,
     features.advanced_user_management,
+    features.support_sla,
   ],
   price: {
     value: 'On Demand',

@@ -21,7 +21,7 @@
       <span class="text-xl">{{ title }}</span>
       <p class="text-gray-divriots" v-html="description"></p>
       <div>
-        <a :href="action.href" class="px-6 py-3 rounded-md bg-primary hover:underline">
+        <a :href="action.href" class="btn-primary">
           {{ action.label }}
         </a>
       </div>

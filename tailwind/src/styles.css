@@ -1,5 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .action {
+    @apply font-semibold 
+    hover:underline 
+    cursor-pointer
+    focus:outline-none;
+  }
+  .btn {
+    @apply action 
+    py-3 
+    px-6 
+    rounded-md;
+  }
+  .btn-primary {
+    @apply btn
+    bg-primary 
+    text-white
+    shadow-xs 
+    focus:ring-primary
+    focus:ring-2
+    focus:ring-opacity-75;
+  }
+}

@@ -9,10 +9,14 @@
         <div class="text-left">
           <h1 class="text-4xl font-bold tracking-tight text-black-default sm:text-5xl md:text-5xl">
             <span class="block text-primary">Design System</span>
-            <span class="block">Developer & designer side</span>
+            <span class="block">Code-oriented</span>
           </h1>
           <p class="mt-3 text-base text-gray-mid sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            This is a very long description
+            Backlight is the bright spot that makes it a breeze to launch a Design System on the developer side and to
+            collaborate with designers.<br/>
+            Front-end teams, get the efficiency and constistency you deserve! Stop wasting time to build and maintain
+            your code. Build faster and better with a single source of truth for your components.<br/>
+            With Backlight, light-up your front!<br/>
           </p>
           <div class="flex mt-4 gap-2">
             <div class="rounded-lg shadow">

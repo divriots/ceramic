@@ -1,6 +1,6 @@
 export const typography = {
   fontFamily: {
-    'space-mono': ["'Space Mono'"],
+    'space-grotesk': ["'Space Grotesk'"],
   },
   fontSize: {
     sm: '0.875rem',
