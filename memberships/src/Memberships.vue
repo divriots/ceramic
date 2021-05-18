@@ -11,7 +11,8 @@ import Price from '../../price/src/index.vue';
     <h2 class="text-6xl py-16">Discover our pricing</h2>
     <div class="mx-auto max-w-5xl grid lg:grid-cols-3 align-center justify-center gap-8">
       <div v-for="(plan,idx) of plans" :key="plan.title" :class="`${idx%3===1?'':'py-8'}`">
-        <component :is="Price" v-bind="plan" :class="`${idx%3===1?'bg-primary text-white':'bg-white text-primary'}`">
+        <component :is="Price" v-bind="plan" :banner="plan.title==='Pro'?'Free until Sep 2021':''"
+          :class="`${idx%3===1?'bg-primary text-white':'bg-white text-primary'}`">
         </component>
       </div>
     </div>

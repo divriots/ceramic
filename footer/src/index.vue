@@ -16,7 +16,7 @@
       </form>
     </div>
     <div class="links flex flex-col sm:flex-row text-black-divriots">
-      <component :is="Logo" class="sm:pr-10 py-10 mx-8">Design-Systems.dev</component>
+      <component :is="Logo" class="sm:pr-10 py-10 mx-8">Backlight.dev</component>
       <div class="cols sm:min-w-max sm:pr-32">
         <div class="col">
           <label>

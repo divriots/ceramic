@@ -1,14 +1,14 @@
 export default [
   {
-    href: '#',
+    pathname: '/blog',
     label: 'Blog',
   },
   {
-    href: '#',
+    pathname: '#',
     label: 'Documentation',
   },
   {
-    href: '#',
+    pathname: '#',
     label: 'Pricing',
   },
 ];

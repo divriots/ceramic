@@ -5,7 +5,7 @@ import routes from './routes';
 export const story1 = () => ({
   components: { NavBar },
   data() {
-    return { routes };
+    return { routes, pathname: '/blog' };
   },
-  template: `<NavBar :routes="routes"/>`,
+  template: `<NavBar :routes="routes" :pathname="pathname"/>`,
 });
