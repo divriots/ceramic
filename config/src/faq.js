@@ -13,13 +13,13 @@ export const pricingFAQ = [
     Viewer users can only access to the content of the design system components.`,
   },
   {
-    question: 'Do you have fee trial periods?',
+    question: 'Do you have free trial periods?',
     answer: `No, we don't, but we have a Free plan to help you discover the value of Backlight. 
     As an exception, we have a free trial period until Septembre 2021 for all news users. `,
   },
   {
     question: `Why free plan is limited?`,
-    answer: `Our Free plan is here to help you give Backlight a try. We hope you you will love it. We believe 3 Editors and 2 projects is good enough to give you a good overview of Backlight value. We would be delighted if you eventually consider to upgrade to a premium plan for your team to get access to the full power of Backlight. `,
+    answer: `Our Free plan is here to help you give Backlight a try. We hope you will love it. We believe 3 Editors and 2 projects is good enough to give you a good overview of Backlight value. We would be delighted if you eventually consider to upgrade to a premium plan for your team to get access to the full power of Backlight. `,
   },
   {
     question: 'How to subscribe?',
