@@ -45,7 +45,7 @@
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
         <a :href="route.href" v-for="route of routes" key="route"
-          class="tbg-gray-300 text-black block px-3 py-2 rounded-md text-base font-medium">{{route.label}}</a>
+          :class="`btn bg-gray-300 block text-base font-medium ${current==route?'text-primary font-semibold':''}`">{{route.label}}</a>
         <component :is="Discord">Discord</component>
         <component :is="Twitter">Twitter</component>
       </div>
@@ -64,6 +64,11 @@ import Logo from '../../logo/src/index.vue'
 export default {
   props:{
     routes: {type: Array, required: true}
+  },
+  computed:{
+    current(){ 
+      return this.routes.find(r=>location.href.endsWith(r.href))
+    }
   },
   setup() { return { Logo, Twitter, Discord }}
 };
