@@ -42,9 +42,11 @@ export default () => (
         <span className="text-primary">stater-kits</span>
       </h2>
       <p className="mt-8 max-w-sm text-sm text-gray-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu velit eu
-        tellus scelerisque porttitor. Nullam dictum finibus quam, in mollis nisi
-        rhoncus at. Nulla lacinpsn
+        Kickstart with one of our starter-kits. Most popular technologies
+        supported.
+        <br />
+        Spend time building amazing products, not maintaining your Design
+        System.
       </p>
       <div className="flex overflow-auto">
         <slot name="starterkit"></slot>

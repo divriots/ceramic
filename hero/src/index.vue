@@ -3,20 +3,18 @@
 </script>
 <template>
   <section
-    class="mx-auto max-w-4xl grid md:grid-cols-2 overflow-hidden mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 place-items-center">
+    class="mx-auto max-w-5xl grid md:grid-cols-2 overflow-hidden mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 place-items-center">
     <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl pl-4 lg:pr-6">
         <div class="text-left">
           <h1 class="text-4xl font-bold tracking-tight text-black-default sm:text-5xl md:text-5xl">
             <span class="block text-primary">Design System</span>
             <span class="block">Code-oriented</span>
           </h1>
           <p class="mt-3 text-base text-gray-mid sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            Backlight is the bright spot that makes it a breeze to launch a Design System on the developer side and to
-            collaborate with designers.<br/>
-            Front-end teams, get the efficiency and constistency you deserve! Stop wasting time to build and maintain
-            your code. Build faster and better with a single source of truth for your components.<br/>
-            With Backlight, light-up your front!<br/>
+            Build your Front-end source of truth.<br/>
+            Collaborate & Maintain on the go.<br/>
+            Get efficiency & constistency you deserve
           </p>
           <div class="flex mt-4 gap-2">
             <div class="rounded-lg shadow">

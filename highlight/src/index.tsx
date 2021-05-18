@@ -32,11 +32,11 @@ export default () => (
       Start your Design System in{' '}
       <span className="text-primary">one-click</span>
     </h2>
-    <p className="text-sm text-gray-mid">
-      Kickstart with one of our components starter-kits. Most popular building
-      environments supported.
+    <p className="text-lg text-gray-mid">
+      Kickstart with one of our starter-kits. Most popular technologies
+      supported.
       <br />
-      Spend time building amazing products, not maintaining your Design System
+      Spend time building amazing products, not maintaining your Design System.
     </p>
     <div className="bg-black-divriots py-48 mt-48 overflow-hidden">
       <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 gap-16">

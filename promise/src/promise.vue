@@ -19,7 +19,7 @@
         reverse ? 'md:col-start-1 md:row-start-1' : ''
       }`">
       <span class="text-xl">{{ title }}</span>
-      <p class="text-gray-divriots" v-html="description"></p>
+      <div class="grid gap-4 text-gray-divriots" v-html="description"></div>
       <div>
         <a :href="action.href" class="btn-primary">
           {{ action.label }}
