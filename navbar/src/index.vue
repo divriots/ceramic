@@ -32,12 +32,8 @@
         <component :is="Logo" class="text-xl">Design-Systems.dev</component>
         <div class="hidden md:block md:ml-6">
           <div class="flex">
-            <a href="/blog"
-              class="text-gray-700 hover:bg-gray-100 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-            <a href="/docs"
-              class="text-gray-700 hover:bg-gray-100 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Documentation</a>
-            <a href="/pricing"
-              class="text-gray-700 hover:bg-gray-100 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
+            <a :href="route.href" v-for="route of routes" key="route"
+              class="text-gray-700 hover:bg-gray-100 hover:text-black px-3 py-2 rounded-md text-sm font-medium">{{route.label}}</a>
             <component :is="Discord"></component>
             <component :is="Twitter"></component>
           </div>
@@ -48,11 +44,8 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <a href="/blog" class="bg-gray-300 text-black block px-3 py-2 rounded-md text-base font-medium">Blog</a>
-        <a href="/docs"
-          class="text-gray-700 hover:bg-gray-200 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Documentation</a>
-        <a href="/pricing"
-          class="text-gray-700 hover:bg-gray-200 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+        <a :href="route.href" v-for="route of routes" key="route"
+          class="tbg-gray-300 text-black block px-3 py-2 rounded-md text-base font-medium">{{route.label}}</a>
         <component :is="Discord">Discord</component>
         <component :is="Twitter">Twitter</component>
       </div>
@@ -69,6 +62,9 @@
 import Discord from '../../discord/src/index.vue';
 import Logo from '../../logo/src/index.vue'
 export default {
+  props:{
+    routes: {type: Array, required: true}
+  },
   setup() { return { Logo, Twitter, Discord }}
 };
 </script>
