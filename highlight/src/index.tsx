@@ -29,10 +29,15 @@ const CardKit = ({
 export default () => (
   <section className="text-center grid gap-8 md:gap-4 relative">
     <h2 className="text-4xl">
-      Kickstart with one of our{' '}
-      <span className="text-primary">starter-kits</span>
+      Start your Design System in{' '}
+      <span className="text-primary">one-click</span>
     </h2>
-    <p className="text-sm text-gray-mid">asdfasdfa sdfasdfasdfasf</p>
+    <p className="text-sm text-gray-mid">
+      Kickstart with one of our components starter-kits. Most popular building
+      environments supported.
+      <br />
+      Spend time building amazing products, not maintaining your Design System
+    </p>
     <div className="bg-black-divriots py-48 mt-48 overflow-hidden">
       <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 gap-16">
         {kits

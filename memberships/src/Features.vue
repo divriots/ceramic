@@ -22,9 +22,9 @@
     <thead>
       <tr>
         <th scope="col"></th>
-        <th class="p-6 text-left" scope="col" v-for="(plan,pIdx) in plans" key="pIdx">
+        <th scope="col" v-for="(plan,pIdx) in plans" key="pIdx">
           {{ plan.title }}
-          <a class="block text-primary text-md" :href="plan.action.url">{{plan.action.label}}</a>
+          <a class="btn block text-primary text-md whitespace-nowrap" :href="plan.action.url">{{plan.action.label}}</a>
         </th>
       </tr>
     </thead>

@@ -7,18 +7,18 @@ export const groups = {
 };
 
 export const features = {
-  viewers: {
+  projects: {
     group: groups.collaboration,
-    restriction: 'Unlimited',
-    label: 'Viewers per project',
+    label: 'Projects',
   },
   editors: {
     group: groups.collaboration,
-    label: 'Editors per project',
+    label: 'Editors',
   },
-  projects: {
+  viewers: {
     group: groups.collaboration,
-    label: 'Public/private projects',
+    restriction: 'Unlimited',
+    label: 'Viewers',
   },
   github: {
     group: groups.source_control,
@@ -72,21 +72,26 @@ export const features = {
 
 export const Free = {
   title: 'Free',
-  legend: 'Open source and Prototyping',
+  legend: 'Discover Backlight',
   price: {
     value: '0',
     currency: 'USD',
     symbol: '$',
   },
   additionalFeatures: [
-    features.viewers,
     {
       restriction: 'Up to 3',
       ...features.editors,
+      highlight: true,
     },
     {
       restriction: 'Up to 2',
       ...features.projects,
+      highlight: true,
+    },
+    {
+      ...features.viewers,
+      highlight: true,
     },
     features.github,
     features.gitlab,
@@ -103,11 +108,13 @@ export const Free = {
 
 export const Pro = {
   title: 'Pro',
+  banner: 'Free until september 2021',
   price: {
     value: '29',
     symbol: '$',
     currency: 'USD',
     unit: 'Editor',
+    style: 'text-decoration: line-through',
   },
   inherits: Free,
   additionalFeatures: [
@@ -136,8 +143,8 @@ export const Enterprise = {
   additionalFeatures: [
     features.matrix_testing,
     features.ci_cd,
-    features.support_sla,
     features.advanced_user_management,
+    features.support_sla,
   ],
   price: {
     value: 'On Demand',
