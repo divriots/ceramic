@@ -10,16 +10,16 @@
 };
 </script>
 <template>
-  <div class="max-w-4xl mx-auto grid md:grid-cols-2 items-center py-12 justify-around gap-4">
-    <div class="p-4 bg-black-default grid place-self-center place-items-center h-96 w-80 sm:w-96 rounded-lg"
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 items-center py-12 justify-around gap-8">
+    <div class="bg-black-default grid place-self-center place-items-center h-96 sm:h-128 w-full rounded-lg"
       :style="{ 'background-color': img.backgroundColor }">
-      <img class="w-64 sm:w-80" :src="img.src" />
+      <img class="max-w-64 sm:max-w-80" :src="img.src" />
     </div>
-    <div :class="`p-4 flex flex-col space-y-12 w-80 sm:w-96 ${
+    <div :class="`flex flex-col space-y-12 max-w-80 sm:max-w-96 ${
         reverse ? 'md:col-start-1 md:row-start-1' : ''
       }`">
-      <span class="text-xl">{{ title }}</span>
-      <div class="grid gap-4 text-gray-divriots" v-html="description"></div>
+      <span class="text-3xl font-semibold">{{ title }}</span>
+      <div class="text-lg grid text-gray-divriots gap-4" v-html="description"></div>
       <div>
         <a :href="action.href" class="btn-primary">
           {{ action.label }}

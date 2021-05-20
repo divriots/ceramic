@@ -2,49 +2,29 @@
   import technologies from '../../config/src/technologies.js';
 </script>
 
-<section class="text-center text-white bg-black-divriots py-8">
+<section class="text-center text-white bg-black-divriots py-8 relative">
   <h2 class="text-3xl">All Web technologies <span class="block text-primary">supported</span></h2>
-  <input id="seemoretech" type="checkbox"/>
-  <div class="mx-auto max-w-6xl technologies h-56 relative overflow-hidden">
+  <div class="mx-auto max-w-6xl technologies max-h-80 relative overflow-auto">
     <div class="flex flex-wrap gap-8 justify-center py-8">
       {#each technologies as t, i}
-      <img class="w-20 h-20 technology" src={t.logo} alt={t.name} aria-label={t.name}/>
-    {/each}
+      <figure class="technology relative opacity-50 hover:opacity-100">
+        <figcaption class="hidden -top-6 w-full absolute text-center">
+          <span class="p-1 text-white bg-black-divriots">{t.name}</span>
+        </figcaption>
+        <img class="w-20 h-20" src={t.logo} alt={t.name} aria-label={t.name}/>
+      </figure>
+      {/each}
     </div>
-    <div class="absolute bottom-0 h-12 w-full bg-gradient-to-b from-transparent to-black-divriots"></div>
   </div>
-  <label for="seemoretech" class="btn-primary inline-block">
-  </label>
+  <div class="absolute bottom-6 h-12 w-full bg-gradient-to-b from-transparent to-black-divriots z-index-1"></div>
 </section>
 
 <style>
-  .technology {
-    opacity: .5;
-    /* filter: grayscale(1); */
+  .technology:hover figcaption {
+    display: block
   }
 
-  .technology:hover {
-    opacity: 1;
-    /* filter: grayscale(0); */
-  }
-
-  #seemoretech {
-    display: none;
-  }
-
-  #seemoretech:checked~.technologies>.bottom-0 {
-    display: none;
-  }
-
-  #seemoretech:checked~.technologies {
-    height: auto;
-  }
-
-  #seemoretech:checked~label:after {
-    content: 'See less';
-  }
-
-  #seemoretech~label:after {
-    content: 'See more';
+  .technologies::-webkit-scrollbar {
+    width: 0px
   }
 </style>

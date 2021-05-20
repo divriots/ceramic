@@ -4,7 +4,7 @@ export default [
     promises: [
       {
         title: 'Build source-of-truth for your Front-end',
-        description: `<p>Backlight help you to consolidate your Design System, from tokens to complex components.</p><p>
+        description: `<p>Backlight helps you consolidate your Design System, from tokens to complex components.</p><p>
 Standardize and share a common design language within all developers and designers.</p>`,
         img: {
           src: '#',
@@ -51,7 +51,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
         title: `Integrates into your workflow seamlessly`,
         description: `<p>Publish your Design System in one click.</p><p> 
         Connect and commit to your favorite Git provider.</p><p> 
-        Your components are always up-to-date ! No more hassle to track inconsitency in your code.</p>`,
+        Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
         img: {
           src: '#',
           backgroundColor: '#21d3b0',
@@ -81,9 +81,9 @@ We love you, so you are free to go any time!</p>`,
     promises: [
       {
         title: 'Review instantly',
-        description: `<p>Compare visually with live diff preview</p><p> 
+        description: `<p>Compare visually with live diff preview.</p><p> 
         Forget build and deploy time. Save precious hours. </p><p> 
-Multi-config previews (desktop, tablet, mobile, ...).</p></p>`,
+Multi-config previews (desktop, tablet, mobile, ...).</p>`,
         img: {
           src: '#',
           backgroundColor: '#21d3b0',
@@ -96,7 +96,7 @@ Multi-config previews (desktop, tablet, mobile, ...).</p></p>`,
       {
         title: 'Code in the browser or with your favorite editor',
         description: `<p>Backlight is open and flexible.</p><p>
-          Use your favorite IDE or our built-in editor to contribute instantly</p></p>`,
+          Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
         img: {
           src: '#',
           backgroundColor: '#5866cd',

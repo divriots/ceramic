@@ -5,6 +5,13 @@ import { html } from 'lit-html';
 import '~/tailwind/src/styles.css';
 ```
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"/>
+<style>
+:root {
+  font-family: 'Space Grotesk'!important;
+}
+</style>
+
 # Font Family
 
 ```html:html

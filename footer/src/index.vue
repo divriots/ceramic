@@ -1,20 +1,17 @@
 <template>
   <footer class="gradient relative overflow-hidden">
-    <div class="mx-auto max-w-7xl grid sm:place-items-center sm:grid-cols-2 py-24 px-4 w-auto text-left">
-      <h1 class="flex-grow text-4xl max-w-68">
-        Subscribe to our <br /><span class="text-primary">newsletter</span>
-      </h1>
-      <form class="inline-flex flex-col gap-4 mt-4 sm:flex-row">
-        <input
-          type="email"
-          class="bg-transparent border-b-1 border-gray-light text-gray-light outline-none"
-          placeholder="Enter your e-mail"
-        />
-        <button type="submit" class="btn-primary self-start">
-          Subscribe
-        </button>
-      </form>
-    </div>
+    <form :action="subscribe" class="mx-auto max-w-2xl py-24 px-4 text-left">
+      <label for="EMAIL" class="flex-grow text-4xl max-w-68">
+        Subscribe to our <span class="text-primary">newsletter</span>
+      </label>
+      <div class="flex flex-col gap-4 mt-4 sm:flex-row w-full">
+        <input name="EMAIL" type="email" placeholder="Enter your e-mail" required autocomplete="off"
+            class="bg-transparent border-b-1 border-gray-light text-gray-mid outline-none flex-grow"/>
+        <!-- input trap for bot -->
+        <input type="text" style="position: absolute; left: -5000px;" aria-hidden="true" :name="`b_${uid}_${audience}`" tabindex="-1" value="">
+        <button type="submit" value="Subscribe" name="subscribe" class="btn-primary self-start">Subscribe</button>
+      </div>
+    </form>
     <div class="links flex flex-col sm:flex-row text-black-divriots">
       <component :is="Logo" class="sm:pr-10 py-10 mx-8">Backlight.dev</component>
       <div class="cols sm:min-w-max sm:pr-32">
@@ -43,25 +40,27 @@
           <label>
           CONTACT
         </label>
-          <a :href="email_link">{{email}}</a>
+          <a :href="`mailto:${contact}`">{{contact}}</a>
         </div>
       </div>
     </div>
   </footer>
-
 </template>
 <script>
   import Twitter from '../../twitter/src/index.vue';
 import Discord from '../../discord/src/index.vue';
 import Logo from '../../logo/src/index.vue'
 export default {
-  data(){
-    return {
-      email : 'hello@backlight.dev'
-    }
+  props:{
+    subscribe: { type :String , required: true},
+    contact:{ type: String , required: true}, 
   },
-  computed:{
-    get email_link(){return `mailto:${this.email}`}
+  data(){
+    const params  = new URL(this.subscribe).searchParams;
+    return {
+      audience : params.get('id'),
+      uid : params.get('u'),
+    }
   },
   setup() { return { Twitter, Discord , Logo}}
 };
@@ -109,7 +108,6 @@ export default {
         font-size: 0.9rem;
         opacity: 50%;
         margin-bottom: 16px;
-        letter-spacing: -1px;
       }
 
       a {

@@ -7,28 +7,23 @@
     <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
       <div class="mx-auto max-w-7xl pl-4 lg:pr-6">
         <div class="text-left">
-          <h1 class="text-4xl font-bold tracking-tight text-black-default sm:text-5xl md:text-5xl">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-black-default sm:text-5xl md:text-5xl">
             <span class="block text-primary">Design System</span>
             <span class="block">Code-oriented</span>
           </h1>
           <p class="mt-3 text-base text-gray-mid sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             Build your Front-end source of truth.<br/>
             Collaborate & Maintain on the go.<br/>
-            Get efficiency & constistency you deserve
+            Get efficiency & consistency you deserve.
           </p>
-          <div class="flex mt-4 gap-2">
-            <div class="rounded-lg shadow">
-              <a href="#"
-                class="w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-primary hover:underline">
-                Start now
-              </a>
-            </div>
-            <div>
-              <a href="#"
-                class="w-full flex items-center justify-center px-8 py-3 text-base font-medium text-primary hover:underline">
-                Discover
-              </a>
-            </div>
+          <div class="flex mt-8 gap-2">
+            <a href="#" class="btn-primary">
+              Start now
+            </a>
+            <a href="https://calendly.com/gg_/backlight" class="btn text-primary">
+              Ask a Demo
+            </a>
           </div>
         </div>
       </div>

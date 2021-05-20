@@ -8,7 +8,7 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
       <>
         <Disclosure.Button
           as="div"
-          className={`flex justify-between items-center py-2 text-xl ${
+          className={`flex justify-between items-center py-2 text-xl cursor-pointer ${
             open ? ' text-primary' : ''
           }`}
         >

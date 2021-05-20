@@ -21,16 +21,21 @@
   <table class="w-full">
     <thead>
       <tr>
-        <th scope="col"></th>
+        <th scope="col" class="text-3xl text-left">All our <span class="text-primary">features</span></th>
         <th scope="col" v-for="(plan,pIdx) in plans" key="pIdx">
+          <span class="inline-flex flex-col text-left">
           {{ plan.title }}
-          <a class="btn block text-primary text-md whitespace-nowrap" :href="plan.action.url">{{plan.action.label}}</a>
+          <a class="action py-2 text-primary text-md whitespace-nowrap"
+            :href="plan.action.url">{{plan.action.label}}</a>
+          </span>
         </th>
       </tr>
     </thead>
-    <tbody v-for="group in groups">
+    <tbody v-for="([,group], idx) of Object.entries(groups)">
       <tr class="border-gray-light border-t-1" scope="row">
-        <td scope="row" colspan="4" class="text-xl text-left text-primary pt-8 pb-6" v-html="group">
+        <td scope="row" colspan="4"
+          :class="`text-xl text-left pt-8 pb-6 ${idx%3===0?'text-orange':idx%3===1?'text-blue':'text-green'}`"
+          v-html="group">
         </td>
       </tr>
       <tr v-for="[k,feature] in Object.entries(features).filter(([k,v])=>v.group===group)" key="k">

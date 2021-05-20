@@ -17,6 +17,9 @@ export const colors = {
       light: '#99999B',
       divriots: windiColors.coolGray['100'],
     },
+    orange: '#FF9423',
+    blue: '#1891FF',
+    green: '#21D3B0',
     teal: {
       light: windiColors.teal[200],
       mid: windiColors.teal[500],

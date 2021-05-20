@@ -28,9 +28,10 @@ const CardKit = ({
 
 export default () => (
   <section className="text-center grid gap-8 md:gap-4 relative">
-    <h2 className="text-4xl">
-      Start your Design System in{' '}
-      <span className="text-primary">one-click</span>
+    <h2 className="text-4xl sm:text-5xl lg:text-6xl">
+      Start your{' '}
+      <span className="text-primary whitespace-nowrap">design system</span> in
+      one-click
     </h2>
     <p className="text-lg text-gray-mid">
       Kickstart with one of our starter-kits. Most popular technologies

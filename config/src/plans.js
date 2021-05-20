@@ -30,11 +30,11 @@ export const features = {
   },
   bitbucket: {
     group: groups.source_control,
-    label: 'BitBucket integration',
+    label: 'BitBucket integration (Coming soon)',
   },
   publish_public: {
     group: groups.package_registry,
-    label: 'Publish NPM w/ @ds-dev',
+    label: 'Publish NPM w/ @backlight-dev',
   },
   publish_custom_registry: {
     group: groups.package_registry,
@@ -50,7 +50,7 @@ export const features = {
   },
   support_email: {
     group: groups.support,
-    label: `Email support`,
+    label: `Email support (Discord only for free trial)`,
   },
   support_sla: {
     group: groups.support,
@@ -67,6 +67,14 @@ export const features = {
   advanced_user_management: {
     group: groups.premium,
     label: 'Advanced User Management (RBAC, SSO)',
+  },
+  advances_features: {
+    group: groups.premium,
+    label: 'Advanced Features',
+  },
+  consulting: {
+    group: groups.premium,
+    label: 'Desing System Consulting',
   },
 };
 
@@ -144,6 +152,7 @@ export const Enterprise = {
     features.matrix_testing,
     features.ci_cd,
     features.advanced_user_management,
+    features.consulting,
     features.support_sla,
   ],
   price: {
@@ -151,7 +160,7 @@ export const Enterprise = {
   },
   action: {
     label: 'Contact us',
-    url: '#',
+    url: 'mailto:hello@backlight.dev',
     type: 'primary',
   },
 };
