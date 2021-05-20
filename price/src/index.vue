@@ -18,7 +18,7 @@ export default {
   },
   setup() {
     const count = ref(1);
-    const period = ref('month');
+    const period = ref('year');
     return {
       count,
       period,

@@ -1,11 +1,11 @@
 export default [
   {
-    title: 'Main title',
+    title: '<em>powered by Design System',
     promises: [
       {
-        title: 'Build you components source-of-truth',
-        description: `With Backlight centralize all you components in all place, from tokens to complex components with advanced behaviours
-It has never been so easy to share a common definition of components within all developers and designers`,
+        title: 'Build source-of-truth for your Front-end',
+        description: `<p>Backlight helps you consolidate your Design System, from tokens to complex components.</p><p>
+Standardize and share a common design language within all developers and designers.</p>`,
         img: {
           src: '#',
           backgroundColor: '#ff9423',
@@ -16,9 +16,28 @@ It has never been so easy to share a common definition of components within all 
         },
       },
       {
+        title: 'Documentation as you go',
+        description: `<p>Backlight makes it seamless for designers and developers to build the documentation of your Design System.</p><p>
+Automatically versioned as you release</p>`,
+        img: {
+          src: '#',
+          backgroundColor: '#ff9423',
+        },
+        action: {
+          label: 'Start',
+          url: '#',
+        },
+      },
+    ],
+  },
+  {
+    title: 'Design together',
+    promises: [
+      {
         title: `Collaborate on the fly`,
-        description: `Share real time in-browser views of components you are working on. Collaboration has never been so smooth withing your front-end team.
-The hand-over between developers and designers is almost an old story.`,
+        description: `<p>Share real-time preview of components in-browser.</p><p>
+        Collaboration has never been so smooth within your front-end team.</p><p>
+The hand-over between developers and designers is almost an old story.</p>`,
         img: {
           src: '#',
           backgroundColor: '#1891ff',
@@ -28,15 +47,11 @@ The hand-over between developers and designers is almost an old story.`,
           url: '#',
         },
       },
-    ],
-  },
-  {
-    title: 'Main title',
-    promises: [
       {
         title: `Integrates into your workflow seamlessly`,
-        description: `Pushing your Design System in production is just one clic-away. Connect and commit to your GitHub, GitLab and Bitbucket repository. 
-Your components are always up-to-date ! No more hassle to track inconsitency in your code.`,
+        description: `<p>Publish your Design System in one click.</p><p> 
+        Connect and commit to your favorite Git provider.</p><p> 
+        Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
         img: {
           src: '#',
           backgroundColor: '#21d3b0',
@@ -47,35 +62,9 @@ Your components are always up-to-date ! No more hassle to track inconsitency in 
         },
       },
       {
-        title: 'Code with our build-in editor or your favorite',
-        description:
-          'Backlight is open. Use your favorite editor or simply use our online editor to contribute immediately',
-        img: {
-          src: '#',
-          backgroundColor: '#5866cd',
-        },
-        action: {
-          label: 'Discover pricing',
-          url: '#',
-        },
-      },
-      {
-        title: 'Documentation as you go',
-        description: `Backlight makes it easy for designers and developers to build the documentation of your Design System. 
-Automatically versioned as you release`,
-        img: {
-          src: '#',
-          backgroundColor: '#ff9423',
-        },
-        action: {
-          label: 'Start',
-          url: '#',
-        },
-      },
-      {
         title: 'No <string> attached',
-        description: `Export your Design System in a few clicks.
-We love you, but you are free to go at any time!`,
+        description: `<p>Export your Design System in a few clicks.</p><p>
+We love you, so you are free to go any time!</p>`,
         img: {
           src: '#',
           backgroundColor: '#1891ff',
@@ -85,16 +74,35 @@ We love you, but you are free to go at any time!`,
           url: '#',
         },
       },
+    ],
+  },
+  {
+    title: 'Develop anywhere, anytime',
+    promises: [
       {
         title: 'Review instantly',
-        description: `Build your components with real-time review. Forget build and deploy time. Save precious hours.
-Compare visually before you push your code. Multi-config previews (desktop, tablet, mobile, ...).`,
+        description: `<p>Compare visually with live diff preview.</p><p> 
+        Forget build and deploy time. Save precious hours. </p><p> 
+Multi-config previews (desktop, tablet, mobile, ...).</p>`,
         img: {
           src: '#',
           backgroundColor: '#21d3b0',
         },
         action: {
           label: 'Start',
+          url: '#',
+        },
+      },
+      {
+        title: 'Code in the browser or with your favorite editor',
+        description: `<p>Backlight is open and flexible.</p><p>
+          Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
+        img: {
+          src: '#',
+          backgroundColor: '#5866cd',
+        },
+        action: {
+          label: 'Discover pricing',
           url: '#',
         },
       },

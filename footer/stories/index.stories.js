@@ -8,5 +8,5 @@ export default {
 };
 export const story1 = () => ({
   components: { Footer },
-  template: `<div><Footer/></div>`,
+  template: `<div><Footer subscribe="https://somewhere.com/subscribe/post?u=UID&id=ID"/></div>`,
 });

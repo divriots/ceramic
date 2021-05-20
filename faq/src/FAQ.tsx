@@ -8,7 +8,7 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
       <>
         <Disclosure.Button
           as="div"
-          className={`flex items-center py-2 text-xl ${
+          className={`flex justify-between items-center py-2 text-xl cursor-pointer ${
             open ? ' text-primary' : ''
           }`}
         >
@@ -19,16 +19,17 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
             <ChevronUpIcon className="ml-2 w-5 h-5" />
           )}
         </Disclosure.Button>
-        <Disclosure.Panel as="p" className="text-gray-mid text-md py-4">
+        <Disclosure.Panel as="p" className={`text-gray-mid text-md py-4 `}>
           {answer}
         </Disclosure.Panel>
+        {!open && <div className="border-b-1 border-gray-mid"></div>}
       </>
     )}
   </Disclosure>
 );
 
 export default ({ excerpt, title, faq }) => (
-  <section className="mx-auto p-4 grid md:grid-cols-2 max-w-4xl w-full gap-8">
+  <section className="mx-auto p-10 grid md:grid-cols-2 max-w-4xl w-full gap-8">
     <div>
       <h2 className="text-4xl">{title}</h2>
       <p>{excerpt}</p>

@@ -23,7 +23,7 @@ export const wide = () => ({
   setup() {
     return { props };
   },
-  template: `<Card wide v-bind="props"/>`,
+  template: `<Card wide class="font-space-grotesk" v-bind="props"/>`,
 });
 
 export const normal = () => ({
@@ -31,5 +31,5 @@ export const normal = () => ({
   setup() {
     return { props };
   },
-  template: `<Card v-bind="props"/>`,
+  template: `<Card class="font-space-grotesk" v-bind="props"/>`,
 });

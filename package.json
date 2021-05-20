@@ -1,5 +1,5 @@
 {
-  "name": "@divriots/ceramic",
+  "name": "@divriots/lcd",
   "version": "0.0.0",
   "scripts": {
     "serve": "dsd-cli serve 1SuMaEt5uxgp62VC8WVP --open"
