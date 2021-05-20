@@ -36,7 +36,7 @@ export default ({ excerpt, title, faq }) => (
     </div>
     <div>
       {faq.map((props, idx) => (
-        <FAQ key={idx} defaultOpen={idx === 0} {...props} />
+        <FAQ key={idx} {...props} />
       ))}
     </div>
   </section>

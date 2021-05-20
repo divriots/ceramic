@@ -1,3 +1,6 @@
+import { colors } from '../../colors/src/index';
+const { orange, blue, green } = colors.colors;
+
 export default [
   {
     title: '<em>powered by Design System',
@@ -8,7 +11,7 @@ export default [
 Standardize and share a common design language within all developers and designers.</p>`,
         img: {
           src: '#',
-          backgroundColor: '#ff9423',
+          backgroundColor: orange,
         },
         action: {
           label: 'Discover',
@@ -21,7 +24,7 @@ Standardize and share a common design language within all developers and designe
 Automatically versioned as you release</p>`,
         img: {
           src: '#',
-          backgroundColor: '#ff9423',
+          backgroundColor: blue,
         },
         action: {
           label: 'Start',
@@ -40,7 +43,7 @@ Automatically versioned as you release</p>`,
 The hand-over between developers and designers is almost an old story.</p>`,
         img: {
           src: '#',
-          backgroundColor: '#1891ff',
+          backgroundColor: green,
         },
         action: {
           label: 'View documentation',
@@ -54,23 +57,10 @@ The hand-over between developers and designers is almost an old story.</p>`,
         Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
         img: {
           src: '#',
-          backgroundColor: '#21d3b0',
+          backgroundColor: orange,
         },
         action: {
           label: 'Ask a demo',
-          url: '#',
-        },
-      },
-      {
-        title: 'No <string> attached',
-        description: `<p>Export your Design System in a few clicks.</p><p>
-We love you, so you are free to go any time!</p>`,
-        img: {
-          src: '#',
-          backgroundColor: '#1891ff',
-        },
-        action: {
-          label: 'Start',
           url: '#',
         },
       },
@@ -82,11 +72,11 @@ We love you, so you are free to go any time!</p>`,
       {
         title: 'Review instantly',
         description: `<p>Compare visually with live diff preview.</p><p> 
-        Forget build and deploy time. Save precious hours. </p><p> 
-Multi-config previews (desktop, tablet, mobile, ...).</p>`,
+        Forget build and deploy time. Save precious hours.</p><p> 
+Parallel viewports preview (desktop, tablet, mobile).</p>`,
         img: {
           src: '#',
-          backgroundColor: '#21d3b0',
+          backgroundColor: blue,
         },
         action: {
           label: 'Start',
@@ -99,10 +89,23 @@ Multi-config previews (desktop, tablet, mobile, ...).</p>`,
           Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
         img: {
           src: '#',
-          backgroundColor: '#5866cd',
+          backgroundColor: green,
         },
         action: {
           label: 'Discover pricing',
+          url: '#',
+        },
+      },
+      {
+        title: 'No <string> attached',
+        description: `<p>Export your Design System in a few clicks.</p><p>
+We love you, so you are free to go any time!</p>`,
+        img: {
+          src: '#',
+          backgroundColor: orange,
+        },
+        action: {
+          label: 'Start',
           url: '#',
         },
       },

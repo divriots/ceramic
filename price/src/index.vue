@@ -12,8 +12,8 @@ export default {
   },
   computed: {
     value() {
-      if (this.period === 'month') return this.price.value;
-      return Math.trunc(this.price.value * 0.8);
+      if (this.period === 'month') return Math.trunc(this.price.value / .8);
+      return this.price.value 
     },
   },
   setup() {
@@ -64,8 +64,8 @@ export default {
             >
               -
             </button>
-    <span>{{ count }}</span>
-    <button class="m-2 p-2 rounded-lg shadow" @click="count++">
+    <span class="tabular-nums">{{ count }}</span>
+    <button class="m-2 p-2 rounded-lg border-2 border-dashed border-opacity-75 border-white" @click="count++">
               +
             </button>
   </div>

@@ -14,7 +14,7 @@
           </h1>
           <p class="mt-3 text-base text-gray-mid sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             Build your Front-end source of truth.<br/>
-            Collaborate & Maintain on the go.<br/>
+            Collaborate & maintain on the go.<br/>
             Get efficiency & consistency you deserve.
           </p>
           <div class="flex mt-8 gap-2">

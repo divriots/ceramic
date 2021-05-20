@@ -1,6 +1,5 @@
 <template>
-  <a :href="href" aria-label="twitter"
-    class="flex items-center text-gray-700 hover:bg-gray-100 hover:text-black rounded-lg px-2 py-1">
+  <a :href="href" aria-label="twitter" class="flex items-center action px-2 py-1">
     <span v-if="!!$slots.default" class="flex-grow"><slot></slot></span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-44.7006 -60.54775 387.4052 363.2865" class="h-auto w-8"
       fill="currentColor">

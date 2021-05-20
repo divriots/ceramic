@@ -9,7 +9,7 @@ export default {
   },
   args: {
     components: { Price },
-    template: `<Price v-bind="props" class="w-80 text-white" banner=""/>`,
+    template: `<Price v-bind="props" class="w-80 bg-gray-divriots" banner=""/>`,
   },
 };
 
@@ -24,7 +24,7 @@ export const pro = (args) => ({
     return { props: Pro };
   },
   ...args,
-  template: `<Price v-bind="props" class="w-80 bg-gray-divriots text-primary" banner="Banner"/>`,
+  template: `<Price v-bind="props" class="w-80 bg-primary text-white" banner="Banner"/>`,
 });
 export const enterprise = (args) => ({
   setup() {

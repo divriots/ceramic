@@ -1,6 +1,5 @@
 <template>
-  <a :href="href" aria-label="discord"
-    class="flex items-center text-gray-700 hover:bg-gray-100 hover:text-black px-2 py-1 rounded-lg">
+  <a :href="href" aria-label="discord" class="flex items-center flex items-center action px-2 py-1">
     <span v-if="!!$slots.default" class="flex-grow"><slot></slot></span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-26.25 -50 227.5 300" class="h-auto w-6" fill="currentColor">
       <path

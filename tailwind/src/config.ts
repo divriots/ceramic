@@ -5,4 +5,7 @@ export const config = {
   darkMode: 'class',
   theme,
   plugins: [typography],
+  variants: {
+    extend: {},
+  },
 };
