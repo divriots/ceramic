@@ -30,11 +30,11 @@ export const features = {
   },
   bitbucket: {
     group: groups.source_control,
-    label: 'BitBucket integration (Coming soon)',
+    label: 'BitBucket (Coming soon)',
   },
   publish_public: {
     group: groups.package_registry,
-    label: 'Publish NPM w/ @backlight-dev',
+    label: 'Publish NPM @backlight-dev',
   },
   publish_custom_registry: {
     group: groups.package_registry,
@@ -42,7 +42,7 @@ export const features = {
   },
   publish_private: {
     group: groups.package_registry,
-    label: 'Publish private/public',
+    label: 'Publish private/public packages',
   },
   support_community: {
     group: groups.support,
@@ -68,13 +68,13 @@ export const features = {
     group: groups.premium,
     label: 'Advanced User Management (RBAC, SSO)',
   },
-  advances_features: {
+  advanced_features: {
     group: groups.premium,
     label: 'Advanced Features',
   },
   consulting: {
     group: groups.premium,
-    label: 'Desing System Consulting',
+    label: 'Design System Consulting',
   },
 };
 
@@ -149,6 +149,12 @@ export const Enterprise = {
   title: 'Enterprise',
   inherits: Pro,
   additionalFeatures: [
+    {
+      restriction: 'Unlimited',
+      ...features.projects,
+      highlight: true,
+    },
+    features.advanced_features,
     features.matrix_testing,
     features.ci_cd,
     features.advanced_user_management,

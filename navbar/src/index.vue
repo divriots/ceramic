@@ -29,7 +29,7 @@
             </svg>
           </label>
         </div>
-        <component :is="Logo" class="text-xl">Backlight.dev</component>
+        <component :is="Logo" class="text-xl"></component>
         <div class="hidden md:block md:ml-6">
           <div class="flex items-center">
             <a :href="route.pathname" v-for="route of routes" key="route"
@@ -45,7 +45,7 @@
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
         <a :href="route.pathname" v-for="route of routes" key="route"
-          :class="`action p-2 block ${current==route?'text-primary font-semibold':'font-normal '}`">{{route.label}}</a>
+          :class="`action px-2 py-1 block ${current==route?'text-primary font-semibold':'font-normal '}`">{{route.label}}</a>
         <component :is="Discord">Discord</component>
         <component :is="Twitter">Twitter</component>
       </div>

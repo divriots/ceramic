@@ -13,14 +13,17 @@
       </div>
     </form>
     <div class="links flex flex-col sm:flex-row text-black-divriots">
-      <component :is="Logo" class="sm:pr-10 py-10 mx-8">Backlight.dev</component>
+      <component :is="Logo" class="sm:pr-10 py-10 mx-8"></component>
       <div class="cols sm:min-w-max sm:pr-32">
         <div class="col">
           <label>
           LINKS
         </label>
-          <a :href="careers_link" target="blank_">Careers</a>
-          <a href="https://www.notion.so/Press-8211461e4609470caa0cbff9e6d3b5b2" target="blank_">Press</a>
+          <template v-for="route in routes" :key="route.pathname">
+            <a href="route.pathname">{{ route.label}}</a>
+          </template>
+          <!-- <a :href="careers_link" target="blank_">Careers</a> -->
+          <!-- <a href="https://www.notion.so/Press-8211461e4609470caa0cbff9e6d3b5b2" target="blank_">Press</a> -->
         </div>
         <div class="col">
           <label>
@@ -28,11 +31,8 @@
         </label>
           <div class="flex">
             <component :is="Discord"></component>
-            <span style="display:inline-block; min-width:16px" />
             <component :is="Twitter"></component>
-            <span style="display:inline-block; min-width:16px" />
             <component :is="LinkedIn"></component>
-            <span style="display:inline-block; min-width:16px" />
             <component :is="Github"></component>
           </div>
         </div>
@@ -52,6 +52,7 @@ import Discord from '../../discord/src/index.vue';
 import Logo from '../../logo/src/index.vue'
 export default {
   props:{
+    routes: { type : Array , default: []},
     subscribe: { type :String , required: true},
     contact:{ type: String , required: true}, 
   },
@@ -66,7 +67,7 @@ export default {
 };
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .gradient:before {
     content: '';
     position: absolute;
