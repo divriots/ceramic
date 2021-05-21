@@ -9,7 +9,7 @@ export default {
   };
 </script>
 <template>
-  <section class="bg-black-divriots text-white p-10">
+  <section class="bg-black-divriots text-white">
     <component :is="Group" v-for="(promisesGroup,idx) in promisesGroups" :key="promisesGroup.group"
       :title="promisesGroup.title">
       <component :is="Promise" v-for="promise of promisesGroup.promises" v-bind="promise" :reverse="idx%2!==0">

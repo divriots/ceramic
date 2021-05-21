@@ -24,7 +24,7 @@ Standardize and share a common design language within all developers and designe
 Automatically versioned as you release</p>`,
         img: {
           src: '#',
-          backgroundColor: blue,
+          backgroundColor: orange,
         },
         action: {
           label: 'Start',
@@ -43,7 +43,7 @@ Automatically versioned as you release</p>`,
 The hand-over between developers and designers is almost an old story.</p>`,
         img: {
           src: '#',
-          backgroundColor: green,
+          backgroundColor: blue,
         },
         action: {
           label: 'View documentation',
@@ -57,7 +57,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
         Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
         img: {
           src: '#',
-          backgroundColor: orange,
+          backgroundColor: blue,
         },
         action: {
           label: 'Ask a demo',
@@ -76,7 +76,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
 Parallel viewports preview (desktop, tablet, mobile).</p>`,
         img: {
           src: '#',
-          backgroundColor: blue,
+          backgroundColor: green,
         },
         action: {
           label: 'Start',
@@ -102,7 +102,7 @@ Parallel viewports preview (desktop, tablet, mobile).</p>`,
 We love you, so you are free to go any time!</p>`,
         img: {
           src: '#',
-          backgroundColor: orange,
+          backgroundColor: green,
         },
         action: {
           label: 'Start',
