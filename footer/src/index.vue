@@ -20,7 +20,7 @@
           LINKS
         </label>
           <template v-for="route in routes" :key="route.pathname">
-            <a href="route.pathname">{{ route.label}}</a>
+            <a :href="route.pathname">{{ route.label}}</a>
           </template>
           <!-- <a :href="careers_link" target="blank_">Careers</a> -->
           <!-- <a href="https://www.notion.so/Press-8211461e4609470caa0cbff9e6d3b5b2" target="blank_">Press</a> -->

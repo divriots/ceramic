@@ -27,7 +27,7 @@ const CardKit = ({
 );
 
 export default () => (
-  <section className="text-center grid gap-8 md:gap-4 relative">
+  <section className="text-center grid gap-8 md:gap-4 relative sm:mt-10">
     <h2 className="text-4xl sm:text-5xl lg:text-6xl">
       Start your{' '}
       <span className="text-primary whitespace-nowrap">design system</span> in

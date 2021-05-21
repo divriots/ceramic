@@ -15,7 +15,7 @@
       :style="{ 'background-color': img.backgroundColor }">
       <img class="max-w-64 sm:max-w-80" :src="img.src" />
     </div>
-    <div :class="`flex flex-col space-y-12 max-w-80 sm:max-w-96 ${
+    <div :class="`flex flex-col h-full justify-center space-y-12 max-w-80 sm:max-w-96 bg-black-divriots ${
         reverse ? 'md:col-start-1 md:row-start-1' : ''
       }`">
       <span class="text-3xl font-semibold">{{ title }}</span>
