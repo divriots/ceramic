@@ -1,4 +1,5 @@
-import { assetRef } from './commons';
+const assetRef = (asset) =>
+  new URL(asset, 'https://design-systems.dev/assets/').href;
 
 export default [
   {

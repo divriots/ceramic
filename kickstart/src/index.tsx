@@ -1,7 +1,5 @@
 import React from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import kits from '../../config/src/starter-kits';
-import { dropbox } from '../../config/src/commons';
 
 const StarterKit = ({ name, href, imgSrc }) => (
   <a href={href} key={name} className="inline-flex items-center p-2 gap-2">
@@ -12,9 +10,7 @@ const StarterKit = ({ name, href, imgSrc }) => (
 
 export default () => (
   <section className="p-4 sm:p-10 justify-center items-center flex flex-col md:flex-row bg-black-default text-white gap-8 md:gap-16">
-    <div className="max-w-md p-10 bg-secondary rounded-lg flex-grow grid justify-center">
-      <img src={dropbox('kickstart.png')} />
-    </div>
+    <div className="max-w-md p-10 bg-secondary rounded-lg flex-grow grid justify-center"></div>
     <div className="max-w-md text-left p-4">
       <h2 className="font-semibold mx-auto text-3xl">
         Kickstart your{' '}

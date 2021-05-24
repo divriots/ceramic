@@ -13,9 +13,8 @@ html {
     rounded-md
     focus:outline-none
     focus:ring-2
-    focus:ring-primary
     focus:ring-offset-2
-    focus:ring-offset-transparent;
+    focus:ring-offset-white;
   }
   .action {
     @apply base_action 
@@ -88,6 +87,6 @@ html {
         #F3F4F6 20%,
         rgba(255, 255, 255, 0) 150%
       ),
-      linear-gradient(to right, #00c3ff, #ffff1c);
+      linear-gradient(to right, #4cb8c4, #3cd3ad);
   }
 }

@@ -1,27 +1,25 @@
 import React from 'react';
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import kits from '../../config/src/starter-kits';
+import kits from './data';
 
-const CardKit = ({
-  name,
-  description,
-  href,
-  imgSrc,
-  thumbSrc,
-  backgroundColor,
-}) => (
+const CardKit = ({ name, desc, href, hero_img, bg_img, backgroundColor }) => (
   <div
-    className="text-left flex flex-col text-white rounded-lg gap-4 p-6 w-64 sm:w-80"
+    className="relative overflow-hidden text-left flex flex-col text-white rounded-lg gap-4 p-6 w-64 sm:w-80"
     style={{ height: '420px', backgroundColor }}
   >
-    <img className="h-40 w-full" src={thumbSrc} />
-    <img className="h-8 w-8" src={imgSrc} />
+    <img className="h-32 w-full" src={hero_img} />
     <header className="text-bold text-xl">{name}</header>
-    <p className="flex-grow">{description || 'ad'}</p>
+    <p className="flex-grow">{desc}</p>
     <a href={href} className="flex items-center">
       Discover
       <ChevronRightIcon className="w-8 h-8" aria-hidden="true" />
     </a>
+    {bg_img && (
+      <img
+        className="absolute h-56 w-auto right-0 bottom-0 opacity-watermark transform -rotate-12 translate-x-8 translate-y-8"
+        src={bg_img}
+      />
+    )}
   </div>
 );
 
@@ -44,6 +42,13 @@ export default () => (
           .map((kit, idx) => (
             <CardKit className="" key={idx} {...kit} />
           ))}
+        <a
+          href="/starterkits"
+          className="bg-secondary relative overflow-hidden grid items-center text-4xl text-bold text-center text-black-default rounded-lg gap-4 p-6 w-64 sm:w-80"
+          style={{ height: '420px' }}
+        >
+          Explore all Starter-kits
+        </a>
       </div>
     </div>
   </section>

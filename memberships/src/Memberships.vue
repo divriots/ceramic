@@ -7,7 +7,7 @@ import Price from '../../price/src/index.vue';
   };
 </script>
 <template>
-  <section class="gradient memberships text-center relative px-4">
+  <section class="gradient text-center relative px-4">
     <h2 class="text-4xl sm:text-5xl lg:text-6xl sm:texttext-6xl py-16">Discover our pricing</h2>
     <div class="mx-auto max-w-5xl grid lg:grid-cols-3 align-center justify-center gap-8">
       <div v-for="(plan,idx) of plans" :key="plan.title" :class="`${idx%3===1?'':'py-8'}`">
@@ -20,8 +20,8 @@ import Price from '../../price/src/index.vue';
   </section>
 </template>
 
-<style>
-  .gradient.memberships::before {
+<style scoped>
+  .gradient::before {
     height: 500px;
   }
 </style>

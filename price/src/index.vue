@@ -30,7 +30,7 @@ export default {
   <div class="relative rounded-lg shadow-lg p-6 flex flex-col">
     <div class="flex bg-primary rounded-md shadow-inset-control" v-if="price && price.value > 0">
       <button
-        :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
+        :class="`flex-grow px-6 py-2 ${
           period === 'year' ? 'text-primary bg-white' : ''
         }`"
         @click="period = 'year'"
@@ -38,7 +38,7 @@ export default {
         Yearly (-20%)
       </button>
       <button
-        :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
+        :class="`flex-grow px-6 py-2 ${
           period === 'month' ? 'text-primary bg-white' : ''
         }`"
         @click="period = 'month'"
@@ -59,13 +59,13 @@ export default {
 <div class="flex items-center" v-if="price && price.unit">
   <div class="flex text-sm items-center" v-if="price && price.unit">
     <button
-              class="btn-primary m-2 p-2"
+              class="m-2 p-2 rounded-lg shadow"
               @click="count > 1 && count--"
             >
               -
             </button>
     <span class="tabular-nums">{{ count }}</span>
-    <button class="btn-primary m-2 p-2" @click="count++">
+    <button class="m-2 p-2 rounded-lg border-2 border-dashed border-opacity-75 border-white" @click="count++">
               +
             </button>
   </div>

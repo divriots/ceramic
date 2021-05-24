@@ -67,8 +67,8 @@ export default {
 };
 
 </script>
-<style lang="scss">
-  footer.gradient::before {
+<style lang="scss" scoped>
+  .gradient::before {
     height: 100%;
   }
 
