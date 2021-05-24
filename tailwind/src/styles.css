@@ -75,4 +75,18 @@ html {
   .scrollable-horizontal::-webkit-scrollbar {
     display: none;
   }
+  .gradient:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(
+        var(--gradient-direction, 180deg),
+        #F3F4F6 20%,
+        rgba(255, 255, 255, 0) 150%
+      ),
+      linear-gradient(to right, #4cb8c4, #3cd3ad);
+  }
 }
