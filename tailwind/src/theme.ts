@@ -16,13 +16,8 @@ const typographyExtension = {
           color: 'inherit',
           a: {
             color: 'inherit',
-            opacity: 0.75,
             fontWeight: '500',
             textDecoration: 'underline',
-            '&:hover': {
-              opacity: 1,
-              color: colors.primary,
-            },
           },
           b: {
             color: 'inherit',

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind is pushing the default line-height too much */
+html {
+  line-height: 1.25;
+}
+
 @layer components {
   .base_action {
     @apply cursor-pointer
@@ -31,6 +36,13 @@
     relative
     bg-primary 
     text-white;
+  }
+  .btn-secondary {
+    @apply base_action
+    base_button
+    relative
+    bg-secondary 
+    text-black-default;
   }
   .btn-primary:before {
     @apply transition-opacity
