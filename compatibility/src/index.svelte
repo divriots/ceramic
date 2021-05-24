@@ -5,8 +5,8 @@
 <section class="text-center text-white bg-black-divriots py-8 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-secondary">supported</span>
   </h2>
-  <div class="mx-auto max-w-6xl technologies max-h-80 relative overflow-auto my-4">
-    <div class="flex flex-wrap gap-8 justify-center py-8">
+  <div class="scrollable-horizontal mx-auto max-w-4xl technologies max-h-64 relative">
+    <div class="flex flex-col flex-wrap gap-8 justify-start py-8 h-64">
       {#each technologies as t, i}
       <figure class="technology relative opacity-50 hover:opacity-100">
         <figcaption class="hidden -top-6 w-full absolute text-center">
@@ -20,7 +20,7 @@
   <div class="absolute bottom-6 h-12 w-full bg-gradient-to-b from-transparent to-black-divriots z-index-1"></div>
 </section>
 
-<style>
+<style scoped>
   .technology:hover figcaption {
     display: block
   }
