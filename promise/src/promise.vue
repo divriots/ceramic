@@ -13,7 +13,7 @@
   <div class="max-w-4xl mx-auto grid md:grid-cols-2 items-center py-12 justify-around gap-8">
     <div class="bg-black-default grid place-self-center place-items-center h-96 sm:h-128 w-full rounded-lg"
       :style="{ 'background-color': img.backgroundColor }">
-      <img class="max-w-64 sm:max-w-80 p-4" :src="img.src" />
+      <img class="max-w-64 sm:max-w-80 p-4 max-h-full" :src="img.src" />
     </div>
     <div :class="`flex flex-col h-full justify-center space-y-12 max-w-80 sm:max-w-96 bg-black-divriots ${
         reverse ? 'md:col-start-1 md:row-start-1' : ''
