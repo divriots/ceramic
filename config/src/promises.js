@@ -1,6 +1,9 @@
 import { colors } from '../../colors/src/index';
 const { orange, blue, green } = colors.colors;
 
+const dropbox = (asset) =>
+  new URL(asset, 'https://dl.dropboxusercontent.com/s/j2t4i1v6wfizmr6/').href;
+
 export default [
   {
     title: '<em>powered by Design System',
@@ -10,7 +13,7 @@ export default [
         description: `<p>Backlight helps you consolidate your Design System, from tokens to complex components.</p><p>
 Standardize and share a common design language within all developers and designers.</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_1_1.png'),
           backgroundColor: orange,
         },
         action: {
@@ -23,7 +26,7 @@ Standardize and share a common design language within all developers and designe
         description: `<p>Backlight makes it seamless for designers and developers to build the documentation of your Design System.</p><p>
 Automatically versioned as you release</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_1_2.png'),
           backgroundColor: orange,
         },
         action: {
@@ -42,7 +45,7 @@ Automatically versioned as you release</p>`,
         Collaboration has never been so smooth within your front-end team.</p><p>
 The hand-over between developers and designers is almost an old story.</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_2_1.png'),
           backgroundColor: blue,
         },
         action: {
@@ -56,7 +59,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
         Connect and commit to your favorite Git provider.</p><p> 
         Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_2_2.png'),
           backgroundColor: blue,
         },
         action: {
@@ -75,7 +78,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
         Forget build and deploy time. Save precious hours.</p><p> 
 Parallel viewports preview (desktop, tablet, mobile).</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_3_1.png'),
           backgroundColor: green,
         },
         action: {
@@ -88,7 +91,7 @@ Parallel viewports preview (desktop, tablet, mobile).</p>`,
         description: `<p>Backlight is open and flexible.</p><p>
           Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_3_2.png'),
           backgroundColor: green,
         },
         action: {
@@ -101,7 +104,7 @@ Parallel viewports preview (desktop, tablet, mobile).</p>`,
         description: `<p>Export your Design System in a few clicks.</p><p>
 We love you, so you are free to go any time!</p>`,
         img: {
-          src: '#',
+          src: dropbox('promise_3_3.png'),
           backgroundColor: green,
         },
         action: {
