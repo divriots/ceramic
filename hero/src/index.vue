@@ -3,7 +3,7 @@
 </script>
 <template>
   <section
-    class="mx-auto max-w-5xl grid md:grid-cols-2 overflow-hidden mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 place-items-center">
+    class="gradient mx-auto max-w-5xl grid md:grid-cols-2 overflow-hidden mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 place-items-center">
     <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
       <div class="mx-auto max-w-7xl pl-4 lg:pr-6">
         <div class="text-left">
@@ -33,3 +33,8 @@
     </div>
   </section>
 </template>
+<style scoped>
+  .gradient::before {
+    height: 1200px;
+  }
+</style>

@@ -27,7 +27,7 @@ export default {
 };
 </script>
 <template>
-  <div class="relative rounded-lg shadow-lg p-6 flex flex-col" :class="{'border-secondary border-2':!!banner}">
+  <div class="relative rounded-lg shadow-lg p-6 flex flex-col">
     <div class="flex bg-primary rounded-md shadow-inset-control" v-if="price && price.value > 0">
       <button
         :class="`flex-grow px-6 py-2 ${
@@ -72,7 +72,7 @@ export default {
   <span class="text-sm px-2">{{ price.unit }}</span>
 </div>
 </header>
-<p class="bg-secondary text-black-divriots text-center rounded-md py-1" v-if="banner">{{banner}}</p>
+<p class="bg-black-divriots text-white font-semibold text-center rounded-md py-1" v-if="banner">{{banner}}</p>
 <span class="mx-auto">{{ legend }}</span>
 <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8 mt-4">
   <li class="mb-4 flex items-start text-left" v-if="inherits">

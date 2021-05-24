@@ -68,15 +68,8 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-  .gradient:before {
-    content: '';
-    position: absolute;
-    width: 100%;
+  .gradient::before {
     height: 100%;
-    left: 0px;
-    top: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, #F3F4F6 20%, rgba(255, 255, 255, 0) 180%), linear-gradient(58.46deg, #6373e6 35.31%, #84e6fb 84.04%);
   }
 
   .links {
