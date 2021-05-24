@@ -21,7 +21,7 @@
       <span class="text-3xl font-semibold">{{ title }}</span>
       <div class="text-lg grid text-gray-divriots gap-4" v-html="description"></div>
       <div>
-        <a :href="action.href" class="btn-primary">
+        <a :href="action.href" class="btn-secondary">
           {{ action.label }}
         </a>
       </div>

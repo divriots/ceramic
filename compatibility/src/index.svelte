@@ -3,7 +3,8 @@
 </script>
 
 <section class="text-center text-white bg-black-divriots py-8 relative">
-  <h2 class="text-3xl">All Web technologies <span class="block text-primary">supported</span></h2>
+  <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-secondary">supported</span>
+  </h2>
   <div class="mx-auto max-w-6xl technologies max-h-80 relative overflow-auto">
     <div class="flex flex-wrap gap-8 justify-center py-8">
       {#each technologies as t, i}
