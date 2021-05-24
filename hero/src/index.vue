@@ -29,7 +29,20 @@
       </div>
     </div>
     <div class="relative hidden md:grid gap-4 pt-12 pb-24 px-4 items-center w-96">
-      <img src="https://via.placeholder.com/400"/>
+      <div class="absolute bg-black-divriots w-2/3 top-0 bottom-16 left-1/6 rounded-lg z-auto" style="left: 16.666%">
+      </div>
+      <div class="z-10 rounded-full bg-teal-mid py-3 px-8 text-white text-left">
+        Hello, I'm a H1 title
+      </div>
+      <div class="z-10 rounded-full bg-teal-light py-3 px-8 text-gray-mid text-left">
+        &lt;and here>
+        <span class="text-black-default font-bold">is the</span> &lt;/code>
+      </div>
+      <div class="z-10 rounded-full bg-white py-3 px-8 text-primary mx-16">
+        No more error
+      </div>
+      <div class="z-10 rounded-full bg-gray-dark py-1 px-8 text-primary mx-16">
+      </div>
     </div>
   </section>
 </template>
