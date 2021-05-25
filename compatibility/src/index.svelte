@@ -21,6 +21,10 @@
 </section>
 
 <style scoped>
+  .technology:hover img {
+    transform: scale(1.2);
+  }
+
   .technology:hover figcaption {
     display: block
   }
