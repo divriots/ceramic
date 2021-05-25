@@ -12,7 +12,7 @@
         <button type="submit" value="Subscribe" name="subscribe" class="btn-primary self-start">Subscribe</button>
       </div>
     </form>
-    <div class="links flex flex-col sm:flex-row text-black-divriots">
+    <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-black-divriots">
       <component :is="Logo" class="sm:pr-10 py-10 mx-8"></component>
       <div class="cols sm:min-w-max sm:pr-32">
         <div class="col">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="flex bg-black-divriots justify-end bg-opacity-50">
+    <div class="flex bg-black-divriots justify-center bg-opacity-50">
       <a class="text-gray-divriots px-2 py-1" href="https://divriots.com">Made by
         <img class="h-4 inline" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
       </a>
