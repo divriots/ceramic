@@ -1,8 +1,7 @@
 import { colors } from '../../colors/src/index';
 const { orange, blue, green } = colors.colors;
 
-const dropbox = (asset) =>
-  new URL(asset, 'https://dl.dropboxusercontent.com/s/j2t4i1v6wfizmr6/').href;
+const dropbox = (asset) => new URL('https://via.placeholder.com/400').href;
 
 export default [
   {
