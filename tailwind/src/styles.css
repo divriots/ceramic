@@ -45,7 +45,8 @@ html {
     bg-secondary 
     text-black-default;
   }
-  .btn-primary:before {
+  .btn-primary:before,
+  .btn-secondary:before {
     @apply transition-opacity
     rounded-md
     duration-200
@@ -55,10 +56,12 @@ html {
     bg-white;
     content: '';
   }
-  .btn-primary:hover::before {
+  .btn-primary:hover::before,
+  .btn-secondary:hover::before {
     opacity: 0.1;
   }
-  .btn-primary:active::before {
+  .btn-primary:active::before,
+  .btn-secondary:hover::before {
     opacity: 0.2;
   }
   .scrollable-horizontal {
