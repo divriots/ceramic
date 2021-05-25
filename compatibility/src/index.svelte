@@ -9,7 +9,7 @@
     <div class="flex flex-col flex-wrap justify-start py-8 h-80 mt-10">
       {#each technologies as t, i}
       <figure class="technology relative opacity-50 hover:opacity-100 p-6">
-        <figcaption class="hidden -top-6 w-full absolute text-center">
+        <figcaption class="hidden -top-6 w-full absolute text-center left-0">
           <span class="p-1 text-white bg-black-divriots">{t.name}</span>
         </figcaption>
         <img class="w-20 h-20" src={t.logo} alt={t.name} aria-label={t.name}/>
