@@ -8,6 +8,7 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
       <>
         <Disclosure.Button
           as="div"
+          style={{ '-webkit-appearance': 'none' } as any}
           className={`flex justify-between items-center py-2 text-xl cursor-pointer ${
             open ? ' text-primary' : ''
           }`}
