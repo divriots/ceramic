@@ -8,7 +8,7 @@
       <div>The landing in front of you is made with <span class="text-secondary">Backlight</span></div>
       <span class="mx-auto text-gray-light text-lg max-w-2xl"
         >Using TailwindCSS with Vue, React and Svelte components!</span>
-      <a class="btn-secondary mx-auto text-lg flex" href="#">Explore</a>
+      <a class="btn-secondary mx-auto text-lg flex" href="/edit/1SuMaEt5uxgp62VC8WVP/hero">Explore</a>
     </div>
   </section>
 </template>

@@ -32,7 +32,7 @@
         <component :is="Logo" class="text-xl"></component>
         <div class="hidden md:block md:ml-6">
           <div class="flex items-center">
-            <a :href="route.pathname" v-for="route of routes" key="route"
+            <a :href="route.pathname" v-for="route of routes" :key="route"
               :class="`action px-3 ${current==route?'text-primary font-semibold':'font-normal'}`">{{route.label}}</a>
             <component :is="Discord"></component>
             <component :is="Twitter"></component>
@@ -44,7 +44,7 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <a :href="route.pathname" v-for="route of routes" key="route"
+        <a :href="route.pathname" v-for="route of routes" :key="route"
           :class="`action px-2 py-1 block ${current==route?'text-primary font-semibold':'font-normal '}`">{{route.label}}</a>
         <component :is="Discord">Discord</component>
         <component :is="Twitter">Twitter</component>

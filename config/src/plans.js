@@ -46,7 +46,7 @@ export const features = {
   },
   support_community: {
     group: groups.support,
-    label: `<a class='icon' href='https://discord.gg/z7JUzhn'>Community support</a>`,
+    label: `<a class='icon' href='https://discord.gg/z7JUzhn' target="_blank">Community support</a>`,
   },
   support_email: {
     group: groups.support,
@@ -108,8 +108,8 @@ export const Free = {
     features.support_community,
   ],
   action: {
-    label: 'Sign up',
-    url: '/signup',
+    label: 'Start now (no credit card required)',
+    url: '/get-started',
     type: 'outline',
   },
 };
@@ -139,8 +139,8 @@ export const Pro = {
     features.support_email,
   ],
   action: {
-    label: 'Subscribe',
-    url: '/signup/ENTHUSIAST',
+    label: 'Start now (no credit card required)',
+    url: '/get-started',
     type: 'primary',
   },
 };

@@ -7,7 +7,7 @@ export default [
     desc: `Visualy setup the design tokens of tailwindcss.
            Export a tailwind.config.js ready for your hot application.
            Also contains examples in headless-ui components for React and Vue.`,
-    href: 'https://backlight.dev/edit/sNbJipmRTmslL3f8RZaO/',
+    href: '/edit/sNbJipmRTmslL3f8RZaO/',
     bg_img:
       'https://dl.dropbox.com/s/w759axusxnp7chd/CSS3%20logo%20-%20White.svg',
   },
@@ -17,7 +17,7 @@ export default [
     name: 'Starter-kit Chakra',
     desc: `Chakra UI is a simple, modular and accessible component library. 
     Based on system-ui tokens.`,
-    href: 'https://backlight.dev/edit/sNbJipmRTmslL3f8RZaO/',
+    href: '/edit/sNbJipmRTmslL3f8RZaO/',
     bg_img:
       'https://dl.dropbox.com/s/ydimq58g76lcj29/React%20logo%20-%20White.svg',
   },
@@ -27,7 +27,7 @@ export default [
     name: 'Starter-kit System-ui',
     desc:
       'Design token in system-ui with examples in styled-components and theme-ui.',
-    href: 'https://backlight.dev/edit/z99ptYZyvMOGDivUlP9u/',
+    href: '/edit/z99ptYZyvMOGDivUlP9u/',
     bg_img:
       'https://dl.dropbox.com/s/ydimq58g76lcj29/React%20logo%20-%20White.svg',
   },

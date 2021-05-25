@@ -18,10 +18,10 @@
             Get efficiency & consistency you deserve.
           </p>
           <div class="flex mt-8 space-x-2">
-            <a href="#" class="btn-primary">
+            <a href="/get-started" class="btn-primary">
               Start now
             </a>
-            <a href="https://calendly.com/gg_/backlight" class="btn text-primary">
+            <a href="https://calendly.com/gg_/backlight" class="btn text-primary" target="_blank">
               Ask a Demo
             </a>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" aria-label="discord" class="flex items-center flex items-center action px-2 py-1">
+  <a :href="href" aria-label="discord" class="flex items-center flex items-center action px-2 py-1" target="_discord">
     <span v-if="!!$slots.default" class="flex-grow"><slot></slot></span>
     <svg width="71" height="55" viewBox="0 0 71 55" fill="none" class="h-5 w-auto">
       <g clip-path="url(#clip0)">
@@ -19,7 +19,7 @@
 <script>
   export default {
   props: {
-    href: { type: String, default: '#' },
+    href: { type: String, default: 'https://discord.gg/XkQxSU9' },
   },
 };
 </script>
