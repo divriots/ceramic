@@ -5,10 +5,10 @@
 <section class="text-center text-white bg-black-divriots py-8 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-secondary">supported</span>
   </h2>
-  <div class="scrollable-horizontal mx-auto max-w-4xl technologies max-h-64 relative">
-    <div class="flex flex-col flex-wrap space-y-8 space-x-8 justify-start py-8 h-64">
+  <div class="scrollable-horizontal mx-auto max-w-4xl technologies max-h-80 relative">
+    <div class="flex flex-col flex-wrap justify-start py-8 h-80 mt-10">
       {#each technologies as t, i}
-      <figure class="technology relative opacity-50 hover:opacity-100">
+      <figure class="technology relative opacity-50 hover:opacity-100 p-6">
         <figcaption class="hidden -top-6 w-full absolute text-center">
           <span class="p-1 text-white bg-black-divriots">{t.name}</span>
         </figcaption>
