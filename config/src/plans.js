@@ -108,9 +108,10 @@ export const Free = {
     features.support_community,
   ],
   action: {
-    label: 'Start now (no credit card required)',
+    label: 'Start now',
     url: '/get-started',
     type: 'outline',
+    legend: 'No credit card required',
   },
 };
 
@@ -136,12 +137,12 @@ export const Pro = {
     },
     features.publish_custom_registry,
     features.publish_private,
-    features.support_email,
   ],
   action: {
-    label: 'Start now (no credit card required)',
+    label: 'Start now',
     url: '/get-started',
     type: 'primary',
+    legend: 'No credit card required',
   },
 };
 

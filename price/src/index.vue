@@ -102,6 +102,7 @@ export default {
   <a :href="action.url" class="btn bg-background block text-base font-display text-primary">
     {{ action.label }}
   </a>
+  <span class="opacity-75 text-sm">{{action.legend}}</span>
 </div>
 </div>
 </template>

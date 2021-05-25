@@ -9,7 +9,7 @@ export default {
   },
   args: {
     components: { Price },
-    template: `<Price v-bind="props" class="w-80 bg-gray-divriots" banner=""/>`,
+    template: `<Price v-bind="props" class="w-80 bg-white" banner=""/>`,
   },
 };
 
