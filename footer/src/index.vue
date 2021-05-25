@@ -44,6 +44,11 @@
         </div>
       </div>
     </div>
+    <div class="flex bg-black-divriots justify-end bg-opacity-50">
+      <a class="text-gray-divriots px-2 py-1" href="https://divriots.com">Made by
+        <img class="h-4 inline" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
+      </a>
+    </div>
   </footer>
 </template>
 <script>
