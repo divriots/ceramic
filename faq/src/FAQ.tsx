@@ -12,11 +12,11 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
             open ? ' text-primary' : ''
           }`}
         >
-          {question}{' '}
+          {question}
           {!open ? (
-            <ChevronDownIcon className="ml-2 w-5 h-5" />
+            <ChevronDownIcon className="flex-shrink-0 w-5 h-5" />
           ) : (
-            <ChevronUpIcon className="ml-2 w-5 h-5" />
+            <ChevronUpIcon className="flex-shrink-0 w-5 h-5" />
           )}
         </Disclosure.Button>
         <Disclosure.Panel as="p" className={`text-gray-mid text-md py-4 `}>
