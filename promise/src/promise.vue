@@ -10,7 +10,8 @@
 };
 </script>
 <template>
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 py-16 sm:py-32 items-center gap-y-32 gap-x-16 xl:gap-x-32">
+  <div data-aos="fade-up"
+    class="max-w-6xl mx-auto grid md:grid-cols-2 py-16 sm:py-32 items-center gap-y-32 gap-x-16 xl:gap-x-32">
     <div class="place-self-center h-64 w-64 sm:w-80 sm:h-80 xl:h-128 xl:w-128 rounded-lg bg-no-repeat bg-contain"
       :style="{ 'background-image': `url(${img.src})` }">
     </div>
