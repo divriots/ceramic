@@ -8,7 +8,7 @@
       <div class="mx-auto max-w-7xl pl-4 lg:pr-6">
         <div class="text-left">
           <h1
-            class="text-2xl sm:text-4xl lg:text-5xl font-semibold text-black-default sm:text-5xl md:text-5xl leading-normal">
+            class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black-default sm:text-5xl md:text-5xl leading-normal">
             <span class="block text-primary whitespace-nowrap">Design Systems,</span>
             <span class="block">Code-side</span>
           </h1>
