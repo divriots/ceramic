@@ -35,7 +35,7 @@ export default () => (
       <br />
       Spend time building amazing products, not maintaining your Design System.
     </p>
-    <div className="bg-black-divriots py-48 mt-48 overflow-hidden">
+    <div className="bg-black-divriots py-48 mt-48 overflow-hidden flex justify-center">
       <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 space-x-16">
         {kits
           .filter(({ highlight }) => !highlight)

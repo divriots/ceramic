@@ -10,12 +10,10 @@
 };
 </script>
 <template>
-  <div data-aos="fade-up"
-    class="max-w-6xl mx-auto grid md:grid-cols-2 py-16 sm:py-32 items-center gap-y-32 gap-x-16 xl:gap-x-32">
-    <div class="place-self-center h-64 w-64 sm:w-80 sm:h-80 xl:h-128 xl:w-128 rounded-lg bg-no-repeat bg-contain"
-      :style="{ 'background-image': `url(${img.src})` }">
-    </div>
-    <div :class="`flex flex-col h-full justify-center space-y-12 max-w-80 bg-black-divriots ${
+  <div data-aos="fade-up" class="max-w-6xl mx-auto grid md:grid-cols-2 place-items-center py-20 gap-12">
+    <div class="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96 bg-no-repeat bg-contain rounded-lg"
+      :style="{ 'background-image': `url(${img.src})` }"></div>
+    <div :class="`flex flex-col h-full justify-center space-y-12 w-64 sm:w-80 xl:w-96 ${
         reverse ? 'md:col-start-1 md:row-start-1' : ''
       }`">
       <span class="text-3xl font-semibold">{{ title }}</span>
