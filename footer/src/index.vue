@@ -4,7 +4,7 @@
       <label for="EMAIL" class="flex-grow text-4xl max-w-68">
         Subscribe to our <span class="text-primary">newsletter</span>
       </label>
-      <div class="flex flex-col gap-4 mt-4 sm:flex-row w-full">
+      <div class="flex flex-col space-y-4 mt-4 sm:flex-row w-full">
         <input name="EMAIL" type="email" placeholder="Enter your e-mail" required autocomplete="off"
             class="bg-transparent border-b-1 border-gray-light text-gray-mid outline-none flex-grow"/>
         <!-- input trap for bot -->

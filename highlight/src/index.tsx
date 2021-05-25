@@ -4,7 +4,7 @@ import kits from './data';
 
 const CardKit = ({ name, desc, href, hero_img, bg_img, backgroundColor }) => (
   <div
-    className="relative overflow-hidden text-left flex flex-col text-white rounded-lg gap-4 p-6 w-64 sm:w-80"
+    className="relative overflow-hidden text-left flex flex-col text-white rounded-lg space-y-4 p-6 w-64 sm:w-80"
     style={{ height: '420px', backgroundColor }}
   >
     <img className="h-32 w-full" src={hero_img} />
@@ -36,7 +36,7 @@ export default () => (
       Spend time building amazing products, not maintaining your Design System.
     </p>
     <div className="bg-black-divriots py-48 mt-48 overflow-hidden">
-      <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 gap-16">
+      <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 space-x-16">
         {kits
           .filter(({ highlight }) => !highlight)
           .map((kit, idx) => (

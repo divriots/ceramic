@@ -17,7 +17,7 @@
             Collaborate & maintain on the go.<br/>
             Get efficiency & consistency you deserve.
           </p>
-          <div class="flex mt-8 gap-2">
+          <div class="flex mt-8 space-x-2">
             <a href="#" class="btn-primary">
               Start now
             </a>

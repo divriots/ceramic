@@ -4,14 +4,14 @@ import kits from '../../config/src/starter-kits';
 import { dropbox } from '../../config/src/commons';
 
 const StarterKit = ({ name, href, imgSrc }) => (
-  <a href={href} key={name} className="inline-flex items-center p-2 gap-2">
+  <a href={href} key={name} className="inline-flex items-center p-2 space-x-2">
     <img className="w-8 h-8" src={imgSrc} />
     <span>{name}</span>
   </a>
 );
 
 export default () => (
-  <section className="p-4 sm:p-10 justify-center items-center flex flex-col md:flex-row bg-black-default text-white gap-8 md:gap-16">
+  <section className="p-4 sm:p-10 justify-center items-center flex flex-col md:flex-row bg-black-default text-white space-y-8 md:space-x-16">
     <div className="max-w-md p-10 bg-secondary rounded-lg flex-grow grid justify-center">
       <img src={dropbox('kickstart.png')} />
     </div>
@@ -21,7 +21,7 @@ export default () => (
         <span className="text-secondary whitespace-nowrap">Design System</span>{' '}
         in one click with one of our starter-kits
       </h2>
-      <div className="flex mt-8 gap-2">
+      <div className="flex mt-8 space-2">
         <a href="#" className="btn-secondary">
           Start now
         </a>

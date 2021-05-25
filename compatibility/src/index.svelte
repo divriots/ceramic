@@ -6,7 +6,7 @@
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-secondary">supported</span>
   </h2>
   <div class="scrollable-horizontal mx-auto max-w-4xl technologies max-h-64 relative">
-    <div class="flex flex-col flex-wrap gap-8 justify-start py-8 h-64">
+    <div class="flex flex-col flex-wrap space-y-8 space-x-8 justify-start py-8 h-64">
       {#each technologies as t, i}
       <figure class="technology relative opacity-50 hover:opacity-100">
         <figcaption class="hidden -top-6 w-full absolute text-center">

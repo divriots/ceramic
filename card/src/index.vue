@@ -1,14 +1,14 @@
 <template>
   <article class="bg-white text-left flex overflow-hidden radius-lg rounded-lg" :class="{ wide }">
     <img v-if="wide" :src="image" class="object-cover max-w-60" />
-    <div class="inline-flex flex-col gap-4 my-4">
+    <div class="inline-flex flex-col space-y-4 my-4">
       <img v-if="!wide" :src="image" class="h-48 object-cover" />
       <h1 class="text-2xl px-4">{{ title }}</h1>
       <p class="flex-grow overflow-hidden overflow-ellipsis px-4">
         {{ description }}
       </p>
       <span class="text-gray-500 text-sm px-4">{{ published_time }}</span>
-      <span v-if="tags" class="flex gap-4 pt-4 px-4">
+      <span v-if="tags" class="flex space-x-4 pt-4 px-4">
         <span
           v-for="tag of tags"
           :key="tag"
