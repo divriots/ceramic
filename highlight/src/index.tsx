@@ -12,11 +12,11 @@ const CardKit = ({ name, desc, href, hero_img, bg_img, backgroundColor }) => (
     <p className="flex-grow">{desc}</p>
     <a href={href} className="flex items-center">
       Discover
-      <ChevronRightIcon className="w-8 h-8" aria-hidden="true" />
+      <ChevronRightIcon className="w-6 h-6" aria-hidden="true" />
     </a>
     {bg_img && (
       <img
-        className="absolute h-56 w-auto right-0 bottom-0 opacity-watermark transform -rotate-12 translate-x-8 translate-y-8"
+        className="absolute h-48 w-auto right-0 bottom-0 opacity-watermark transform -rotate-12 translate-x-8 translate-y-8"
         src={bg_img}
       />
     )}
@@ -30,10 +30,8 @@ export default () => (
       hero!
     </h2>
     <p className="text-lg text-gray-mid px-4">
-      Kickstart with one of our starter-kits. Most popular technologies
-      supported.
-      <br />
-      Spend time building amazing products, not maintaining your Design System.
+      Select the Starter-kits with the right technology for you.<br/>
+      You are not far from releasing your first Design System.
     </p>
     <div className="bg-black-divriots py-48 mt-48 overflow-hidden flex justify-center">
       <div className="scrollable-horizontal max-w-full px-8 py-16 sm:px-16 absolute bottom-0 space-x-16">
