@@ -13,7 +13,7 @@
       </div>
     </form>
     <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-black-divriots">
-      <component :is="Logo" class="sm:pr-10 py-10 mx-auto"><a href="https://divriots.com">by
+      <component :is="Logo" class="sm:p-10 py-10 mx-auto"><a href="https://divriots.com">by
           <img class="h-4 inline filter invert" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
         </a></component>
       <div class="cols sm:min-w-max sm:pr-32">
