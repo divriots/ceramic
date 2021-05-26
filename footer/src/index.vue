@@ -44,8 +44,8 @@
         </div>
       </div>
     </div>
-    <div class="flex bg-black-divriots justify-center bg-opacity-50">
-      <a class="text-gray-divriots px-2 py-1" href="https://divriots.com">Made by
+    <div class="flex justify-center">
+      <a class="text-gray-divriots px-2 py-1 bg-black-divriots rounded-t-lg" href="https://divriots.com">Made by
         <img class="h-4 inline" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
       </a>
     </div>
