@@ -7,6 +7,7 @@ export const colors = {
     secondary: '#f8c307',
     tertiary: '#ff3660',
     quaternary: '#01a7ec',
+    toto: '#fff',
     white: '#FFFFFF',
     black: {
       default: twcolors.black,
