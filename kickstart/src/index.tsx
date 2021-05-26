@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import kits from '../../config/src/starter-kits';
-import { assetRef } from '../../config/src/commons';
+import { dropbox } from '../../config/src/commons';
 
 const StarterKit = ({ name, href, imgSrc }) => (
   <a href={href} key={name} className="inline-flex items-center p-2 space-x-2">
@@ -15,7 +15,7 @@ export default () => (
     <div className="mx-auto max-w-5xl px-8 py-20 grid md:grid-cols-2 place-items-center items-center gap-4 ">
       <div
         className="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96 bg-no-repeat bg-contain rounded-lg"
-        style={{ backgroundImage: `url(${assetRef('')})` }}
+        style={{ backgroundImage: `url(${dropbox('')})` }}
       ></div>
       <div className="w-64 sm:w-80 xl:w-96 text-left">
         <h2 className="font-semibold mx-auto text-3xl">
