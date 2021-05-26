@@ -1,4 +1,4 @@
-export const dropbox = (asset) => (asset) =>
+export const dropbox = (asset) =>
   new URL('https://via.placeholder.com/400').href;
 
 export const assetRef = (asset) =>
