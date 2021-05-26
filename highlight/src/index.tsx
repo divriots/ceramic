@@ -25,11 +25,11 @@ const CardKit = ({ name, desc, href, hero_img, bg_img, backgroundColor }) => (
 
 export default () => (
   <section className="text-center grid gap-8 md:gap-4 relative mt-20">
-    <h2 className="text-3xl sm:text-4xl lg:text-5xl">
+    <h2 className="text-3xl sm:text-4xl lg:text-5xl px-4">
       Be a <span className="text-primary whitespace-nowrap">Design System</span>{' '}
       hero!
     </h2>
-    <p className="text-lg text-gray-mid">
+    <p className="text-lg text-gray-mid px-4">
       Kickstart with one of our starter-kits. Most popular technologies
       supported.
       <br />
