@@ -13,7 +13,9 @@
       </div>
     </form>
     <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-black-divriots">
-      <component :is="Logo" class="sm:pr-10 py-10 mx-8"></component>
+      <component :is="Logo" class="sm:pr-10 py-10 mx-auto"><a href="https://divriots.com">by
+          <img class="h-4 inline filter invert" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
+        </a></component>
       <div class="cols sm:min-w-max sm:pr-32">
         <div class="col">
           <label>
@@ -43,11 +45,6 @@
           <a :href="`mailto:${contact}`">{{contact}}</a>
         </div>
       </div>
-    </div>
-    <div class="flex justify-center">
-      <a class="text-gray-divriots px-2 py-1 bg-black-divriots rounded-t-lg" href="https://divriots.com">Made by
-        <img class="h-4 inline" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
-      </a>
     </div>
   </footer>
 </template>
