@@ -24,8 +24,8 @@ const CardKit = ({ name, desc, href, hero_img, bg_img, backgroundColor }) => (
 );
 
 export default () => (
-  <section className="text-center grid gap-8 md:gap-4 relative sm:mt-10">
-    <h2 className="text-4xl sm:text-5xl lg:text-6xl">
+  <section className="text-center grid gap-8 md:gap-4 relative mt-20">
+    <h2 className="text-3xl sm:text-4xl lg:text-5xl">
       Be a <span className="text-primary whitespace-nowrap">Design System</span>{' '}
       hero!
     </h2>

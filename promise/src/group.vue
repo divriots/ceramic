@@ -6,7 +6,7 @@
 };
 </script>
 <template>
-  <article>
+  <article class="overflow-hidden">
     <h3 data-aos="fade-left" class="text-center text-4xl sm:text-5xl lg:text-6xl my-10 sm:my-20">{{ title }}</h3>
     <slot></slot>
   </article>

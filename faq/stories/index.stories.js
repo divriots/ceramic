@@ -6,7 +6,7 @@ import { pricingFAQ } from '../../config/src/faq';
 export const q_and_a = () => (
   <FAQ
     className="bg-gray-divriots"
-    title="F.A.Q."
+    title="F.A.Q.s"
     excerpt="Lorem ipsum"
     faq={pricingFAQ}
   />

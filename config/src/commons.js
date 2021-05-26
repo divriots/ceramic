@@ -1,5 +1,5 @@
-export const dropbox = (asset) =>
-  new URL(asset, 'https://dl.dropboxusercontent.com/s/j2t4i1v6wfizmr6/').href;
+export const dropbox = (asset) => (asset) =>
+  new URL('https://via.placeholder.com/400').href;
 
 export const assetRef = (asset) =>
   new URL(asset, 'https://backlight.dev/assets/').href;
