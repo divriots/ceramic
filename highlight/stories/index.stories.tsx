@@ -1,5 +1,7 @@
-import React from 'react';
-import Highlight from '../src/index';
+import Highlight from '../src/Highlight.vue';
 import '~/tailwind/src/styles.css';
 
-export const highlight = () => <Highlight />;
+export const highlight = () => ({
+  components: { Highlight },
+  template: `<Highlight/>`,
+});
