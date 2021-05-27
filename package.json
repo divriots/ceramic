@@ -1,6 +1,6 @@
 {
   "name": "@divriots/lcd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "serve": "dsd-cli serve 1SuMaEt5uxgp62VC8WVP --open"
   },
