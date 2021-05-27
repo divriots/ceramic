@@ -2,12 +2,13 @@
   export default {
   props: {
     title: { type: String, required: true },
+    classes: { type: String, required: true },
   },
 };
 </script>
 <template>
   <article class="overflow-hidden">
-    <h3 data-aos="fade-left" class="text-center text-4xl sm:text-5xl lg:text-6xl my-10 sm:my-20">{{ title }}</h3>
+    <h3 data-aos="fade-left" class="text-center font-bold text-4xl sm:text-5xl lg:text-6xl my-10 sm:my-20" v-html="title"></h3>
     <slot></slot>
   </article>
 </template>

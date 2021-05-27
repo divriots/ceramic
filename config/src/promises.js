@@ -2,93 +2,85 @@ import { colors } from '../../colors/src/index';
 import { dropbox } from './commons';
 const { orange, blue, green } = colors.colors;
 
+const imgLanding = (asset) => `https://backlight.dev/landing/${asset}`;
+
 export default [
   {
-    title: '<em>powered by Design System',
+    classes: 'text-secondary',
+    title: 'Everything in <span class="text-secondary">one place</span>',
     promises: [
       {
-        title: 'Build source-of-truth for your Front-end',
-        description: `<p>Backlight helps you consolidate your Design System, from tokens to complex components.</p><p>
-Standardize and share a common design language within all developers and designers.</p>`,
+        title: 'Visual component library',
+        description: `<p>From design tokens to complex components, 
+        everything is in one place, visually accessible by anyone.</p>
+        <p>Developers and designers can work together on the Design System code-side.</p>`,
         img: {
-          src: dropbox('promise_1_1.png'),
-          backgroundColor: orange,
+          src: imgLanding('promise_1_1.png'),
         },
         action: {
-          label: 'Discover',
-          url: '#',
+          label: 'Look at one of the starter-kits',
+          url: '/starterkits',
         },
       },
       {
-        title: 'Documentation as you go',
-        description: `<p>Backlight makes it seamless for designers and developers to build the documentation of your Design System.</p><p>
-Automatically versioned as you release</p>`,
+        title: 'Reference site out-of-the-box',
+        description: `<p>Built-in Markdown and MDX for documenting your components.</p>
+        <p>No need for change request tickets, everybody can contribute directly with the WYSIWYG online editor.</p>
+        <p>The reference site always has the exact component in the rigth version with no additional efforts.</p>`,
         img: {
-          src: dropbox('promise_1_2.png'),
-          backgroundColor: orange,
+          src: imgLanding('promise_1_2.png'),
         },
         action: {
-          label: 'Start',
+          label: 'Reference site demo',
           url: '#',
         },
       },
     ],
   },
   {
-    title: 'Design together',
+    classes: 'text-tertiary',
+    title: 'A true <span class="text-tertiary">collaborative space</span>',
     promises: [
       {
-        title: `Collaborate on the fly`,
-        description: `<p>Share real-time preview of components in-browser.</p><p>
-        Collaboration has never been so smooth within your front-end team.</p><p>
-The hand-over between developers and designers is almost an old story.</p>`,
+        title: `Get feedback in one click`,
+        description: `<p>Share real-time previews of the component your are working on.</p>
+        <p>No need to push, release or deploy anything. Just share a link to your team,
+        even when coding from your local environment.</p>
+        <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
         img: {
-          src: dropbox('promise_2_1.png'),
-          backgroundColor: blue,
+          src: imgLanding('promise_2_1.png'),
         },
         action: {
-          label: 'View documentation',
+          label: 'Foo',
           url: '#',
         },
       },
       {
-        title: `Integrates into your workflow seamlessly`,
-        description: `<p>Publish your Design System in one click.</p><p> 
-        Connect and commit to your favorite Git provider.</p><p> 
-        Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
+        title: 'Review Pull-Requests visually',
+        description: `<p>No need to wait for the branch to be built and deployed.</p>
+        <p>Pull-Requests are visually reviewable instantly.</p>
+        <p>Review more in less time.</p>`,
         img: {
           src: imgLanding('promise_2_2.png'),
         },
         action: {
-          label: 'Ask a demo',
+          label: 'Bar',
           url: '#',
         },
       },
     ],
   },
   {
-    title: 'Develop anywhere, anytime',
+    classes: 'text-quaternary',
+    title: 'Integrates into <span class="text-quaternary">your workflow</span>',
     promises: [
       {
-        title: 'Review instantly',
-        description: `<p>Compare visually with live diff preview.</p><p> 
-        Forget build and deploy time. Save precious hours.</p><p> 
-Parallel viewports preview (desktop, tablet, mobile).</p>`,
-        img: {
-          src: imgLanding('promise_3_1.png'),
-        },
-        action: {
-          label: 'Start',
-          url: '#',
-        },
-      },
-      {
-        title: 'Code in the browser or with your favorite editor',
-        description: `<p>Backlight is open and flexible.</p><p>
+        title: 'Bring-your-own IDE',
+        description: `<p>Backlight comes with an integrated online IDE inpired
+        by VSCode but you can use your prefered IDE locally on</p><p>
           Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
         img: {
-          src: dropbox('promise_3_2.png'),
-          backgroundColor: green,
+          src: imgLanding('promise_3_1.png'),
         },
         action: {
           label: 'Discover pricing',
@@ -96,14 +88,26 @@ Parallel viewports preview (desktop, tablet, mobile).</p>`,
         },
       },
       {
-        title: 'No <string> attached',
-        description: `<p>Export your Design System in a few clicks.</p><p>
-We love you, so you are free to go any time!</p>`,
+        title: 'Connects to your Git repository',
+        description: `<p>Supports GitHub and Gitlab (BitBucket coming soon).</p>
+        <p>Push changes on branches and review Pull-Requests easily.</p>`,
+        img: {
+          src: imgLanding('promise_3_2.png'),
+        },
+        action: {
+          label: 'Foo',
+          url: '#',
+        },
+      },
+      {
+        title: 'Publish npm packages',
+        description: `<p>Design Systems are compiled, packaged and versioned on demand.</p>
+        <p>They can be delivered to any npm registry like npmjs.org or GitHub packages.</p>`,
         img: {
           src: imgLanding('promise_3_3.png'),
         },
         action: {
-          label: 'Start',
+          label: 'Bar',
           url: '#',
         },
       },

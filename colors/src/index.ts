@@ -3,8 +3,10 @@ import twcolors from 'tailwindcss/colors';
 export const colors = {
   colors: {
     transparent: '#00000000',
-    primary: '#007c89',
+    primary: '#008594',
     secondary: '#f8c307',
+    tertiary: '#ff3660',
+    quaternary: '#01a7ec',
     white: '#FFFFFF',
     black: {
       default: twcolors.black,

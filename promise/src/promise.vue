@@ -1,6 +1,7 @@
 <script>
   export default {
   props: {
+    classes: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
     action: { type: Object, required: true },
@@ -19,8 +20,8 @@
       <span class="text-3xl font-semibold">{{ title }}</span>
       <div class="text-lg grid text-gray-divriots gap-4" v-html="description"></div>
       <div v-if="action">
-        <a :href="action.href" class="btn-secondary">
-          {{ action.label }}
+        <a :href="action.href" :class="classes">
+          {{ action.label }} >
         </a>
       </div>
     </div>
