@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col space-y-2 px-2 mt-2">
-    <a href="/" class="flex-shrink-0 flex items-center block">
+  <div class="flex flex-wrap items-center space-x-2 py-10">
+    <a href="/" class="flex-shrink-0 flex items-center block px-2">
       <svg class="mt-1 h-12" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 647.24 149.09">
         <path class="cls-1"
           d="M48,5V47.45c4.8-8.7,17-13.2,26-13.2,21.3,0,37.5,13.35,37.5,38.55,0,24.45-16.35,38.55-37.8,38.55-9.9,0-19.8-3.75-25.65-13.2l-.9,11.7H32.5V5Zm.9,67.8C48.85,87.35,59.5,97,72.55,97S96,87.65,96,72.8c0-15.15-10.5-24-23.4-24S48.85,58.55,48.85,72.8Z"

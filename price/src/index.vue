@@ -27,25 +27,11 @@ export default {
 };
 </script>
 <template>
-  <div class="relative rounded-lg shadow-lg p-6 flex flex-col">
-    <div class="flex bg-primary rounded-md shadow-inset-control" v-if="price && price.value > 0">
-      <button
-        :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
-          period === 'year' ? 'text-primary bg-white' : ''
-        }`"
-        @click="period = 'year'"
-      >
-        Yearly (-20%)
-      </button>
-      <button
-        :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
-          period === 'month' ? 'text-primary bg-white' : ''
-        }`"
-        @click="period = 'month'"
-      >
-        Monthly
-      </button>
-    </div>
+  <div :class="`relative rounded-2xl p-6 flex flex-col ${!!banner?'ring-secondary ring-4 ':'shadow-lg'}`">
+    <p class="absolute inset-x-0 -mx-1 -top-8 bg-secondary text-black-default font-semibold text-center rounded-t-lg pt-2 pb-4"
+      v-if="banner">{{banner}}</p>
+    <p class="absolute inset-x-0 top-0 h-6 bg-primary text-black-default font-semibold text-center rounded-t-lg py-1"
+      v-if="banner"></p>
     <header class="py-4 text-3xl flex flex-col mx-auto items-center">
       <span class="font-semibold font-display col-span-2">{{ title }}</span>
       <span class="flex flex-grow items-center tracking-tight font-medium">
@@ -72,7 +58,24 @@ export default {
   <span class="text-sm px-2">{{ price.unit }}</span>
 </div>
 </header>
-<p class="bg-black-divriots text-white font-semibold text-center rounded-md py-1" v-if="banner">{{banner}}</p>
+<div class="flex bg-primary rounded-2xl shadow-inset-control" v-if="price && price.value > 0">
+  <button
+        :class="`flex-grow btn rounded-xl focus:ring-offset-0 focus:ring-0 ${
+          period === 'year' ? 'text-primary bg-white' : ''
+        }`"
+        @click="period = 'year'"
+      >
+        Yearly (-20%)
+      </button>
+  <button
+        :class="`flex-grow btn rounded-xl focus:ring-offset-0 focus:ring-0 ${
+          period === 'month' ? 'text-primary bg-white' : ''
+        }`"
+        @click="period = 'month'"
+      >
+        Monthly
+      </button>
+</div>
 <span class="mx-auto">{{ legend }}</span>
 <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8 mt-4">
   <li class="mb-4 flex items-start text-left" v-if="inherits">
@@ -98,11 +101,11 @@ export default {
   </li>
 </ul>
 
-<div class="mt-8 grid gap-4 justify-center">
-  <a :href="action.url" class="btn bg-background block text-base font-display text-primary">
+<div class="mt-8 grid mb-4 justify-center">
+  <a :href="action.url" class="btn rounded-xl bg-background block text-base font-display text-primary">
     {{ action.label }}
   </a>
-  <span class="opacity-75 text-sm">{{action.legend}}</span>
+  <span class="absolute inset-x-0 bottom-0 opacity-75 text-sm h-8 text-center">{{action.legend}}</span>
 </div>
 </div>
 </template>
@@ -112,7 +115,7 @@ export default {
     padding: 2px;
   }
 
-  .shadow-inset-control>button {
-    border-radius: 0.25rem;
+  .banner {
+    box-shadow: 0 0 0px 4px red;
   }
 </style>

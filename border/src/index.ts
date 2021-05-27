@@ -3,6 +3,8 @@ export const border = {
     sm: '0.125rem',
     md: '0.375rem',
     lg: '0.5rem',
+    xl: '.625rem',
+    '2xl': '.75rem',
     full: '9999px',
   },
   borderWidth: {
