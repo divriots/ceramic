@@ -15,7 +15,7 @@ export default [
         everything is in one place, visually accessible by anyone.</p>
         <p>Developers and designers can work together on the Design System code-side.</p>`,
         img: {
-          src: imgLanding('promise_1_1.png'),
+          src: imgLanding('promise_visual.png'),
         },
         action: {
           label: 'Look at one of the starter-kits',
@@ -28,7 +28,7 @@ export default [
         <p>No need for change request tickets, everybody can contribute directly with the WYSIWYG online editor.</p>
         <p>The reference site always has the exact component in the rigth version with no additional efforts.</p>`,
         img: {
-          src: imgLanding('promise_1_2.png'),
+          src: imgLanding('promise_refsite.png'),
         },
         action: {
           label: 'Reference site demo',
@@ -48,7 +48,7 @@ export default [
         even when coding from your local environment.</p>
         <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
         img: {
-          src: imgLanding('promise_2_1.png'),
+          src: imgLanding('promise_feedback.png'),
         },
         action: {
           label: 'Foo',
@@ -61,7 +61,7 @@ export default [
         <p>Pull-Requests are visually reviewable instantly.</p>
         <p>Review more in less time.</p>`,
         img: {
-          src: imgLanding('promise_2_2.png'),
+          src: imgLanding('promise_pr.png'),
         },
         action: {
           label: 'Bar',
@@ -80,7 +80,7 @@ export default [
         by VSCode but you can use your prefered IDE locally on</p><p>
           Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
         img: {
-          src: imgLanding('promise_3_1.png'),
+          src: imgLanding('promise_ide.png'),
         },
         action: {
           label: 'Discover pricing',
@@ -92,7 +92,7 @@ export default [
         description: `<p>Supports GitHub and Gitlab (BitBucket coming soon).</p>
         <p>Push changes on branches and review Pull-Requests easily.</p>`,
         img: {
-          src: imgLanding('promise_3_2.png'),
+          src: imgLanding('promise_git.png'),
         },
         action: {
           label: 'Foo',
@@ -104,7 +104,7 @@ export default [
         description: `<p>Design Systems are compiled, packaged and versioned on demand.</p>
         <p>They can be delivered to any npm registry like npmjs.org or GitHub packages.</p>`,
         img: {
-          src: imgLanding('promise_3_3.png'),
+          src: imgLanding('promise_npm.png'),
         },
         action: {
           label: 'Bar',
