@@ -57,8 +57,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
         Connect and commit to your favorite Git provider.</p><p> 
         Your components are always up-to-date ! No more hassle to track inconsistency in your code.</p>`,
         img: {
-          src: dropbox('promise_2_2.png'),
-          backgroundColor: blue,
+          src: imgLanding('promise_2_2.png'),
         },
         action: {
           label: 'Ask a demo',
@@ -76,8 +75,7 @@ The hand-over between developers and designers is almost an old story.</p>`,
         Forget build and deploy time. Save precious hours.</p><p> 
 Parallel viewports preview (desktop, tablet, mobile).</p>`,
         img: {
-          src: dropbox('promise_3_1.png'),
-          backgroundColor: green,
+          src: imgLanding('promise_3_1.png'),
         },
         action: {
           label: 'Start',
@@ -102,8 +100,7 @@ Parallel viewports preview (desktop, tablet, mobile).</p>`,
         description: `<p>Export your Design System in a few clicks.</p><p>
 We love you, so you are free to go any time!</p>`,
         img: {
-          src: dropbox('promise_3_3.png'),
-          backgroundColor: green,
+          src: imgLanding('promise_3_3.png'),
         },
         action: {
           label: 'Start',
