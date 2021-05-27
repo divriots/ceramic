@@ -1,6 +1,3 @@
-import { colors } from '../../colors/src/index';
-import { dropbox } from './commons';
-const { orange, blue, green } = colors.colors;
 
 const imgLanding = (asset) => `https://backlight.dev/landing/${asset}`;
 
@@ -23,10 +20,11 @@ export default [
         },
       },
       {
-        title: 'Reference site out-of-the-box',
-        description: `<p>Built-in Markdown and MDX for documenting your components.</p>
-        <p>No need for change request tickets, everybody can contribute directly with the WYSIWYG online editor.</p>
-        <p>The reference site always has the exact component in the rigth version with no additional efforts.</p>`,
+        title: 'Reference site',
+        description: `<p>Reference sites are online documentation of your
+        Design System including component description, rules and guidelines.</p>
+        <p>Backlight has built-in support for Markdown and MDX documentation.</p>
+        <p>Everybody can contribute directly with the WYSIWYG online editor.</p>`,
         img: {
           src: imgLanding('promise_refsite.png'),
         },
@@ -44,29 +42,31 @@ export default [
       {
         title: `Get feedback in one click`,
         description: `<p>Share real-time previews of the component your are working on.</p>
-        <p>No need to push, release or deploy anything. Just share a link to your team,
-        even when coding from your local environment.</p>
+        <p>No need to push, release or deploy anything. Just share a link to your team
+        to show what you are working on.</p>
         <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
         img: {
           src: imgLanding('promise_feedback.png'),
         },
-        action: {
-          label: 'Foo',
-          url: '#',
-        },
+        // action: {
+        //   label: 'Foo',
+        //   url: '#',
+        // },
       },
       {
         title: 'Review Pull-Requests visually',
-        description: `<p>No need to wait for the branch to be built and deployed.</p>
-        <p>Pull-Requests are visually reviewable instantly.</p>
-        <p>Review more in less time.</p>`,
+        description: `<p>Reviewing HTML, CSS and JavaScript code doesn't tell
+        the full picture.</p>
+        <p>Backlight renders Pull-request instantly so you can review them
+        graphically. You don't need to wait for the build task or the deploy task.</p>
+        <p>Review better in less time.</p>`,
         img: {
           src: imgLanding('promise_pr.png'),
         },
-        action: {
-          label: 'Bar',
-          url: '#',
-        },
+        // action: {
+        //   label: 'Bar',
+        //   url: '#',
+        // },
       },
     ],
   },
@@ -76,40 +76,39 @@ export default [
     promises: [
       {
         title: 'Bring-your-own IDE',
-        description: `<p>Backlight comes with an integrated online IDE inpired
-        by VSCode but you can use your prefered IDE locally on</p><p>
-          Use your favorite IDE or our built-in editor to contribute instantly.</p>`,
+        description: `<p>Backlight comes with an integrated online IDE highly-inspired
+        by VSCode but you can use your prefered IDE locally.</p>`,
         img: {
           src: imgLanding('promise_ide.png'),
         },
-        action: {
-          label: 'Discover pricing',
-          url: '#',
-        },
+        // action: {
+        //   label: 'Try now',
+        //   url: '/get-started',
+        // },
       },
       {
         title: 'Connects to your Git repository',
-        description: `<p>Supports GitHub and Gitlab (BitBucket coming soon).</p>
+        description: `<p>Backlight supports GitHub and Gitlab (BitBucket coming soon).</p>
         <p>Push changes on branches and review Pull-Requests easily.</p>`,
         img: {
           src: imgLanding('promise_git.png'),
         },
-        action: {
-          label: 'Foo',
-          url: '#',
-        },
+        // action: {
+        //   label: 'Foo',
+        //   url: '#',
+        // },
       },
       {
         title: 'Publish npm packages',
         description: `<p>Design Systems are compiled, packaged and versioned on demand.</p>
-        <p>They can be delivered to any npm registry like npmjs.org or GitHub packages.</p>`,
+        <p>Packages can be delivered to any npm registry like npmjs.org or GitHub packages.</p>`,
         img: {
           src: imgLanding('promise_npm.png'),
         },
-        action: {
-          label: 'Bar',
-          url: '#',
-        },
+        // action: {
+        //   label: 'Bar',
+        //   url: '#',
+        // },
       },
     ],
   },
