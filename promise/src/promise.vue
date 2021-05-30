@@ -12,7 +12,7 @@
 </script>
 <template>
   <div data-aos="fade-up" class="max-w-6xl mx-auto grid md:grid-cols-2 place-items-center py-20 gap-12">
-    <div class="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96 bg-no-repeat bg-contain rounded-lg"
+    <div class="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96 bg-no-repeat bg-contain bg-center"
       :style="{ 'background-image': `url(${img.src})` }"></div>
     <div :class="`flex flex-col h-full justify-center space-y-12 w-64 sm:w-80 xl:w-96 ${
         reverse ? 'md:col-start-1 md:row-start-1' : ''
