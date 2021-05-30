@@ -1,5 +1,5 @@
 
-const imgLanding = (asset) => `https://backlight.dev/landing/${asset}`;
+const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}`;
 
 export default [
   {
@@ -26,7 +26,7 @@ export default [
         <p>Backlight has built-in support for Markdown and MDX documentation.</p>
         <p>Everybody can contribute directly with the WYSIWYG online editor.</p>`,
         img: {
-          src: imgLanding('promise_refsite.png'),
+          src: imgLanding('referencesite.gif'),
         },
         action: {
           label: 'Reference site demo',
@@ -46,7 +46,7 @@ export default [
         to show what you are working on.</p>
         <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
         img: {
-          src: imgLanding('promise_feedback.png'),
+          src: imgLanding('collaborate.mp4'),
         },
         // action: {
         //   label: 'Foo',
@@ -61,7 +61,7 @@ export default [
         graphically. You don't need to wait for the build task or the deploy task.</p>
         <p>Review better in less time.</p>`,
         img: {
-          src: imgLanding('promise_pr.png'),
+          src: imgLanding('diff.png'),
         },
         // action: {
         //   label: 'Bar',
@@ -79,7 +79,7 @@ export default [
         description: `<p>Backlight comes with an integrated online IDE highly-inspired
         by VSCode but you can use your prefered IDE locally.</p>`,
         img: {
-          src: imgLanding('promise_ide.png'),
+          src: imgLanding('ides.png'),
         },
         // action: {
         //   label: 'Try now',

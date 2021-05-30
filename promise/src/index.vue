@@ -1,7 +1,7 @@
 <script>
 import Promise from './promise.vue';
 import Group from './group.vue';
-import promisesGroups from '../../config/src/promises';
+import promisesGroups from './content';
 
 export default {
     data() {return { promisesGroups }},
