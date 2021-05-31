@@ -28,10 +28,10 @@ export default [
         img: {
           src: imgLanding('referencesite.gif'),
         },
-        action: {
-          label: 'Reference site demo',
-          url: '#',
-        },
+        // action: {
+        //   label: 'Reference site demo',
+        //   url: '#',
+        // },
       },
     ],
   },
@@ -104,6 +104,18 @@ export default [
         <p>Packages can be delivered to any npm registry like npmjs.org or GitHub packages.</p>`,
         img: {
           src: imgLanding('npm.png'),
+        },
+        // action: {
+        //   label: 'Bar',
+        //   url: '#',
+        // },
+      },
+      {
+        title: 'No lock-in',
+        description: `<p>Backlight promote 100% standard Web development technologies.</p>
+        <p>You are always free to eject your Design System and continue outside of Backlight.</p>`,
+        img: {
+          src: imgLanding('nolockin.gif'),
         },
         // action: {
         //   label: 'Bar',
