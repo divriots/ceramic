@@ -45,7 +45,7 @@ export default [
         <p>No need to push, release or deploy anything. Just share a link to your team
         to show what you are working on.</p>
         <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
-        img: {
+        video: { 
           src: imgLanding('collaborate.mp4'),
         },
         // action: {
@@ -61,7 +61,7 @@ export default [
         graphically. You don't need to wait for the build task or the deploy task.</p>
         <p>Review better in less time.</p>`,
         img: {
-          src: imgLanding('diff.png'),
+          src: imgLanding('diff.gif'),
         },
         // action: {
         //   label: 'Bar',
@@ -91,7 +91,7 @@ export default [
         description: `<p>Backlight supports GitHub and Gitlab (BitBucket coming soon).</p>
         <p>Push changes on branches and review Pull-Requests easily.</p>`,
         img: {
-          src: imgLanding('promise_git.png'),
+          src: imgLanding('git.png'),
         },
         // action: {
         //   label: 'Foo',
@@ -103,7 +103,7 @@ export default [
         description: `<p>Design Systems are compiled, packaged and versioned on demand.</p>
         <p>Packages can be delivered to any npm registry like npmjs.org or GitHub packages.</p>`,
         img: {
-          src: imgLanding('promise_npm.png'),
+          src: imgLanding('npm.png'),
         },
         // action: {
         //   label: 'Bar',
