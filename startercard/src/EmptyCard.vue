@@ -32,16 +32,15 @@ export default {
     transform: scale(1.02);
     filter: drop-shadow(0.2rem 0.2rem 0.25rem rgba(0, 0, 30, 0.5));
   }
+  height: 460px;
 }
 .starter-kit-normal {
-  height: 460px;
   @media (min-width: 640px) {
     width: 20rem;
   }
   width: 16rem;
 }
 .starter-kit-big {
-  height: 600px;
-  width: 24rem;
+  width: 22rem;
 }
 </style>
