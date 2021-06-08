@@ -4,7 +4,7 @@
       <label for="EMAIL" class="flex-grow text-4xl max-w-68">
         Subscribe to our <span class="text-primary">newsletter</span>
       </label>
-      <div class="flex flex-col space-y-4 mt-4 sm:flex-row w-full">
+      <div class="flex flex-col space-y-4 sm:space-y-0 mt-4 sm:flex-row w-full">
         <input name="EMAIL" type="email" placeholder="Enter your e-mail" required autocomplete="off"
             class="bg-transparent border-b-1 border-gray-light text-gray-mid outline-none flex-grow"/>
         <!-- input trap for bot -->
@@ -13,9 +13,12 @@
       </div>
     </form>
     <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-black-divriots">
-      <component :is="Logo" class="sm:p-10 py-10 mx-auto"><a href="https://divriots.com">by
+      <div class="flex flex-col m-4 mb-8 sm:mb-4">
+        <img class="h-24" src="/assets/logo/bkl.svg" alt="Backlight logo" width="128" height="128"/>
+        <a href="https://divRIOTS.com">by
           <img class="h-4 inline filter invert" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
-        </a></component>
+        </a>
+      </div>
       <div class="cols sm:min-w-max sm:pr-32">
         <div class="col">
           <label>
@@ -102,7 +105,6 @@ export default {
 
       label {
         font-size: 0.9rem;
-        opacity: 50%;
         margin-bottom: 16px;
       }
 

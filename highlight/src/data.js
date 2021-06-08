@@ -2,7 +2,7 @@ export default [
   {
     backgroundColor: '#944db8',
     heroImg: 'https://backlight.dev/assets/lib-white/systemui-typo.svg',
-    name: 'System-ui',
+    name: 'React',
     desc:
       'Design token in system-ui with examples in styled-components and theme-ui.',
     url: '/edit/z99ptYZyvMOGDivUlP9u/',
