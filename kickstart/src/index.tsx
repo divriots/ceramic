@@ -24,15 +24,15 @@ export default () => (
           in one click with one of our starter-kits
         </h2>
         <div className="flex mt-8 space-x-4">
-          <a href="/waitlist" className="btn-secondary">
-            Start now
+          <a href="https://divriots.typeform.com/to/h3dOxxEz" className="btn-secondary" target="_blank">
+            Request early access
           </a>
           <a
             href="https://calendly.com/gg_/backlight"
             className="btn text-secondary"
             target="_blank"
           >
-            Ask a Demo
+            Book a demo
           </a>
         </div>
       </div>

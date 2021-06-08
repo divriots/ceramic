@@ -30,7 +30,7 @@ export const FAQ = ({ question, answer, defaultOpen }) => (
 );
 
 export default ({ excerpt, title, faq }) => (
-  <section className="mx-auto px-8 py-20 grid md:grid-cols-2 max-w-4xl w-full gap-8">
+  <section className="mx-auto px-8 pt-16 pb-40 grid md:grid-cols-2 max-w-4xl w-full gap-8">
     <div>
       <h2 className="text-4xl">{title}</h2>
       <p>{excerpt}</p>
