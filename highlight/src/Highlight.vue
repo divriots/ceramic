@@ -5,7 +5,7 @@
       >{{ ' ' }}
       hero!
     </h2>
-    <p class="text-lg text-gray-mid px-4">
+    <p class="text-lg text-gray-dark px-4 leading-relaxed">
       Select the Starter-kits with the right technology for you.<br />
       You are not far from releasing your first Design System.
     </p>

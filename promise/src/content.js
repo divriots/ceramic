@@ -75,7 +75,7 @@ export default [
     title: 'Integrates into <span class="text-quaternary">your workflow</span>',
     promises: [
       {
-        title: 'Bring-your-own IDE',
+        title: 'Works with your IDE too',
         description: `<p>Backlight comes with an integrated online IDE highly-inspired
         by VSCode but you can use your prefered IDE locally.</p>`,
         img: {

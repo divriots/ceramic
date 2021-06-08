@@ -50,11 +50,11 @@ export const features = {
   },
   support_email: {
     group: groups.support,
-    label: `Email support (Discord only for free trial)`,
+    label: `Email support`,
   },
   support_sla: {
     group: groups.support,
-    label: `Premium support with SLA`,
+    label: `Premium Email support`,
   },
   ci_cd: {
     group: groups.premium,
@@ -137,6 +137,7 @@ export const Pro = {
     },
     features.publish_custom_registry,
     features.publish_private,
+    features.support_email
   ],
   action: {
     label: 'Start now',
