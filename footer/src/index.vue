@@ -105,6 +105,7 @@ export default {
 
       label {
         font-size: 0.9rem;
+        opacity: 0.6;
         margin-bottom: 16px;
       }
 
