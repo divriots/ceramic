@@ -88,7 +88,7 @@ export default {
       flex-wrap: wrap;
     }
 
-    @media only screen and (min-width: 1100px) {
+    @media only screen and (min-width: 800px) {
       .logo {
         height: 150px;
       }
