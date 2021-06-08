@@ -19,7 +19,7 @@
             Get efficiency & consistency you deserve.
           </p>
           <div class="flex mt-8 space-x-2">
-            <a href="/waitlist" class="btn-primary">Start now</a>
+            <a href="/waitlist" class="btn-primary">Join waitlist</a>
             <a href="https://calendly.com/gg_/backlight" class="btn text-primary" target="_blank">
               Ask a Demo
             </a>
