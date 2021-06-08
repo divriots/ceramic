@@ -25,7 +25,7 @@ export default () => (
         </h2>
         <div className="flex mt-8 space-x-4">
           <a href="/waitlist" className="btn-secondary">
-            Start now
+            Join waitlist
           </a>
           <a
             href="https://calendly.com/gg_/backlight"
