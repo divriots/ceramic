@@ -2,7 +2,7 @@
   import technologies from '../../config/src/technologies.js';
 </script>
 
-<section class="text-center text-white bg-black-divriots px-8 py-24 relative space-y-20">
+<section class="text-center text-white bg-black-divriots px-8 pt-24 pb-40 relative space-y-20">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-secondary">supported</span>
   </h2>
   <div class="scrollable-horizontal mx-auto max-w-4xl technologies relative">
@@ -22,11 +22,12 @@
 
 <style scoped>
   .technology img {
-    transition: transform .2s ease-in-out;
+    transition: transform .1s ease-in-out;
   }
 
   .technology:hover img {
     transform: scale(1.1);
+    cursor: pointer;
   }
 
   .technology:hover figcaption {
