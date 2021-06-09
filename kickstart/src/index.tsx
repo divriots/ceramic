@@ -13,7 +13,7 @@ export default () => (
     <div className="mx-auto max-w-5xl px-8 py-20 grid md:grid-cols-2 place-items-center items-center gap-4 ">
       <div
         className="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96 bg-no-repeat bg-contain rounded-lg"
-        style={{ backgroundImage: 'url(https://backlight.dev/assets/icons/rocket.svg' }}
+        style={{ backgroundImage: 'url("https://backlight.dev/assets/icons/rocket.svg")' }}
       ></div>
       <div className="w-64 sm:w-80 xl:w-96 text-left">
         <h2 className="font-semibold mx-auto text-3xl">
