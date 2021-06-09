@@ -1,7 +1,7 @@
 <template>
   <section class="text-center grid gap-8 md:gap-4 relative mt-20">
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl px-4">
-      Be a <span class="text-primary whitespace-nowrap">Design System</span
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl px-4">
+      Be a <span class="text-primary whitespace-nowrap ">Design System</span
       >{{ ' ' }}
       hero!
     </h2>

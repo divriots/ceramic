@@ -9,7 +9,7 @@
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
             <h1
-              class="text-4xl sm:text-5xl  md:text-5xl lg:text-6xl font-semibold text-black-default leading-normal">
+              class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold text-black-default leading-normal">
               <span class="block text-primary whitespace-nowrap"
                 >Design Systems,</span>
               <span class="block">Code-side</span>
