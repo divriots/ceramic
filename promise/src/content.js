@@ -1,4 +1,3 @@
-
 const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}`;
 
 export default [
@@ -41,11 +40,11 @@ export default [
     promises: [
       {
         title: `Get feedback in one click`,
-        description: `<p>Share real-time previews of the component your are working on.</p>
+        description: `<p>Share real-time previews of the component you are working on.</p>
         <p>No need to push, release or deploy anything. Just share a link to your team
         to show what you are working on.</p>
         <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
-        video: { 
+        video: {
           src: imgLanding('collaborate.mp4'),
         },
         // action: {
