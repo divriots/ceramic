@@ -24,7 +24,7 @@ export default () => (
           in one click with one of our starter-kits
         </h2>
         <div className="flex mt-8 space-x-4">
-          <a href="https://divriots.typeform.com/to/h3dOxxEz" className="btn-secondary" target="_blank">
+          <a href="/request-earlyaccess" className="btn-secondary" target="_blank">
             Request early access
           </a>
           <a

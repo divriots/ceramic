@@ -20,7 +20,7 @@
               Developers and Designers together.
             </p>
             <div class="flex mt-8 space-x-2">
-              <a href="https://divriots.typeform.com/to/h3dOxxEz" class="btn-primary" target="_blank">Request early access</a>
+              <a href="/request-earlyaccess" class="btn-primary" target="_blank">Request early access</a>
               <a href="https://calendly.com/gg_/backlight" class="btn text-primary" target="_blank">
                 Book a demo
               </a>
