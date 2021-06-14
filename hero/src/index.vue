@@ -9,7 +9,7 @@
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
             <h1
-              class="text-4xl sm:text-5xl  md:text-5xl lg:text-6xl font-semibold text-black-default leading-normal">
+              class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold text-black-default leading-normal">
               <span class="block text-primary whitespace-nowrap"
                 >Design Systems,</span>
               <span class="block">Code-side</span>
@@ -20,7 +20,7 @@
               Developers and Designers together.
             </p>
             <div class="flex mt-8 space-x-2">
-              <a href="https://divriots.typeform.com/to/h3dOxxEz" class="btn-primary" target="_blank">Request early access</a>
+              <a href="/request-earlyaccess" class="btn-primary" target="_blank">Request early access</a>
               <a href="https://calendly.com/gg_/backlight" class="btn text-primary" target="_blank">
                 Book a demo
               </a>

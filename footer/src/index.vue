@@ -14,8 +14,8 @@
     </form>
     <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-black-divriots">
       <div class="flex flex-col m-4 mb-8 sm:mb-4">
-        <img class="h-24" src="/assets/logo/bkl.svg" alt="Backlight logo" width="128" height="128"/>
-        <a href="https://divRIOTS.com">by
+        <img class="w-24" src="/assets/logo/bkl.svg" alt="Backlight logo"/>
+        <a class="mt-2" href="https://divRIOTS.com">by
           <img class="h-4 inline filter invert" src="/img/divriots.svg" alt="‹div›RIOTS logo"/>
         </a>
       </div>
@@ -27,8 +27,6 @@
           <template v-for="route in routes" :key="route.pathname">
             <a :href="route.pathname">{{ route.label}}</a>
           </template>
-          <!-- <a :href="careers_link" target="blank_">Careers</a> -->
-          <!-- <a href="https://www.notion.so/Press-8211461e4609470caa0cbff9e6d3b5b2" target="blank_">Press</a> -->
         </div>
         <div class="col">
           <label>
