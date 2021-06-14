@@ -24,12 +24,18 @@
         >
           {{ kit.desc }}
         </component>
-        <component :is="EmptyCard" url="/starterkits" class="bg-secondary">
-          <div
-            class="w-full h-full flex items-center text-4xl text-bold text-center text-black-default"
-          >
-            Explore all Starter-kits
-          </div>
+        <component
+          :is="EmptyCard"
+          url="/starterkits"
+          backgroundColor="var(--color-secondary)"
+        >
+          <template v-slot:caption-layer>
+            <div
+              class="w-full h-full flex items-center text-4xl text-bold text-center text-black-default"
+            >
+              Explore all Starter-kits
+            </div>
+          </template>
         </component>
       </div>
     </div>
@@ -45,8 +51,10 @@ export default {
   computed: {
     kits() {
       return kits;
-    }
+    },
   },
-  data() { return { EmptyCard, StarterCard } },
+  data() {
+    return { EmptyCard, StarterCard };
+  },
 };
 </script>
