@@ -5,21 +5,47 @@ export default [
     classes: 'text-secondary',
     title: 'Everything in <span class="text-secondary">one place</span>',
     promises: [
+      // {
+      //   title: 'Visual component library',
+      //   description: `<p>From design tokens to complex components, 
+      //   everything is in one place, visually accessible by anyone.</p>
+      //   <p>Developers and designers can work together on the Design System code-side.</p>`,
+      //   img: {
+      //     src: imgLanding('promise_visual.png'),
+      //   },
+      //   // action: {
+      //   //   label: 'Look at one of the starter-kits',
+      //   //   url: '/starterkits',
+      //   // },
+      // },
       {
-        title: 'Visual component library',
-        description: `<p>From design tokens to complex components, 
-        everything is in one place, visually accessible by anyone.</p>
-        <p>Developers and designers can work together on the Design System code-side.</p>`,
+        title: 'Code and Stories',
+        description: `<p>Your component library is visually organised.
+        It's easy for anyone to discover the component catalog and contribute
+        to the Design System right away.</p>
+        <p>Storybook Stories (CSF) are supported out-the-box.</p>`,
         img: {
-          src: imgLanding('promise_visual.png'),
+          src: imgLanding('code-and-stories.png'),
         },
-        action: {
-          label: 'Look at one of the starter-kits',
-          url: '/starterkits',
-        },
+        // action: {
+        //   label: 'Look at one of the starter-kits',
+        //   url: '/starterkits',
+        // },
       },
       {
-        title: 'Reference site',
+        title: 'Design links',
+        description: `<p>Keep the preview of the design next to the components.</p>
+        <p>Figma and Adobe Xd links supported.</p>`,
+        img: {
+          src: imgLanding('designlink.png'),
+        },
+        // action: {
+        //   label: 'Reference site demo',
+        //   url: '#',
+        // },
+      },
+      {
+        title: 'Documentation aka Reference Site',
         description: `<p>Reference sites are online documentation of your
         Design System including component description, rules and guidelines.</p>
         <p>Backlight has built-in support for Markdown and MDX documentation.</p>
@@ -30,6 +56,18 @@ export default [
         // action: {
         //   label: 'Reference site demo',
         //   url: '#',
+        // },
+      },
+      {
+        title: 'Unit Tests',
+        description: `<p>Reproduce bugs. Ensure accessibility over time. Automate event checks...</p>
+        <p>Backlight has a built-in test runner and reporter for effortless test checks and contributions.</p>`,
+        img: {
+          src: imgLanding('tests.png'),
+        },
+        // action: {
+        //   label: 'Look at one of the starter-kits',
+        //   url: '/starterkits',
         // },
       },
     ],

@@ -1,7 +1,7 @@
 export default [
   {
     backgroundColor: '#944db8',
-    heroImg: 'https://backlight.dev/assets/lib-white/react-typo-w-sui.svg',
+    heroImg: 'https://backlight.dev/assets/lib-white/react-typo.svg',
     name: 'React',
     desc:
       'Design token in system-ui with examples in styled-components and theme-ui.',
