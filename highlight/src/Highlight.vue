@@ -26,7 +26,7 @@
         </component>
         <component :is="EmptyCard" url="/request-earlyaccess" class="bg-secondary">
           <div
-            class="w-full h-full flex items-center text-4xl text-bold text-center text-black-default"
+            class="w-full h-full flex items-center text-3xl sm:text-4xl text-bold text-center text-black-default"
           >
             Many other Starter-kits available in different technologies
           </div>
