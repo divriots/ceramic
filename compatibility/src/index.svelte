@@ -27,7 +27,6 @@
 
   .technology:hover img {
     transform: scale(1.1);
-    cursor: pointer;
   }
 
   .technology figcaption {
