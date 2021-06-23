@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="relative hidden md:block">
-        <img class="absolute max-w-none h-full" src="https://storage.googleapis.com/tmp-gg/hero.png"/>
+        <img class="absolute max-w-none h-full" src="/img/landing/hero.png"/>
       </div>
     </div>
   </section>
