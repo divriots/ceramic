@@ -93,7 +93,7 @@ export const Free = {
       highlight: true,
     },
     {
-      restriction: 'Up to 2',
+      restriction: '1',
       ...features.projects,
       highlight: true,
     },
