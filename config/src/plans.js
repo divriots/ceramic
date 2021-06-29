@@ -1,7 +1,7 @@
 export const groups = {
   collaboration: 'Collaboration',
-  source_control: 'Source Control',
-  package_registry: 'Package Registry',
+  source_control: 'Source control',
+  package_registry: 'Package registry',
   support: 'Support',
   premium: 'Premium',
 };
@@ -30,7 +30,7 @@ export const features = {
   },
   bitbucket: {
     group: groups.source_control,
-    label: 'BitBucket (Coming soon)',
+    label: 'BitBucket (coming soon)',
   },
   publish_public: {
     group: groups.package_registry,
@@ -54,11 +54,11 @@ export const features = {
   },
   support_sla: {
     group: groups.support,
-    label: `Premium Email support`,
+    label: `Premium email support`,
   },
   ci_cd: {
     group: groups.premium,
-    label: 'Continuous Integration/Delivery',
+    label: 'Continuous integration/delivery',
   },
   matrix_testing: {
     group: groups.premium,
@@ -66,15 +66,15 @@ export const features = {
   },
   advanced_user_management: {
     group: groups.premium,
-    label: 'Advanced User Management (RBAC, SSO)',
+    label: 'Advanced user management (RBAC, SSO)',
   },
   advanced_features: {
     group: groups.premium,
-    label: 'Advanced Features',
+    label: 'Advanced features',
   },
   consulting: {
     group: groups.premium,
-    label: 'Design System Consulting',
+    label: 'Design system consulting',
   },
 };
 
@@ -108,7 +108,7 @@ export const Free = {
     features.support_community,
   ],
   action: {
-    label: 'Early Access',
+    label: 'Early access',
     url: '/request-earlyaccess',
     type: 'outline',
     legend: 'No credit card required',
@@ -140,7 +140,7 @@ export const Pro = {
     features.support_email,
   ],
   action: {
-    label: 'Early Access',
+    label: 'Early access',
     url: '/request-earlyaccess',
     type: 'primary',
     legend: 'No credit card required',
@@ -164,7 +164,7 @@ export const Enterprise = {
     features.support_sla,
   ],
   price: {
-    value: 'On Demand',
+    value: 'On demand',
   },
   action: {
     label: 'Contact us',
