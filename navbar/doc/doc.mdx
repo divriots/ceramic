@@ -3,4 +3,8 @@ import NavBar from '../dist/index.vue';
 import '~/tailwind/src/styles.css';
 import routes from '../stories/routes';
 
-<NavBar routes={routes} pathname="/blog" />
+<NavBar
+  routes={routes}
+  pathname="/blog"
+  appRoute={{ label: 'EARLY ACCESS', pathname: '/studio' }}
+/>
