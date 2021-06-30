@@ -36,7 +36,7 @@
             <component :is="Discord"></component>
             <component :is="Twitter"></component>
             <a :href="appRoute.pathname"
-              class="action border-solid border-1 rounded-md whitespace-nowrap px-3 py-3 ml-2">{{appRoute.label}}</a>
+              class="action border-solid border-black-default border-1 rounded-md whitespace-nowrap px-3 py-3 ml-2">{{appRoute.label}}</a>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
         <div class="my-6">
           <a :href="appRoute.pathname"
-            class="action border-solid border-1 rounded-md whitespace-nowrap px-3 py-3 ml-2">{{appRoute.label}}</a>
+            class="action border-solid border-black-divriots border-1 rounded-md whitespace-nowrap px-3 py-3 ml-2">{{appRoute.label}}</a>
         </div>
         <a :href="route.pathname" v-for="route of routes" :key="route"
           :class="`action px-2 py-1 block ${current==route?'text-primary font-semibold':'font-normal '}`">{{route.label}}</a>
