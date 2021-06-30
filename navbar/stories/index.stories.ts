@@ -5,7 +5,7 @@ import routes from './routes';
 export const story1 = () => ({
   components: { NavBar },
   data() {
-    return { routes, pathname: '/blog' };
+    return { routes, pathname: '/blog', appRoute: { pathname: '/studio', label: 'EARLY ACCESS' } };
   },
-  template: `<NavBar :routes="routes" :pathname="pathname"/>`,
+  template: `<NavBar :routes="routes" :pathname="pathname" :appRoute="appRoute"/>`,
 });
