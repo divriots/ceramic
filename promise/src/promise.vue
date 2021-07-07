@@ -13,9 +13,9 @@
 </script>
 <template>
   <div data-aos="fade-up" class="max-w-6xl mx-auto grid md:grid-cols-2 place-items-center py-20 gap-12">
-    <div class="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96">
+    <div class="h-80 w-80 sm:w-96 sm:h-96 xl:h-128 xl:w-128">
       <img v-if="img" :src="img.src" loading="lazy" class="object-contain overflow-hidden w-full h-full"/>
-      <video v-if="video" class="h-64 w-64 sm:w-80 sm:h-80 xl:h-96 xl:w-96" autoplay muted loop>
+      <video v-if="video" class="h-80 w-80 sm:w-96 sm:h-96 xl:h-128 xl:w-128" autoplay muted loop>
         <source :src="video.src" type="video/mp4">
       </video>
     </div>
