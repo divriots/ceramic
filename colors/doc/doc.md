@@ -5,7 +5,7 @@ import { html } from 'lit-html';
 import '~/tailwind/src/styles.css';
 ```
 
-# Background Color
+# Background Colors
 
 ```html:html
 <dockit-tailwind-showcases
@@ -15,7 +15,7 @@ component-class="shadow-xl h-24 w-24 rounded-sm"
 </dockit-tailwind-showcases>
 ```
 
-# Border Color
+# Border Colors
 
 ```html:html
 <dockit-tailwind-showcases
@@ -26,7 +26,7 @@ checkered-background="false"
 </dockit-tailwind-showcases>
 ```
 
-# Text Color
+# Text Colors
 
 ```html:html
 <dockit-tailwind-showcases
