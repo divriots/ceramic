@@ -7,7 +7,7 @@ export default [
     promises: [
       // {
       //   title: 'Visual component library',
-      //   description: `<p>From design tokens to complex components, 
+      //   description: `<p>From design tokens to complex components,
       //   everything is in one place, visually accessible by anyone.</p>
       //   <p>Developers and designers can work together on the Design System code-side.</p>`,
       //   img: {
@@ -19,11 +19,11 @@ export default [
       //   // },
       // },
       {
-        title: 'Code and Stories',
-        description: `<p>Your component library is visually organised.
+        title: 'Code and stories',
+        description: `<p>Your component library is visually organized.
         It's easy for anyone to discover the component catalog and contribute
         to the Design System right away.</p>
-        <p>Storybook Stories (CSF) are supported out-the-box.</p>`,
+        <p>Storybook stories (CSF) are supported out-the-box.</p>`,
         img: {
           src: imgLanding('code-and-stories.png'),
         },
@@ -45,7 +45,7 @@ export default [
         // },
       },
       {
-        title: 'Documentation aka Reference Site',
+        title: 'Documentation aka reference site',
         description: `<p>Reference sites are online documentation of your
         Design System including component description, rules and guidelines.</p>
         <p>Backlight has built-in support for Markdown and MDX documentation.</p>
@@ -59,7 +59,7 @@ export default [
         // },
       },
       {
-        title: 'Unit Tests',
+        title: 'Unit tests',
         description: `<p>Reproduce bugs. Ensure accessibility over time. Automate event checks...</p>
         <p>Backlight has a built-in test runner and reporter for effortless test checks and contributions.</p>`,
         img: {
@@ -91,10 +91,10 @@ export default [
         // },
       },
       {
-        title: 'Review Pull-Requests visually',
+        title: 'Review pull-Requests visually',
         description: `<p>Reviewing HTML, CSS and JavaScript code doesn't tell
         the full picture.</p>
-        <p>Backlight renders Pull-request instantly so you can review them
+        <p>Backlight renders pull-request instantly so you can review them
         graphically. You don't need to wait for the build task or the deploy task.</p>
         <p>Review better in less time.</p>`,
         img: {
@@ -126,7 +126,7 @@ export default [
       {
         title: 'Connects to your Git repository',
         description: `<p>Backlight supports GitHub and Gitlab (BitBucket coming soon).</p>
-        <p>Push changes on branches and review Pull-Requests easily.</p>`,
+        <p>Push changes on branches and review pull-Requests easily.</p>`,
         img: {
           src: imgLanding('git.png'),
         },
@@ -149,7 +149,7 @@ export default [
       },
       {
         title: 'No lock-in',
-        description: `<p>Backlight promote 100% standard Web development technologies.</p>
+        description: `<p>Backlight promote 100% standard web development technologies.</p>
         <p>You are always free to eject your Design System and continue outside of Backlight.</p>`,
         img: {
           src: imgLanding('nolockin.gif'),
