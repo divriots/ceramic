@@ -25,5 +25,5 @@ export const features = () => ({
       groups,
     };
   },
-  template: `<Features :select="1" :plans="[Free,Pro,Enterprise]" :features="feat" :groups="groups"/>`,
+  template: `<Features colSelectClass="bg-primary bg-opacity-25" :colSelectIdx="1" :plans="[Free,Pro,Enterprise]" :features="feat" :groups="groups"/>`,
 });

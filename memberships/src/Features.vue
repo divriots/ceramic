@@ -1,6 +1,6 @@
 <script>
   export default {
-  props: ['select','plans', 'features', 'groups'],
+  props: ['plans', 'features', 'groups','colSelectClass', 'colSelectIdx',],
   methods: {
     findFeature(plan, feature) {
       const _feature = plan.additionalFeatures.find(
@@ -9,7 +9,7 @@
       if (_feature)
         return (
           _feature.restriction ||
-          `<svg class="h-6 w-6 text-teal-500" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`
+          `<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`
         );
       if (plan.inherits) return this.findFeature(plan.inherits, feature);
       return '';
@@ -21,7 +21,7 @@
   <table class="w-full">
     <colgroup>
       <col />
-      <col v-for="i in plans.length" :class="{ select: i === select }" />
+      <col v-for="i in plans.length" :class="`${ i === colSelectIdx?colSelectClass:''}`" />
     </colgroup>
     <thead>
       <tr>
@@ -30,12 +30,9 @@
         </th>
         <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-2">
           <span class="inline-flex flex-col text-left">
-            {{ plan.title }}
-            <a
-              class="action py-2 text-primary text-md whitespace-nowrap"
-              :href="plan.action.url"
-              >{{ plan.action.label }}</a
-            >
+            <span class="text-xl">{{ plan.title }}</span>
+          <a class="action py-2 text-primary text-md whitespace-nowrap" :href="plan.action.url">{{ plan.action.label
+            }}</a>
           </span>
         </th>
       </tr>
@@ -62,8 +59,7 @@
   </table>
 </template>
 <style scoped>
-  col.select {
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  table {
+    border-collapse: collapse;
   }
 </style>
