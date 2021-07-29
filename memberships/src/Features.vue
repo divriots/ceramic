@@ -28,11 +28,13 @@
         <th scope="col" class="text-3xl text-left">
           All our <span class="text-primary">features</span>
         </th>
-        <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-2">
+        <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-2 align-text-top">
           <span class="inline-flex flex-col text-left">
             <span class="text-xl">{{ plan.title }}</span>
-          <a class="action py-2 text-primary text-md whitespace-nowrap" :href="plan.action.url">{{ plan.action.label
-            }}</a>
+          <component :is="plan.action.url?'a':'span'" class="action py-2 text-primary text-md whitespace-nowrap"
+            :href="plan.action.url">{{
+            plan.action.label
+            }}</component>
           </span>
         </th>
       </tr>
