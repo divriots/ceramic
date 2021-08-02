@@ -20,7 +20,7 @@ component-class="shadow-xl h-24 w-24 bg-primary"
 ```html:html
 <dockit-tailwind-showcases
 showcase-key="borderWidth"
-component-class="shadow-xl h-24 w-24 border-4 rounded-sm"
+component-class="shadow-xl h-24 w-24 rounded-sm"
 checkered-background="false"
 .theme=${theme}>
 </dockit-tailwind-showcases>
