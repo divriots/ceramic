@@ -9,6 +9,13 @@ import {
 } from '../../config/src/plans';
 import '~/tailwind/src/styles.css';
 
+export default {
+  parameters: {
+    layout: 'centered',
+    backgrounds: { default: 'black' },
+  },
+};
+
 export const memberships = () => ({
   components: { Memberships },
   template: `<Memberships/>`,

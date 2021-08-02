@@ -18,7 +18,7 @@
 };
 </script>
 <template>
-  <table class="w-full">
+  <table class="w-full text-white">
     <colgroup>
       <col />
       <col v-for="i in plans.length" :class="`${ i === colSelectIdx?colSelectClass:''}`" />
@@ -31,7 +31,7 @@
         <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-4 align-text-top">
           <span class="inline-flex flex-col text-left">
             <span class="text-xl">{{ plan.title }}</span>
-          <component :is="plan.action.url?'a':'span'" class="action py-2 text-primary text-md whitespace-nowrap"
+          <component :is="plan.action.url?'a':'span'" class="action py-2 text-secondary text-md whitespace-nowrap"
             :href="plan.action.url">{{
             plan.action.label
             }}</component>

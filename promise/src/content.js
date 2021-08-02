@@ -2,7 +2,7 @@ const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}`;
 
 export default [
   {
-    classes: 'text-secondary',
+    classes: 'text-primary',
     title: 'Everything in <span class="text-secondary">one place</span>',
     promises: [
       // {
