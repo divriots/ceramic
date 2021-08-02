@@ -18,7 +18,7 @@
 };
 </script>
 <template>
-  <table class="w-full">
+  <table class="w-full text-white">
     <colgroup>
       <col />
       <col v-for="i in plans.length" :class="`${ i === colSelectIdx?colSelectClass:''}`" />
@@ -26,7 +26,7 @@
     <thead>
       <tr>
         <th scope="col" class="text-3xl text-left">
-          All our <span class="text-secondary">features</span>
+          All our <span class="text-primary">features</span>
         </th>
         <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-4 align-text-top">
           <span class="inline-flex flex-col text-left">
