@@ -1,5 +1,5 @@
 <template>
-  <nav class="mt-2">
+  <nav class="mt-2 text-white">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
@@ -35,8 +35,6 @@
               :class="`action px-3 ${current==route?'text-primary font-semibold':'font-normal'}`">{{route.label}}</a>
             <component :is="Discord"></component>
             <component :is="Twitter"></component>
-            <a :href="appRoute.pathname"
-              class="action border-solid border-black-default border-1 rounded-md whitespace-nowrap px-3 py-3 ml-2">{{appRoute.label}}</a>
           </div>
         </div>
       </div>
@@ -45,14 +43,10 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <div class="my-6">
-          <a :href="appRoute.pathname"
-            class="action border-solid border-black-divriots border-1 rounded-md whitespace-nowrap px-3 py-3 ml-2">{{appRoute.label}}</a>
-        </div>
         <a :href="route.pathname" v-for="route of routes" :key="route"
           :class="`action px-2 py-1 block ${current==route?'text-primary font-semibold':'font-normal '}`">{{route.label}}</a>
-        <component :is="Discord">Discord</component>
-        <component :is="Twitter">Twitter</component>
+        <component :is="Discord"></component>
+        <component :is="Twitter"></component>
       </div>
     </div>
   </nav>
@@ -70,7 +64,6 @@ export default {
   props:{
     routes: {type: Array, required: true},
     pathname: {type: String, default:''},
-    appRoute: {type: Object, required: true},
   },
   computed:{
     current(){ 

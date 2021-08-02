@@ -28,10 +28,10 @@ export default {
 </script>
 <template>
   <div class="relative rounded-lg shadow-lg p-6 flex flex-col">
-    <div class="flex bg-primary rounded-md shadow-inset-control" v-if="price && price.value > 0">
+    <div class="flex bg-secondary rounded-md shadow-inset-control" v-if="price && price.value > 0">
       <button
         :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
-          period === 'year' ? 'text-primary bg-white' : ''
+          period === 'year' ? 'text-secondary bg-white' : ''
         }`"
         @click="period = 'year'"
       >
@@ -39,7 +39,7 @@ export default {
       </button>
       <button
         :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
-          period === 'month' ? 'text-primary bg-white' : ''
+          period === 'month' ? 'text-secondary bg-white' : ''
         }`"
         @click="period = 'month'"
       >
@@ -59,13 +59,13 @@ export default {
 <div class="flex items-center" v-if="price && price.unit">
   <div class="flex text-sm items-center" v-if="price && price.unit">
     <button
-              class="btn-primary m-2 p-2"
+              class="btn-secondary m-2 p-2"
               @click="count > 1 && count--"
             >
               -
             </button>
     <span class="tabular-nums">{{ count }}</span>
-    <button class="btn-primary m-2 p-2" @click="count++">
+    <button class="btn-secondary m-2 p-2" @click="count++">
               +
             </button>
   </div>
@@ -99,7 +99,7 @@ export default {
 </ul>
 
 <div class="mt-8 grid gap-4 justify-center">
-  <a :href="action.url" class="btn bg-background block text-base font-display text-primary">
+  <a :href="action.url" class="btn bg-background block text-base font-display text-secondary">
     {{ action.label }}
   </a>
   <span class="opacity-75 text-sm">{{action.legend}}</span>

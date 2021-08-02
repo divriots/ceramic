@@ -5,7 +5,7 @@ import { Free, Pro, Enterprise } from '../../config/src/plans';
 export default {
   parameters: {
     layout: 'centered',
-    // backgrounds: { default: 'black' },
+    backgrounds: { default: 'black' },
   },
   args: {
     components: { Price },
@@ -24,7 +24,7 @@ export const pro = (args) => ({
     return { props: Pro };
   },
   ...args,
-  template: `<Price v-bind="props" class="w-80 bg-primary text-white" banner="Banner"/>`,
+  template: `<Price v-bind="props" class="w-80 bg-secondary text-white" banner="Banner"/>`,
 });
 export const enterprise = (args) => ({
   setup() {

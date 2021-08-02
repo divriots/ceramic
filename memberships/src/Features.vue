@@ -26,12 +26,12 @@
     <thead>
       <tr>
         <th scope="col" class="text-3xl text-left">
-          All our <span class="text-primary">features</span>
+          All our <span class="text-secondary">features</span>
         </th>
         <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-4 align-text-top">
           <span class="inline-flex flex-col text-left">
             <span class="text-xl">{{ plan.title }}</span>
-          <component :is="plan.action.url?'a':'span'" class="action py-2 text-primary text-md whitespace-nowrap"
+          <component :is="plan.action.url?'a':'span'" class="action py-2 text-secondary text-md whitespace-nowrap"
             :href="plan.action.url">{{
             plan.action.label
             }}</component>
