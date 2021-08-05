@@ -15,9 +15,12 @@ const typographyExtension = {
           maxWidth: '65ch',
           color: 'inherit',
           a: {
-            color: 'inherit',
+            color: colors.colors.primary,
             fontWeight: '500',
-            textDecoration: 'underline',
+            textDecoration: 'none',
+            '&:hover': {
+              textDecoration: 'underline',
+            },
           },
           b: {
             color: 'inherit',
@@ -42,6 +45,12 @@ const typographyExtension = {
           },
           code: {
             color: 'inherit',
+          },
+          blockquote: {
+            color: 'inherit',
+            fontStyle: null,
+            borderLeftColor: colors.colors.primary,
+            fontSize: '1.25rem',
           },
         },
       },
