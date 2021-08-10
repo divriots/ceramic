@@ -1,6 +1,6 @@
 import React from 'react';
 import FAQ from '../src/FAQ';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 import { pricingFAQ } from '../../config/src/faq';
 
 export default {

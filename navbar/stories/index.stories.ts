@@ -1,5 +1,5 @@
 import NavBar from '../src/index.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export default {
   parameters: {

@@ -1,5 +1,5 @@
 import Discord from '../src/index.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export const discord = () => ({
   components: { Discord },

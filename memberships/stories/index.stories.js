@@ -7,7 +7,7 @@ import {
   groups,
   features as feat,
 } from '../../config/src/plans';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export default {
   parameters: {

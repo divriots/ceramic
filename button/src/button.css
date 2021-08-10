@@ -1,0 +1,66 @@
+@tailwind components;
+
+@layer components {
+  .base_action {
+    @apply cursor-pointer
+    rounded-md
+    focus:outline-none
+    focus:ring-1
+    focus:ring-primary
+    focus:ring-offset-1
+    focus:ring-offset-transparent;
+  }
+  .action {
+    @apply base_action 
+    hover:underline;
+  }
+  .base_button {
+    @apply py-2
+    px-4
+    sm:py-3 
+    sm:px-6;
+  }
+  .btn {
+    @apply action 
+    base_button;
+  }
+  .btn-primary {
+    @apply base_action
+    base_button
+    relative
+    bg-primary 
+    text-black-default;
+  }
+
+  .btn-text {
+    @apply btn
+		text-primary;
+  }
+
+  .btn-secondary {
+    @apply base_action
+    base_button
+    relative
+    bg-secondary 
+    text-white;
+  }
+  .btn-primary:before,
+  .btn-secondary:before {
+    @apply transition-opacity
+    rounded-md
+    duration-200
+    absolute
+    inset-0
+    opacity-0
+    bg-white;
+    content: '';
+  }
+  .btn-primary:hover::before,
+  .btn-secondary:hover::before {
+    opacity: 0.1;
+  }
+  .btn-primary:active::before,
+  .btn-secondary:hover::before {
+    opacity: 0.2;
+  }
+}

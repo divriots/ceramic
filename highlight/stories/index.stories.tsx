@@ -1,5 +1,5 @@
 import Highlight from '../src/Highlight.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export default {
   parameters: {
