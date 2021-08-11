@@ -21,10 +21,13 @@ customElements.define(
         ? `onclick="${this.getAttribute('secondaryOnClick')}"`
         : '';
 
+      const primaryCta = !!primaryHref ? 'a' : 'button';
+      const secondaryCta = !!secondaryHref ? 'a' : 'button';
+
       this.innerHTML = /*html*/ `
       <div class="flex mt-8 space-x-2">
-        <button class="btn-primary" ${primaryHref} ${primaryOnClick}>${primaryText}</button>
-        <button class="btn-text" ${secondaryHref} ${secondaryOnClick}>${secondaryText}</button>
+        <${primaryCta} class="btn-primary" ${primaryHref} ${primaryOnClick}>${primaryText}</${primaryCta}>
+        <${secondaryCta} class="btn-text" ${secondaryHref} ${secondaryOnClick}>${secondaryText}</${secondaryCta}>
       </div>`;
     }
   }
