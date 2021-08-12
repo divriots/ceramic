@@ -1,5 +1,7 @@
-import { DoubleCtaVue } from '~/double-cta';
+import React from 'react';
+import { DoubleCtaVue, DoubleCtaReact } from '~/double-cta';
 import '~/tailwind';
+import { react } from '@babel/types';
 
 export default {
   parameters: {
@@ -8,7 +10,7 @@ export default {
   },
 };
 
-export const double_cta_web_components_href = () => /*html*/ `
+export const double_cta_web_component_href = () => /*html*/ `
   <double-cta
     primaryText="Request early access"
     primaryHref="/request-earlyaccess"
@@ -16,7 +18,7 @@ export const double_cta_web_components_href = () => /*html*/ `
     secondaryHref="https://calendly.com/gg_/backlight"
   ></double-cta>`;
 
-export const double_cta_web_components_click = () => /*html*/ `
+export const double_cta_web_component_click = () => /*html*/ `
   <double-cta
     primaryText="Request early access"
     primaryOnClick="alert('primary clicked!')"
@@ -57,3 +59,21 @@ export const double_cta_vue_click = () => ({
       :secondaryOnClick="secondaryOnClick"/>
   `,
 });
+
+export const double_cta_react_href = () => (
+  <DoubleCtaReact
+    primaryText="Request early access"
+    primaryHref="/request-earlyaccess"
+    secondaryText="Book a demo"
+    secondaryHref="https://calendly.com/gg_/backlight"
+  />
+  );
+
+export const double_cta_react_click = () => (
+  <DoubleCtaReact
+    primaryText="Request early access"
+    primaryOnClick={() => alert('primary clicked!')}
+    secondaryText="Book a demo"
+    secondaryOnClick={() => alert('secondary clicked!')}
+  />
+);

@@ -1,8 +1,10 @@
 <script>
 import '../../title';
 import '../../subtitle';
-import '../../double-cta';
-export default {};
+import { DoubleCtaVue } from '../../double-cta';
+export default {
+  setup: () => ({ DoubleCtaVue }),
+};
 </script>
 <template>
   <section
@@ -48,12 +50,13 @@ export default {};
               <br />
               Developers and Designers together.
             </p>
-            <double-cta
-              primaryHref="/request-earlyaccess"
-              primaryText="Request early access"
-              secondaryHref="https://calendly.com/gg_/backlight"
-              secondaryText="Book a demo"
-            ></double-cta>
+            <component
+              :is="DoubleCtaVue"
+              :primaryText="'Request early access'"
+              :primaryHref="'/request-earlyaccess'"
+              :secondaryText="'Book a demo'"
+              :secondaryHref="'https://calendly.com/gg_/backlight'"
+            ></component>
           </div>
         </div>
       </div>
