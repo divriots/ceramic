@@ -1,7 +1,6 @@
 import React from 'react';
-import { DoubleCtaVue, DoubleCtaReact } from '~/double-cta';
+import { DoubleCtaVue, DoubleCtaReact, DoubleCtaSvelte } from '~/double-cta';
 import '~/tailwind';
-import { react } from '@babel/types';
 
 export default {
   parameters: {
@@ -77,3 +76,25 @@ export const double_cta_react_click = () => (
     secondaryOnClick={() => alert('secondary clicked!')}
   />
 );
+
+export const double_cta_svelte_href = () => ({
+  Component: DoubleCtaSvelte,
+  props: {
+    primaryText: "Request early access",
+    primaryHref: "/request-earlyaccess",
+    secondaryText: "Book a demo",
+    secondaryHref: "https://calendly.com/gg_/backlight",
+  },
+});
+
+export const double_cta_svelte_click = () => ({
+  Component: DoubleCtaSvelte,
+  props: {
+    primaryText: "Request early access",
+    primaryOnClick: () => alert('primary clicked!'),
+    secondaryText: "Book a demo",
+    secondaryOnClick: () => alert('secondary clicked!'),
+  },
+});
+
+
