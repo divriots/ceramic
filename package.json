@@ -6,10 +6,7 @@
     "serve": "dsd-cli serve 1SuMaEt5uxgp62VC8WVP --open"
   },
   "dependencies": {
-    "react": "latest",
-    "vue": "latest"
-  },
-  "devDependencies": {
-    "dsd-cli": "latest"
+    "react": "^17.0.2",
+    "vue": "^3.0.7"
   }
 }
