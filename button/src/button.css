@@ -34,7 +34,7 @@
 
   .btn-text {
     @apply btn
-		text-primary;
+    text-primary;
   }
 
   .btn-secondary {
