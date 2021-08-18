@@ -44,7 +44,8 @@
         "infrastructure",
         [
           "config",
-          "tailwind"
+          "tailwind",
+          "layout"
         ]
       ],
       [
