@@ -1,4 +1,4 @@
-import { NavMenuItem } from '~/navmenuitem';
+import { NavMenuItem } from '~/navmenu-item';
 import '~/tailwind';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   },
 };
 
-export const nav_menu_item_inactive = () => ({
+export const inactive = () => ({
   components: { NavMenuItem },
   data: () => ({
     route: {
@@ -18,7 +18,7 @@ export const nav_menu_item_inactive = () => ({
   template: `<NavMenuItem :route="route" />`,
 });
 
-export const nav_menu_item_active = () => ({
+export const active = () => ({
   components: { NavMenuItem },
   data: () => ({
     route: {
@@ -30,7 +30,7 @@ export const nav_menu_item_active = () => ({
   template: `<NavMenuItem :route="route" :isActive="isActive"/>`,
 });
 
-export const nav_menu_item_inactive_mobile = () => ({
+export const inactive_mobile = () => ({
   components: { NavMenuItem },
   data: () => ({
     route: {
@@ -42,7 +42,7 @@ export const nav_menu_item_inactive_mobile = () => ({
   template: `<NavMenuItem :route="route" />`,
 });
 
-export const nav_menu_item_active_mobile = () => ({
+export const active_mobile = () => ({
   components: { NavMenuItem },
   data: () => ({
     route: {

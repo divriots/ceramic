@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const double_cta_web_component_href = () => /*html*/ `
+export const webcomponent = () => /*html*/ `
   <double-cta
     primaryText="Request early access"
     primaryHref="/request-earlyaccess"
@@ -17,15 +17,7 @@ export const double_cta_web_component_href = () => /*html*/ `
     secondaryHref="https://calendly.com/gg_/backlight"
   ></double-cta>`;
 
-export const double_cta_web_component_click = () => /*html*/ `
-  <double-cta
-    primaryText="Request early access"
-    primaryOnClick="alert('primary clicked!')"
-    secondaryText="Book a demo"
-    secondaryOnClick="alert('secondary clicked!')"
-  ></double-cta>`;
-
-export const double_cta_vue_href = () => ({
+export const vue = () => ({
   components: { DoubleCtaVue },
   data: () => ({
     primaryText: 'Request early access',
@@ -42,59 +34,21 @@ export const double_cta_vue_href = () => ({
   `,
 });
 
-export const double_cta_vue_click = () => ({
-  components: { DoubleCtaVue },
-  data: () => ({
-    primaryText: 'Request early access',
-    primaryOnClick: 'alert("primary clicked!")',
-    secondaryText: 'Book a demo',
-    secondaryOnClick: 'alert("secondary clicked!")',
-  }),
-  template: `
-    <DoubleCtaVue
-      :primaryText="primaryText"
-      :primaryOnClick="primaryOnClick"
-      :secondaryText="secondaryText"
-      :secondaryOnClick="secondaryOnClick"/>
-  `,
-});
-
-export const double_cta_react_href = () => (
+export const react = () => (
   <DoubleCtaReact
     primaryText="Request early access"
     primaryHref="/request-earlyaccess"
     secondaryText="Book a demo"
     secondaryHref="https://calendly.com/gg_/backlight"
   />
-  );
-
-export const double_cta_react_click = () => (
-  <DoubleCtaReact
-    primaryText="Request early access"
-    primaryOnClick={() => alert('primary clicked!')}
-    secondaryText="Book a demo"
-    secondaryOnClick={() => alert('secondary clicked!')}
-  />
 );
 
-export const double_cta_svelte_href = () => ({
+export const svelte = () => ({
   Component: DoubleCtaSvelte,
   props: {
-    primaryText: "Request early access",
-    primaryHref: "/request-earlyaccess",
-    secondaryText: "Book a demo",
-    secondaryHref: "https://calendly.com/gg_/backlight",
+    primaryText: 'Request early access',
+    primaryHref: '/request-earlyaccess',
+    secondaryText: 'Book a demo',
+    secondaryHref: 'https://calendly.com/gg_/backlight',
   },
 });
-
-export const double_cta_svelte_click = () => ({
-  Component: DoubleCtaSvelte,
-  props: {
-    primaryText: "Request early access",
-    primaryOnClick: () => alert('primary clicked!'),
-    secondaryText: "Book a demo",
-    secondaryOnClick: () => alert('secondary clicked!'),
-  },
-});
-
-

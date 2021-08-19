@@ -18,7 +18,7 @@
 <script>
 import { Twitter } from '../../twitter';
 import { Discord } from '../../discord';
-import { NavMenuItem } from '../../navmenuitem';
+import { NavMenuItem } from '../../navmenu-item';
 export default {
   props: {
     routes: { type: Array, required: true },

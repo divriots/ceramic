@@ -2,7 +2,9 @@ import { NavMenu } from '~/navmenu';
 import '~/tailwind';
 
 export default {
-  parameters: {},
+  parameters: {
+    layout: 'centered',
+  },
 };
 
 export const nav_menu = () => ({

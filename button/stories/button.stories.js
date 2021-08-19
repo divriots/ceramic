@@ -7,20 +7,23 @@ export default {
   },
 };
 
-export const href_primary_button = () =>
-  /*html*/ `<a class="btn-primary" href="#">Request early access</a>`;
+export const btn_primary = () => /*html*/ `
+  <div>
+    <a class="btn-primary" href="#">This is an anchor</a>
+    <button class="btn-primary" onclick="alert('clicked')">This is a button</button>
+  </div>
+`;
 
-export const click_primary_button = () =>
-  /*html*/ `<button class="btn-primary" onclick="alert('clicked')">Request early access</button>`;
+export const btn_secondary = () => /*html*/ `
+  <div>
+    <a class="btn-secondary" href="#">This is an anchor</a>
+    <button class="btn-secondary" onclick="alert('clicked')">This is a button</button>
+  </div>
+`;
 
-export const href_secondary_button = () =>
-  /*html*/ `<a class="btn-secondary" href="#">Request early access</a>`;
-
-export const click_secondary_button = () =>
-  /*html*/ `<button class="btn-secondary" onclick="alert('clicked')">Request early access</button>`;
-
-export const href_text_button = () =>
-  /*html*/ `<a class="btn-text" href="#">Book a demo</button>`;
-
-export const click_text_button = () =>
-  /*html*/ `<button class="btn-text" onclick="alert('clicked')">Book a demo</button>`;
+export const btn_text = () => /*html*/ `
+  <div>
+    <a class="btn-text" href="#">This is an anchor</a>
+    <button class="btn-text" onclick="alert('clicked')">This is a button</button>
+  </div>
+`;
