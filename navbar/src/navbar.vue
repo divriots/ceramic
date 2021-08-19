@@ -31,18 +31,8 @@
         <component :is="Logo" class="text-xl"></component>
         <div class="hidden md:block md:ml-6">
           <div class="flex items-center">
-            <a
-              :href="route.pathname"
-              v-for="route of routes"
-              :key="route"
-              :class="`action px-3 ${
-                current == route ? 'text-primary font-semibold' : 'font-normal'
-              }`"
-            >
-              {{ route.label }}
-            </a>
-            <component :is="Discord"></component>
-            <component :is="Twitter"></component>
+            <component :is="NavMenu" :pathname="pathname" :routes="routes">
+            </component>
           </div>
         </div>
       </div>
@@ -51,18 +41,8 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <a
-          :href="route.pathname"
-          v-for="route of routes"
-          :key="route"
-          :class="`action px-2 py-1 block ${
-            current == route ? 'text-primary font-semibold' : 'font-normal '
-          }`"
-        >
-          {{ route.label }}
-        </a>
-        <component :is="Discord"></component>
-        <component :is="Twitter"></component>
+        <component :is="NavMenu" :pathname="pathname" :routes="routes">
+        </component>
       </div>
     </div>
   </nav>
@@ -73,21 +53,16 @@
 }
 </style>
 <script>
-import Twitter from '../../twitter/src/index.vue';
-import Discord from '../../discord/src/index.vue';
-import Logo from '../../logo/src/index.vue';
+import { NavMenu } from '../../navmenu';
+import { Logo } from '../../logo';
 export default {
+  components: { NavMenu },
   props: {
     routes: { type: Array, required: true },
     pathname: { type: String, default: '' },
   },
-  computed: {
-    current() {
-      return this.routes.find((r) => this.pathname === r.pathname);
-    },
-  },
   setup() {
-    return { Logo, Twitter, Discord };
+    return { Logo, NavMenu };
   },
 };
 </script>

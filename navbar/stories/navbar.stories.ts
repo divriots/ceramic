@@ -1,4 +1,4 @@
-import NavBar from '../src/index.vue';
+import { NavBar } from '~/navbar';
 import '~/tailwind';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   },
 };
 
-export const story1 = () => ({
+export const navbar = () => ({
   components: { NavBar },
   data() {
     return {

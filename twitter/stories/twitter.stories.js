@@ -1,4 +1,4 @@
-import Twitter from '../src/index.vue';
+import { Twitter } from '~/twitter';
 import '~/tailwind';
 
 export const twiter = () => ({

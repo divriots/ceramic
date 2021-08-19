@@ -1,4 +1,4 @@
-import Logo from '../src/index.vue';
+import { Logo } from '~/logo';
 import '~/tailwind';
 
 export const story1 = () => ({

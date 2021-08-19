@@ -1,4 +1,4 @@
-import Discord from '../src/index.vue';
+import { Discord } from '~/discord';
 import '~/tailwind';
 
 export const discord = () => ({

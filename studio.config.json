@@ -18,29 +18,32 @@
         [
           "button",
           "title",
-          "subtitle"
+          "subtitle",
+          "logo",
+          "twitter",
+          "discord",
+          "navmenuitem"
         ]
       ],
       [
         "molecules",
         [
-          "double-cta"
+          "double-cta",
+          "navmenu"
         ]
       ],
       [
         "organisms",
         [
-          "hero"
+          "hero",
+          "navbar"
         ]
       ],
       [
         "components",
         [
           "card",
-          "logo",
           "price",
-          "twitter",
-          "discord",
           "dropdown",
           "startercard"
         ]
@@ -48,7 +51,6 @@
       [
         "templates",
         [
-          "navbar",
           "highlight",
           "promise",
           "compatibility",
