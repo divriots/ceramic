@@ -1,4 +1,4 @@
 import Compatibility from '../src/index.svelte';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export const story1 = () => Compatibility;

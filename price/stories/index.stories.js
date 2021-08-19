@@ -1,5 +1,5 @@
 import Price from '../src/index.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 import { Free, Pro, Enterprise } from '../../config/src/plans';
 
 export default {

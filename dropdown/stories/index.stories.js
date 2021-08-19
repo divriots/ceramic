@@ -3,7 +3,7 @@ import Menu from '../src/index';
 import { Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export default {
   parameters: {

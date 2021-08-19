@@ -1,5 +1,5 @@
 import Explore from '../src/index.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export const story1 = () => ({
   components: { Explore },

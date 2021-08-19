@@ -14,22 +14,23 @@
         ]
       ],
       [
-        "components",
+        "atoms",
         [
-          "card",
+          "button",
+          "title",
+          "subtitle",
           "logo",
-          "price",
           "twitter",
           "discord",
-          "dropdown",
-          "startercard"
+          "navmenu-item"
         ]
       ],
+      ["molecules", ["double-cta", "navmenu"]],
+      ["organisms", ["hero", "navbar"]],
+      ["components", ["card", "price", "dropdown", "startercard"]],
       [
         "templates",
         [
-          "navbar",
-          "hero",
           "highlight",
           "promise",
           "compatibility",
@@ -40,19 +41,8 @@
           "footer"
         ]
       ],
-      [
-        "infrastructure",
-        [
-          "config",
-          "tailwind"
-        ]
-      ],
-      [
-        "todo",
-        [
-          "otherproducts"
-        ]
-      ]
+      ["infrastructure", ["config", "tailwind"]],
+      ["todo", ["otherproducts"]]
     ]
   }
 }

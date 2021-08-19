@@ -1,11 +1,11 @@
 import Hero from '../src/index.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 
 export default {
   parameters: {
-    layout: "fullscreen"
-  }
-}
+    layout: 'fullscreen',
+  },
+};
 
 export const story1 = () => ({
   components: { Hero },

@@ -1,5 +1,5 @@
 import Promise from '../src/index.vue';
-import '~/tailwind/src/styles.css';
+import '~/tailwind';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
