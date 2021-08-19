@@ -22,12 +22,13 @@
           "logo",
           "twitter",
           "discord",
-          "navmenu-item"
+          "navmenu-item",
+          "empty-card"
         ]
       ],
-      ["molecules", ["double-cta", "navmenu"]],
+      ["molecules", ["double-cta", "navmenu", "starter-card"]],
       ["organisms", ["hero", "navbar"]],
-      ["components", ["card", "price", "dropdown", "startercard"]],
+      ["components", ["card", "price", "dropdown"]],
       [
         "templates",
         [
