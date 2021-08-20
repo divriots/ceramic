@@ -82,9 +82,9 @@
   </footer>
 </template>
 <script>
-import { Twitter } from '../../twitter';
-import { Discord } from '../../discord';
-import { Logo } from '../../logo';
+import Twitter from '../../twitter/src/twitter.vue';
+import Discord from '../../discord/src/discord.vue';
+import Logo from '../../Logo/src/logo.vue';
 export default {
   props: {
     routes: { type: Array, default: [] },

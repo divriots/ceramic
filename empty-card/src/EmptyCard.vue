@@ -1,6 +1,11 @@
 <template>
-  <a :href="url" v-on:click="event => $emit('click', event)" :class="`starter-kit starter-kit-${size}`" :style="`background-color: ${backgroundColor};`">
-      <slot></slot>
+  <a
+    :href="url"
+    v-on:click="(event) => $emit('click', event)"
+    :class="`starter-kit starter-kit-${size}`"
+    :style="`background-color: ${backgroundColor};`"
+  >
+    <slot></slot>
   </a>
 </template>
 <script>

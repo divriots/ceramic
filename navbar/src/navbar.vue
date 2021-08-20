@@ -31,8 +31,11 @@
         <component :is="Logo" class="text-xl"></component>
         <div class="hidden md:block md:ml-6">
           <div class="flex items-center">
-            <component :is="NavMenu" :pathname="pathname" :routes="routes">
-            </component>
+            <component
+              :is="NavMenu"
+              :pathname="pathname"
+              :routes="routes"
+            ></component>
           </div>
         </div>
       </div>
@@ -41,8 +44,11 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <component :is="NavMenu" :pathname="pathname" :routes="routes">
-        </component>
+        <component
+          :is="NavMenu"
+          :pathname="pathname"
+          :routes="routes"
+        ></component>
       </div>
     </div>
   </nav>
@@ -53,8 +59,8 @@
 }
 </style>
 <script>
-import { NavMenu } from '../../navmenu';
-import { Logo } from '../../logo';
+import NavMenu from '../../navmenu/src/navmenu.vue';
+import Logo from '../../Logo/src/logo.vue';
 export default {
   components: { NavMenu },
   props: {

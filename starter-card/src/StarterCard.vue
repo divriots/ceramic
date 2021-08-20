@@ -33,7 +33,7 @@
   </component>
 </template>
 <script>
-import EmptyCard from './EmptyCard.vue';
+import EmptyCard from '../../empty-card';
 
 export default {
   props: {
@@ -46,7 +46,9 @@ export default {
     actionDescription: { type: String },
     size: { type: String, default: 'normal' },
   },
-  data(){ return { EmptyCard }},
+  data() {
+    return { EmptyCard };
+  },
 };
 </script>
 <style lang="scss" scoped>

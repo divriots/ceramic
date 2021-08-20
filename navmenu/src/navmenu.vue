@@ -16,9 +16,9 @@
 }
 </style>
 <script>
-import { Twitter } from '../../twitter';
-import { Discord } from '../../discord';
-import { NavMenuItem } from '../../navmenu-item';
+import Twitter from '../../twitter/src/twitter.vue';
+import Discord from '../../discord/src/discord.vue';
+import NavMenuItem from '../../navmenu-item/src/navmenu-item.vue';
 export default {
   props: {
     routes: { type: Array, required: true },

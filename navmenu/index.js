@@ -1,1 +1,1 @@
-export { default as NavMenu } from './src/navmenu.vue';
+// export { default as NavMenu } from './src/navmenu.vue';
