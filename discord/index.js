@@ -1,1 +1,1 @@
-export { default as Discord } from './src/discord.vue';
+// export { default as Discord } from './src/discord.vue';

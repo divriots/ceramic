@@ -33,7 +33,7 @@
   </component>
 </template>
 <script>
-import { EmptyCard } from '../../empty-card';
+import EmptyCard from '../../empty-card';
 
 export default {
   props: {

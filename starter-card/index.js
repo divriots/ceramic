@@ -1,1 +1,1 @@
-export { default as StarterCard } from './src/StarterCard.vue';
+// export { default as StarterCard } from './src/StarterCard.vue';

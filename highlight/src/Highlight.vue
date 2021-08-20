@@ -58,8 +58,8 @@
 </template>
 
 <script>
-import { StarterCard } from '../../starter-card';
-import { EmptyCard } from '../../empty-card';
+import StarterCard from '../../starter-card';
+import EmptyCard from '../../empty-card';
 import kits from './data';
 
 export default {
