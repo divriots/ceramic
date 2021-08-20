@@ -3,6 +3,7 @@ import { StarterCard } from '~/starter-card';
 export default {
   parameters: {
     layout: 'centered',
+    backgrounds: { default: 'black' },
   },
 };
 
