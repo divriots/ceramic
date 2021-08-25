@@ -84,26 +84,27 @@
 </template>
 <script>
   import { Twitter } from '../../twitter';
-import { YouTube } from '../../youtube';
-import { Discord } from '../../discord';
-import { Logo } from '../../logo';
-export default {
-  props: {
-    routes: { type: Array, default: [] },
-    subscribe: { type: String, required: true },
-    contact: { type: String, required: true },
-  },
-  data() {
-    const params = new URL(this.subscribe).searchParams;
-    return {
-      audience: params.get('id'),
-      uid: params.get('u'),
-    };
-  },
-  setup() {
-    return { Twitter, Discord, Logo, YouTube };
-  },
-};
+  import { YouTube } from '../../youtube';
+  import { Discord } from '../../discord';
+  import { Logo } from '../../logo';
+  
+  export default {
+    props: {
+      routes: { type: Array, default: [] },
+      subscribe: { type: String, required: true },
+      contact: { type: String, required: true },
+    },
+    data() {
+      const params = new URL(this.subscribe).searchParams;
+      return {
+        audience: params.get('id'),
+        uid: params.get('u'),
+      };
+    },
+    setup() {
+      return { Twitter, Discord, Logo, YouTube };
+    },
+  };
 </script>
 <style lang="scss">
   footer.gradient::before {
