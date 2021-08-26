@@ -22,12 +22,33 @@
           "logo",
           "twitter",
           "discord",
+          "youtube",
           "navmenu-item"
         ]
       ],
-      ["molecules", ["double-cta", "navmenu"]],
-      ["organisms", ["hero", "navbar"]],
-      ["components", ["card", "price", "dropdown", "startercard"]],
+      [
+        "molecules",
+        [
+          "double-cta",
+          "navmenu"
+        ]
+      ],
+      [
+        "organisms",
+        [
+          "hero",
+          "navbar"
+        ]
+      ],
+      [
+        "components",
+        [
+          "card",
+          "price",
+          "dropdown",
+          "startercard"
+        ]
+      ],
       [
         "templates",
         [
@@ -41,8 +62,19 @@
           "footer"
         ]
       ],
-      ["infrastructure", ["config", "tailwind"]],
-      ["todo", ["otherproducts"]]
+      [
+        "infrastructure",
+        [
+          "config",
+          "tailwind"
+        ]
+      ],
+      [
+        "todo",
+        [
+          "otherproducts"
+        ]
+      ]
     ]
   }
 }

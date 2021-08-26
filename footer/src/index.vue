@@ -71,6 +71,7 @@
             <component :is="Twitter"></component>
             <component :is="LinkedIn"></component>
             <component :is="Github"></component>
+            <component :is="YouTube"></component>
           </div>
         </div>
         <div class="col">
@@ -82,67 +83,69 @@
   </footer>
 </template>
 <script>
-import { Twitter } from '../../twitter';
-import { Discord } from '../../discord';
-import { Logo } from '../../logo';
-export default {
-  props: {
-    routes: { type: Array, default: [] },
-    subscribe: { type: String, required: true },
-    contact: { type: String, required: true },
-  },
-  data() {
-    const params = new URL(this.subscribe).searchParams;
-    return {
-      audience: params.get('id'),
-      uid: params.get('u'),
-    };
-  },
-  setup() {
-    return { Twitter, Discord, Logo };
-  },
-};
+  import { Twitter } from '../../twitter';
+  import { YouTube } from '../../youtube';
+  import { Discord } from '../../discord';
+  import { Logo } from '../../logo';
+  
+  export default {
+    props: {
+      routes: { type: Array, default: [] },
+      subscribe: { type: String, required: true },
+      contact: { type: String, required: true },
+    },
+    data() {
+      const params = new URL(this.subscribe).searchParams;
+      return {
+        audience: params.get('id'),
+        uid: params.get('u'),
+      };
+    },
+    setup() {
+      return { Twitter, Discord, Logo, YouTube };
+    },
+  };
 </script>
 <style lang="scss">
-footer.gradient::before {
-  height: 100%;
-}
-
-.links {
-  overflow: hidden;
-  font-size: 17px;
-
-  .cols {
-    display: flex;
-    justify-content: start;
-    flex: 1;
-    flex-wrap: wrap;
+  footer.gradient::before {
+    height: 100%;
   }
 
-  @media only screen and (min-width: 800px) {
-    .logo {
-      height: 150px;
-    }
+  .links {
+    overflow: hidden;
+    font-size: 17px;
 
     .cols {
-      justify-content: space-around;
+      display: flex;
+      justify-content: start;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    @media only screen and (min-width: 800px) {
+      .logo {
+        height: 150px;
+      }
+
+      .cols {
+        justify-content: space-around;
+      }
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 32px 32px 20px;
+
+      label {
+        font-size: 0.9rem;
+        opacity: 0.6;
+        margin-bottom: 16px;
+      }
+
+      a {
+        margin-bottom: 3px;
+      }
     }
   }
-
-  .col {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 32px 32px 20px;
-
-    label {
-      font-size: 0.9rem;
-      opacity: 0.6;
-      margin-bottom: 16px;
-    }
-
-    a {
-      margin-bottom: 3px;
-    }
-  }
-}
 </style>

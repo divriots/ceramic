@@ -20,6 +20,10 @@ export const navbar = () => ({
           pathname: '#',
           label: 'Early Access',
         },
+        {
+          pathname: '#',
+          label: 'Blog',
+        },
       ],
       pathname: '/blog',
     };
