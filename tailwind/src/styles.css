@@ -1,44 +1,11 @@
 @import '../../button/dist/button.css';
 @import '../../title/dist/title.css';
 @import '../../subtitle/dist/subtitle.css';
+@import '../dist/commons.css';
 
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Tailwind is pushing the default line-height too much */
 html {
   line-height: 1.25;
-}
-
-@layer components {
-  .scrollable-horizontal {
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-  .scrollable-horizontal > * {
-    flex-shrink: 0;
-    flex-grow: 0;
-  }
-  .scrollable-horizontal::-webkit-scrollbar {
-    display: none;
-  }
-  .gradient:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background: linear-gradient(
-        var(--gradient-direction, 180deg),
-        rgb(23, 23, 23) 20%,
-        rgba(255, 255, 255, 0) 150%
-      ),
-      linear-gradient(to right, #00c3ff, #ffff1c);
-  }
 }
