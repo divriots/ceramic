@@ -1,6 +1,4 @@
 <script>
-import '../../title';
-import '../../subtitle';
 import { DoubleCtaVue } from '../../double-cta';
 export default {
   setup: () => ({ DoubleCtaVue }),

@@ -1,5 +1,4 @@
 <script>
-import '../../tailwind';
 export default {
   props: {
     primaryText: { type: String, required: false },

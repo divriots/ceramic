@@ -1,5 +1,3 @@
-import '~/button';
-
 customElements.define(
   'double-cta',
   class extends HTMLElement {
