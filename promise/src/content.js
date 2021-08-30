@@ -33,18 +33,6 @@ export default [
         // },
       },
       {
-        title: 'Design links',
-        description: `<p>Keep the preview of the design next to the components.</p>
-        <p>Figma and Adobe Xd links supported.</p>`,
-        img: {
-          src: imgLanding('designlink.png'),
-        },
-        // action: {
-        //   label: 'Reference site demo',
-        //   url: '#',
-        // },
-      },
-      {
         title: 'Documentation aka reference site',
         description: `<p>Reference sites are online documentation of your
         Design System including component description, rules and guidelines.</p>
@@ -52,6 +40,18 @@ export default [
         <p>Everybody can contribute directly with the WYSIWYG online editor.</p>`,
         img: {
           src: imgLanding('referencesite.gif'),
+        },
+        // action: {
+        //   label: 'Reference site demo',
+        //   url: '#',
+        // },
+      },
+      {
+        title: 'Design links',
+        description: `<p>Keep the preview of the design next to the components.</p>
+        <p>Figma and Adobe Xd links supported.</p>`,
+        img: {
+          src: imgLanding('designlink.png'),
         },
         // action: {
         //   label: 'Reference site demo',
