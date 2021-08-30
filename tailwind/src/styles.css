@@ -1,3 +1,7 @@
+@import '../../button/dist/button.css';
+@import '../../title/dist/title.css';
+@import '../../subtitle/dist/subtitle.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

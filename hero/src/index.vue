@@ -1,14 +1,11 @@
 <script>
-import '../../title';
-import '../../subtitle';
-import { DoubleCtaVue } from '../../double-cta';
+  import DoubleCtaVue from '../../double-cta/src/double-cta.vue';
 export default {
   setup: () => ({ DoubleCtaVue }),
 };
 </script>
 <template>
-  <section
-    class="
+  <section class="
       gradient
       text-white
       hero
@@ -19,11 +16,9 @@ export default {
       md:my-24
       lg:my-28
       xl:my-32
-    "
-  >
+    ">
     <div class="wrapper max-w-6xl mx-auto">
-      <div
-        class="
+      <div class="
           relative
           z-10
           lg:max-w-2xl lg:w-full
@@ -33,8 +28,7 @@ export default {
           md:py-16
           lg:py-20
           xl:py-28
-        "
-      >
+        ">
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
             <h1 class="title">
@@ -50,13 +44,8 @@ export default {
               <br />
               Developers and Designers together.
             </p>
-            <component
-              :is="DoubleCtaVue"
-              :primaryText="'Request early access'"
-              :primaryHref="'/request-earlyaccess'"
-              :secondaryText="'Book a demo'"
-              :secondaryHref="'https://calendly.com/gg_/backlight'"
-            ></component>
+            <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
+              :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
           </div>
         </div>
       </div>
@@ -67,18 +56,18 @@ export default {
   </section>
 </template>
 <style lang="scss" scoped>
-.gradient .wrapper {
-  min-height: 400px;
+  .gradient .wrapper {
+    min-height: 400px;
 
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
 
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: 6fr 4fr;
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: 6fr 4fr;
+    }
   }
-}
 
-.gradient.hero::before {
-  height: 1200px;
-}
+  .gradient.hero::before {
+    height: 1200px;
+  }
 </style>
