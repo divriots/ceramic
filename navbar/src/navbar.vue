@@ -48,13 +48,13 @@
   </nav>
 </template>
 <style scoped>
-#navexpander:checked ~ #mobile-menu {
-  display: none;
-}
+  #navexpander:checked~#mobile-menu {
+    display: none;
+  }
 </style>
 <script>
-import { NavMenu } from '../../navmenu';
-import { Logo } from '../../logo';
+  import NavMenu from '../../navmenu/src/navmenu.vue';
+import Logo from '../../logo/src/logo.vue';
 export default {
   components: { NavMenu },
   props: {

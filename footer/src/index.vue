@@ -83,10 +83,10 @@
   </footer>
 </template>
 <script>
-  import { Twitter } from '../../twitter';
-  import { YouTube } from '../../youtube';
-  import { Discord } from '../../discord';
-  import { Logo } from '../../logo';
+  import Twitter  from '../../twitter/src/twitter.vue';
+  import YouTube  from '../../youtube/src/youtube.vue';
+  import Discord  from '../../discord/src/discord.vue';
+  import Logo  from '../../logo/src/logo.vue';
   
   export default {
     props: {
