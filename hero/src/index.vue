@@ -1,6 +1,10 @@
 <script>
   import DoubleCtaVue from '../../double-cta/src/double-cta.vue';
 export default {
+  props:{
+    videoSrc: String,
+    imgSrc: String
+  },
   setup: () => ({
     DoubleCtaVue,
     stop:()=>{
@@ -35,9 +39,7 @@ export default {
     <div class="relative wrapper max-w-6xl mx-auto">
       <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls @ended="stop"
         @blur="stop">
-        <source
-          src=" https://user-images.githubusercontent.com/5250572/131305534-6e4baa97-8cb1-4e45-b14c-15600f232167.mp4"
-          type="video/mp4">
+        <source :src="videoSrc" type="video/mp4">
       </video>
       <div class="
           z-10
@@ -70,7 +72,7 @@ export default {
         </div>
       </div>
       <div class="img-video relative hidden md:block cursor-pointer" @click="play">
-        <img class="absolute max-w-none h-full" src="/img/landing/hero.png"/>
+        <img class="absolute max-w-none h-full" :src="imgSrc"/>
         <svg class="absolute left-0 bottom-0 text-primary stroke-current h-12" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490">
           <circle cx="230" cy="245" r="200" stroke-width="20" fill="black" />
