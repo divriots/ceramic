@@ -54,10 +54,8 @@ export default {
               <br />
               Developers and Designers together.
             </p>
-            <div class="flex items-center">
-              <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
-                :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
-            </div>
+            <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
+              :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
           </div>
         </div>
       </div>
