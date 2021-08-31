@@ -1,12 +1,14 @@
 <script>
   import technologies from './technologies.js';
+  import '@divriots/infini-scroll/define';
 </script>
 
 <section class="text-center text-white bg-black-divriots px-8 pt-24 pb-16 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-primary">supported</span>
   </h2>
   <div class="scrollable-horizontal mx-auto max-w-4xl technologies relative py-32">
-    <div class="flex flex-col flex-wrap justify-start h-64">
+    <infini-scroll class="flex flex-col flex-wrap justify-start" drag-speed="1" scroll-interval="15"
+      container-height="260" box-width="128">
       {#each technologies as t, i}
       <figure class="technology relative p-6">
         <figcaption class="opacity-0 -bottom-2 w-full absolute text-center left-0">
@@ -15,7 +17,7 @@
         <img class="w-20 h-20" src={t.logo} alt={t.name} aria-label={t.name} loading="lazy"/>
       </figure>
       {/each}
-    </div>
+    </infini-scroll>
   </div>
   <!-- <div class="absolute bottom-6 h-12 w-full bg-gradient-to-b from-transparent to-black-divriots z-index-1"></div> -->
 </section>
