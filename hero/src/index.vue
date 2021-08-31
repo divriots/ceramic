@@ -1,7 +1,12 @@
 <script>
   import DoubleCtaVue from '../../double-cta/src/double-cta.vue';
 export default {
-  setup: () => ({ DoubleCtaVue }),
+  setup: () => ({
+    DoubleCtaVue,
+    play:()=>{
+      document.getElementById('hero-video').play();
+      document.getElementById('hero-video').classList.remove('hidden')}
+   }),
 };
 </script>
 <template>
@@ -17,9 +22,14 @@ export default {
       lg:my-28
       xl:my-32
     ">
-    <div class="wrapper max-w-6xl mx-auto">
+    <div class="relative wrapper max-w-6xl mx-auto">
+      <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
+        onended="this.classList.add('hidden')" onblur="this.classList.add('hidden')">
+        <source
+          src=" https://user-images.githubusercontent.com/5250572/131305534-6e4baa97-8cb1-4e45-b14c-15600f232167.mp4"
+          type="video/mp4">
+      </video>
       <div class="
-          relative
           z-10
           lg:max-w-2xl lg:w-full
           self-center
@@ -35,7 +45,7 @@ export default {
               <span class="text-primary whitespace-nowrap">
                 Design Systems,
               </span>
-              <span class="block">Code-side</span>
+              <span class="flex items-center md:hidden">Code-side<button class="ml-4 text-3xl" @click="play">🎬</button></span>
             </h1>
             <p class="subtitle">
               All-in-one Design System platform.
@@ -44,13 +54,20 @@ export default {
               <br />
               Developers and Designers together.
             </p>
-            <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
-              :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
+            <div class="flex items-center">
+              <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
+                :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
+            </div>
           </div>
         </div>
       </div>
-      <div class="relative hidden md:block">
-        <img class="absolute max-w-none h-full" src="/img/landing/hero.png" />
+      <div class="relative hidden md:block" @click="play">
+        <img class="absolute max-w-none h-full" src="/img/landing/hero.png"/>
+        <svg class="absolute left-0 bottom-0 text-primary stroke-current h-12" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490">
+          <circle cx="230" cy="245" r="200" stroke-width="20" fill="black" />
+          <polygon points="181.062,336.575 343.938,242.5 181.062,148.425" fill="currentColor" />
+        </svg>
       </div>
     </div>
   </section>
@@ -64,6 +81,18 @@ export default {
 
     @media only screen and (min-width: 768px) {
       grid-template-columns: 6fr 4fr;
+    }
+  }
+
+  #hero-video {
+    left: 50%;
+    transform: translateX(-50%);
+    transition: display .1s ease-out;
+    height: 100%;
+
+    &:not(.hidden)~* {
+      transition: opacity .5s ease-out;
+      opacity: 0;
     }
   }
 

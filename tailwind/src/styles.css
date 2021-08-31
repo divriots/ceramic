@@ -1,7 +1,7 @@
 @import '../../button/dist/button.css';
 @import '../../title/dist/title.css';
 @import '../../subtitle/dist/subtitle.css';
-@import '../dist/commons.css';
+@import '../../tailwind/dist/commons.css';
 
 @tailwind base;
 
