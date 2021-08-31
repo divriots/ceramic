@@ -3,9 +3,19 @@
 export default {
   setup: () => ({
     DoubleCtaVue,
+    stop:()=>{
+      const heroVideo = document.getElementById('hero-video');
+      heroVideo.pause();
+      heroVideo.currentTime = 0;
+      heroVideo.classList.add('hidden');
+      heroVideo.blur();
+    },
     play:()=>{
-      document.getElementById('hero-video').play();
-      document.getElementById('hero-video').classList.remove('hidden')}
+      const heroVideo = document.getElementById('hero-video');
+      heroVideo.play();
+      heroVideo.classList.remove('hidden');
+      heroVideo.focus();
+    }
    }),
 };
 </script>
@@ -23,8 +33,8 @@ export default {
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
-        onended="this.classList.add('hidden')" onblur="this.classList.add('hidden')">
+      <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls @ended="stop"
+        @blur="stop">
         <source
           src=" https://user-images.githubusercontent.com/5250572/131305534-6e4baa97-8cb1-4e45-b14c-15600f232167.mp4"
           type="video/mp4">
@@ -59,7 +69,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="relative hidden md:block" @click="play">
+      <div class="img-video relative hidden md:block cursor-pointer" @click="play">
         <img class="absolute max-w-none h-full" src="/img/landing/hero.png"/>
         <svg class="absolute left-0 bottom-0 text-primary stroke-current h-12" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490">
@@ -84,6 +94,7 @@ export default {
 
   #hero-video {
     left: 50%;
+    outline: none;
     transform: translateX(-50%);
     transition: display .1s ease-out;
     height: 100%;
@@ -91,6 +102,15 @@ export default {
     &:not(.hidden)~* {
       transition: opacity .5s ease-out;
       opacity: 0;
+    }
+  }
+
+  .img-video {
+    margin: 4px;
+
+    &:hover {
+      transform: scale(1.02);
+      /* transition: transform .1s; */
     }
   }
 
