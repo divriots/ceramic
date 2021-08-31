@@ -5,6 +5,7 @@ export default {
     layout: 'centered',
     backgrounds: { default: 'dark' },
   },
+  decorators: [(story) => `<div class="hero">${story()}</div>`],
 };
 
 export const subtitle = () => /*html*/ `
