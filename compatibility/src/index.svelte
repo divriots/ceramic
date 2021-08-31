@@ -7,7 +7,7 @@
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-primary">supported</span>
   </h2>
   <infini-scroll class="mx-auto max-w-4xl my-32" drag-speed="1" scroll-interval="15" container-height="270"
-    box-width="128">
+    box-width="128" row-amount="2">
     {#each technologies as t, i}
     <figure class="technology relative p-6">
       <figcaption class="opacity-0 -bottom-2 w-full absolute text-center left-0">
