@@ -8,7 +8,7 @@
   </h2>
   <div class="scrollable-horizontal mx-auto max-w-4xl technologies relative py-32">
     <infini-scroll class="flex flex-col flex-wrap justify-start" drag-speed="1" scroll-interval="15"
-      container-height="260" box-width="128">
+      container-height="270" box-width="128">
       {#each technologies as t, i}
       <figure class="technology relative p-6">
         <figcaption class="opacity-0 -bottom-2 w-full absolute text-center left-0">
