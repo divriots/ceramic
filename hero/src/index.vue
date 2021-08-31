@@ -98,6 +98,7 @@ export default {
     transform: translateX(-50%);
     transition: display .1s ease-out;
     height: 100%;
+    z-index: 11;
 
     &:not(.hidden)~* {
       transition: opacity .5s ease-out;
