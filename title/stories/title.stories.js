@@ -5,7 +5,6 @@ export default {
     layout: 'centered',
     backgrounds: { default: 'black' },
   },
-  decorators: [(story) => `<div class="hero">${story()}</div>`],
 };
 
 export const simple_title = () =>

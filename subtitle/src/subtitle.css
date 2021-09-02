@@ -2,18 +2,13 @@
 @tailwind utilities;
 
 @layer components {
-  .hero .subtitle {
-    @apply mt-3
-		text-base
+  .subtitle {
+    @apply text-base
 		text-white
 		opacity-75
-		sm:mt-5
 		sm:text-lg
 		sm:max-w-xl
-		sm:mx-auto
-		md:mt-5
 		md:text-xl
-		lg:mx-0
 		leading-relaxed;
   }
 }
