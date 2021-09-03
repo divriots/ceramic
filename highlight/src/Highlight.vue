@@ -1,6 +1,6 @@
 <template>
   <section class="text-center grid gap-8 md:gap-4 relative">
-    <h2 class="title text-white px-4">
+    <h2 class="main-title text-white px-4">
       Kickstart your <span class="text-primary whitespace-nowrap ">Design System</span>
     </h2>
     <p class="text-lg text-white px-4 leading-relaxed">

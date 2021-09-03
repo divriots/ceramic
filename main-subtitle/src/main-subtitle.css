@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 @layer components {
-  .subtitle {
+  .main-subtitle {
     @apply text-base
 		text-white
 		opacity-75

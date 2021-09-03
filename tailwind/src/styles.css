@@ -1,6 +1,6 @@
 @import '../../button/dist/button.css';
-@import '../../title/dist/title.css';
-@import '../../subtitle/dist/subtitle.css';
+@import '../../main-title/dist/main-title.css';
+@import '../../main-subtitle/dist/main-subtitle.css';
 @import '../../tailwind/dist/commons.css';
 
 @tailwind base;

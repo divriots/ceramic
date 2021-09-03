@@ -8,7 +8,7 @@
 </script>
 <template>
   <article class="overflow-hidden">
-    <h3 data-aos="fade-left" class="title text-center my-10 sm:my-20" v-html="title"></h3>
+    <h3 data-aos="fade-left" class="main-title text-center my-10 sm:my-20" v-html="title"></h3>
     <slot></slot>
   </article>
 </template>

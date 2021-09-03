@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 @layer components {
-  .title {
+  .main-title {
     @apply text-4xl
 		sm:text-5xl
 		md:text-5xl

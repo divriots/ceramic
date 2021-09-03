@@ -31,13 +31,13 @@ export default {
         ">
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
-            <h1 class="title font-semibold leading-normal">
+            <h1 class="main-title font-semibold leading-normal">
               <span class="text-primary whitespace-nowrap">
                 Design Systems,
               </span>
               <span class="block">Code-side</span>
             </h1>
-            <p class="subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0 ">
+            <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0 ">
               All-in-one Design System platform.
               <br />
               Build components and reference site.

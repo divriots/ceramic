@@ -17,8 +17,8 @@
         "atoms",
         [
           "button",
-          "title",
-          "subtitle",
+          "main-title",
+          "main-subtitle",
           "logo",
           "twitter",
           "discord",
