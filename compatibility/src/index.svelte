@@ -1,7 +1,10 @@
 <script>
   import technologies from './technologies.js';
-  import '@divriots/infini-scroll/define';
 </script>
+
+<svelte:head>
+  <script type="module" src="https://unpkg.com/@divriots/infini-scroll@0.3.2/infini-scroll.js?module"></script>
+</svelte:head>
 
 <section class="text-center text-white bg-black-divriots px-8 pt-24 pb-16 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-primary">supported</span>
