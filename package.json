@@ -3,7 +3,7 @@
   "version": "0.1.6",
   "license": "GPLV3",
   "scripts": {
-    "serve": "dsd-cli serve 1SuMaEt5uxgp62VC8WVP --open"
+    "serve": "npx backlight serve 1SuMaEt5uxgp62VC8WVP --open"
   },
   "dependencies": {
     "react": "^17.0.2",
