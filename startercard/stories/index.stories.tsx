@@ -12,19 +12,19 @@ export default {
 };
 
 function props(name: string) {
-  return kits.find(kit => kit.name.toLowerCase().indexOf(name) >= 0);
+  return kits.find((kit) => kit.name.toLowerCase().indexOf(name) >= 0);
 }
 
 export const normal = (args) => ({
   setup() {
-    return { props: props("chakra") };
+    return { props: props('chakra') };
   },
   ...args,
 });
 
 export const big = (args) => ({
   setup() {
-    return { props: {...props("tailwind"), size: 'big'} };
+    return { props: { ...props('simba'), size: 'big' } };
   },
   ...args,
 });
