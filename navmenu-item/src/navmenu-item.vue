@@ -3,7 +3,7 @@
       action
       text-inherit
       ${isMobile ? 'px-2 py-1 block' : 'px-3'}
-      ${isActive ? 'text-primary font-semibold' : 'font-normal'}
+      ${isActive ? 'text-primary font-semibold active' : 'font-normal'}
     `">
     {{ route.label }}
   </a>
