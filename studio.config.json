@@ -24,9 +24,7 @@
           "discord",
           "youtube",
           "navmenu-item",
-          "empty-card",
-          "starter-logo",
-          "action-description"
+          "card"
         ]
       ],
       ["molecules", ["double-cta", "navmenu"]],
