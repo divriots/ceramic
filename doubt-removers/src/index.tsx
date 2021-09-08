@@ -7,7 +7,7 @@ function DoubtRemovers() {
       <article className="overflow-hidden">
         <h3
           data-aos="fade-left"
-          className="main-title text-center my-10 sm:my-20"
+          className="main-title text-center mx-12 my-10 sm:my-20"
           dangerouslySetInnerHTML={{ __html: content.data.title }}
         />
 
@@ -18,7 +18,7 @@ function DoubtRemovers() {
               data-aos="fade-up"
               className="min-w-full mx-auto md:flex"
             >
-              <div className=" w-16 h-16 md:w-20 md:h-20 md:mx-4 mb-8 md:mb-0">
+              <div className=" w-16 h-16 md:w-20 md:h-20 md:mr-4 mb-8 md:mb-0">
                 <div
                   className="w-16 h-16 md:w-20 md:h-20"
                   dangerouslySetInnerHTML={{ __html: promise.img.src }}
