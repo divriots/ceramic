@@ -7,7 +7,7 @@ function DoubtRemovers() {
       <article className="md:px-20">
         <h3
           data-aos="fade-left"
-          className="main-title text-center mx-12 my-10 sm:my-20"
+          className="main-title text-center my-10 sm:my-20"
           dangerouslySetInnerHTML={{ __html: content.data.title }}
         />
 
