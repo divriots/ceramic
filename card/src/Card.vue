@@ -4,9 +4,12 @@
     v-on:click="(event) => $emit('click', event)"
     :class="{
       'starter-kit': true,
-      highlighted,
     }"
-    :style="`background-color: ${backgroundColor};`"
+    :style="
+      highlighted
+        ? `background-color: ${backgroundColor};`
+        : `background-color: black; border: 3px solid ${backgroundColor}`
+    "
   >
     <slot></slot>
   </a>

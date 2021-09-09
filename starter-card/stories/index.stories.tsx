@@ -20,7 +20,7 @@ export const normal = (args) => ({
       name: 'React',
       desc: 'Design token in system-ui with examples in styled-components and theme-ui.',
       url: '/edit/z99ptYZyvMOGDivUlP9u',
-      bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
+      bgImg: 'https://backlight.dev/assets/lib-white/css3.svg',
       owner: 'divriots',
       ownerPhoto: 'https://backlight.dev/assets/logo/dr-b.svg',
       frameworks: new Map([
@@ -49,6 +49,7 @@ export const highlighted = (args) => ({
         ['fmk1', 'https://backlight.dev/assets/lib-white/sass.svg'],
         ['fmk2', 'https://backlight.dev/assets/lib-white/sass.svg'],
       ]),
+      wip: true,
     },
   }),
   ...args,

@@ -7,22 +7,26 @@
     class="card"
     :highlighted="highlighted"
   >
+    <div v-if="wip" class="wip-ribbon"><span>in progress...</span></div>
     <div :class="{ logo: true, 'logo-highlighted': highlighted }">
       <img :src="heroImg" />
     </div>
-    <div class="details" style="align-self: stretch; display: flex">
+    <div
+      :class="{ details: highlighted }"
+      style="align-self: stretch; display: flex; flex-grow: 100"
+    >
       <p class="description">
         <slot></slot>
       </p>
     </div>
     <div class="powered-by">
-      <span>powered by</span>
+      <span>{{ highlighted ? 'powered by' : 'featuring' }}</span>
       <span v-for="[name, logo] in frameworks" :key="name">
         <img :src="logo" />
         {{ name }}
       </span>
     </div>
-    <div class="owner" v-if="ownerPhoto">
+    <div class="owner" v-if="ownerPhoto && highlighted">
       <span>made by</span>
       <span>
         <img :src="ownerPhoto" />
@@ -52,7 +56,19 @@
         />
       </svg>
     </div>
-    <img class="framework-bg" :src="bgImg" />
+    <img v-if="highlighted" class="framework-bg" :src="bgImg" />
+    <div
+      v-else
+      class="framework-bg"
+      :style="`
+        -webkit-mask-image: url(${bgImg});
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url(${bgImg});
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-color: ${backgroundColor}`"
+    />
   </component>
 </template>
 <script>
@@ -70,6 +86,7 @@ export default {
     frameworks: { type: Map },
     owner: { type: String },
     ownerPhoto: { type: String },
+    wip: { type: Boolean },
   },
   data: () => ({ Card }),
 };
@@ -81,7 +98,6 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex-grow: 1;
   img {
     transition: all 0.4s ease;
     max-width: 80%;
@@ -90,15 +106,41 @@ export default {
     height: 8em;
   }
 }
-.logo-highlighted img {
-  max-width: 100%;
-  height: 12em;
+.logo-highlighted {
+  flex-grow: 1;
+  img {
+    max-width: 100%;
+    height: 12em;
+  }
+}
+.wip-ribbon {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 7.5em;
+  height: 7em;
+  text-align: right;
+}
+.wip-ribbon span {
+  color: #000;
+  text-align: center;
+  line-height: 28px;
+  transform: rotate(40deg);
+  width: 10em;
+  display: block;
+  background: #fff;
+  box-shadow: 0 3px 10px -5px black;
+  position: absolute;
+  top: 1.8em;
+  right: -1.9em;
+  padding-left: 0.5em;
 }
 .description {
   height: 100%;
   display: flex;
   align-items: center;
-  padding-bottom: 4em;
 }
 .framework-bg {
   position: absolute;
@@ -125,29 +167,17 @@ p {
 .details {
   overflow: hidden;
   max-height: 0px;
-  flex-shrink: 5;
-  flex-grow: 0;
+  opacity: 0;
   transition: all 0.4s ease;
-  animation-name: fadeInBottom;
-}
-@keyframes fadeInBottom {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-  }
 }
 .card {
   @mixin detailed-card {
     .framework-bg {
-      opacity: 0.1;
+      opacity: 0.2;
     }
     .details {
       max-height: 100%;
-      flex-shrink: 0;
-      flex-grow: 10;
+      opacity: 1;
     }
     .logo,
     .logo-highlighted {
@@ -189,6 +219,7 @@ p {
 
 .powered-by {
   margin-top: auto;
+  margin-bottom: 0.4em;
 }
 
 .action-description {
