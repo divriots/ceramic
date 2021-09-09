@@ -11,8 +11,8 @@ export default {
 
 export const webcomponent = () => /*html*/ `
   <double-cta
-    primaryText="Request early access"
-    primaryHref="/request-earlyaccess"
+    primaryText="Get started"
+    primaryHref="/get-started"
     secondaryText="Book a demo"
     secondaryHref="https://calendly.com/gg_/backlight"
   ></double-cta>`;
@@ -20,8 +20,8 @@ export const webcomponent = () => /*html*/ `
 export const vue = () => ({
   components: { DoubleCtaVue },
   data: () => ({
-    primaryText: 'Request early access',
-    primaryHref: '/request-earlyaccess',
+    primaryText: 'Get started',
+    primaryHref: '/get-started',
     secondaryText: 'Book a demo',
     secondaryHref: 'https://calendly.com/gg_/backlight',
   }),
@@ -36,8 +36,8 @@ export const vue = () => ({
 
 export const react = () => (
   <DoubleCtaReact
-    primaryText="Request early access"
-    primaryHref="/request-earlyaccess"
+    primaryText="Get started"
+    primaryHref="/get-started"
     secondaryText="Book a demo"
     secondaryHref="https://calendly.com/gg_/backlight"
   />
@@ -46,8 +46,8 @@ export const react = () => (
 export const svelte = () => ({
   Component: DoubleCtaSvelte,
   props: {
-    primaryText: 'Request early access',
-    primaryHref: '/request-earlyaccess',
+    primaryText: 'Get started',
+    primaryHref: '/get-started',
     secondaryText: 'Book a demo',
     secondaryHref: 'https://calendly.com/gg_/backlight',
   },

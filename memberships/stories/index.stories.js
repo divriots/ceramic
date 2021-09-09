@@ -21,8 +21,6 @@ export const memberships = () => ({
   template: `<Memberships/>`,
 });
 
-Free.action = {};
-
 export const features = () => ({
   components: { Features },
   data() {

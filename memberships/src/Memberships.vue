@@ -1,6 +1,6 @@
 <script>
   import {Free, Pro, Enterprise} from '../../config/src/plans';
-import Price from '../../price/src/index.vue';
+  import Price from '../../price/src/index.vue';
   export default {
     data(){ return { plans: [Free, Pro, Enterprise]}},
     setup(){return { Price}}
