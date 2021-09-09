@@ -2,6 +2,7 @@
   <a :href="route.pathname" :class="`
       action
       text-inherit
+      ml-2
       ${isMobile ? 'px-2 py-1 block' : 'px-3'}
       ${isActive ? 'text-primary font-semibold active' : 'font-normal'}
     `">

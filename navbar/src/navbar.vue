@@ -2,7 +2,13 @@
   <nav class="mt-2 text-white">
     <div class="mx-auto px-2">
       <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+        <component :is="Logo" class="text-xl"></component>
+        <div class="hidden md:block md:ml-6 flex-grow">
+          <div class="flex items-center justify-end">
+            <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
+          </div>
+        </div>
+        <div class="inset-y-0 right-0 flex items-center md:hidden">
           <label
             for="navexpander"
             class="btn"
@@ -27,12 +33,6 @@
               />
             </svg>
           </label>
-        </div>
-        <component :is="Logo" class="text-xl"></component>
-        <div class="hidden md:block md:ml-6 flex-grow">
-          <div class="flex items-center justify-end">
-            <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
-          </div>
         </div>
       </div>
     </div>
