@@ -29,8 +29,8 @@
           </label>
         </div>
         <component :is="Logo" class="text-xl"></component>
-        <div class="hidden md:block md:ml-6">
-          <div class="flex items-center">
+        <div class="hidden md:block md:ml-6 flex-grow">
+          <div class="flex items-center justify-end">
             <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
           </div>
         </div>
