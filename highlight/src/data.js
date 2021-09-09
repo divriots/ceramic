@@ -3,8 +3,7 @@ export default [
     backgroundColor: '#944db8',
     heroImg: 'https://backlight.dev/assets/lib-white/react-typo.svg',
     name: 'React',
-    desc:
-      'Design token in system-ui with examples in styled-components and theme-ui.',
+    desc: 'Design token in system-ui with examples in styled-components and theme-ui.',
     url: '/request-earlyaccess',
     bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
   },
@@ -18,12 +17,11 @@ export default [
     bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
   },
   {
-    backgroundColor: '#06B6D4',
-    heroImg: 'https://backlight.dev/assets/lib-white/tailwindcss-typo.svg',
-    name: 'Tailwindcss',
-    desc: `Visualy setup tailwind's design tokens.
-           Contains Tailwind headless-ui components for React and Vue.`,
+    backgroundColor: '#967a2d',
+    heroImg: 'https://backlight.dev/assets/lib-white/simba.svg',
+    name: 'Simba',
+    desc: `Starter design system based on Lit & Lion Web Components, design inspired by TailwindCSS. Works in any framework/technology and includes in-depth theming capabilities.`,
     url: '/request-earlyaccess',
-    bgImg: 'https://backlight.dev/assets/lib-white/css3.svg',
+    bgImg: 'https://backlight.dev/assets/lib-white/lit.svg',
   },
 ];

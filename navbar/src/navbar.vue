@@ -1,6 +1,6 @@
 <template>
   <nav class="mt-2 text-white">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="mx-auto px-2">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
           <label
@@ -31,8 +31,7 @@
         <component :is="Logo" class="text-xl"></component>
         <div class="hidden md:block md:ml-6">
           <div class="flex items-center">
-            <component :is="NavMenu" :pathname="pathname" :routes="routes">
-            </component>
+            <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
           </div>
         </div>
       </div>
@@ -41,8 +40,7 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <component :is="NavMenu" :pathname="pathname" :routes="routes">
-        </component>
+        <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
       </div>
     </div>
   </nav>

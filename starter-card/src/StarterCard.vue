@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="EmptyCard"
+    :is="Card"
     :url="url"
     @click="(event) => $emit('click', event)"
     :backgroundColor="backgroundColor"
@@ -9,7 +9,7 @@
     <div :class="`logo logo-${size}`">
       <img :src="heroImg" />
     </div>
-    <header class="title">Starter {{ name }}</header>
+    <header class="starter-title">Starter {{ name }}</header>
     <p class="description">
       <slot></slot>
     </p>
@@ -33,7 +33,7 @@
   </component>
 </template>
 <script>
-import EmptyCard from './EmptyCard.vue';
+import Card from '../../card/src/Card.vue';
 
 export default {
   props: {
@@ -46,16 +46,18 @@ export default {
     actionDescription: { type: String },
     size: { type: String, default: 'normal' },
   },
-  data(){ return { EmptyCard }},
+  data: () => ({ Card }),
 };
 </script>
 <style lang="scss" scoped>
 .logo-normal {
   height: 5rem;
 }
+
 .logo-big {
   height: 10rem;
 }
+
 .logo {
   width: 100%;
   display: flex;
@@ -66,13 +68,16 @@ export default {
     height: 100%;
   }
 }
-.title {
+
+.starter-title {
   font-size: 1.5em;
   font-weight: bold;
 }
+
 .description {
   flex-grow: 1;
 }
+
 .framework-bg {
   position: absolute;
   width: 14rem;
@@ -82,12 +87,14 @@ export default {
   opacity: 0.25;
   transform: translateX(4rem) translateY(3rem) rotate(-12deg);
 }
+
 .action-description {
   display: flex;
   align-items: center;
   font-weight: bold;
   z-index: 1;
 }
+
 .action-description-big {
   font-size: 1.5em;
 }

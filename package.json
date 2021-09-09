@@ -1,11 +1,12 @@
 {
   "name": "@divriots/lcd",
-  "version": "0.1.4",
+  "version": "0.1.13",
   "license": "GPLV3",
   "scripts": {
-    "serve": "dsd-cli serve 1SuMaEt5uxgp62VC8WVP --open"
+    "serve": "npx backlight@latest serve 1SuMaEt5uxgp62VC8WVP --open"
   },
   "dependencies": {
+    "tailwincss": "^2.2.9",
     "react": "^17.0.2",
     "vue": "^3.0.7"
   },
