@@ -18,7 +18,7 @@ export const navbar = () => ({
         },
         {
           pathname: '#',
-          label: 'Early Access',
+          label: 'Get started',
         },
         {
           pathname: '#',

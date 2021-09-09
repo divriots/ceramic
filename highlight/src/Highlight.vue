@@ -9,11 +9,8 @@
       <br />
       <!-- You are not far from releasing your first Design System. -->
     </p>
-    <div
-      class="bg-black-divriots py-32 mt-64 overflow-hidden flex justify-center"
-    >
-      <div
-        class="
+    <div class="bg-black-divriots py-32 mt-64 overflow-hidden flex justify-center">
+      <div class="
           scrollable-horizontal
           max-w-full
           px-8
@@ -22,20 +19,13 @@
           absolute
           bottom-0
           space-x-16
-        "
-      >
-        <component
-          :is="StarterCard"
-          v-for="kit of kits.filter(({ highlight }) => !highlight)"
-          :key="kit.name"
-          v-bind="kit"
-          actionDescription="Request early access"
-        >
+        ">
+        <component :is="StarterCard" v-for="kit of kits.filter(({ highlight }) => !highlight)" :key="kit.name"
+          v-bind="kit" actionDescription="Get started">
           {{ kit.desc }}
         </component>
-        <component :is="Card" url="/request-earlyaccess" class="bg-primary">
-          <div
-            class="
+        <component :is="Card" url="/get-started" class="bg-primary">
+          <div class="
               w-full
               h-full
               flex
@@ -43,8 +33,7 @@
               text-3xl
               sm:text-4xl
               text-bold text-center text-black-default
-            "
-          >
+            ">
             Many other Starter-kits available in different technologies
           </div>
         </component>
@@ -54,7 +43,7 @@
 </template>
 
 <script>
-import StarterCard from '../../starter-card/src/StarterCard.vue';
+  import StarterCard from '../../starter-card/src/StarterCard.vue';
 import Card from '../../card/src/Card.vue';
 import kits from './data';
 

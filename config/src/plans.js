@@ -108,10 +108,9 @@ export const Free = {
     features.support_community,
   ],
   action: {
-    label: 'Early access',
-    url: '/request-earlyaccess',
+    label: 'Get started',
+    url: '/get-started',
     type: 'outline',
-    legend: 'No credit card required',
   },
 };
 
@@ -140,8 +139,8 @@ export const Pro = {
     features.support_email,
   ],
   action: {
-    label: 'Early access',
-    url: '/request-earlyaccess',
+    label: 'Subscribe',
+    url: '/signup/PRO',
     type: 'primary',
     legend: 'No credit card required',
   },

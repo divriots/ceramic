@@ -98,8 +98,8 @@ export default {
   </li>
 </ul>
 
-<div class="mt-8 grid gap-4 justify-center">
-  <a :href="action.url" class="btn bg-background block text-base font-display text-secondary">
+<div class="mt-8 flex flex-col items-center gap-4">
+  <a :href="action.url" class="btn bg-background text-base font-display text-secondary">
     {{ action.label }}
   </a>
   <span class="opacity-75 text-sm">{{action.legend}}</span>
