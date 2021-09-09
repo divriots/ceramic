@@ -9,7 +9,7 @@
 <section class="text-center text-white bg-black-divriots px-8 pt-24 pb-16 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">All Web technologies <span class="block text-primary">supported</span>
   </h2>
-  <div class="infini-wrapper mx-auto max-w-4xl my-32">
+  <div class="infini-wrapper text-black-divriots mx-auto max-w-4xl my-32">
     <infini-scroll drag-speed="1" scroll-interval="15" container-height="270" box-width="128" row-amount="2"
       follow-user-direction>
       {#each technologies as t, i}
@@ -46,25 +46,24 @@
     position: relative;
   }
 
-  .infini-wrapper::before {
-    content: '';
-    position: absolute;
-    width: 150px;
-    inset: 0;
-    background: linear-gradient(to left, rgba(23, 23, 23, 0), rgba(23, 23, 23, 1));
-    z-index: 1;
-    pointer-events: none;
-  }
-
+  .infini-wrapper::before,
   .infini-wrapper::after {
     content: '';
     position: absolute;
     height: 100%;
     width: 150px;
-    top: 0;
-    right: 0;
-    background: linear-gradient(to right, rgba(23, 23, 23, 0), rgba(23, 23, 23, 1));
     z-index: 1;
     pointer-events: none;
+  }
+
+  .infini-wrapper::before {
+    inset: 0;
+    background: linear-gradient(to left, transparent, currentColor);
+  }
+
+  .infini-wrapper::after {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, transparent, currentColor);
   }
 </style>
