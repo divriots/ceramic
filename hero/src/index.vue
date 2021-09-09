@@ -1,26 +1,27 @@
 <script>
-  import DoubleCtaVue from '../../double-cta/src/double-cta.vue';
-export default {
-  props:{
+  export default {
+  props: {
     videoSrc: String,
-    imgSrc: String
+    imgSrc: String,
   },
+
   setup: () => ({
-    DoubleCtaVue,
-    stop:()=>{
+    stop: () => {
       const heroVideo = document.getElementById('hero-video');
       heroVideo.pause();
       heroVideo.currentTime = 0;
       heroVideo.classList.add('hidden');
+      heroVideo.nextElementSibling.classList.remove('hidden');
       heroVideo.blur();
     },
-    play:()=>{
+    play: () => {
       const heroVideo = document.getElementById('hero-video');
       heroVideo.play();
       heroVideo.classList.remove('hidden');
+      heroVideo.nextElementSibling.classList.add('hidden');
       heroVideo.focus();
-    }
-   }),
+    },
+  }),
 };
 </script>
 <template>
@@ -39,7 +40,7 @@ export default {
     <div class="relative wrapper max-w-6xl mx-auto">
       <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls @ended="stop"
         @blur="stop">
-        <source :src="videoSrc" type="video/mp4">
+        <source :src="videoSrc" type="video/mp4" />
       </video>
       <div class="
           z-10
@@ -57,7 +58,7 @@ export default {
               <span class="text-primary whitespace-nowrap">
                 Design Systems,
               </span>
-              <span class="flex items-center md:hidden">Code-side<button class="ml-4 text-3xl" @click="play">🎬</button></span>
+              <span class="flex items-center md:hidden">Code-side</span>
             </h1>
             <p class="subtitle">
               All-in-one Design System platform.
@@ -66,18 +67,31 @@ export default {
               <br />
               Developers and Designers together.
             </p>
-            <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
-              :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
+            <div class="flex mt-8 space-x-8">
+              <a class="btn-primary" href="/get-started">Get Started</a>
+              <button
+                class="action inline-flex items-center text-primary"
+                @click="play"
+              >
+                <svg
+                  class="text-primary stroke-current h-8 inline"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 490 490"
+                >
+                  <polygon
+                    points="181.062,336.575 343.938,242.5 181.062,148.425"
+                    fill="currentColor"
+                  />
+                </svg>
+                Play video
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <div class="img-video relative hidden md:block cursor-pointer" @click="play">
-        <img class="absolute max-w-none h-full" :src="imgSrc"/>
-        <svg class="absolute left-0 bottom-0 text-primary stroke-current h-12" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490">
-          <circle cx="230" cy="245" r="200" stroke-width="20" fill="black" />
-          <polygon points="181.062,336.575 343.938,242.5 181.062,148.425" fill="currentColor" />
-        </svg>
+        <img class="md:rounded-lg absolute max-w-none h-full" :src="imgSrc" />
       </div>
     </div>
   </section>
@@ -98,12 +112,12 @@ export default {
     left: 50%;
     outline: none;
     transform: translateX(-50%);
-    transition: display .1s ease-out;
+    transition: display 0.1s ease-out;
     height: 100%;
     z-index: 11;
 
     &:not(.hidden)~* {
-      transition: opacity .5s ease-out;
+      transition: opacity 0.1s ease-out;
       opacity: 0;
     }
   }
@@ -113,7 +127,7 @@ export default {
 
     &:hover {
       transform: scale(1.02);
-      /* transition: transform .1s; */
+      transition: transform 0.2s;
     }
   }
 
