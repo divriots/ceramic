@@ -51,7 +51,7 @@ export default {
       <span class="flex flex-grow items-center tracking-tight font-medium">
           <template v-if="price && price.value >= 0">
             <span class="mr-2"> {{ price.symbol }}</span>
-      <span aria-label="(+ €25.80 VAT)">{{ value * count }}</span>
+      <span aria-label="Subscription Price">{{ value * count }}</span>
       <span class="ml-1 text-sm opacity-50 font-semibold tracking-wide">/ month</span>
 </template>
 <span v-else class="text-lg mt-2">{{ price.value }}</span>
