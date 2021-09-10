@@ -9,7 +9,8 @@ export const groups = {
 export const features = {
   projects: {
     group: groups.collaboration,
-    label: 'Projects',
+    label: 'Design Systems',
+    labelSingular: 'Design System',
   },
   editors: {
     group: groups.collaboration,
@@ -142,7 +143,6 @@ export const Pro = {
     label: 'Subscribe',
     url: '/signup/PRO',
     type: 'primary',
-    legend: 'No credit card required',
   },
 };
 
