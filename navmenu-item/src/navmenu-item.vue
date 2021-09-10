@@ -1,10 +1,12 @@
 <template>
   <a :href="route.pathname" :class="`
-      action
       text-inherit
       ml-2
+      pb-1
+      border-b-4 border-solid border-transparent
       ${isMobile ? 'px-2 py-1 block' : 'px-3'}
-      ${isActive ? 'text-primary font-semibold active' : 'font-normal'}
+      ${isActive ? 'font-semibold active' : 'font-normal'}
+      nav-link
     `">
     {{ route.label }}
   </a>

@@ -2,6 +2,10 @@
 @tailwind utilities;
 
 @layer components {
+  .nav-link:hover,
+  .nav-link.active {
+    @apply border-primary;
+  }
   .scrollable-horizontal {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
