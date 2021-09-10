@@ -24,19 +24,8 @@ export default () => (
           in one click with one of our starter-kits
         </h2>
         <div className="flex mt-8 space-x-4">
-          <a
-            href="/request-earlyaccess"
-            className="btn-primary"
-            target="_blank"
-          >
-            Request early access
-          </a>
-          <a
-            href="https://calendly.com/gg_/backlight"
-            className="btn text-primary"
-            target="_blank"
-          >
-            Book a demo
+          <a href="/get-started" className="btn-primary" target="_blank">
+            Get Started
           </a>
         </div>
       </div>

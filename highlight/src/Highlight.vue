@@ -19,17 +19,19 @@
           absolute
           bottom-0
           space-x-16
+
           flex
         ">
         <component :is="StarterCard" v-for="kit of kits.filter(({ highlight }) => !highlight)" :key="kit.name"
-          v-bind="kit" actionDescription="Request early access">
+          v-bind="kit" actionDescription="Get started">
           {{ kit.desc }}
         </component>
 
         <div class="relative">
-          <component :is="Card" url="/request-earlyaccess"
+          <component :is="Card" url="/get-started"
             style="position:absolute; left:30px; background-color: #A2A2A2">
             <div class="
+
               w-full
               h-full
               flex
@@ -41,7 +43,7 @@
             </div>
           </component>
 
-          <component :is="Card" url="/request-earlyaccess"
+          <component :is="Card" url="/get-started"
             style="position:absolute; left:20px; background-color: #616161">
             <div class="
               w-full
@@ -55,7 +57,7 @@
             </div>
           </component>
 
-          <component :is="Card" url="/request-earlyaccess"
+          <component :is="Card" url="/get-started"
             style="position:absolute; left:10px; background-color: #333333">
             <div class="
               w-full
@@ -69,7 +71,7 @@
             </div>
           </component>
 
-          <component :is="Card" url="/request-earlyaccess" style=" background-color: #212121">
+          <component :is="Card" url="/get-started" style=" background-color: #212121">
             <div class="
               w-full
               h-full
@@ -201,7 +203,6 @@
             </div>
           </component>
         </div>
-
       </div>
     </div>
   </section>

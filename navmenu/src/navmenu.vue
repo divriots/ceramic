@@ -1,8 +1,9 @@
 <template>
-  <component :is="NavMenuItem" v-for="route of routes" :route="route" :key="route" :isMobile="true"
-    :isActive="current === route"></component>
   <component :is="Discord"></component>
   <component :is="Twitter"></component>
+  <component :is="NavMenuItem" v-for="route of routes" :route="route" :key="route" :isMobile="true"
+    :isActive="current === route"></component>
+  <a href="/studio" class="btn-primary ml-2 inline-block">Studio</a>
 </template>
 <style scoped>
   #navexpander:checked~#mobile-menu {

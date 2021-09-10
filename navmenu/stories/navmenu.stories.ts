@@ -17,11 +17,11 @@ export const nav_menu = () => ({
           label: 'Pricing',
         },
         {
-          pathname: '/early-access',
-          label: 'Early Access',
+          pathname: '/get-started',
+          label: 'Get Started',
         },
       ],
-      pathname: '/early-access',
+      pathname: '/get-started',
     };
   },
   template: `<NavMenu :routes="routes" :pathname="pathname" />`,

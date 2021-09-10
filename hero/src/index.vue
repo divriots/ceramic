@@ -1,7 +1,27 @@
 <script>
-import DoubleCtaVue from '../../double-cta/src/double-cta.vue';
-export default {
-  setup: () => ({ DoubleCtaVue }),
+  export default {
+  props: {
+    videoSrc: String,
+    imgSrc: String,
+  },
+
+  setup: () => ({
+    stop: () => {
+      const heroVideo = document.getElementById('hero-video');
+      heroVideo.pause();
+      heroVideo.currentTime = 0;
+      heroVideo.classList.add('hidden');
+      heroVideo.nextElementSibling.classList.remove('hidden');
+      heroVideo.blur();
+    },
+    play: () => {
+      const heroVideo = document.getElementById('hero-video');
+      heroVideo.play();
+      heroVideo.classList.remove('hidden');
+      heroVideo.nextElementSibling.classList.add('hidden');
+      heroVideo.focus();
+    },
+  }),
 };
 </script>
 <template>
@@ -17,12 +37,13 @@ export default {
       md:my-24
       lg:my-28
       xl:my-32
-    "
-  >
-    <div class="wrapper max-w-6xl mx-auto">
-      <div
-        class="
-          relative
+    ">
+    <div class="relative wrapper max-w-6xl mx-auto">
+      <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls @ended="stop"
+        @blur="stop">
+        <source :src="videoSrc" type="video/mp4" />
+      </video>
+      <div class="
           z-10
           lg:max-w-2xl lg:w-full
           self-center
@@ -39,7 +60,7 @@ export default {
               <span class="text-primary whitespace-nowrap">
                 Design Systems,
               </span>
-              <span class="block">Code-side</span>
+              <span class="flex items-center md:hidden">Code-side</span>
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               All-in-one Design System platform.
@@ -48,6 +69,26 @@ export default {
               <br />
               Developers and Designers together.
             </p>
+            <div class="flex mt-8 space-x-8">
+              <a class="btn-primary" href="/get-started">Get Started</a>
+              <button
+                class="action inline-flex items-center text-primary"
+                @click="play"
+              >
+                <svg
+                  class="text-primary stroke-current h-8 inline"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 490 490"
+                >
+                  <polygon
+                    points="181.062,336.575 343.938,242.5 181.062,148.425"
+                    fill="currentColor"
+                  />
+                </svg>
+                Play video
+              </button>
+            </div>
             <component
               :is="DoubleCtaVue"
               :primaryText="'Request early access'"
@@ -58,8 +99,8 @@ export default {
           </div>
         </div>
       </div>
-      <div class="relative hidden md:block">
-        <img class="absolute max-w-none h-full" src="/img/landing/hero.png" />
+      <div class="img-video relative hidden md:block cursor-pointer" @click="play">
+        <img class="md:rounded-lg absolute max-w-none h-full" :src="imgSrc" />
       </div>
     </div>
   </section>
@@ -76,7 +117,30 @@ export default {
   }
 }
 
-.gradient.hero::before {
-  height: 1200px;
-}
+  #hero-video {
+    left: 50%;
+    outline: none;
+    transform: translateX(-50%);
+    transition: display 0.1s ease-out;
+    height: 100%;
+    z-index: 11;
+
+    &:not(.hidden)~* {
+      transition: opacity 0.1s ease-out;
+      opacity: 0;
+    }
+  }
+
+  .img-video {
+    margin: 4px;
+
+    &:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s;
+    }
+  }
+
+  .gradient.hero::before {
+    height: 1200px;
+  }
 </style>
