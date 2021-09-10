@@ -112,13 +112,13 @@ export default {
   img {
     max-width: 85%;
     height: 15em;
+    padding-top: 0;
   }
 }
 .wip-ribbon {
   position: absolute;
   right: -5px;
   top: -5px;
-  z-index: 1;
   overflow: hidden;
   width: 7.5em;
   height: 7em;
@@ -156,7 +156,6 @@ export default {
 .action-description {
   font-size: 1.1em;
   font-weight: bold;
-  z-index: 1;
   position: absolute;
   right: 0.5em;
   bottom: 1em;
@@ -180,11 +179,10 @@ p {
       max-height: 100%;
       opacity: 1;
     }
-    .logo,
     .logo-highlighted {
       img {
         height: 5rem;
-        max-width: 60%;
+        padding-top: 1em;
       }
     }
   }
@@ -228,7 +226,6 @@ p {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
-  z-index: 1;
 }
 
 .action-description-big {
