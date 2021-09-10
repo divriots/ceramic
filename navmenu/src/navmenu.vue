@@ -1,6 +1,4 @@
 <template>
-  <component :is="Discord"></component>
-  <component :is="Twitter"></component>
   <component :is="NavMenuItem" v-for="route of routes" :route="route" :key="route" :isMobile="true"
     :isActive="current === route"></component>
   <a href="/studio" class="btn-primary ml-2 inline-block">Studio</a>
@@ -12,8 +10,6 @@
 </style>
 <script>
   import Twitter from '../../twitter/src/twitter.vue';
-import Discord from '../../discord/src/discord.vue';
-import NavMenuItem from '../../navmenu-item/src/navmenu-item.vue';
 export default {
   props: {
     routes: { type: Array, required: true },
@@ -26,7 +22,7 @@ export default {
     },
   },
   setup() {
-    return { NavMenuItem, Twitter, Discord };
+    return { NavMenuItem };
   },
 };
 </script>
