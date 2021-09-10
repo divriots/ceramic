@@ -10,7 +10,7 @@
 </style>
 <script>
   import NavMenuItem from '../../navmenu-item/src/navmenu-item.vue';
- export default {
+export default {
   props: {
     routes: { type: Array, required: true },
     pathname: { type: String, default: '' },
