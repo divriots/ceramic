@@ -26,10 +26,10 @@
         {{ name }}
       </span>
     </div>
-    <div class="owner" v-if="ownerPhoto && highlighted">
+    <div class="owner" v-if="highlighted">
       <span>made by</span>
       <span>
-        <img :src="ownerPhoto" />
+        <img :src="ownerPhoto" :style="`opacity: ${ownerPhoto ? '1' : '0'}`" />
         {{ owner }}
       </span>
     </div>
@@ -103,14 +103,15 @@ export default {
     max-width: 80%;
     max-height: 100%;
     width: auto;
-    height: 8em;
+    height: 6em;
+    padding-top: 1em;
   }
 }
 .logo-highlighted {
   flex-grow: 1;
   img {
-    max-width: 100%;
-    height: 12em;
+    max-width: 85%;
+    height: 15em;
   }
 }
 .wip-ribbon {
@@ -207,8 +208,9 @@ p {
     display: block;
   }
   img {
-    height: 1em;
-    width: 1em;
+    transition: opacity 0.4s ease;
+    height: 1.5em;
+    width: 1.5em;
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.2em;
