@@ -3,7 +3,7 @@
   <component :is="Twitter"></component>
   <component :is="NavMenuItem" v-for="route of routes" :route="route" :key="route" :isMobile="true"
     :isActive="current === route"></component>
-  <a :href="signinPath" class="btn-primary ml-2 inline-block">Sign In</a>
+  <a href="/studio" class="btn-primary ml-2 inline-block">Studio</a>
 </template>
 <style scoped>
   #navexpander:checked~#mobile-menu {
@@ -19,7 +19,6 @@ export default {
     routes: { type: Array, required: true },
     pathname: { type: String, default: '' },
     isMobile: { type: Boolean, default: false },
-    signinPath: { type: String, default: '/signup' },
   },
   computed: {
     current() {
