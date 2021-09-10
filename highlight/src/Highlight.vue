@@ -86,7 +86,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4H7v3H4v1h3v3h1V8h3V7H8V4z" />
               </svg>
               <header class="mt-9">... and many more!</header>
-              <p class="text-lg my-4">You envision it, we make it happen. When you access Backlight you will get to use
+              <p class="text-lg my-4">When you access Backlight you will get to use
                 many
                 other startkits
                 available in different technologies.</p>
