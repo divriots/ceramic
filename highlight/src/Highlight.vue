@@ -116,13 +116,13 @@
                   d="M8 4H7v3H4v1h3v3h1V8h3V7H8V4z"
                 />
               </svg>
-              <header class="mt-9">... and many more!</header>
+              <header>... and many more!</header>
               <p class="text-lg my-4">
                 When you access Backlight you will get to use many other
                 startkits available in different technologies.
               </p>
               <svg
-                width="275"
+                width="100%"
                 height="30"
                 viewBox="0 0 275 30"
                 fill="none"
