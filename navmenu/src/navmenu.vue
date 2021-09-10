@@ -9,8 +9,8 @@
   }
 </style>
 <script>
-  import Twitter from '../../twitter/src/twitter.vue';
-export default {
+  import NavMenuItem from '../../navmenu-item/src/navmenu-item.vue';
+ export default {
   props: {
     routes: { type: Array, required: true },
     pathname: { type: String, default: '' },
