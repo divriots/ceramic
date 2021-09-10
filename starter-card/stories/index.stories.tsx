@@ -4,6 +4,7 @@ import '~/tailwind';
 export default {
   parameters: {
     layout: 'centered',
+    backgrounds: { default: 'black' },
   },
   args: {
     components: { StarterCard },
@@ -19,13 +20,19 @@ export const normal = (args) => ({
       name: 'React',
       desc: 'Design token in system-ui with examples in styled-components and theme-ui.',
       url: '/edit/z99ptYZyvMOGDivUlP9u',
-      bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
+      bgImg: 'https://backlight.dev/assets/lib-white/css3.svg',
+      owner: 'divriots',
+      ownerPhoto: 'https://backlight.dev/assets/logo/dr-b.svg',
+      frameworks: new Map([
+        ['fmk1', 'https://backlight.dev/assets/lib-white/sass.svg'],
+        ['fmk2', 'https://backlight.dev/assets/lib-white/sass.svg'],
+      ]),
     },
   }),
   ...args,
 });
 
-export const big = (args) => ({
+export const highlighted = (args) => ({
   setup: () => ({
     props: {
       backgroundColor: '#30c6b9',
@@ -35,7 +42,14 @@ export const big = (args) => ({
     Based on system-ui tokens.`,
       url: '/edit/sNbJipmRTmslL3f8RZaO',
       bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
-      size: 'big',
+      owner: 'divriots',
+      ownerPhoto: 'https://backlight.dev/assets/logo/dr-b.svg',
+      highlighted: true,
+      frameworks: new Map([
+        ['fmk1', 'https://backlight.dev/assets/lib-white/sass.svg'],
+        ['fmk2', 'https://backlight.dev/assets/lib-white/sass.svg'],
+      ]),
+      wip: true,
     },
   }),
   ...args,
