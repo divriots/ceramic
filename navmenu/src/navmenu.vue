@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     current() {
-      return this.routes.find((r) => this.pathname === r.pathname);
+      return this.routes.find((r) => this.pathname.startsWith(r.pathname));
     },
   },
   setup() {

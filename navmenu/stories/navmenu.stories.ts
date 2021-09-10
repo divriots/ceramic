@@ -21,7 +21,7 @@ export const nav_menu = () => ({
           label: 'Get Started',
         },
       ],
-      pathname: '/get-started',
+      pathname: '/get-started/abc/',
     };
   },
   template: `<NavMenu :routes="routes" :pathname="pathname" />`,
