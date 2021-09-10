@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center grid gap-8 md:gap-4 relative">
+  <section class="text-center grid gap-8 md:gap-4">
     <h2 class="main-title text-white px-4">
       Kickstart your
       <span class="text-primary whitespace-nowrap">Design System</span>
@@ -9,22 +9,24 @@
       <br />
       <!-- You are not far from releasing your first Design System. -->
     </p>
-    <div
-      class="bg-black-divriots py-32 mt-64 overflow-hidden flex justify-center"
-    >
-      <div
-        class="
-          scrollable-horizontal
-          max-w-full
-          px-8
-          py-16
-          sm:px-16
-          absolute
-          bottom-0
-          space-x-16
-          flex
-        "
+    <div class="bg-black-divriots py-40 mt-64"></div>
+    <div class="highlights-wrapper">
+      <svg
+        class="left-paddle"
+        tabindex="0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="currentColor"
       >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
+        />
+      </svg>
+      <div class="highlights-container">
         <component
           :is="StarterCard"
           v-for="kit of kits.filter(({ highlight }) => !highlight)"
@@ -34,12 +36,17 @@
         >
           <div v-html="kit.desc" />
         </component>
-
-        <div class="relative">
+        <div class="relative" style="padding-right: 30px">
           <component
+            v-for="{ left, bg } in [
+              { left: 30, bg: '#A2A2A2' },
+              { left: 20, bg: '#616161' },
+              { left: 10, bg: '#333333' },
+            ]"
+            :style="`position: absolute; left:${left}px; background-color:${bg}`"
+            :reducedHover="true"
             :is="Card"
-            url="/get-started"
-            style="position: absolute; left: 30px; background-color: #a2a2a2"
+            :key="bg"
           >
             <div
               class="
@@ -53,43 +60,6 @@
               "
             ></div>
           </component>
-
-          <component
-            :is="Card"
-            url="/get-started"
-            style="position: absolute; left: 20px; background-color: #616161"
-          >
-            <div
-              class="
-                w-full
-                h-full
-                flex
-                items-center
-                text-3xl
-                sm:text-4xl
-                text-bold text-center
-              "
-            ></div>
-          </component>
-
-          <component
-            :is="Card"
-            url="/get-started"
-            style="position: absolute; left: 10px; background-color: #333333"
-          >
-            <div
-              class="
-                w-full
-                h-full
-                flex
-                items-center
-                text-3xl
-                sm:text-4xl
-                text-bold text-center
-              "
-            ></div>
-          </component>
-
           <component
             :is="Card"
             url="/get-started"
@@ -367,14 +337,122 @@
           </component>
         </div>
       </div>
+      <svg
+        class="right-paddle"
+        tabindex="0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
+        />
+      </svg>
     </div>
   </section>
 </template>
+
+<style>
+.highlights-wrapper {
+  position: relative;
+  max-width: 100%;
+  height: max-content;
+  margin: -600px auto 0;
+  overflow: hidden;
+}
+
+.highlights-container {
+  display: flex;
+  gap: 4rem;
+  padding: 3rem 2rem;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.highlights-container::-webkit-scrollbar {
+  display: none;
+}
+
+.highlights-container a {
+  flex-shrink: 0;
+}
+
+.left-paddle,
+.right-paddle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.left-paddle:focus,
+.right-paddle:focus {
+  border: 1px solid white;
+  outline: none;
+}
+
+.left-paddle:hover,
+.right-paddle:hover,
+.left-paddle:focus,
+.right-paddle:focus {
+  transform: translateY(calc(-50% - 4px));
+}
+
+.left-paddle {
+  left: 10px;
+}
+
+.right-paddle {
+  right: 10px;
+}
+</style>
 
 <script>
 import StarterCard from '../../starter-card/src/StarterCard.vue';
 import Card from '../../card/src/Card.vue';
 import kits from './data';
+import setupScrollArrows from './scroll-arrows.js';
+
+let target;
+
+function dragHandler() {
+  if (!target.dragging) {
+    return;
+  }
+  target.scrollLeft -= (target.xDiff ?? 0) * 4;
+  target.xDiff = 0;
+  requestAnimationFrame(dragHandler);
+}
+
+function mouseUpHandler() {
+  target.dragging = false;
+}
+
+function mouseDownHandler(ev) {
+  ev.preventDefault();
+  target.oldMousePosX = ev.clientX;
+  target.dragging = true;
+  dragHandler();
+}
+
+function mouseMoveHandler(ev) {
+  if (!target.dragging) {
+    return;
+  }
+  target.xDiff = ev.clientX - target.oldMousePosX;
+  target.oldMousePosX = ev.clientX;
+}
 
 export default {
   computed: {
@@ -384,6 +462,20 @@ export default {
   },
   data() {
     return { Card, StarterCard };
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      setupScrollArrows();
+      target = document.querySelector('.highlights-container');
+      target.addEventListener('mousedown', mouseDownHandler);
+      target.addEventListener('mousemove', mouseMoveHandler);
+      target.addEventListener('mouseup', mouseUpHandler);
+    });
+  },
+  beforeUnmount: function () {
+    target.removeEventListener('mousedown', mouseDownHandler);
+    target.addEventListener('mousemove', mouseMoveHandler);
+    target.removeEventListener('mouseup', mouseUpHandler);
   },
 };
 </script>

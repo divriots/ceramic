@@ -1,24 +1,28 @@
 <template>
-  <a
+  <!-- in case you don't want a clickable anchor card, simply don't pass a url and it will be a div instead -->
+  <component
+    :is="url ? 'a' : 'div'"
     :href="url"
     v-on:click="(event) => $emit('click', event)"
     :class="{
       'starter-kit': true,
+      'reduced-hover': reducedHover,
     }"
     :style="
       highlighted
         ? `background-color: ${backgroundColor};`
-        : `background-color: black; border: 3px solid ${backgroundColor}`
+        : `background-color: black; border: 3px solid ${backgroundColor};`
     "
   >
     <slot></slot>
-  </a>
+  </component>
 </template>
 <script>
 export default {
   props: {
     url: { type: String },
     onClick: { type: Object },
+    reducedHover: { type: Boolean, default: false },
     backgroundColor: { type: String },
     highlighted: { type: Boolean, default: false },
   },
@@ -40,7 +44,6 @@ export default {
 
   &:hover {
     transform: scale(1.2);
-    z-index: 10;
     filter: drop-shadow(0.2rem 0.2rem 0.25rem rgba(0, 0, 30, 0.5));
   }
   @media (min-width: 640px) {
@@ -49,5 +52,9 @@ export default {
   }
   width: 16em;
   height: 24em;
+}
+
+.starter-kit.reduced-hover:hover {
+  transform: scale(1.02);
 }
 </style>
