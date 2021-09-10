@@ -43,7 +43,10 @@
           feature.highlight ? 'font-bold' : ''
         }`"
         v-html="
-          (feature.restriction ? `${feature.restriction} ` : '') + feature.label
+          (feature.restriction ? `${feature.restriction} ` : '') +
+          (parseInt(feature.restriction, 10) === 1
+            ? feature.labelSingular
+            : feature.label)
         "
       ></p>
     </li>
