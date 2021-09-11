@@ -5,7 +5,7 @@
       pb-1
       border-0 border-b-4 border-solid border-transparent
       ${isMobile ? 'px-2 py-1 block' : 'px-3'}
-      ${isActive ? 'font-semibold active' : 'font-normal'}
+      ${isActive ? 'active' : ''}
       nav-link
     `">
     {{ route.label }}
