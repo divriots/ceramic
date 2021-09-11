@@ -28,5 +28,6 @@ export const colors = {
       dark: twcolors.teal[800],
     },
     background: twcolors.coolGray['100'],
+    inherit: 'inherit',
   },
 };
