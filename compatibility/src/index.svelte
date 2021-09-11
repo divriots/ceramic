@@ -51,7 +51,7 @@
     content: '';
     position: absolute;
     height: 100%;
-    width: 150px;
+    width: 30px;
     z-index: 1;
     pointer-events: none;
   }
@@ -65,5 +65,21 @@
     top: 0;
     right: 0;
     background: linear-gradient(to right, transparent, currentColor);
+  }
+
+  @media (min-width: 420px) {
+
+    .infini-wrapper::before,
+    .infini-wrapper::after {
+      width: 70px;
+    }
+  }
+
+  @media (min-width: 600px) {
+
+    .infini-wrapper::before,
+    .infini-wrapper::after {
+      width: 150px;
+    }
   }
 </style>
