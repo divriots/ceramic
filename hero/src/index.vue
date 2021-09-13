@@ -33,7 +33,7 @@ export default {
 
     const stopEmbedded = () => {
       const video = heroVideo.value;
-      embeddedPlayer.pauseVideo();
+      embeddedPlayer.stopVideo();
       video.currentTime = 0;
       video.classList.add('hidden');
       video.nextElementSibling.classList.remove('hidden');
