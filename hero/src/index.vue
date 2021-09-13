@@ -1,6 +1,7 @@
 <script>
   export default {
   props: {
+    videoType: String,
     videoSrc: String,
     imgSrc: String,
   },
@@ -38,8 +39,12 @@
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls @ended="stop"
-        @blur="stop">
+      <iframe v-if="videoType === 'youtube'" id="hero-video" width="560" height="315" :src="videoSrc"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="absolute hidden md:rounded-lg"></iframe>
+      <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
+        @ended="stop" @blur="stop">
         <source :src="videoSrc" type="video/mp4" />
       </video>
       <div class="
