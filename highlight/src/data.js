@@ -25,8 +25,8 @@ export default [
     bgImg: 'https://backlight.dev/assets/lib-white/lit.svg',
     highlighted: true,
     frameworks: new Map([
-      ['LION', 'https://backlight.dev/assets/lib-white/lion.svg'],
-      ['LIT', 'https://backlight.dev/assets/lib-white/lit.svg'],
+      ['Lion', 'https://backlight.dev/assets/lib-white/lion.svg'],
+      ['Lit', 'https://backlight.dev/assets/lib-white/lit.svg'],
     ]),
   },
   {
