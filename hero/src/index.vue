@@ -58,7 +58,7 @@
               <span class="text-primary whitespace-nowrap">
                 Design Systems,
               </span>
-              <span class="flex items-center md:hidden">Code-side</span>
+              <span class="flex items-center">Code-side</span>
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               All-in-one Design System platform.
