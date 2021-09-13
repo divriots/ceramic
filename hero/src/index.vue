@@ -25,8 +25,7 @@
 };
 </script>
 <template>
-  <section
-    class="
+  <section class="
       gradient
       text-white
       hero
@@ -52,8 +51,7 @@
           md:py-16
           lg:py-20
           xl:py-28
-        "
-      >
+        ">
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
@@ -65,9 +63,9 @@
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               All-in-one Design System platform.
               <br />
-              Build components and reference site.
+              Manage components, stories and documentation.
               <br />
-              Developers and Designers together.
+              The source of truth for front-end teams.
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
@@ -89,13 +87,8 @@
                 Play video
               </button>
             </div>
-            <component
-              :is="DoubleCtaVue"
-              :primaryText="'Request early access'"
-              :primaryHref="'/request-earlyaccess'"
-              :secondaryText="'Book a demo'"
-              :secondaryHref="'https://calendly.com/gg_/backlight'"
-            ></component>
+            <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
+              :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
           </div>
         </div>
       </div>
@@ -106,16 +99,16 @@
   </section>
 </template>
 <style lang="scss" scoped>
-.gradient .wrapper {
-  min-height: 400px;
+  .gradient .wrapper {
+    min-height: 400px;
 
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
 
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: 6fr 4fr;
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: 6fr 4fr;
+    }
   }
-}
 
   #hero-video {
     left: 50%;
