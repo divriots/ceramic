@@ -14,40 +14,6 @@ export default {
     let embeddedPlayer;
     let youtubeScript;
 
-    const stopLocal = () => {
-      const video = heroVideo.value;
-      video.pause();
-      video.currentTime = 0;
-      video.classList.add('hidden');
-      video.nextElementSibling.classList.remove('hidden');
-      video.blur();
-    };
-
-    const playLocal = () => {
-      const video = heroVideo.value;
-      video.play();
-      video.classList.remove('hidden');
-      video.nextElementSibling.classList.add('hidden');
-      video.focus();
-    };
-
-    const stopEmbedded = () => {
-      const video = heroVideo.value;
-      embeddedPlayer.stopVideo();
-      video.currentTime = 0;
-      video.classList.add('hidden');
-      video.nextElementSibling.classList.remove('hidden');
-      video.blur();
-    };
-
-    const playEmbedded = () => {
-      const video = heroVideo.value;
-      embeddedPlayer.playVideo();
-      video.classList.remove('hidden');
-      video.nextElementSibling.classList.add('hidden');
-      video.focus();
-    };
-
     onMounted(() => {
       if (isYoutube.value) {
         if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -76,19 +42,30 @@ export default {
       heroVideo,
       isYoutube,
       stop: () => {
+        const video = heroVideo.value;
+        video.classList.add('hidden');
+        video.nextElementSibling.classList.remove('hidden');
+        video.blur();
+
         if (isYoutube.value) {
-          stopEmbedded();
+          embeddedPlayer.stopVideo()
         }
         else {
-          stopLocal();
+          video.pause();
+          video.currentTime = 0;
         }
       },
       play: () => {
+        const video = heroVideo.value;
+        video.classList.remove('hidden');
+        video.nextElementSibling.classList.add('hidden');
+        video.focus();
+
         if (isYoutube.value) {
-          playEmbedded();
+          embeddedPlayer.playVideo();
         }
         else {
-          playLocal();
+          video.play();
         }
       },
     }
