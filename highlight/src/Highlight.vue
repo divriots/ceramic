@@ -13,7 +13,9 @@
     <!--Design system cards container-->
     <div class="bg-black-divriots py-40 mt-64"></div>
     <div class="highlights-wrapper">
+    
       <!--Paddles for horizontal scrolling, will not show if all cards are already visible on screen-->
+
       <svg class="left-paddle" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
         viewBox="0 0 16 16" fill="currentColor">
         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -21,7 +23,9 @@
       </svg>
 
       <div class="highlights-container">
+
         <!--Design system cards (data.js)-->
+
         <component :is="StarterCard" v-for="kit of kits.filter(({ highlight }) => !highlight)" :key="kit.name"
           v-bind="kit" actionDescription="Get started">
           <div v-html="kit.desc" />
@@ -46,6 +50,7 @@
                 text-bold text-center
               "></div>
           </component>
+
           <!--"... and many more" card (LOTS of SVGs in here)-->
           <component :is="Card" url="/starterkits" style="background-color: #212121">
             <div class="w-full h-full text-2xl sm:text-3xl"
@@ -173,6 +178,7 @@
 
               <p class="text-lg font-bold pt-3 text-right">
                 Explore
+
                 <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5em; height: 1.5em" aria-hidden="true"
                   viewBox="0 0 20 20" fill="currentColor" class="inline">
                   <path fill-rule="evenodd"
@@ -259,37 +265,14 @@
   import StarterCard from '../../starter-card/src/StarterCard.vue';
 import Card from '../../card/src/Card.vue';
 import kits from './data';
-import setupScrollArrows from './scroll-arrows.js';
-
-let target;
-
-function dragHandler() {
-  if (!target.dragging) {
-    return;
-  }
-  target.scrollLeft -= (target.xDiff ?? 0) * 4;
-  target.xDiff = 0;
-  requestAnimationFrame(dragHandler);
-}
-
-function mouseUpHandler() {
-  target.dragging = false;
-}
-
-function mouseDownHandler(ev) {
-  ev.preventDefault();
-  target.oldMousePosX = ev.clientX;
-  target.dragging = true;
-  dragHandler();
-}
-
-function mouseMoveHandler(ev) {
-  if (!target.dragging) {
-    return;
-  }
-  target.xDiff = ev.clientX - target.oldMousePosX;
-  target.oldMousePosX = ev.clientX;
-}
+import { 
+  setupScrollArrows, 
+  teardownScrollArrows,
+} from './scroll-arrows.js';
+import {
+  setupDragHandling, 
+  teardownDragHandling, 
+} from './drag-handling.js';
 
 export default {
   computed: {
@@ -303,16 +286,12 @@ export default {
   mounted: function () {
     this.$nextTick(function () {
       setupScrollArrows();
-      target = document.querySelector('.highlights-container');
-      target.addEventListener('mousedown', mouseDownHandler);
-      target.addEventListener('mousemove', mouseMoveHandler);
-      target.addEventListener('mouseup', mouseUpHandler);
+      setupDragHandling();
     });
   },
   beforeUnmount: function () {
-    target.removeEventListener('mousedown', mouseDownHandler);
-    target.addEventListener('mousemove', mouseMoveHandler);
-    target.removeEventListener('mouseup', mouseUpHandler);
+    teardownScrollArrows();
+    teardownDragHandling();
   },
 };
 </script>
