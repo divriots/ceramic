@@ -29,7 +29,7 @@
           All our <span class="text-primary">features</span>
         </th>
         <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-4 align-text-top">
-          <span class="pricing-grid text-left">
+          <span class="inline-grid text-left">
             <span class="text-xl">{{ plan.title }}</span>
           <span class="font-normal">
             <template v-if="plan.price.symbol">{{ plan.price.symbol }}{{ plan.price.value }} / mo</template>
@@ -78,10 +78,5 @@
 <style scoped>
   table {
     border-collapse: collapse;
-  }
-
-  .pricing-grid {
-    display: inline-grid;
-    grid-template-rows: auto minmax(0, auto) 1fr;
   }
 </style>
