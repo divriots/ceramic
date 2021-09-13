@@ -48,7 +48,8 @@ export default {
     };
 
     onMounted(() => {
-      if (isYoutube) {
+      console.log(isYoutube.value)
+      if (isYoutube.value) {
         console.log('mounted in the composition api!')
       
         if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -56,6 +57,8 @@ export default {
           tag.src = 'https://www.youtube.com/player_api';
           const firstScriptTag = document.getElementsByTagName('script')[0];
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          console.log('loads the youtube player')
 
           window.onYouTubeIframeAPIReady = () => {
             console.log('iframe youtube ready');
@@ -70,7 +73,7 @@ export default {
     });
 
     onBeforeUnmount(() => {
-      // TODO: Destroy def player
+      embeddedPlayer.destroy();
     });
 
     return {
@@ -110,7 +113,8 @@ export default {
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo">
+      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo" @blur="stop"
+        tabindex="-1">
         <div id="hero-embedded-placeholder"></div>
       </div>
       <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
