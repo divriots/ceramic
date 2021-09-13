@@ -29,9 +29,13 @@
           All our <span class="text-primary">features</span>
         </th>
         <th scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-4 align-text-top">
-          <span class="inline-flex flex-col text-left">
+          <span class="pricing-grid text-left">
             <span class="text-xl">{{ plan.title }}</span>
-          <component :is="plan.action.url?'a':'span'" class="action py-2 text-secondary text-md whitespace-nowrap"
+          <span class="font-normal">
+            <template v-if="plan.price.symbol">{{ plan.price.symbol }}{{ plan.price.value }} / mo</template>
+            <template v-else>{{ plan.price.value }}</template>
+          </span>
+          <component :is="plan.action.url?'a':'span'" class="font-normal btn-primary mt-2 text-md whitespace-nowrap"
             :href="plan.action.url">{{
             plan.action.label
             }}</component>
@@ -58,10 +62,26 @@
         </td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td scope="col" v-for="(plan, pIdx) in plans" :key="pIdx" class="p-4 align-text-top">
+          <component :is="plan.action.url?'a':'span'" class="btn-primary mt-2 text-md whitespace-nowrap"
+            :href="plan.action.url">{{
+            plan.action.label
+            }}</component>
+        </td>
+      </tr>
+    </tfoot>
   </table>
 </template>
 <style scoped>
   table {
     border-collapse: collapse;
+  }
+
+  .pricing-grid {
+    display: inline-grid;
+    grid-template-rows: auto minmax(0, auto) 1fr;
   }
 </style>
