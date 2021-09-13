@@ -7,8 +7,11 @@
   };
 </script>
 <template>
-  <section class="gradient text-white memberships text-center relative px-4 pt-8 md:pt-16">
-    <h2 class="text-4xl sm:text-5xl lg:text-6xl py-16">Discover our pricing</h2>
+  <section class="gradient text-white memberships text-center relative">
+    <header class="py-20">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl mb-2">Discover our pricing</h2>
+      <p class="text-lg sm:text-xl lg:text-2xl text-gray-light">Affordable for teams at all sizes</p>
+    </header>
     <div class="mx-auto max-w-5xl grid lg:grid-cols-3 align-center justify-center gap-8">
       <div v-for="(plan,idx) of plans" :key="plan.title">
         <component :is="Price" v-bind="plan" :banner="plan.banner"
