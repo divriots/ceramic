@@ -5,7 +5,10 @@ import { html } from 'lit-html';
 import '~/tailwind';
 ```
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 :root {
   font-family: 'Space Grotesk'!important;
