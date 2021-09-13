@@ -33,11 +33,11 @@ export default [
         // },
       },
       {
-        title: 'Documentation aka reference site',
-        description: `<p>Reference sites are online documentation of your
-        Design System including component description, rules and guidelines.</p>
-        <p>Backlight has built-in support for Markdown and MDX documentation.</p>
-        <p>Everybody can contribute directly with the WYSIWYG online editor.</p>`,
+        title: 'Documentation',
+        description: `<p>Backlight has built-in support for MDX (React) and Markdown documentation.</p>
+        <p>Showcase the components directly in the documentation, include Playgrounds and show Properties/Events 
+        directly from code with no additional maintenance.</p>
+        <p>Everybody can contribute directly with instant online preview.</p>`,
         img: {
           src: imgLanding('referencesite.gif'),
         },
