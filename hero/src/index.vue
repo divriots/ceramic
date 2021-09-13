@@ -1,5 +1,5 @@
 <script>
-  import { ref } from 'vue';
+  import { ref, computed } from 'vue';
 
 export default {
   props: {
@@ -8,25 +8,55 @@ export default {
     imgSrc: String,
   },
 
-  setup() {
+  setup({videoType}) {
     const heroVideo = ref(null);
+    const embeddedVideo = ref(null);
+    const isYoutube = computed(() => videoType === 'youtube');
+
+    const stopLocal = () => {
+      const video = heroVideo.value;
+      video.pause();
+      video.currentTime = 0;
+      video.classList.add('hidden');
+      video.nextElementSibling.classList.remove('hidden');
+      video.blur();
+    };
+
+    const playLocal = () => {
+      const video = heroVideo.value;
+      video.play();
+      video.classList.remove('hidden');
+      video.nextElementSibling.classList.add('hidden');
+      video.focus();
+    };
+
+    const stopEmbedded = () => {
+      console.log('stop embedded')
+    };
+
+    const playEmbedded = () => {
+      console.log('play embedded')
+    };
 
     return {
       heroVideo,
+      embeddedVideo,
+      isYoutube,
       stop: () => {
-        const video = heroVideo.value;
-        video.pause();
-        video.currentTime = 0;
-        video.classList.add('hidden');
-        video.nextElementSibling.classList.remove('hidden');
-        video.blur();
+        if (isYoutube.value) {
+          stopEmbedded();
+        }
+        else {
+          stopLocal();
+        }
       },
       play: () => {
-        const video = heroVideo.value;
-        video.play();
-        video.classList.remove('hidden');
-        video.nextElementSibling.classList.add('hidden');
-        video.focus();
+        if (isYoutube.value) {
+          playEmbedded();
+        }
+        else {
+          playLocal();
+        }
       },
     }
   },
@@ -46,10 +76,9 @@ export default {
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <iframe v-if="videoType === 'youtube'" id="hero-video" width="560" height="315" :src="videoSrc"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-        class="absolute hidden md:rounded-lg"></iframe>
+      <iframe v-if="isYoutube" id="hero-video" width="560" height="315" :src="videoSrc" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen class="absolute hidden md:rounded-lg" ref="embeddedVideo"></iframe>
       <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
         @ended="stop" @blur="stop" ref="heroVideo">
         <source :src="videoSrc" type="video/mp4" />
