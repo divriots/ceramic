@@ -1,27 +1,75 @@
 <script>
-  export default {
+  import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+
+export default {
   props: {
+    videoType: String,
     videoSrc: String,
     imgSrc: String,
   },
 
-  setup: () => ({
-    stop: () => {
-      const heroVideo = document.getElementById('hero-video');
-      heroVideo.pause();
-      heroVideo.currentTime = 0;
-      heroVideo.classList.add('hidden');
-      heroVideo.nextElementSibling.classList.remove('hidden');
-      heroVideo.blur();
-    },
-    play: () => {
-      const heroVideo = document.getElementById('hero-video');
-      heroVideo.play();
-      heroVideo.classList.remove('hidden');
-      heroVideo.nextElementSibling.classList.add('hidden');
-      heroVideo.focus();
-    },
-  }),
+  setup({videoType, videoSrc}) {
+    const heroVideo = ref(null);
+    const isYoutube = computed(() => videoType === 'youtube');
+    let embeddedPlayer;
+    let youtubeScript;
+
+    onMounted(() => {
+      if (isYoutube.value) {
+        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+          youtubeScript = document.createElement('script');
+          youtubeScript.src = 'https://www.youtube.com/player_api';
+          const firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(youtubeScript, firstScriptTag);
+
+          window.onYouTubeIframeAPIReady = () => {
+            embeddedPlayer = new YT.Player('hero-embedded-placeholder', {
+              height: '360',
+              width: '640',
+              videoId: videoSrc,
+            });
+          }
+        }
+      }
+    });
+
+    onBeforeUnmount(() => {
+      embeddedPlayer.destroy();
+      youtubeScript.parentNode.removeChild(youtubeScript);
+    });
+
+    return {
+      heroVideo,
+      isYoutube,
+      stop: () => {
+        const video = heroVideo.value;
+        video.classList.add('hidden');
+        video.nextElementSibling.classList.remove('hidden');
+        video.blur();
+
+        if (isYoutube.value) {
+          embeddedPlayer.stopVideo()
+        }
+        else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      },
+      play: () => {
+        const video = heroVideo.value;
+        video.classList.remove('hidden');
+        video.nextElementSibling.classList.add('hidden');
+        video.focus();
+
+        if (isYoutube.value) {
+          embeddedPlayer.playVideo();
+        }
+        else {
+          video.play();
+        }
+      },
+    }
+  },
 };
 </script>
 <template>
@@ -38,8 +86,12 @@
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <video id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls @ended="stop"
-        @blur="stop">
+      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo" @blur="stop"
+        tabindex="-1">
+        <div id="hero-embedded-placeholder"></div>
+      </div>
+      <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
+        @ended="stop" @blur="stop" ref="heroVideo">
         <source :src="videoSrc" type="video/mp4" />
       </video>
       <div class="
