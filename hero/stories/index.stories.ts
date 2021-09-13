@@ -14,5 +14,5 @@ export const localVideo = () => ({
 
 export const youtubeVideo = () => ({
   components: { Hero },
-  template: `<Hero videoSrc="https://www.youtube.com/embed/veDoIqU2So0" videoType="youtube" imgSrc="/img/landing/hero.png"/>`,
+  template: `<Hero videoSrc="veDoIqU2So0" videoType="youtube" imgSrc="/img/landing/hero.png"/>`,
 });

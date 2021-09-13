@@ -1,5 +1,5 @@
 <script>
-  import { ref, computed } from 'vue';
+  import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
   props: {
@@ -8,10 +8,10 @@ export default {
     imgSrc: String,
   },
 
-  setup({videoType}) {
+  setup({videoType, videoSrc}) {
     const heroVideo = ref(null);
-    const embeddedVideo = ref(null);
     const isYoutube = computed(() => videoType === 'youtube');
+    let embeddedPlayer;
 
     const stopLocal = () => {
       const video = heroVideo.value;
@@ -31,16 +31,50 @@ export default {
     };
 
     const stopEmbedded = () => {
-      console.log('stop embedded')
+      const video = heroVideo.value;
+      embeddedPlayer.pauseVideo();
+      video.currentTime = 0;
+      video.classList.add('hidden');
+      video.nextElementSibling.classList.remove('hidden');
+      video.blur();
     };
 
     const playEmbedded = () => {
-      console.log('play embedded')
+      const video = heroVideo.value;
+      embeddedPlayer.playVideo();
+      video.classList.remove('hidden');
+      video.nextElementSibling.classList.add('hidden');
+      video.focus();
     };
+
+    onMounted(() => {
+      if (isYoutube) {
+        console.log('mounted in the composition api!')
+      
+        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+          const tag = document.createElement('script');
+          tag.src = 'https://www.youtube.com/player_api';
+          const firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          window.onYouTubeIframeAPIReady = () => {
+            console.log('iframe youtube ready');
+            embeddedPlayer = new YT.Player('hero-embedded-placeholder', {
+              height: '360',
+              width: '640',
+              videoId: videoSrc,
+            });
+          }
+        }
+      }
+    });
+
+    onBeforeUnmount(() => {
+      // TODO: Destroy def player
+    });
 
     return {
       heroVideo,
-      embeddedVideo,
       isYoutube,
       stop: () => {
         if (isYoutube.value) {
@@ -76,9 +110,9 @@ export default {
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <iframe v-if="isYoutube" id="hero-video" width="560" height="315" :src="videoSrc" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen class="absolute hidden md:rounded-lg" ref="embeddedVideo"></iframe>
+      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo">
+        <div id="hero-embedded-placeholder"></div>
+      </div>
       <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
         @ended="stop" @blur="stop" ref="heroVideo">
         <source :src="videoSrc" type="video/mp4" />
