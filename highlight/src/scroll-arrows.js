@@ -1,12 +1,10 @@
 let leftPaddle;
 let rightPaddle;
 let menuContainer;
-let menuFullSize;
 // get some relevant size for the paddle triggering point
 const paddleMargin = 40;
 
-function handlePaddleButtons() {
-  const menuContainerSize = menuContainer.getBoundingClientRect().width;
+function handlePaddleButtons(menuFullSize, menuContainerSize) {
   const menuInvisibleSize = menuFullSize - menuContainerSize;
   const menuPosition = menuContainer.scrollLeft;
   const menuStartOffset = paddleMargin;
@@ -25,40 +23,46 @@ function handlePaddleButtons() {
   }
 }
 
-function padRightHandler() {
-  menuContainer.scrollTo({
-    left: menuFullSize,
-    behavior: 'smooth',
+function setupListeners(menuFullSize) {
+  window.addEventListener('resize', () => {
+    handlePaddleButtons(
+      menuFullSize,
+      menuContainer.getBoundingClientRect().width
+    );
+  });
+
+  menuContainer.addEventListener('scroll', () => {
+    handlePaddleButtons(
+      menuFullSize,
+      menuContainer.getBoundingClientRect().width
+    );
+  });
+
+  rightPaddle.addEventListener('click', function () {
+    menuContainer.scrollTo({
+      left: menuFullSize,
+      behavior: 'smooth',
+    });
+  });
+
+  leftPaddle.addEventListener('click', function () {
+    menuContainer.scrollTo({
+      left: 0,
+      behavior: 'smooth',
+    });
   });
 }
 
-function padLeftHandler() {
-  menuContainer.scrollTo({
-    left: 0,
-    behavior: 'smooth',
-  });
-}
-
-function setupListeners() {
-  window.addEventListener('resize', handlePaddleButtons);
-  menuContainer.addEventListener('scroll', handlePaddleButtons);
-  rightPaddle.addEventListener('click', padRightHandler);
-  leftPaddle.addEventListener('click', padLeftHandler);
-}
-
-export function setupScrollArrows() {
+export default function setupScrollArrows() {
   leftPaddle = document.querySelector('.left-paddle');
   rightPaddle = document.querySelector('.right-paddle');
   menuContainer = document.querySelector('.highlights-container');
-  menuFullSize = menuContainer.scrollWidth;
+  const menuFullSize = menuContainer.scrollWidth;
 
-  setupListeners();
-  handlePaddleButtons();
-}
+  setupListeners(menuFullSize);
 
-export function teardownScrollArrows() {
-  window.removeEventListener('resize', handlePaddleButtons);
-  menuContainer.removeEventListener('scroll', handlePaddleButtons);
-  rightPaddle.removeEventListener('click', padRightHandler);
-  leftPaddle.removeEventListener('click', padLeftHandler);
+  handlePaddleButtons(
+    menuFullSize,
+    menuContainer.getBoundingClientRect().width
+  );
 }
