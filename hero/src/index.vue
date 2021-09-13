@@ -1,28 +1,35 @@
 <script>
-  export default {
+  import { ref } from 'vue';
+
+export default {
   props: {
     videoType: String,
     videoSrc: String,
     imgSrc: String,
   },
 
-  setup: () => ({
-    stop: () => {
-      const heroVideo = document.getElementById('hero-video');
-      heroVideo.pause();
-      heroVideo.currentTime = 0;
-      heroVideo.classList.add('hidden');
-      heroVideo.nextElementSibling.classList.remove('hidden');
-      heroVideo.blur();
-    },
-    play: () => {
-      const heroVideo = document.getElementById('hero-video');
-      heroVideo.play();
-      heroVideo.classList.remove('hidden');
-      heroVideo.nextElementSibling.classList.add('hidden');
-      heroVideo.focus();
-    },
-  }),
+  setup() {
+    const heroVideo = ref(null);
+
+    return {
+      heroVideo,
+      stop: () => {
+        const video = heroVideo.value;
+        video.pause();
+        video.currentTime = 0;
+        video.classList.add('hidden');
+        video.nextElementSibling.classList.remove('hidden');
+        video.blur();
+      },
+      play: () => {
+        const video = heroVideo.value;
+        video.play();
+        video.classList.remove('hidden');
+        video.nextElementSibling.classList.add('hidden');
+        video.focus();
+      },
+    }
+  },
 };
 </script>
 <template>
@@ -44,7 +51,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         class="absolute hidden md:rounded-lg"></iframe>
       <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
-        @ended="stop" @blur="stop">
+        @ended="stop" @blur="stop" ref="heroVideo">
         <source :src="videoSrc" type="video/mp4" />
       </video>
       <div class="
