@@ -15,9 +15,9 @@
       :class="{ details: highlighted }"
       style="align-self: stretch; display: flex; flex-grow: 100"
     >
-      <p class="description">
+      <div class="description">
         <slot></slot>
-      </p>
+      </div>
     </div>
     <div class="powered-by">
       <span>{{ highlighted ? 'powered by' : 'featuring' }}</span>
@@ -26,7 +26,7 @@
         {{ name }}
       </span>
     </div>
-    <div class="owner" v-if="highlighted">
+    <div class="owner" v-if="highlighted && owner">
       <span>made by</span>
       <span>
         <img :src="ownerPhoto" :style="`opacity: ${ownerPhoto ? '1' : '0'}`" />
@@ -160,7 +160,10 @@ export default {
   right: 0.5em;
   bottom: 1em;
   max-width: 50%;
+  display: flex;
+  align-items: flex-end;
 }
+
 p {
   margin: 0;
 }
@@ -173,7 +176,7 @@ p {
 .card {
   @mixin detailed-card {
     .framework-bg {
-      opacity: 0.2;
+      opacity: 0.15;
     }
     .details {
       max-height: 100%;
@@ -220,15 +223,5 @@ p {
 .powered-by {
   margin-top: auto;
   margin-bottom: 0.4em;
-}
-
-.action-description {
-  display: flex;
-  align-items: flex-end;
-  font-weight: bold;
-}
-
-.action-description-big {
-  font-size: 1.5em;
 }
 </style>
