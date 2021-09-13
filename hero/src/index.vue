@@ -12,6 +12,7 @@ export default {
     const heroVideo = ref(null);
     const isYoutube = computed(() => videoType === 'youtube');
     let embeddedPlayer;
+    let youtubeScript;
 
     const stopLocal = () => {
       const video = heroVideo.value;
@@ -48,20 +49,14 @@ export default {
     };
 
     onMounted(() => {
-      console.log(isYoutube.value)
       if (isYoutube.value) {
-        console.log('mounted in the composition api!')
-      
         if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-          const tag = document.createElement('script');
-          tag.src = 'https://www.youtube.com/player_api';
+          youtubeScript = document.createElement('script');
+          youtubeScript.src = 'https://www.youtube.com/player_api';
           const firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          console.log('loads the youtube player')
+          firstScriptTag.parentNode.insertBefore(youtubeScript, firstScriptTag);
 
           window.onYouTubeIframeAPIReady = () => {
-            console.log('iframe youtube ready');
             embeddedPlayer = new YT.Player('hero-embedded-placeholder', {
               height: '360',
               width: '640',
@@ -74,6 +69,7 @@ export default {
 
     onBeforeUnmount(() => {
       embeddedPlayer.destroy();
+      youtubeScript.parentNode.removeChild(youtubeScript);
     });
 
     return {
