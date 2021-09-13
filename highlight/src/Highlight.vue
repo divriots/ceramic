@@ -13,9 +13,7 @@
     <!--Design system cards container-->
     <div class="bg-black-divriots py-40 mt-64"></div>
     <div class="highlights-wrapper">
-    
       <!--Paddles for horizontal scrolling, will not show if all cards are already visible on screen-->
-
       <svg class="left-paddle" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
         viewBox="0 0 16 16" fill="currentColor">
         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -23,9 +21,7 @@
       </svg>
 
       <div class="highlights-container">
-
         <!--Design system cards (data.js)-->
-
         <component :is="StarterCard" v-for="kit of kits.filter(({ highlight }) => !highlight)" :key="kit.name"
           v-bind="kit" actionDescription="Get started">
           <div v-html="kit.desc" />
@@ -50,14 +46,12 @@
                 text-bold text-center
               "></div>
           </component>
-
           <!--"... and many more" card (LOTS of SVGs in here)-->
-          <component :is="Card" url="/starterkits" style="background-color: #212121">
+          <component :is="Card" url="/starterkits" style="background-color: #212121" actionDescription="Explore">
             <div class="w-full h-full text-2xl sm:text-3xl"
-              style="display: flex; flex-direction: column; justify-content: space-between">
+              style="display: flex; flex-direction: column; justify-content: space-evenly">
               <!--Top left SVG +-->
-              <svg width="60" height="60" class="mt-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor">
+              <svg width="60" height="60" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M1.5 1h12l.5.5v12l-.5.5h-12l-.5-.5v-12l.5-.5zM2 13h11V2H2v11z" />
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4H7v3H4v1h3v3h1V8h3V7H8V4z" />
@@ -176,16 +170,15 @@
                 </div>
               </div>
 
-              <p class="text-lg font-bold pt-3 text-right">
+              <!-- <p class="text-lg font-bold pt-3 text-right">
                 Explore
-
                 <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5em; height: 1.5em" aria-hidden="true"
                   viewBox="0 0 20 20" fill="currentColor" class="inline">
                   <path fill-rule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                     clip-rule="evenodd" />
                 </svg>
-              </p>
+              </p> -->
             </div>
           </component>
         </div>
@@ -265,14 +258,37 @@
   import StarterCard from '../../starter-card/src/StarterCard.vue';
 import Card from '../../card/src/Card.vue';
 import kits from './data';
-import { 
-  setupScrollArrows, 
-  teardownScrollArrows,
-} from './scroll-arrows.js';
-import {
-  setupDragHandling, 
-  teardownDragHandling, 
-} from './drag-handling.js';
+import setupScrollArrows from './scroll-arrows.js';
+
+let target;
+
+function dragHandler() {
+  if (!target.dragging) {
+    return;
+  }
+  target.scrollLeft -= (target.xDiff ?? 0) * 4;
+  target.xDiff = 0;
+  requestAnimationFrame(dragHandler);
+}
+
+function mouseUpHandler() {
+  target.dragging = false;
+}
+
+function mouseDownHandler(ev) {
+  ev.preventDefault();
+  target.oldMousePosX = ev.clientX;
+  target.dragging = true;
+  dragHandler();
+}
+
+function mouseMoveHandler(ev) {
+  if (!target.dragging) {
+    return;
+  }
+  target.xDiff = ev.clientX - target.oldMousePosX;
+  target.oldMousePosX = ev.clientX;
+}
 
 export default {
   computed: {
@@ -286,12 +302,16 @@ export default {
   mounted: function () {
     this.$nextTick(function () {
       setupScrollArrows();
-      setupDragHandling();
+      target = document.querySelector('.highlights-container');
+      target.addEventListener('mousedown', mouseDownHandler);
+      target.addEventListener('mousemove', mouseMoveHandler);
+      target.addEventListener('mouseup', mouseUpHandler);
     });
   },
   beforeUnmount: function () {
-    teardownScrollArrows();
-    teardownDragHandling();
+    target.removeEventListener('mousedown', mouseDownHandler);
+    target.addEventListener('mousemove', mouseMoveHandler);
+    target.removeEventListener('mouseup', mouseUpHandler);
   },
 };
 </script>
