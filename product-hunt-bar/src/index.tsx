@@ -3,7 +3,7 @@ import './style.css';
 
 function ProductHuntBar() {
   return (
-    <div className="flex justify-center items-center  text-black-default relative">
+    <div className="flex justify-center items-center text-black-default relative">
       <input type="checkbox" id="toggle" />
       <label htmlFor="toggle" id="testLabel" className="absolute right-2">
         <svg
