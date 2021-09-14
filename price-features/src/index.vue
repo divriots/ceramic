@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8 mt-4">
+  <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8">
     <li class="mb-4 flex items-start text-left" v-if="inherits">
       <div class="flex-shrink-0">
         <svg

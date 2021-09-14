@@ -1,8 +1,12 @@
 <template>
-  <div class="relative flex flex-col">
+  <div
+    :class="`price-info relative flex flex-col ${
+      highlight ? 'highlight' : 'lg:pt-12'
+    }`"
+  >
     <div
       class="flex bg-secondary rounded-md shadow-inset-control"
-      v-if="price && price.value > 0"
+      v-if="highlight"
     >
       <button
         :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
@@ -71,6 +75,9 @@ export default {
     banner: { type: String },
   },
   computed: {
+    highlight() {
+      return this.price && this.price.value > 0;
+    },
     value() {
       if (this.period === 'month') return Math.trunc(this.price.value / 0.8);
       return this.price.value;
@@ -88,6 +95,14 @@ export default {
 </script>
 
 <style>
+.price-info {
+  min-height: 12.2rem;
+}
+
+.price-info.highlight {
+  min-height: 12rem;
+}
+
 .shadow-inset-control {
   box-shadow: inset 0 0 2rem 2rem rgb(0 0 0 / 10%);
   padding: 2px;
