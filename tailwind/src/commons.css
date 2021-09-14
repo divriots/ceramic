@@ -3,7 +3,7 @@
 
 @layer components {
   .nav-link:hover,
-  .nav-link.active {
+  .nav-link.active span {
     @apply border-primary;
   }
   .scrollable-horizontal {

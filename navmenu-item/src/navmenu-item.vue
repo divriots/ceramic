@@ -2,13 +2,13 @@
   <a :href="route.pathname" :class="`
       text-inherit
       ml-2
-      pb-1
-      border-0 border-b-4 border-solid border-transparent
       ${isMobile ? 'px-2 py-1 block' : 'px-3'}
       ${isActive ? 'active' : ''}
       nav-link
     `">
-    {{ route.label }}
+    <span :class="`inline-block pb-1 border-0 border-b-4 border-solid border-transparent`">
+      {{ route.label }}
+    </span>
   </a>
 </template>
 <script>

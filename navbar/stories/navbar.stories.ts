@@ -13,19 +13,19 @@ export const navbar = () => ({
     return {
       routes: [
         {
-          pathname: '#',
+          pathname: '/princing',
           label: 'Pricing',
         },
         {
-          pathname: '#',
+          pathname: '/get-started',
           label: 'Get started',
         },
         {
-          pathname: '#',
+          pathname: '/blog',
           label: 'Blog',
         },
       ],
-      pathname: '/blog',
+      pathname: '/get-started',
     };
   },
   template: `<NavBar :routes="routes" :pathname="pathname" :appRoute="appRoute"/>`,
