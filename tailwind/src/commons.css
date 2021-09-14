@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 @layer components {
-  .nav-link:hover,
+  .nav-link:hover span,
   .nav-link.active span {
     @apply border-primary;
   }
