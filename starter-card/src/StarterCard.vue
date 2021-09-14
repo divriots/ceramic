@@ -17,7 +17,7 @@
         {{ name }}
       </span>
     </div>
-    <div class="owner" v-if="highlighted">
+    <div class="owner" v-if="highlighted && owner">
       <span>made by</span>
       <span>
         <img :src="ownerPhoto" :style="`opacity: ${ownerPhoto ? '1' : '0'}`" />
