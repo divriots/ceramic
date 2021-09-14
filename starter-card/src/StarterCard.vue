@@ -111,6 +111,9 @@ export default {
     height: 100%;
     display: flex;
     align-items: center;
+    @media (hover: none) {
+      font-size: 0.9em;
+    }
   }
 
   .framework-bg {
@@ -168,6 +171,9 @@ export default {
   .powered-by,
   .owner {
     font-size: 0.9em;
+    @media (hover: none) {
+      font-size: 0.8em;
+    }
 
     :first-child {
       font-size: 0.8em;
@@ -181,6 +187,10 @@ export default {
       transition: opacity 0.4s ease;
       height: 1.5em;
       width: 1.5em;
+      @media (hover: none) {
+        height: 1.2em;
+        width: 1.2em;
+      }
       display: inline-block;
       vertical-align: middle;
       margin-right: 0.2em;
@@ -192,15 +202,5 @@ export default {
   .powered-by {
     margin-top: auto;
     margin-bottom: 0.4em;
-  }
-
-  .action-description {
-    display: flex;
-    align-items: flex-end;
-    font-weight: bold;
-  }
-
-  .action-description-big {
-    font-size: 1.5em;
   }
 </style>
