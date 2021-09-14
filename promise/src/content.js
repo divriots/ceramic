@@ -1,5 +1,4 @@
-const imgLanding = (asset) =>
-  `https://dev-designsystems--promises-3zmrn7s5.web.app/img/landing/${asset}?v1`;
+const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}?v1`;
 
 export default [
   {
