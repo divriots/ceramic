@@ -6,7 +6,7 @@
       ${isActive ? 'active' : ''}
       nav-link
     `">
-    <span :class="`inline-block pb-1 border-0 border-b-4 border-solid border-transparent`">
+    <span class="inline-block pb-1 border-0 border-b-4 border-solid border-transparent">
       {{ route.label }}
     </span>
   </a>
