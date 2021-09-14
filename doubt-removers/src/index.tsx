@@ -3,8 +3,8 @@ import content from './content';
 
 function DoubtRemovers() {
   return (
-    <section className="bg-black-divriots text-white px-8 py-12 -my-2 overflow-hidden">
-      <article className="md:px-20">
+    <section className="bg-black-divriots text-white px-8 py-12 -my-2">
+      <article className="md:px-20 overflow-hidden">
         <h3
           data-aos="fade-left"
           className="main-title text-center my-10 sm:my-20"
