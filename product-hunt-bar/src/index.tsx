@@ -3,7 +3,7 @@ import './style.css';
 
 function ProductHuntBar() {
   return (
-    <div className="flex justify-center items-center relative">
+    <div className="flex justify-center items-center text-black-default relative">
       <input type="checkbox" id="toggle" />
       <label htmlFor="toggle" id="testLabel" className="absolute right-2">
         <svg
@@ -25,7 +25,7 @@ function ProductHuntBar() {
       <a
         href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
         id="banner"
-        className="flex justify-center items-center flex-grow bg-primary h-16 text-black-default controlled"
+        className="flex justify-center items-center flex-grow bg-primary h-16 controlled"
       >
         <p className="text-lg md:text-xl font-semibold mx-6">
           <span className="md:mx-4">🎉</span>We are live on{' '}
