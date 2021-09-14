@@ -71,7 +71,7 @@
   }
 
   .action-description {
-    font-size: 1.1em;
+    font-size: 1.0em;
     font-weight: bold;
     position: absolute;
     right: 0.5em;
