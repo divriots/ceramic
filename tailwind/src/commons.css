@@ -2,8 +2,8 @@
 @tailwind utilities;
 
 @layer components {
-  .nav-link:hover,
-  .nav-link.active {
+  .nav-link:hover span,
+  .nav-link.active span {
     @apply border-primary;
   }
   .scrollable-horizontal {
