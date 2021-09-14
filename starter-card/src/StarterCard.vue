@@ -3,7 +3,7 @@
     :highlighted="highlighted" :class="{ card: true, 'highlighted': highlighted, 'not-highlighted': !highlighted }">
     <div v-if="wip" class="wip-ribbon"><span>in progress...</span></div>
     <div :class="{ logo: true }">
-      <img :src="heroImg" />
+      <img :src="versioned(heroImg)" />
     </div>
     <div class="details">
       <p class="description">
@@ -13,23 +13,23 @@
     <div class="powered-by">
       <span>{{ highlighted ? 'powered by' : 'featuring' }}</span>
       <span v-for="[name, logo] in frameworks" :key="name">
-        <img :src="logo" />
+        <img :src="versioned(logo)" />
         {{ name }}
       </span>
     </div>
     <div class="owner" v-if="highlighted && owner">
       <span>made by</span>
       <span>
-        <img :src="ownerPhoto" :style="`opacity: ${ownerPhoto ? '1' : '0'}`" />
+        <img :src="versioned(ownerPhoto)" :style="`opacity: ${ownerPhoto ? '1' : '0'}`" />
         {{ owner }}
       </span>
     </div>
-    <img v-if="highlighted" class="framework-bg" :src="bgImg" />
+    <img v-if="highlighted" class="framework-bg" :src="versioned(bgImg)" />
     <div v-else class="framework-bg" :style="`
-        -webkit-mask-image: url(${bgImg});
+        -webkit-mask-image: url(${versioned(bgImg)});
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
-        mask-image: url(${bgImg});
+        mask-image: url(${versioned(bgImg)});
         mask-position: center;
         mask-repeat: no-repeat;
         background-color: ${backgroundColor}`" />
@@ -52,6 +52,12 @@ export default {
     wip: { type: Boolean },
   },
   data: () => ({ Card }),
+  methods: {
+    versioned: function(imgUrl) {
+      // append a version to be able to bust cached images when updating them
+      return `${imgUrl}?v1`
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
