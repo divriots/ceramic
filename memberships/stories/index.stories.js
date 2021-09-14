@@ -9,6 +9,8 @@ import {
 } from '../../config/src/plans';
 import '~/tailwind';
 
+Free.action = {};
+
 export default {
   parameters: {
     layout: 'centered',
