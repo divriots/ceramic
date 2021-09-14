@@ -2,7 +2,7 @@
   <nav class="mt-2 text-white">
     <div class="mx-auto px-2">
       <div class="relative flex items-center justify-between h-16">
-        <component :is="Logo" class="text-xl"></component>
+        <component :is="Logo" class="text-xl mr-4"></component>
         <div class="hidden md:block md:ml-6 flex-grow">
           <div class="flex items-center justify-end">
             <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>

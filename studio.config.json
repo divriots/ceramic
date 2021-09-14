@@ -28,11 +28,28 @@
           "dropdown"
         ]
       ],
-      ["molecules", ["double-cta", "navmenu", "price-info", "price-features"]],
-      ["organisms", ["hero", "navbar", "starter-card", "price"]],
+      [
+        "molecules",
+        [
+          "double-cta",
+          "navmenu",
+          "price-info",
+          "price-features"
+        ]
+      ],
+      [
+        "organisms",
+        [
+          "hero",
+          "navbar",
+          "starter-card",
+          "price"
+        ]
+      ],
       [
         "templates",
         [
+          "product-hunt-bar",
           "highlight",
           "promise",
           "doubt-removers",
@@ -44,8 +61,19 @@
           "footer"
         ]
       ],
-      ["infrastructure", ["config", "tailwind"]],
-      ["todo", ["otherproducts"]]
+      [
+        "infrastructure",
+        [
+          "config",
+          "tailwind"
+        ]
+      ],
+      [
+        "todo",
+        [
+          "otherproducts"
+        ]
+      ]
     ]
   }
 }
