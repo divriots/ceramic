@@ -38,7 +38,7 @@ export const highlighted = (args) => ({
       backgroundColor: '#30c6b9',
       heroImg: 'https://backlight.dev/assets/lib-white/chakra-typo.svg',
       name: 'Chakra',
-      desc: `Chakra UI is a simple, modular and accessible component library. 
+      desc: `Chakra UI is a simple, modular and accessible component library.
     Based on system-ui tokens.`,
       url: '/edit/sNbJipmRTmslL3f8RZaO',
       bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
@@ -50,6 +50,55 @@ export const highlighted = (args) => ({
         ['fmk2', 'https://backlight.dev/assets/lib-white/sass.svg'],
       ]),
       wip: true,
+    },
+  }),
+  ...args,
+});
+
+export const smallContent = (args) => ({
+  setup: () => ({
+    props: {
+      backgroundColor: '#967a2d',
+      heroImg: 'https://backlight.dev/assets/lib-white/simba.svg',
+      desc: `<ul class="list-disc list-inside">
+        <li>Open-source</li>
+        <li>20+ Web Components already</li>
+        <li>Based on Lion's accessible components</li>
+        <li>Dark mode out-of-the-box</li>
+        </ul>`,
+      url: '/edit/5vtJtbY04aoD1dGKcsu1',
+      bgImg: 'https://backlight.dev/assets/lib-white/lit.svg',
+      owner: 'divriots',
+      ownerPhoto: 'https://backlight.dev/assets/logo/dr-b.svg',
+      highlighted: true,
+      frameworks: new Map([
+        ['Lion', 'https://backlight.dev/assets/lib-white/lion.svg'],
+        ['Lit', 'https://backlight.dev/assets/lib-white/lit.svg'],
+      ]),
+    },
+  }),
+  ...args,
+});
+
+export const largeContent = (args) => ({
+  setup: () => ({
+    props: {
+      backgroundColor: 'rgb(98, 0, 238)',
+      heroImg: 'https://backlight.dev/assets/lib-white/smelte.svg',
+      desc: `<ul><li>Mobile &amp; Web</li><li>Based on Paper components</li><li>Paper Design Token</li><li>25+ cross-platform components</li><li>Dark mode support</li></ul><ul><li>Mobile &amp; Web</li><li>Based on Paper components</li><li>Paper Design Token</li><li>25+ cross-platform components</li><li>Dark mode support</li></ul>`,
+      url: '/edit/5vtJtbY04aoD1dGKcsu1',
+      bgImg: 'https://backlight.dev/assets/lib-white/lit.svg',
+      owner: 'divriots',
+      ownerPhoto: 'https://backlight.dev/assets/logo/dr-b.svg',
+      highlighted: true,
+      frameworks: new Map([
+        ['Paper', 'https://backlight.dev/assets/lib-white/paper.svg'],
+        [
+          'React-Native',
+          'https://backlight.dev/assets/lib-white/react-native.svg',
+        ],
+        ['Something cool', ''],
+      ]),
     },
   }),
   ...args,

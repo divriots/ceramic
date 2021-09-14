@@ -117,7 +117,6 @@ export const Free = {
 
 export const Pro = {
   title: 'Pro',
-  banner: 'Free until september 2021',
   price: {
     value: '29',
     symbol: '$',
