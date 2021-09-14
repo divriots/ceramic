@@ -9,17 +9,17 @@
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
     "@tailwindcss/typography": "^0.4.1",
-    "aos": "^2.3.4",
+    "deepmerge": "^4.2.2",
+    "tailwindcss": "^2.2.9",
     "react": "^17.0.2",
     "svelte": "^3.42.5",
-    "tailwindcss": "^2.2.9",
     "vue": "^3.0.7"
   },
   "devDependencies": {
     "@divriots/dockit-core": "^0.1.9",
     "@mdx-js/vue": "^1.6.22",
     "@types/react": "^17.0.19",
-    "deepmerge": "^4.2.2",
-    "lit-html": "^1.4.1"
+    "aos": "^2.3.4",
+    "lit": "^2.0.0-rc.4"
   }
 }

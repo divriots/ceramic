@@ -29,25 +29,9 @@
 
         <!--Cards stacked effect on "many more" card-->
         <div class="relative" style="padding-right: 30px">
-
-          <component v-for="{ left, bg } in [
-              { left: 30, bg: '#A2A2A2' },
-              { left: 20, bg: '#616161' },
-              { left: 10, bg: '#333333' },
-            ]" :style="`position: absolute; left:${left}px; background-color:${bg}`" :reducedHover="true" :is="Card"
-            :key="bg">
-            <div class="
-                w-full
-                h-full
-                flex
-                items-center
-                text-3xl
-                sm:text-4xl
-                text-bold text-center
-              "></div>
-          </component>
           <!--"... and many more" card (LOTS of SVGs in here)-->
-          <component :is="Card" url="/starterkits" style="background-color: #212121" actionDescription="Explore">
+          <component :is="Card" url="/starterkits" style="background-color: #212121; z-index: 4"
+            actionDescription="Explore">
             <div class="w-full h-full text-2xl sm:text-3xl"
               style="display: flex; flex-direction: column; justify-content: space-evenly">
               <!--Top left SVG +-->
@@ -170,6 +154,22 @@
                 </div>
               </div>
             </div>
+          </component>
+          <component v-for="({ left, bg }, index) in [
+              { left: 10, bg: '#333333' },
+              { left: 20, bg: '#616161' },
+              { left: 30, bg: '#A2A2A2' },
+            ]" :style="`position: absolute; top: 0; z-index: ${3-index}; left:${left}px; background-color:${bg}`"
+            url="/starterkits" :reducedHover="true" :is="Card" :key="bg">
+            <div class="
+                w-full
+                h-full
+                flex
+                items-center
+                text-3xl
+                sm:text-4xl
+                text-bold text-center
+              "></div>
           </component>
         </div>
       </div>
