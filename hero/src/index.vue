@@ -86,12 +86,12 @@ export default {
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo" @blur="stop"
-        tabindex="-1">
+      <div id="hero-video-overlay" @click="stop"></div>
+      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo" tabindex="-1">
         <div id="hero-embedded-placeholder"></div>
       </div>
       <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
-        @ended="stop" @blur="stop" ref="heroVideo">
+        @ended="stop" ref="heroVideo">
         <source :src="videoSrc" type="video/mp4" />
       </video>
       <div class="
@@ -122,7 +122,7 @@ export default {
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
               <button
-                class="action inline-flex items-center text-primary"
+                class="action inline-flex items-center text-primary pr-3"
                 @click="play"
               >
                 <svg
@@ -162,12 +162,17 @@ export default {
     }
   }
 
+  #hero-video-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+
   #hero-video {
     left: 50%;
     outline: none;
     transform: translateX(-50%);
     transition: display 0.1s ease-out;
-    height: 100%;
     z-index: 11;
 
     &:not(.hidden)~* {
