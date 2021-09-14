@@ -15,7 +15,7 @@
     <div class="mx-auto max-w-5xl grid lg:grid-cols-3 align-center justify-center gap-8">
       <div v-for="(plan,idx) of plans" :key="plan.title">
         <component :is="Price" v-bind="plan" :banner="plan.banner"
-          :class="`h-full ${idx%3===1?'bg-secondary text-white':'text-secondary bg-white'}`">
+          :class="`h-full ${idx%3===1?'bg-secondary text-white':'text-secondary bg-white transform lg:scale-95'}`">
         </component>
       </div>
     </div>
