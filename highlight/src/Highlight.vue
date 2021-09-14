@@ -241,6 +241,7 @@
 
   .right-paddle {
     right: 10px;
+    z-index: 5;
   }
 </style>
 
@@ -248,37 +249,14 @@
   import StarterCard from '../../starter-card/src/StarterCard.vue';
 import Card from '../../card/src/Card.vue';
 import kits from './data';
-import setupScrollArrows from './scroll-arrows.js';
-
-let target;
-
-function dragHandler() {
-  if (!target.dragging) {
-    return;
-  }
-  target.scrollLeft -= (target.xDiff ?? 0) * 4;
-  target.xDiff = 0;
-  requestAnimationFrame(dragHandler);
-}
-
-function mouseUpHandler() {
-  target.dragging = false;
-}
-
-function mouseDownHandler(ev) {
-  ev.preventDefault();
-  target.oldMousePosX = ev.clientX;
-  target.dragging = true;
-  dragHandler();
-}
-
-function mouseMoveHandler(ev) {
-  if (!target.dragging) {
-    return;
-  }
-  target.xDiff = ev.clientX - target.oldMousePosX;
-  target.oldMousePosX = ev.clientX;
-}
+import { 
+  setupScrollArrows, 
+  teardownScrollArrows,
+} from './scroll-arrows.js';
+import {
+  setupDragHandling, 
+  teardownDragHandling, 
+} from './drag-handling.js';
 
 export default {
   computed: {
@@ -292,16 +270,12 @@ export default {
   mounted: function () {
     this.$nextTick(function () {
       setupScrollArrows();
-      target = document.querySelector('.highlights-container');
-      target.addEventListener('mousedown', mouseDownHandler);
-      target.addEventListener('mousemove', mouseMoveHandler);
-      target.addEventListener('mouseup', mouseUpHandler);
+      setupDragHandling();
     });
   },
   beforeUnmount: function () {
-    target.removeEventListener('mousedown', mouseDownHandler);
-    target.addEventListener('mousemove', mouseMoveHandler);
-    target.removeEventListener('mouseup', mouseUpHandler);
+    teardownScrollArrows();
+    teardownDragHandling();
   },
 };
 </script>
