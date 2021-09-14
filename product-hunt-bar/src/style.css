@@ -1,0 +1,9 @@
+#toggle {
+  display: none;
+}
+#toggle:checked ~ .controlled {
+  display: none;
+}
+#toggle:checked ~ #testLabel > svg {
+  display: none;
+}
