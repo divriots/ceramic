@@ -8,22 +8,26 @@
     img: { type: Object, required: false },
     video: { type: Object, required: false },
     reverse: { type: Boolean, default: false },
+    layout: { type: String, default: 'horizontal'},
   },
 };
 </script>
 <template>
-  <div data-aos="fade-up" class="max-w-6xl mx-auto grid md:grid-cols-2 place-items-center py-20 gap-12">
+  <div data-aos="fade-up"
+    :class="`max-w-6xl grid ${layout === 'horizontal' ? 'mx-auto md:grid-cols-2 gap-12' : 'md:grid-rows-2 text-center'} place-items-center py-10`">
     <div class="h-80 w-80 sm:w-96 sm:h-96 xl:h-128 xl:w-128">
       <img v-if="img" :src="img.src" loading="lazy" class="object-contain overflow-hidden w-full h-full"/>
       <video v-if="video" class="h-80 w-80 sm:w-96 sm:h-96 xl:h-128 xl:w-128" autoplay muted loop>
         <source :src="video.src" type="video/mp4">
       </video>
     </div>
-    <div :class="`flex flex-col h-full justify-center space-y-12 w-64 sm:w-80 xl:w-96 ${
+    <div :class="`flex flex-col ${layout === 'horizontal' ? 'justify-center h-full sm:w-80 xl:w-96' : 'self-start sm:w-96 xl:w-128' } w-64 space-y-12 ${
         reverse ? 'md:col-start-1 md:row-start-1' : ''
       }`">
-      <span class="text-3xl font-semibold">{{ title }}</span>
-      <div class="text-lg grid text-gray-divriots gap-4" v-html="description"></div>
+      <div class="text-3xl font-semibold">{{ title }}</div>
+      <div
+        :class="`text-lg flex flex-col ${layout === 'horizontal' ? '': 'flex-grow justify-center sm:w-80 xl:w-96 mx-auto'} text-gray-divriots gap-4`"
+        v-html="description"></div>
       <div v-if="action">
         <a :href="action.href" :class="classes">
           {{ action.label }} >

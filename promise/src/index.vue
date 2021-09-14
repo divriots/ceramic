@@ -1,5 +1,5 @@
 <script>
-import Promise from './promise.vue';
+  import Promise from './promise.vue';
 import Group from './group.vue';
 import promisesGroups from './content';
 
@@ -10,10 +10,15 @@ export default {
 </script>
 <template>
   <section class="bg-black-divriots text-white px-4 py-12 -my-2">
-    <component :is="Group" v-for="(promisesGroup,idx) in promisesGroups" :key="promisesGroup.group"
+    <component :is="Group" v-for="promisesGroup of promisesGroups" :key="promisesGroup.group"
       :title="promisesGroup.title" :classes="promisesGroup.classes">
-      <component :is="Promise" v-for="promise of promisesGroup.promises" v-bind="promise" :classes="promisesGroup.classes" :reverse="idx%2!==0">
-      </component>
+      <div
+        :class="`flex ${promisesGroup.layout === 'vertical' ? 'flex-col' : 'flex-row justify-center gap-x-24 flex-wrap'}`">
+        <component :is="Promise" v-for="(promise, promiseIdx) in promisesGroup.promises" v-bind="promise"
+          :classes="promisesGroup.classes" :reverse="promisesGroup.layout === 'vertical' ? promiseIdx%2!==0 : false"
+          :layout="promisesGroup.layout === 'vertical' ? 'horizontal' : 'veritcal'">
+        </component>
+      </div>
     </component>
   </section>
 </template>

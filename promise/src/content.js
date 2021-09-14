@@ -1,9 +1,10 @@
-const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}`;
+const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}?v1`;
 
 export default [
   {
     classes: 'text-primary',
     title: 'Everything in <span class="text-secondary">one place</span>',
+    layout: 'vertical',
     promises: [
       // {
       //   title: 'Visual component library',
@@ -39,7 +40,7 @@ export default [
         directly from code with no additional maintenance.</p>
         <p>Everybody can contribute directly with instant online preview.</p>`,
         img: {
-          src: imgLanding('referencesite.gif'),
+          src: imgLanding('referencesite.png'),
         },
         // action: {
         //   label: 'Reference site demo',
@@ -75,6 +76,7 @@ export default [
   {
     classes: 'text-tertiary',
     title: 'A true <span class="text-tertiary">collaborative space</span>',
+    layout: 'horizontal',
     promises: [
       {
         title: `Get feedback in one click`,
