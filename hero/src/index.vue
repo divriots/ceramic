@@ -176,6 +176,7 @@ export default {
     width: 100%;
     max-width: 640px;
     z-index: 11;
+    margin: 0 auto;
 
     @media only screen and (min-width: 768px) {
       left: 50%;
