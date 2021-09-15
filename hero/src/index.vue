@@ -214,16 +214,23 @@ export default {
   #hero-video {
     left: 50%;
     outline: none;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     transition: display 0.1s ease-out;
     z-index: 11;
     border-radius: 0.5rem;
     overflow: hidden;
     max-width: 640px;
+    width: 100%;
+    top: 50%;
 
     &:not(.hidden)~* {
       transition: opacity 0.1s ease-out;
       opacity: 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+      transform: translateX(-50%);
+      top: auto;
     }
   }
 
