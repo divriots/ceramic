@@ -73,6 +73,10 @@
             <component :is="Github"></component>
             <component :is="YouTube"></component>
           </div>
+          <a href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
+            target="_blank" class="mt-4">
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=312123&theme=light" alt="Backlight - Make design systems that front-end teams want to use | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+          </a>
         </div>
         <div class="col">
           <label>CONTACT</label>
