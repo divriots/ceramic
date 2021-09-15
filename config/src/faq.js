@@ -9,8 +9,8 @@ export const pricingFAQ = [
     answer: `No, we don't. But the free plan should get you far enough to evaluate Backlight properly.`,
   },
   {
-    question: 'Do you have open-source and education licences?',
-    answer: ` Yes. We have free licences for open-source and education. Please contact us contact@backlight.dev to get information.`,
+    question: 'Do you have open-source and education licenses?',
+    answer: ` Yes. We have free licenses for open-source and education. Please contact us contact@backlight.dev to get information.`,
   },
   {
     question: 'Can I eject my Design System?',
