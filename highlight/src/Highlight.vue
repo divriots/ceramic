@@ -220,6 +220,7 @@
     border-radius: 100%;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    z-index: 5;
   }
 
   .left-paddle:focus,
@@ -241,7 +242,6 @@
 
   .right-paddle {
     right: 10px;
-    z-index: 5;
   }
 </style>
 
