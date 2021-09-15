@@ -8,7 +8,7 @@ export default {
     imgSrc: String,
   },
 
-  setup({videoType, videoSrc}) {
+  setup({ videoType, videoSrc }) {
     const heroVideo = ref(null);
     const isYoutube = computed(() => videoType === 'youtube');
     let embeddedPlayer;
@@ -24,11 +24,9 @@ export default {
 
           window.onYouTubeIframeAPIReady = () => {
             embeddedPlayer = new YT.Player('hero-embedded-placeholder', {
-              height: '360',
-              width: '640',
               videoId: videoSrc,
             });
-          }
+          };
         }
       }
     });
@@ -44,13 +42,13 @@ export default {
       stop: () => {
         const video = heroVideo.value;
         video.classList.add('hidden');
+        video.previousElementSibling.classList.add('hidden');
         video.nextElementSibling.classList.remove('hidden');
         video.blur();
 
         if (isYoutube.value) {
-          embeddedPlayer.stopVideo()
-        }
-        else {
+          embeddedPlayer.stopVideo();
+        } else {
           video.pause();
           video.currentTime = 0;
         }
@@ -58,17 +56,17 @@ export default {
       play: () => {
         const video = heroVideo.value;
         video.classList.remove('hidden');
+        video.previousElementSibling.classList.remove('hidden');
         video.nextElementSibling.classList.add('hidden');
         video.focus();
 
         if (isYoutube.value) {
           embeddedPlayer.playVideo();
-        }
-        else {
+        } else {
           video.play();
         }
       },
-    }
+    };
   },
 };
 </script>
@@ -86,7 +84,7 @@ export default {
       xl:my-32
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
-      <div id="hero-video-overlay" @click="stop"></div>
+      <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo" tabindex="-1">
         <div id="hero-embedded-placeholder"></div>
       </div>
@@ -164,12 +162,11 @@ export default {
 
   #hero-video-overlay {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10;
   }
 
   #hero-video {
@@ -178,6 +175,8 @@ export default {
     transform: translateX(-50%);
     transition: display 0.1s ease-out;
     z-index: 11;
+    border-radius: 0.5rem;
+    overflow: hidden;
 
     &:not(.hidden)~* {
       transition: opacity 0.1s ease-out;
