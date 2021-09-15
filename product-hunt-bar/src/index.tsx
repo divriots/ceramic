@@ -25,6 +25,8 @@ function ProductHuntBar() {
       <a
         href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
         id="banner"
+        target="_blank"
+        rel="noopener"
         className="flex justify-center items-center flex-grow bg-primary h-16 controlled"
       >
         <p className="text-lg md:text-xl font-semibold mx-6">
