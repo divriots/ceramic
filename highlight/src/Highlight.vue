@@ -193,10 +193,13 @@
 
   .highlights-container {
     display: flex;
-    gap: 4rem;
     padding: 3rem 2rem;
     overflow-x: scroll;
     scrollbar-width: none;
+  }
+
+  .highlights-container>*+* {
+    margin-left: 4rem;
   }
 
   .highlights-container::-webkit-scrollbar {

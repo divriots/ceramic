@@ -58,13 +58,13 @@
 
   .infini-wrapper::before {
     inset: 0;
-    background: linear-gradient(to left, transparent, currentColor);
+    background: linear-gradient(to left, rgba(23,23,23,0), currentColor);
   }
 
   .infini-wrapper::after {
     top: 0;
     right: 0;
-    background: linear-gradient(to right, transparent, currentColor);
+    background: linear-gradient(to right, rgba(23,23,23,0), currentColor);
   }
 
   @media (min-width: 420px) {
