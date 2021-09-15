@@ -177,6 +177,8 @@ export default {
     max-width: 640px;
     z-index: 11;
     margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
 
     @media only screen and (min-width: 768px) {
       left: 50%;
@@ -185,6 +187,7 @@ export default {
       transition: display 0.1s ease-out;
       border-radius: 0.5rem;
       overflow: hidden;
+      top: auto;
     }
 
     .embedded-wrapper {
