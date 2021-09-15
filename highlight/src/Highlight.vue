@@ -7,7 +7,7 @@
     </h2>
     <!--Section Subtitle-->
     <p class="text-lg text-white p-4 mb-4 leading-relaxed">
-      Select the Starter-kits with the right technology for you.
+      Select the Starter-Kit with the right technology for you.
       <br />
     </p>
     <!--Design system cards container-->
