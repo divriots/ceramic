@@ -6,7 +6,7 @@ export default {
       {
         title: 'Works with your IDE too',
         description: `Backlight comes with an integrated online IDE highly-inspired
-        by VSCode but you can use your prefered IDE locally.`,
+        by VSCode but you can use your preferred IDE locally.`,
         img: {
           src: `<svg
               viewBox="0 0 24 24"
