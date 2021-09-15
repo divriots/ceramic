@@ -8,7 +8,7 @@
 </script>
 <template>
   <section class="gradient text-white memberships text-center relative">
-    <header class="py-20">
+    <header class="py-20 px-6">
       <h2 class="text-4xl sm:text-5xl lg:text-6xl mb-2">Discover our pricing</h2>
       <p class="text-lg sm:text-xl lg:text-2xl text-gray-light">Affordable for teams at all sizes</p>
     </header>
