@@ -1,5 +1,5 @@
 <script>
-  import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+  import { ref, computed, onBeforeUnmount } from 'vue';
 
 export default {
   props: {
@@ -14,26 +14,31 @@ export default {
     let embeddedPlayer;
     let youtubeScript;
 
-    onMounted(() => {
-      if (isYoutube.value) {
-        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    const loadYoutube = () => {
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+        return new Promise((resolve) => {
           youtubeScript = document.createElement('script');
           youtubeScript.src = 'https://www.youtube.com/player_api';
           const firstScriptTag = document.getElementsByTagName('script')[0];
           firstScriptTag.parentNode.insertBefore(youtubeScript, firstScriptTag);
 
           window.onYouTubeIframeAPIReady = () => {
-            embeddedPlayer = new YT.Player('hero-embedded-placeholder', {
+            const player = new YT.Player('hero-embedded-placeholder', {
               videoId: videoSrc,
-            });
+              events: {
+                'onReady': () => resolve(player)
+              }
+            });;
           };
-        }
+        });
       }
-    });
+    };
 
     onBeforeUnmount(() => {
-      embeddedPlayer.destroy();
-      youtubeScript.parentNode.removeChild(youtubeScript);
+      if (embeddedPlayer && youtubeScript) {
+        embeddedPlayer.destroy();
+        youtubeScript.parentNode.removeChild(youtubeScript);
+      }
     });
 
     return {
@@ -53,7 +58,7 @@ export default {
           video.currentTime = 0;
         }
       },
-      play: () => {
+      play: async () => {
         const video = heroVideo.value;
         video.classList.remove('hidden');
         video.previousElementSibling.classList.remove('hidden');
@@ -61,6 +66,7 @@ export default {
         video.focus();
 
         if (isYoutube.value) {
+          embeddedPlayer = await loadYoutube();
           embeddedPlayer.playVideo();
         } else {
           video.play();
