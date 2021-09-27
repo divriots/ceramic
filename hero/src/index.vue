@@ -85,8 +85,11 @@ export default {
     ">
     <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
-      <div v-if="isYoutube" id="hero-video" class="absolute hidden md:rounded-lg" ref="heroVideo" tabindex="-1">
-        <div id="hero-embedded-placeholder"></div>
+      <div v-if="isYoutube" id="hero-embedded-video" class="absolute hidden md:rounded-lg" ref="heroVideo"
+        tabindex="-1">
+        <div class="embedded-wrapper">
+          <div id="hero-embedded-placeholder"></div>
+        </div>
       </div>
       <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
         @ended="stop" ref="heroVideo">
@@ -169,18 +172,65 @@ export default {
     z-index: 10;
   }
 
-  #hero-video {
-    left: 50%;
-    outline: none;
-    transform: translateX(-50%);
-    transition: display 0.1s ease-out;
+  #hero-embedded-video {
+    width: 100%;
+    max-width: 640px;
     z-index: 11;
-    border-radius: 0.5rem;
-    overflow: hidden;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media only screen and (min-width: 768px) {
+      left: 50%;
+      outline: none;
+      transform: translateX(-50%);
+      transition: display 0.1s ease-out;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      top: auto;
+    }
+
+    .embedded-wrapper {
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+      position: relative;
+
+      ::v-deep iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
 
     &:not(.hidden)~* {
       transition: opacity 0.1s ease-out;
       opacity: 0;
+    }
+  }
+
+  #hero-video {
+    left: 50%;
+    outline: none;
+    transform: translate(-50%, -50%);
+    transition: display 0.1s ease-out;
+    z-index: 11;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 640px;
+    width: 100%;
+    top: 50%;
+
+    &:not(.hidden)~* {
+      transition: opacity 0.1s ease-out;
+      opacity: 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+      transform: translateX(-50%);
+      top: auto;
     }
   }
 
