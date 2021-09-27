@@ -3,9 +3,10 @@
     <div class="mx-auto px-2">
       <div class="relative flex items-center justify-between h-16">
         <component :is="Logo" class="text-xl mr-4"></component>
+        <div class="flex-grow"></div>
         <slot name="search" />
-        <div class="hidden md:block md:ml-6 flex-grow">
-          <div class="flex items-center justify-end">
+        <div class="hidden md:block md:ml-6">
+          <div class="flex items-baseline justify-end">
             <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
           </div>
         </div>
