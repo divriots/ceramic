@@ -4,6 +4,7 @@ function Testimonial() {
   return (
     <section className="bg-black-divriots text-white leading-normal text-base sm:text-lg px-8 py-12 -my-2">
       <article className="place-items-center lg:grid lg:grid-cols-2 lg:w-920 m-auto">
+        {/*Column 1*/}
         <div className="col-auto">
           <div className="relative">
             {/*Big quote mark*/}
@@ -32,7 +33,7 @@ function Testimonial() {
             {/*Title and subtitle*/}
             <div className="relative z-10 pt-16 lg:ml-24 lg:w-96">
               <h1 className="text-4xl sm:text-5xl">
-                Real Stories from Real Customers
+                Real Stories from Real Users
               </h1>
               <p className="my-4">Get inspired by these stories.</p>
             </div>
@@ -63,25 +64,18 @@ function Testimonial() {
             </svg>
             <div className="flex-col mt-2 mb-4 mx-3 max-w-3/4 sm:leading-relaxed sm:tracking-wide">
               <p>
-                I have been following what those guys are doing since the early
-                days, and the promise of Backlight completely sells me. As a
-                product developer, keeping sync frontend developers and product
-                designers is not an easy task. Especially when we have released
-                our product and our designers need to validate our integrated
-                components and design system. Thanks to Backlight for easing our
-                product team collaboration at Qovery. Backlight is a must-have
-                for all product-driven companies and teams. I recommend
+                The next generation of tooling to help teams build, ship, and
+                evolve design systems.
               </p>
-              <p className="mt-6 font-semibold">Romaric Philogène</p>
+              <p className="mt-6 font-semibold">Kaelig Deloumeau-Prigent</p>
               <p className="text-sm text-gray-light">
-                CEO and co-founder of Qovery
+                Developer tooling at Shopify, and co-chair of the Design Tokens
+                W3C Community Group
               </p>
             </div>
           </div>
-        </div>
-        {/*Testimonial 2*/}
-        <div className="col-auto ">
-          <div className="bg-black-default lg:m-6 rounded-lg px-4 lg:px-8 py-5 flex flex-col lg:flex-row my-6 lg:w-96">
+          {/*Testimonial 2*/}
+          <div className="bg-black-default lg:ml-24 rounded-lg px-4 lg:px-8 py-5 flex flex-col lg:flex-row my-6 lg:w-96">
             <svg
               width="18"
               height="18"
@@ -106,17 +100,23 @@ function Testimonial() {
             </svg>
             <div className="flex-col mt-2 mb-4 mx-3 max-w-3/4 sm:leading-relaxed sm:tracking-wide">
               <p>
-                Woow. As a seasoned frontend engineer I really liked it. Design
-                System is essential and had to be put from the start. Later on
-                the development it is really hard to adopt one. I will keep
-                looking after Backlight. Good job team!
+                I have been following what those guys are doing since the early
+                days, and the promise of Backlight completely sells me. [...]
+                Thanks to Backlight for easing our product team collaboration at
+                Qovery. Backlight is a must-have for all product-driven
+                companies and teams. I recommend.
               </p>
-              <p className="mt-6 font-semibold">Mustafa Ilker Sarac</p>
-              <p className="text-sm text-gray-light">Engineer, Thundraio</p>
+              <p className="mt-6 font-semibold">Romaric Philogène</p>
+              <p className="text-sm text-gray-light">
+                CEO, co-founder and product developer of Qovery
+              </p>
             </div>
           </div>
+        </div>
+        {/*Column 2*/}
+        <div className="col-auto ">
           {/*Testimonial 3*/}
-          <div className="bg-black-default lg:m-6 rounded-lg px-4 lg:px-8 py-5 lg:w-3/5 flex flex-col lg:flex-row my-6 lg:w-80">
+          <div className="bg-black-default rounded-lg px-4 lg:px-8 py-5 flex flex-col lg:flex-row lg:w-96 lg:m-6">
             <svg
               width="18"
               height="18"
@@ -141,14 +141,13 @@ function Testimonial() {
             </svg>
             <div className="flex-col mt-2 mb-4 mx-3 sm:leading-relaxed sm:tracking-wide">
               <p>
-                The next generation of tooling to help teams build, ship, and
-                evolve design systems.
+                Woow. As a seasoned frontend engineer I really liked it. Design
+                System is essential and had to be put from the start. Later on
+                the development it is really hard to adopt one. I will keep
+                looking after Backlight. Good job team!
               </p>
-              <p className="mt-6 font-semibold">Kaelig Deloumeau-Prigent</p>
-              <p className="text-sm text-gray-light">
-                Developer tooling at Shopify, and co-chair of the Design Tokens
-                W3C Community Group
-              </p>
+              <p className="mt-6 font-semibold">Mustafa Ilker Sarac</p>
+              <p className="text-sm text-gray-light">Engineer, Thundraio</p>
             </div>
           </div>
         </div>
