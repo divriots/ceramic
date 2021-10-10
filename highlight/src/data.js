@@ -1,6 +1,6 @@
 export default [
   {
-    backgroundColor: '#ef4f01',
+    backgroundColor: '#d13400',
     heroImg: 'https://backlight.dev/assets/lib-white/furious.svg',
     desc: `<ul class="list-disc list-inside">
     <li>Based on <code>fast-components</code></li>
