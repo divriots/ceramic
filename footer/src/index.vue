@@ -72,6 +72,7 @@
             <component :is="LinkedIn"></component>
             <component :is="Github"></component>
             <component :is="YouTube"></component>
+            <component :is="Rss"></component>
           </div>
           <a href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
             target="_blank" class="mt-4">
@@ -90,6 +91,7 @@
   import Twitter  from '../../twitter/src/twitter.vue';
   import YouTube  from '../../youtube/src/youtube.vue';
   import Discord  from '../../discord/src/discord.vue';
+  import Rss  from '../../rss/src/rss.vue';
   import Logo  from '../../logo/src/logo.vue';
   
   export default {
@@ -106,7 +108,7 @@
       };
     },
     setup() {
-      return { Twitter, Discord, Logo, YouTube };
+      return { Twitter, Discord, Logo, YouTube , Rss};
     },
   };
 </script>
