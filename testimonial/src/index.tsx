@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import TestimonialCard from '../../testimonial-card/src/index';
 import './styles.scss';
-import { setupScrollArrows } from './scroll-arrows';
-import { setupDragHandling } from './drag-handling';
+import { setupScrollArrows } from '~/highlight/src/scroll-arrows';
+import { setupDragHandling } from '~/highlight/src/drag-handling';
 
 function Testimonial({ title, subtitle, comments }) {
   useEffect(() => {
@@ -59,7 +59,7 @@ function Testimonial({ title, subtitle, comments }) {
               d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
             />
           </svg>
-          <article className="flex lg:grid lg:grid-cols-2 lg:w-920 overflow-x-scroll lg:overflow-visible">
+          <article className="flex lg:grid lg:grid-cols-2 lg:w-920 overflow-x-scroll lg:overflow-visible highlights-container">
             {/*Column 1*/}
             <div className="flex lg:block lg:ml-24">
               {/*Testimonial 1*/}
@@ -71,6 +71,8 @@ function Testimonial({ title, subtitle, comments }) {
                 <TestimonialCard comment={comments[1]} />
               </div>
             </div>
+            {/*Trick div to make scroll-arrows scroll the right amount*/}
+            <div className="lg:hidden w-0"></div>
             {/*Column 2*/}
             <div className="flex lg:block lg:-mt-48 lg:ml-12">
               {/*Testimonial 3*/}
@@ -82,6 +84,8 @@ function Testimonial({ title, subtitle, comments }) {
                 <TestimonialCard comment={comments[3]} />
               </div>
             </div>
+            {/*Trick div to make scroll-arrows scroll the right amount*/}
+            <div className="lg:hidden w-0"></div>
           </article>
           <svg
             className="right-paddle lg:hidden"
