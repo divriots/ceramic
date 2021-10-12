@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TestimonialCard({ text, author, author_title }) {
+function TestimonialCard({ comment }) {
   return (
     <div className="bg-black-default text-white rounded-lg px-4 lg:px-8 py-5 flex flex-col lg:flex-row my-6 lg:w-96">
       <svg
@@ -26,9 +26,9 @@ function TestimonialCard({ text, author, author_title }) {
         </defs>
       </svg>
       <div className="flex-col mt-2 mb-4 mx-3 max-w-3/4 sm:leading-relaxed sm:tracking-wide">
-        <p>{text}</p>
-        <p className="mt-6 font-semibold">{author}</p>
-        <p className="text-sm text-gray-light">{author_title}</p>
+        <p>{comment.text}</p>
+        <p className="mt-6 font-semibold">{comment.author}</p>
+        <p className="text-sm text-gray-light">{comment.author_title}</p>
       </div>
     </div>
   );

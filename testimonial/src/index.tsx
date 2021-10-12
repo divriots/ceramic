@@ -4,7 +4,7 @@ import './styles.scss';
 import { setupScrollArrows } from './scroll-arrows';
 import { setupDragHandling } from './drag-handling';
 
-function Testimonial({ title, subtitle, testimonials }) {
+function Testimonial({ title, subtitle, comments }) {
   useEffect(() => {
     setupScrollArrows();
     setupDragHandling();
@@ -64,38 +64,22 @@ function Testimonial({ title, subtitle, testimonials }) {
             <div className="flex lg:block lg:ml-24">
               {/*Testimonial 1*/}
               <div className="w-64">
-                <TestimonialCard
-                  text={testimonials[0].text}
-                  author={testimonials[0].author}
-                  author_title={testimonials[0].author_title}
-                />
+                <TestimonialCard comment={comments[0]} />
               </div>
               {/*Testimonial 2*/}
               <div className="mx-4 lg:mx-0 w-64">
-                <TestimonialCard
-                  text={testimonials[1].text}
-                  author={testimonials[1].author}
-                  author_title={testimonials[1].author_title}
-                />
+                <TestimonialCard comment={comments[1]} />
               </div>
             </div>
             {/*Column 2*/}
             <div className="flex lg:block lg:-mt-48 lg:ml-12">
               {/*Testimonial 3*/}
               <div className="mr-4 lg:mr-0 w-64">
-                <TestimonialCard
-                  text={testimonials[2].text}
-                  author={testimonials[2].author}
-                  author_title={testimonials[2].author_title}
-                />
+                <TestimonialCard comment={comments[2]} />
               </div>
               {/*Testimonial 4*/}
               <div className="w-64">
-                <TestimonialCard
-                  text={testimonials[3].text}
-                  author={testimonials[3].author}
-                  author_title={testimonials[3].author_title}
-                />
+                <TestimonialCard comment={comments[3]} />
               </div>
             </div>
           </article>
