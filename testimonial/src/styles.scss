@@ -1,0 +1,51 @@
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  height: max-content;
+  overflow: visible;
+}
+
+article {
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+article::-webkit-scrollbar {
+  display: none;
+}
+
+.left-paddle,
+.right-paddle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  top: 30%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.left-paddle:focus,
+.right-paddle:focus {
+  border: 1px solid white;
+  outline: none;
+}
+
+.left-paddle:hover,
+.right-paddle:hover,
+.left-paddle:focus,
+.right-paddle:focus {
+  transform: translateY(calc(-50% - 4px));
+}
+
+.left-paddle {
+  left: -20px;
+}
+
+.right-paddle {
+  right: -20px;
+}
