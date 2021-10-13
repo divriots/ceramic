@@ -5,17 +5,16 @@
   overflow: visible;
 }
 
-article {
-  overflow-x: scroll;
+.testimonial-container {
   scrollbar-width: none;
 }
 
-article::-webkit-scrollbar {
+.testimonial-container::-webkit-scrollbar {
   display: none;
 }
 
-.left-paddle,
-.right-paddle {
+.testimonial-left-paddle,
+.testimonial-right-paddle {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -29,23 +28,29 @@ article::-webkit-scrollbar {
   transition: transform 0.3s ease-in-out;
 }
 
-.left-paddle:focus,
-.right-paddle:focus {
+.testimonial-left-paddle:focus,
+.testimonial-right-paddle:focus {
   border: 1px solid white;
   outline: none;
 }
 
-.left-paddle:hover,
-.right-paddle:hover,
-.left-paddle:focus,
-.right-paddle:focus {
+.testimonial-left-paddle:hover,
+.testimonial-right-paddle:hover,
+.testimonial-left-paddle:focus,
+.testimonial-right-paddle:focus {
   transform: translateY(calc(-50% - 4px));
 }
 
-.left-paddle {
+.testimonial-left-paddle {
   left: -20px;
 }
 
-.right-paddle {
+.testimonial-right-paddle {
   right: -20px;
+}
+
+@media (min-width: 1024px) {
+  .negative-top-margin {
+    margin-top: -15rem;
+  }
 }

@@ -45,7 +45,7 @@ function preventAnchorClickDuringDrag(ev) {
 }
 
 export function setupDragHandling() {
-  target = document.querySelector('.highlights-container');
+  target = document.querySelector('.container');
   target.addEventListener('mousedown', mouseDownHandler);
   target.addEventListener('mousemove', mouseMoveHandler);
   target.addEventListener('mouseup', mouseUpHandler);

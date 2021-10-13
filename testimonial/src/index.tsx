@@ -46,7 +46,7 @@ function Testimonial({ title, subtitle, comments }) {
 
         <div className="wrapper">
           <svg
-            className="left-paddle lg:hidden"
+            className="left-paddle testimonial-left-paddle lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -59,7 +59,7 @@ function Testimonial({ title, subtitle, comments }) {
               d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
             />
           </svg>
-          <article className="flex lg:grid lg:grid-cols-2 lg:w-920 overflow-x-scroll lg:overflow-visible highlights-container">
+          <article className="flex lg:grid lg:grid-cols-2 lg:w-920 overflow-x-scroll lg:overflow-visible testimonial-container container">
             {/*Column 1*/}
             <div className="flex lg:block lg:ml-24">
               {/*Testimonial 1*/}
@@ -74,7 +74,7 @@ function Testimonial({ title, subtitle, comments }) {
             {/*Trick div to make scroll-arrows scroll the right amount*/}
             <div className="lg:hidden w-0"></div>
             {/*Column 2*/}
-            <div className="flex lg:block lg:-mt-48 lg:ml-12">
+            <div className="flex lg:block negative-top-margin lg:ml-12">
               {/*Testimonial 3*/}
               <div className="mr-4 lg:mr-0 w-64">
                 <TestimonialCard comment={comments[2]} />
@@ -88,7 +88,7 @@ function Testimonial({ title, subtitle, comments }) {
             <div className="lg:hidden w-0"></div>
           </article>
           <svg
-            className="right-paddle lg:hidden"
+            className="right-paddle testimonial-right-paddle lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
