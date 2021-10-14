@@ -1,6 +1,7 @@
 ```js script
 import { theme } from '~/tailwind';
 import '@divriots/dockit-core/tailwind-showcases';
+import '@divriots/dockit-core/style.css';
 import { html } from 'lit';
 ```
 
