@@ -59,7 +59,7 @@ function Testimonial({ title, subtitle, comments }) {
               d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
             />
           </svg>
-          <article className="flex lg:grid lg:grid-cols-2 lg:w-920 overflow-x-scroll lg:overflow-visible testimonial-container container">
+          <article className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible testimonial-container container">
             {/*Column 1*/}
             <div className="flex lg:block lg:ml-24">
               {/*Testimonial 1*/}
