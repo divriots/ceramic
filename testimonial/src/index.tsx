@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import TestimonialCard from '../../testimonial-card/src/index';
 import './styles.scss';
-import { setupScrollArrows } from '../../highlight/src/scroll-arrows';
-import { setupDragHandling } from '../../highlight/src/drag-handling';
+// import { setupScrollArrows } from '../../highlight/src/scroll-arrows';
+// import { setupDragHandling } from '../../highlight/src/drag-handling';
 
 function Testimonial({ title, subtitle, comments }) {
-  useEffect(() => {
-    setupScrollArrows();
-    setupDragHandling();
-  }, []);
+  // useEffect(() => {
+  //   setupScrollArrows();
+  //   setupDragHandling();
+  // }, []);
   return (
     <section className="bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg px-8 py-12 -my-2 flex justify-center">
       <div className="w-full lg:w-auto">
@@ -44,64 +44,34 @@ function Testimonial({ title, subtitle, comments }) {
           </div>
         </div>
 
-        <div className="wrapper">
-          <svg
-            className="left-paddle testimonial-left-paddle lg:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
-            />
-          </svg>
-          <article className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible testimonial-container container">
-            {/*Column 1*/}
-            <div className="flex lg:block lg:ml-24">
-              {/*Testimonial 1*/}
-              <div className="w-64">
-                <TestimonialCard comment={comments[0]} />
-              </div>
-              {/*Testimonial 2*/}
-              <div className="mx-4 lg:mx-0 w-64">
-                <TestimonialCard comment={comments[1]} />
-              </div>
+        <article className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible testimonial-container container">
+          {/*Column 1*/}
+          <div className="flex lg:block lg:ml-24">
+            {/*Testimonial 1*/}
+            <div className="w-64">
+              <TestimonialCard comment={comments[0]} />
             </div>
-            {/*Trick div to make scroll-arrows scroll the right amount*/}
-            <div className="lg:hidden w-0"></div>
-            {/*Column 2*/}
-            <div className="flex lg:block negative-top-margin lg:ml-12">
-              {/*Testimonial 3*/}
-              <div className="mr-4 lg:mr-0 w-64">
-                <TestimonialCard comment={comments[2]} />
-              </div>
-              {/*Testimonial 4*/}
-              <div className="w-64">
-                <TestimonialCard comment={comments[3]} />
-              </div>
+            {/*Testimonial 2*/}
+            <div className="mx-4 lg:mx-0 w-64">
+              <TestimonialCard comment={comments[1]} />
             </div>
-            {/*Trick div to make scroll-arrows scroll the right amount*/}
-            <div className="lg:hidden w-0"></div>
-          </article>
-          <svg
-            className="right-paddle testimonial-right-paddle lg:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
-            />
-          </svg>
-        </div>
+          </div>
+          {/*Trick div to make scroll-arrows scroll the right amount*/}
+          <div className="lg:hidden w-0"></div>
+          {/*Column 2*/}
+          <div className="flex lg:block negative-top-margin lg:ml-12">
+            {/*Testimonial 3*/}
+            <div className="mr-4 lg:mr-0 w-64">
+              <TestimonialCard comment={comments[2]} />
+            </div>
+            {/*Testimonial 4*/}
+            <div className="w-64">
+              <TestimonialCard comment={comments[3]} />
+            </div>
+          </div>
+          {/*Trick div to make scroll-arrows scroll the right amount*/}
+          <div className="lg:hidden w-0"></div>
+        </article>
       </div>
     </section>
   );
