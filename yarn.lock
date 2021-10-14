@@ -55,6 +55,11 @@
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.4.tgz#11847eb2ea5510419d7ada9ff150a33af0ad0863"
   integrity sha512-3kOrTmo8+Z8o6AL0rzN82MOf8J5CuxhRLFhpI8mrn+3OqekA6d5eb1GYO3EYYo1Vn6mYQSMNTzCWbEwUInb0cQ==
 
+"@lit/reactive-element@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-1.0.1.tgz#853cacd4d78d79059f33f66f8e7b0e5c34bee294"
+  integrity sha512-nSD5AA2AZkKuXuvGs8IK7K5ZczLAogfDd26zT9l6S7WzvqALdVWcW5vMUiTnZyj5SPcNwNNANj0koeV1ieqTFQ==
+
 "@mdx-js/vue@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/vue/-/vue-1.6.22.tgz#8fe19fa4592a9eaa6420979e841f1461655489fe"
@@ -114,6 +119,11 @@
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
+"@types/trusted-types@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
+  integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
 "@vue/compiler-core@3.2.11":
   version "3.2.11"
@@ -673,10 +683,29 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lit-html@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.4.1.tgz#0c6f3ee4ad4eb610a49831787f0478ad8e9ae5e0"
-  integrity sha512-B9btcSgPYb1q4oSOb/PrOT6Z/H+r6xuNzfH4lFli/AWhYwdtrgQkQWBbIc6mdnf6E2IL3gDXdkkqNktpU0OZQA==
+lit-element@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.0.1.tgz#3c545af17d8a46268bc1dd5623a47486e6ff76f4"
+  integrity sha512-vs9uybH9ORyK49CFjoNGN85HM9h5bmisU4TQ63phe/+GYlwvY/3SIFYKdjV6xNvzz8v2MnVC+9+QOkPqh+Q3Ew==
+  dependencies:
+    "@lit/reactive-element" "^1.0.0"
+    lit-html "^2.0.0"
+
+lit-html@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-2.0.1.tgz#63241015efa07bc9259b6f96f04abd052d2a1f95"
+  integrity sha512-KF5znvFdXbxTYM/GjpdOOnMsjgRcFGusTnB54ixnCTya5zUR0XqrDRj29ybuLS+jLXv1jji6Y8+g4W7WP8uL4w==
+  dependencies:
+    "@types/trusted-types" "^2.0.2"
+
+lit@^2.0.0-rc.4:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/lit/-/lit-2.0.2.tgz#5e6f422924e0732258629fb379556b6d23f7179c"
+  integrity sha512-hKA/1YaSB+P+DvKWuR2q1Xzy/iayhNrJ3aveD0OQ9CKn6wUjsdnF/7LavDOJsKP/K5jzW/kXsuduPgRvTFrFJw==
+  dependencies:
+    "@lit/reactive-element" "^1.0.0"
+    lit-element "^3.0.0"
+    lit-html "^2.0.0"
 
 lodash.castarray@^4.4.0:
   version "4.4.0"

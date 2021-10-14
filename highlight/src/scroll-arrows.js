@@ -50,7 +50,7 @@ function setupListeners() {
 export function setupScrollArrows() {
   leftPaddle = document.querySelector('.left-paddle');
   rightPaddle = document.querySelector('.right-paddle');
-  menuContainer = document.querySelector('.highlights-container');
+  menuContainer = document.querySelector('.container');
   menuFullSize = menuContainer.scrollWidth;
   menuItemWidth = menuFullSize / menuContainer.childElementCount;
 
