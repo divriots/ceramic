@@ -47,10 +47,10 @@ function setupListeners() {
   leftPaddle.addEventListener('click', padLeftHandler);
 }
 
-export function setupScrollArrows() {
-  leftPaddle = document.querySelector('.left-paddle');
-  rightPaddle = document.querySelector('.right-paddle');
-  menuContainer = document.querySelector('.container');
+export function setupScrollArrows( leftId, rightId, containerId) {
+  leftPaddle = document.getElementById(leftId);
+  rightPaddle = document.getElementById(rightId);
+  menuContainer = document.getElementById(containerId);
   menuFullSize = menuContainer.scrollWidth;
   menuItemWidth = menuFullSize / menuContainer.childElementCount;
 

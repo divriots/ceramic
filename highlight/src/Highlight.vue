@@ -12,10 +12,10 @@
     </p>
     <!--Design system cards container-->
     <div class="bg-black-divriots py-40 mt-64"></div>
-    <div class="highlights-wrapper">
+    <div id="highlight-wrapper">
       <!--Paddles for horizontal scrolling, will not show if all cards are already visible on screen-->
       <svg
-        class="left-paddle highlight-left-paddle"
+        id="highlight-left-paddle"
         tabindex="0"
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -30,7 +30,7 @@
         />
       </svg>
 
-      <div class="highlights-container container">
+      <div id="highlight-container">
         <!--Design system cards (data.js)-->
         <component
           :is="StarterCard"
@@ -299,7 +299,7 @@
         </div>
       </div>
       <svg
-        class="right-paddle highlight-right-paddle"
+        id="highlight-right-paddle"
         tabindex="0"
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -318,7 +318,7 @@
 </template>
 
 <style>
-.highlights-wrapper {
+#highlight-wrapper {
   position: relative;
   max-width: 100%;
   height: max-content;
@@ -326,27 +326,27 @@
   overflow: hidden;
 }
 
-.highlights-container {
+#highlight-container {
   display: flex;
   padding: 3rem 2rem;
   overflow-x: scroll;
   scrollbar-width: none;
 }
 
-.highlights-container > * + * {
+#highlight-container > * + * {
   margin-left: 4rem;
 }
 
-.highlights-container::-webkit-scrollbar {
+#highlight-container::-webkit-scrollbar {
   display: none;
 }
 
-.highlights-container a {
+#highlight-container a {
   flex-shrink: 0;
 }
 
-.highlight-left-paddle,
-.highlight-right-paddle {
+#highlight-left-paddle,
+#highlight-right-paddle {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -361,24 +361,24 @@
   z-index: 5;
 }
 
-.highlight-left-paddle:focus,
-.highlight-right-paddle:focus {
+#highlight-left-paddle:focus,
+#highlight-right-paddle:focus {
   border: 1px solid white;
   outline: none;
 }
 
-.highlight-left-paddle:hover,
-.highlight-right-paddle:hover,
-.highlight-left-paddle:focus,
-.highlight-right-paddle:focus {
+#highlight-left-paddle:hover,
+#highlight-right-paddle:hover,
+#highlight-left-paddle:focus,
+#highlight-right-paddle:focus {
   transform: translateY(calc(-50% - 4px));
 }
 
-.highlight-left-paddle {
+#highlight-left-paddle {
   left: 10px;
 }
 
-.highlight-right-paddle {
+#highlight-right-paddle {
   right: 10px;
 }
 </style>
@@ -401,8 +401,8 @@ export default {
   },
   mounted: function () {
     this.$nextTick(function () {
-      setupScrollArrows();
-      setupDragHandling();
+      setupScrollArrows('highlight-left-paddle','highlight-right-paddle','highlight-container');
+      setupDragHandling('highlight-container');
     });
   },
   beforeUnmount: function () {

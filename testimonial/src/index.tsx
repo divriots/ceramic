@@ -6,8 +6,8 @@ import { setupDragHandling } from '../../highlight/src/drag-handling';
 
 function Testimonial({ title, subtitle, comments }) {
   useEffect(() => {
-    setupScrollArrows();
-    setupDragHandling();
+    setupScrollArrows('testimonial-left-paddle', 'testimonial-right-paddle', 'testimonial-container');
+    setupDragHandling('testimonial-container');
   }, []);
   return (
     <section className="bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg px-8 py-12 -my-2 flex justify-center">
@@ -44,9 +44,10 @@ function Testimonial({ title, subtitle, comments }) {
           </div>
         </div>
 
-        <div className="wrapper">
+        <div id="testimonial-wrapper">
           <svg
-            className="left-paddle testimonial-left-paddle lg:hidden"
+            id="testimonial-left-paddle"
+            className="lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -59,7 +60,7 @@ function Testimonial({ title, subtitle, comments }) {
               d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
             />
           </svg>
-          <article className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible testimonial-container container">
+          <article id="testimonial-container" className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible">
             {/*Column 1*/}
             <div className="flex lg:block lg:ml-24">
               {/*Testimonial 1*/}
@@ -88,7 +89,8 @@ function Testimonial({ title, subtitle, comments }) {
             <div className="lg:hidden w-0"></div>
           </article>
           <svg
-            className="right-paddle testimonial-right-paddle lg:hidden"
+          id="testimonial-right-paddle"
+            className="lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"

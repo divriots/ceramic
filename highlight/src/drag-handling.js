@@ -44,8 +44,8 @@ function preventAnchorClickDuringDrag(ev) {
   }
 }
 
-export function setupDragHandling() {
-  target = document.querySelector('.container');
+export function setupDragHandling(containerId) {
+  target = document.getElementById(containerId);
   target.addEventListener('mousedown', mouseDownHandler);
   target.addEventListener('mousemove', mouseMoveHandler);
   target.addEventListener('mouseup', mouseUpHandler);
