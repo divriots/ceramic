@@ -1,6 +1,6 @@
 <template>
   <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8">
-    <li class="mb-4 flex items-start text-left" v-if="inherits">
+    <li class="mb-4 flex items-center text-left" v-if="inherits">
       <div class="flex-shrink-0">
         <svg
           class="h-6 w-6 text-teal-500"
@@ -19,7 +19,7 @@
       <p class="ml-3 text-base font-bold">All {{ inherits.title }} features</p>
     </li>
     <li
-      class="mb-4 flex items-start text-left"
+      class="mb-4 flex items-center text-left"
       v-for="feature of additionalFeatures"
       :key="feature.label"
     >
