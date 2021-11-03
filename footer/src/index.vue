@@ -110,13 +110,6 @@ export default {
     subscribe: { type: String, required: true },
     contact: { type: String, required: true },
   },
-  data() {
-    const params = new URL(this.subscribe).searchParams;
-    return {
-      audience: params.get('id'),
-      uid: params.get('u'),
-    };
-  },
   setup() {
     return { Twitter, Discord, Logo, YouTube, Rss };
   },
