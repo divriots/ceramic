@@ -1,7 +1,17 @@
 <template>
   <footer class="gradient text-white relative overflow-hidden">
-    <form :action="subscribe" class="mx-auto max-w-2xl py-24 px-4 text-left">
-      <label for="EMAIL" class="block flex-grow text-4xl max-w-68 leading-none">
+    <form
+      :action="subscribe"
+      method="post"
+      id="revue-form"
+      name="revue-form"
+      target="_blank"
+      class="mx-auto max-w-2xl py-24 px-4 text-left"
+    >
+      <label
+        for="member_email"
+        class="block flex-grow text-4xl max-w-68 leading-none"
+      >
         Subscribe to
         <span class="text-primary">Backlight</span>
         newsletter
@@ -12,8 +22,9 @@
       </label>
       <div class="flex flex-col space-y-4 sm:space-y-0 mt-4 sm:flex-row w-full">
         <input
-          name="EMAIL"
           type="email"
+          name="member[email]"
+          id="member_email"
           placeholder="Enter your e-mail"
           required
           autocomplete="off"
@@ -26,23 +37,13 @@
             flex-grow
           "
         />
-        <!-- input trap for bot -->
         <input
-          type="text"
-          style="position: absolute; left: -5000px"
-          aria-hidden="true"
-          :name="`b_${uid}_${audience}`"
-          tabindex="-1"
-          value=""
-        />
-        <button
           type="submit"
           value="Subscribe"
-          name="subscribe"
+          name="member[subscribe]"
+          id="member_submit"
           class="btn-primary self-start"
-        >
-          Subscribe
-        </button>
+        />
       </div>
     </form>
     <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-white">
@@ -74,9 +75,18 @@
             <component :is="YouTube"></component>
             <component :is="Rss"></component>
           </div>
-          <a href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
-            target="_blank" class="mt-4">
-            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=312123&theme=light" alt="Backlight - Make design systems that front-end teams want to use | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+          <a
+            href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
+            target="_blank"
+            class="mt-4"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=312123&theme=light"
+              alt="Backlight - Make design systems that front-end teams want to use | Product Hunt"
+              style="width: 250px; height: 54px"
+              width="250"
+              height="54"
+            />
           </a>
         </div>
         <div class="col">
@@ -88,70 +98,70 @@
   </footer>
 </template>
 <script>
-  import Twitter  from '../../twitter/src/twitter.vue';
-  import YouTube  from '../../youtube/src/youtube.vue';
-  import Discord  from '../../discord/src/discord.vue';
-  import Rss  from '../../rss/src/rss.vue';
-  import Logo  from '../../logo/src/logo.vue';
-  
-  export default {
-    props: {
-      routes: { type: Array, default: [] },
-      subscribe: { type: String, required: true },
-      contact: { type: String, required: true },
-    },
-    data() {
-      const params = new URL(this.subscribe).searchParams;
-      return {
-        audience: params.get('id'),
-        uid: params.get('u'),
-      };
-    },
-    setup() {
-      return { Twitter, Discord, Logo, YouTube , Rss};
-    },
-  };
+import Twitter from '../../twitter/src/twitter.vue';
+import YouTube from '../../youtube/src/youtube.vue';
+import Discord from '../../discord/src/discord.vue';
+import Rss from '../../rss/src/rss.vue';
+import Logo from '../../logo/src/logo.vue';
+
+export default {
+  props: {
+    routes: { type: Array, default: [] },
+    subscribe: { type: String, required: true },
+    contact: { type: String, required: true },
+  },
+  data() {
+    const params = new URL(this.subscribe).searchParams;
+    return {
+      audience: params.get('id'),
+      uid: params.get('u'),
+    };
+  },
+  setup() {
+    return { Twitter, Discord, Logo, YouTube, Rss };
+  },
+};
 </script>
 <style lang="scss">
-  footer.gradient::before {
-    height: 100%;
+footer.gradient::before {
+  height: 100%;
+}
+
+.links {
+  overflow: hidden;
+  font-size: 17px;
+
+  .cols {
+    display: flex;
+    justify-content: start;
+    flex: 1;
+    flex-wrap: wrap;
   }
 
-  .links {
-    overflow: hidden;
-    font-size: 17px;
+  @media only screen and (min-width: 800px) {
+    .logo {
+      height: 150px;
+    }
 
     .cols {
-      display: flex;
-      justify-content: start;
-      flex: 1;
-      flex-wrap: wrap;
-    }
-
-    @media only screen and (min-width: 800px) {
-      .logo {
-        height: 150px;
-      }
-
-      .cols {
-        justify-content: space-around;
-      }
-    }
-
-    .col {
-      display: flex;
-      flex-direction: column;
-      padding: 0px 32px 32px 20px;
-
-      label {
-        font-size: 0.9rem;
-        opacity: 0.6;
-        margin-bottom: 16px;
-      }
-
-      a {
-        margin-bottom: 3px;
-      }
+      justify-content: space-around;
     }
   }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 32px 32px 20px;
+
+    label {
+      font-size: 0.9rem;
+      opacity: 0.6;
+      margin-bottom: 16px;
+    }
+
+    a {
+      margin-bottom: 3px;
+    }
+  }
+}
 </style>
