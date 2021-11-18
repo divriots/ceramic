@@ -103,3 +103,20 @@ export const largeContent = (args) => ({
   }),
   ...args,
 });
+
+export const noFrameworks = (args) => ({
+  setup: () => ({
+    props: {
+      backgroundColor: '#111',
+      heroImg: 'https://backlight.dev/assets/icons/placeholder.svg',
+      desc: `Blank project.`,
+      url: '/edit/xxx',
+      bgImg: '',
+      owner: 'divriots',
+      ownerPhoto: 'https://backlight.dev/assets/logo/dr-b.svg',
+      highlighted: true,
+      frameworks: new Map([]),
+    },
+  }),
+  ...args,
+});
