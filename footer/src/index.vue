@@ -48,13 +48,19 @@
     </form>
     <div class="max-w-7xl mx-auto links flex flex-col sm:flex-row text-white">
       <div class="flex flex-col m-4 mb-8 sm:mb-4">
-        <img class="w-24" src="/assets/logo/bkl.svg" alt="Backlight logo" />
+        <img
+          class="w-24"
+          src="/assets/logo/bkl.svg"
+          alt="Backlight logo"
+          loading="lazy"
+        />
         <a class="mt-2" href="https://divRIOTS.com">
           by
           <img
             class="h-4 inline"
             src="/img/divriots.svg"
             alt="‹div›RIOTS logo"
+            loading="lazy"
           />
         </a>
       </div>
@@ -86,6 +92,7 @@
               style="width: 250px; height: 54px"
               width="250"
               height="54"
+              loading="lazy"
             />
           </a>
         </div>

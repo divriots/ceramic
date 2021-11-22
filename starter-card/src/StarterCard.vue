@@ -13,7 +13,7 @@
   >
     <div v-if="wip" class="wip-ribbon"><span>in progress...</span></div>
     <div :class="{ logo: true }">
-      <img :src="versioned(heroImg)" />
+      <img :src="versioned(heroImg)" loading="lazy" />
     </div>
     <div class="details">
       <p class="description">
@@ -42,6 +42,7 @@
       v-show="bgImg"
       class="framework-bg"
       :src="versioned(bgImg)"
+      loading="lazy"
     />
     <div
       v-else

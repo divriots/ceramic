@@ -1,5 +1,5 @@
 <script>
-  import { ref, computed, onBeforeUnmount } from 'vue';
+import { ref, computed, onBeforeUnmount } from 'vue';
 
 export default {
   props: {
@@ -26,9 +26,9 @@ export default {
             const player = new YT.Player('hero-embedded-placeholder', {
               videoId: videoSrc,
               events: {
-                'onReady': () => resolve(player)
-              }
-            });;
+                onReady: () => resolve(player),
+              },
+            });
           };
         });
       }
@@ -77,7 +77,8 @@ export default {
 };
 </script>
 <template>
-  <section class="
+  <section
+    class="
       gradient
       text-white
       hero
@@ -88,20 +89,35 @@ export default {
       md:my-24
       lg:my-28
       xl:my-32
-    ">
+    "
+  >
     <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
-      <div v-if="isYoutube" id="hero-embedded-video" class="absolute hidden md:rounded-lg" ref="heroVideo"
-        tabindex="-1">
+      <div
+        v-if="isYoutube"
+        id="hero-embedded-video"
+        class="absolute hidden md:rounded-lg"
+        ref="heroVideo"
+        tabindex="-1"
+      >
         <div class="embedded-wrapper">
           <div id="hero-embedded-placeholder"></div>
         </div>
       </div>
-      <video v-else id="hero-video" class="absolute hidden md:rounded-lg" preload="none" volume="0.3" controls
-        @ended="stop" ref="heroVideo">
+      <video
+        v-else
+        id="hero-video"
+        class="absolute hidden md:rounded-lg"
+        preload="none"
+        volume="0.3"
+        controls
+        @ended="stop"
+        ref="heroVideo"
+      >
         <source :src="videoSrc" type="video/mp4" />
       </video>
-      <div class="
+      <div
+        class="
           z-10
           lg:max-w-2xl lg:w-full
           self-center
@@ -110,7 +126,8 @@ export default {
           md:py-16
           lg:py-20
           xl:py-28
-        ">
+        "
+      >
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
@@ -146,110 +163,122 @@ export default {
                 Play video
               </button>
             </div>
-            <component :is="DoubleCtaVue" :primaryText="'Request early access'" :primaryHref="'/request-earlyaccess'"
-              :secondaryText="'Book a demo'" :secondaryHref="'https://calendly.com/gg_/backlight'"></component>
+            <component
+              :is="DoubleCtaVue"
+              :primaryText="'Request early access'"
+              :primaryHref="'/request-earlyaccess'"
+              :secondaryText="'Book a demo'"
+              :secondaryHref="'https://calendly.com/gg_/backlight'"
+            ></component>
           </div>
         </div>
       </div>
-      <div class="img-video relative hidden md:block cursor-pointer" @click="play">
-        <img class="md:rounded-lg absolute max-w-none h-full" :src="imgSrc" />
+      <div
+        class="img-video relative hidden md:block cursor-pointer"
+        @click="play"
+      >
+        <img
+          class="md:rounded-lg absolute max-w-none h-full"
+          :src="imgSrc"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
 </template>
 <style lang="scss" scoped>
-  .gradient .wrapper {
-    min-height: 400px;
+.gradient .wrapper {
+  min-height: 400px;
 
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 
-    @media only screen and (min-width: 768px) {
-      grid-template-columns: 6fr 4fr;
-    }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 6fr 4fr;
   }
+}
 
-  #hero-video-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-  }
+#hero-video-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
 
-  #hero-embedded-video {
-    width: 100%;
-    max-width: 640px;
-    z-index: 11;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
+#hero-embedded-video {
+  width: 100%;
+  max-width: 640px;
+  z-index: 11;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 
-    @media only screen and (min-width: 768px) {
-      left: 50%;
-      outline: none;
-      transform: translateX(-50%);
-      transition: display 0.1s ease-out;
-      border-radius: 0.5rem;
-      overflow: hidden;
-      top: auto;
-    }
-
-    .embedded-wrapper {
-      width: 100%;
-      height: 0;
-      padding-top: 56.25%;
-      position: relative;
-
-      ::v-deep iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
-    }
-
-    &:not(.hidden)~* {
-      transition: opacity 0.1s ease-out;
-      opacity: 0;
-    }
-  }
-
-  #hero-video {
+  @media only screen and (min-width: 768px) {
     left: 50%;
     outline: none;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     transition: display 0.1s ease-out;
-    z-index: 11;
     border-radius: 0.5rem;
     overflow: hidden;
-    max-width: 640px;
+    top: auto;
+  }
+
+  .embedded-wrapper {
     width: 100%;
-    top: 50%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
 
-    &:not(.hidden)~* {
-      transition: opacity 0.1s ease-out;
-      opacity: 0;
-    }
-
-    @media only screen and (min-width: 768px) {
-      transform: translateX(-50%);
-      top: auto;
-    }
-  }
-
-  .img-video {
-    margin: 4px;
-
-    &:hover {
-      transform: scale(1.02);
-      transition: transform 0.2s;
+    ::v-deep iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
     }
   }
 
-  .gradient.hero::before {
-    height: 1200px;
+  &:not(.hidden) ~ * {
+    transition: opacity 0.1s ease-out;
+    opacity: 0;
   }
+}
+
+#hero-video {
+  left: 50%;
+  outline: none;
+  transform: translate(-50%, -50%);
+  transition: display 0.1s ease-out;
+  z-index: 11;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 640px;
+  width: 100%;
+  top: 50%;
+
+  &:not(.hidden) ~ * {
+    transition: opacity 0.1s ease-out;
+    opacity: 0;
+  }
+
+  @media only screen and (min-width: 768px) {
+    transform: translateX(-50%);
+    top: auto;
+  }
+}
+
+.img-video {
+  margin: 4px;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+  }
+}
+
+.gradient.hero::before {
+  height: 1200px;
+}
 </style>
