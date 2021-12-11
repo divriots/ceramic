@@ -28,7 +28,7 @@ export default [
   {
     name: 'FAST',
     logo: assetRef('lib/fast.svg'),
-  },  
+  },
   {
     name: 'Svelte',
     logo: assetRef('lib/svelte.svg'),
@@ -71,7 +71,7 @@ export default [
   },
   {
     name: 'Storybook',
-    logo: assetRef('logo/storybook.svg'),
+    logo: assetRef('lib/storybook.svg'),
   },
   {
     name: 'LWC',

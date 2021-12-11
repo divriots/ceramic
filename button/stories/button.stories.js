@@ -21,6 +21,13 @@ export const btn_secondary = () => /*html*/ `
   </div>
 `;
 
+export const btn_outline = () => /*html*/ `
+  <div>
+    <a class="btn-outline" href="#">This is an anchor</a>
+    <button class="btn-outline" onclick="alert('clicked')">This is a button</button>
+  </div>
+`;
+
 export const btn_text = () => /*html*/ `
   <div>
     <a class="btn-text" href="#">This is an anchor</a>

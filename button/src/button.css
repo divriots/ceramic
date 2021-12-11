@@ -45,6 +45,17 @@
     bg-secondary 
     text-white;
   }
+
+  .btn-outline {
+    @apply base_action
+    base_button
+    relative
+    bg-transparent
+    border-1
+    border-primary
+    text-primary;
+  }
+
   .btn-primary:before,
   .btn-secondary:before {
     @apply transition-opacity
