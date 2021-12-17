@@ -137,11 +137,13 @@ export default {
               <span class="flex items-center">Code-side</span>
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
-              All-in-one Design System platform.
+              <a href="/" class="text-primary">Backlight</a>
+              is a collaborative platform empowering teams to build and ship
+              great Design Systems on the engineering side. Create at the speed
+              of light and benefit from your Design System today.
               <br />
-              Manage components, stories and documentation.
               <br />
-              The source of truth for front-end teams.
+              No need to be Apple to have a Design System.
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
@@ -160,7 +162,7 @@ export default {
                     fill="currentColor"
                   />
                 </svg>
-                Play video
+                Watch video
               </button>
             </div>
             <component

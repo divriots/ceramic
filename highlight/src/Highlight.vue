@@ -7,8 +7,13 @@
     </h2>
     <!--Section Subtitle-->
     <p class="text-lg text-white p-4 mb-4 leading-relaxed">
-      Select the Starter-Kit with the right technology for you.
+      <a class="text-primary" href="/">Backlight</a>
+      provides Design System examples with starterkit to help you jump in.
       <br />
+      Select the one with your preferred technology or
+      <a href="/edit/dsPyB9DWNnBvDP17EMGC" class="text-primary">
+        start from scratch
+      </a>
     </p>
     <!--Design system cards container-->
     <div class="bg-black-divriots py-40 mt-64"></div>
@@ -401,7 +406,11 @@ export default {
   },
   mounted: function () {
     this.$nextTick(function () {
-      setupScrollArrows('highlight-left-paddle','highlight-right-paddle','highlight-container');
+      setupScrollArrows(
+        'highlight-left-paddle',
+        'highlight-right-paddle',
+        'highlight-container'
+      );
       setupDragHandling('highlight-container');
     });
   },
