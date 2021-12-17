@@ -3,7 +3,7 @@ const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}?v1`;
 export default [
   {
     classes: 'text-primary',
-    title: 'Everything in <span class="text-secondary">one place</span>',
+    title: '<span class="text-secondary">All-in-one</span> Design System tool',
     layout: 'vertical',
     promises: [
       // {
@@ -20,11 +20,10 @@ export default [
       //   // },
       // },
       {
-        title: 'Code and stories',
+        title: 'Code and preview',
         description: `<p>Your component library is visually organized.
         It's easy for anyone to discover the component catalog and contribute
-        to the Design System right away.</p>
-        <p>Storybook stories (CSF) are supported out-the-box.</p>`,
+        to the Design System right away.</p>`,
         img: {
           src: imgLanding('code-and-stories.png'),
         },
@@ -34,11 +33,21 @@ export default [
         // },
       },
       {
-        title: 'Documentation',
-        description: `<p>Backlight has built-in support for MDX (React) and Markdown documentation.</p>
-        <p>Showcase the components directly in the documentation, include Playgrounds and show Properties/Events 
-        directly from code with no additional maintenance.</p>
-        <p>Everybody can contribute directly with instant online preview.</p>`,
+        title: 'Storybook stories',
+        description: `<p>Backlight support Storybook stories out-of-the-box. Display your stories next to your code for perfect Developers / Designers alignment.</p>`,
+        img: {
+          src: imgLanding('storybook_integration.png'),
+        },
+        // action: {
+        //   label: 'Look at one of the starter-kits',
+        //   url: '/starterkits',
+        // },
+      },
+      {
+        title: 'Live documentation',
+        description: `<p>Create a live design system documentation. Showcase the components directly in the documentation, with playgrounds, properties and events directly from code.</p>
+        <p>Everyone can contribute directly to documentation with instant online preview.</p>
+        <p>Backlight has built-in support for Markdown, MDX, MD Vue, and Nunjunk for documentation.</p>`,
         img: {
           src: imgLanding('referencesite.png'),
         },
@@ -48,9 +57,9 @@ export default [
         // },
       },
       {
-        title: 'Design links',
-        description: `<p>Keep the preview of the design next to the components.</p>
-        <p>Figma and Adobe Xd links supported.</p>`,
+        title: 'Design integration',
+        description: `<p>Keep the preview of the design next to the components. Streamline collaboration between developers and designers.</p>
+        <p>Figma, Sketch and Adobe Xd supported.</p>`,
         img: {
           src: imgLanding('designlink.png'),
         },
@@ -61,7 +70,7 @@ export default [
       },
       {
         title: 'Unit tests',
-        description: `<p>Reproduce bugs. Ensure accessibility over time. Automate event checks...</p>
+        description: `<p>Create and run test sets. Ensure quality and accessibility over time.</p>
         <p>Backlight has a built-in test runner and reporter for effortless test checks and contributions.</p>`,
         img: {
           src: imgLanding('tests.png'),
@@ -81,7 +90,7 @@ export default [
       {
         title: `Get feedback in one click`,
         description: `<p>Share real-time previews of the component you are working on.</p>
-        <p>No need to push, release or deploy anything. Just share a link to your team
+        <p>Speed-up pipeline. No need to push, release or deploy anything. Just share a link to your team
         to show what you are working on.</p>
         <p>Don't wait the end of the sprint to get feedback, collaborate more.</p>`,
         video: {
@@ -93,11 +102,10 @@ export default [
         // },
       },
       {
-        title: 'Review pull-Requests visually',
+        title: 'Pull-requests visual review',
         description: `<p>Reviewing HTML, CSS and JavaScript code doesn't tell
         the full picture.</p>
-        <p>Backlight renders pull-request instantly so you can review them
-        graphically. You don't need to wait for the build task or the deploy task.</p>
+        <p>Backlight renders pull-request instantly for fast visual review. You don't need to wait for the build task or the deploy task.</p>
         <p>Review better in less time.</p>`,
         img: {
           src: imgLanding('diff.gif'),
