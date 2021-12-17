@@ -233,7 +233,7 @@ export default {
     padding-top: 56.25%;
     position: relative;
 
-    ::v-deep iframe {
+    :deep(iframe) {
       position: absolute;
       width: 100%;
       height: 100%;
