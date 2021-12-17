@@ -2,10 +2,6 @@
   import technologies from './technologies.js';
 </script>
 
-<svelte:head>
-  <script type="module" src="https://unpkg.com/@divriots/infini-scroll@0.3.3/infini-scroll.js?module"></script>
-</svelte:head>
-
 <section class="text-center text-white bg-black-divriots px-8 pt-24 pb-16 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">Bring your own <span class="text-primary">stack</span>
   </h2>
