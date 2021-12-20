@@ -119,7 +119,7 @@ export default {
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               <a href="/" class="text-primary">Backlight</a>
               is a collaborative platform empowering front-end teams to build
-              and ship great Design Systems in no time.
+              and ship great Design Systems.
             </p>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               From code to documentation and npm package, Backlight is the
