@@ -78,18 +78,7 @@ export default {
 </script>
 <template>
   <section
-    class="
-      gradient
-      text-white
-      hero
-      w-full
-      overflow-hidden
-      my-8
-      sm:my-16
-      md:my-24
-      lg:my-28
-      xl:my-32
-    "
+    class="gradient text-white hero w-full overflow-hidden my-8 sm:my-16 md:my-24 lg:my-28 xl:my-32"
   >
     <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
@@ -117,16 +106,7 @@ export default {
         <source :src="videoSrc" type="video/mp4" />
       </video>
       <div
-        class="
-          z-10
-          lg:max-w-2xl lg:w-full
-          self-center
-          py-8
-          sm:py-12
-          md:py-16
-          lg:py-20
-          xl:py-28
-        "
+        class="z-10 lg:max-w-2xl lg:w-full self-center py-8 sm:py-12 md:py-16 lg:py-20 xl:py-28"
       >
         <div class="flex justify-center px-4 md:px-16">
           <div class="text-left">
@@ -138,12 +118,20 @@ export default {
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               <a href="/" class="text-primary">Backlight</a>
-              is a collaborative platform empowering teams to build and ship
-              great Design Systems on the engineering side. Create at the speed
-              of light and benefit from your Design System today.
-              <br />
-              <br />
-              No need to be Apple to have a Design System.
+              is a collaborative platform empowering front-end teams to build
+              and ship great Design Systems in no time.
+            </p>
+            <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
+              From code to documentation and npm package, Backlight is the
+              all-in-one devtool for Design Systems that empowers developers and
+              improves collaboration with designers, UX writers and product
+              owners.
+            </p>
+            <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
+              Now, every team can afford a
+              <a href="/mastery/what-is-a-design-system" class="text-primary">
+                Design System.
+              </a>
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
