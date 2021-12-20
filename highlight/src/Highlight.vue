@@ -8,7 +8,7 @@
     <!--Section Subtitle-->
     <p class="text-lg text-white p-4 mb-4 leading-relaxed">
       <a class="text-primary" href="/">Backlight</a>
-      provides Design System examples with starterkit to help you jump in.
+      provides Design System examples to help you jump in.
       <br />
       Select the one with your preferred technology or
       <a href="/edit/dsPyB9DWNnBvDP17EMGC" class="text-primary">
@@ -290,15 +290,7 @@
             :key="bg"
           >
             <div
-              class="
-                w-full
-                h-full
-                flex
-                items-center
-                text-3xl
-                sm:text-4xl
-                text-bold text-center
-              "
+              class="w-full h-full flex items-center text-3xl sm:text-4xl text-bold text-center"
             ></div>
           </component>
         </div>
