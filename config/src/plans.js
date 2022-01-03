@@ -84,8 +84,8 @@ export const Free = {
   legend: 'Discover Backlight',
   price: {
     value: '0',
-    currency: 'USD',
-    symbol: '$',
+    currency: 'EUR',
+    symbol: '€',
   },
   additionalFeatures: [
     {
@@ -119,8 +119,8 @@ export const Pro = {
   title: 'Pro',
   price: {
     value: '29',
-    symbol: '$',
-    currency: 'USD',
+    symbol: '€',
+    currency: 'EUR',
     unit: 'Editor',
     style: 'text-decoration: line-through',
   },
