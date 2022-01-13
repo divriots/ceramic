@@ -59,10 +59,21 @@ export const external_link = () => ({
   components: { NavMenuItem },
   data: () => ({
     route: {
-      pathname: '#',
-      label: 'Pricing',
-      external: true,
+      pathname: 'https://google.com',
+      label: 'Google',
     },
   }),
-  template: `<NavMenuItem :route="route" :external=true />`,
+  template: `<NavMenuItem :route="route" />`,
+});
+
+export const external_link_in_current_tab = () => ({
+  components: { NavMenuItem },
+  data: () => ({
+    route: {
+      pathname: 'https://google.com',
+      label: 'Google',
+      external: false,
+    },
+  }),
+  template: `<NavMenuItem :route="route" />`,
 });
