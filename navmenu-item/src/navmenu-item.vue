@@ -9,7 +9,7 @@
       nav-link
     `"
     :target="external ? '_blank' : '_self'"
-    rel="noopener noreferrer nofollow"
+    :rel="external ? 'noopener noreferrer nofollow' : null"
   >
     <span
       class="inline-block pb-1 border-0 border-b-4 border-solid border-transparent"
@@ -27,15 +27,7 @@ export default {
   },
   computed: {
     external() {
-      if (
-        (this.route.external !== false &&
-          this.route.pathname.startsWith('http')) ||
-        this.route.external === true
-      ) {
-        return true;
-      } else {
-        return false;
-      }
+      return /^https?\:/.test(this.route.pathname) || this.route.external;
     },
   },
 };
