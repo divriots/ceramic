@@ -92,7 +92,6 @@
         <div class="col">
           <label>CONTACT</label>
           <a :href="`mailto:${contact}`">{{ contact }}</a>
-          <div>sample</div>
           <a
             href="https://calendly.com/backlight_"
             target="_blank"
