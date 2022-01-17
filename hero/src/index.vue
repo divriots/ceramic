@@ -11,8 +11,10 @@ export default {
   setup({ videoType, videoSrc }) {
     const heroVideo = ref(null);
     const isYoutube = computed(() => videoType === 'youtube');
+    const isApiVideo = computed(() => videoType === 'apivideo');
     let embeddedPlayer;
     let youtubeScript;
+    let apiScript;
 
     const loadYoutube = () => {
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -34,16 +36,40 @@ export default {
       }
     };
 
+    const loadApiVideo = () => {
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+        return new Promise((resolve) => {
+          apiScript = document.createElement('script');
+          apiScript.src = 'https://unpkg.com/@api.video/player-sdk';
+          const firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(apiScript, firstScriptTag);
+
+          apiScript.onload = () => {
+            const sdk = new PlayerSdk('#hero-embedded-placeholder', {
+              id: videoSrc,
+              // ... other optional options, see https://docs.api.video/docs/video-player-sdk#method-2-typescript
+            });
+            resolve(sdk);
+          };
+        });
+      }
+    };
+
     onBeforeUnmount(() => {
       if (embeddedPlayer && youtubeScript) {
         embeddedPlayer.destroy();
         youtubeScript.parentNode.removeChild(youtubeScript);
+      }
+      if (embeddedPlayer && apiScript) {
+        embeddedPlayer.destroy();
+        apiScript.parentNode.removeChild(apiScript);
       }
     });
 
     return {
       heroVideo,
       isYoutube,
+      isApiVideo,
       stop: () => {
         const video = heroVideo.value;
         video.classList.add('hidden');
@@ -53,6 +79,9 @@ export default {
 
         if (isYoutube.value) {
           embeddedPlayer.stopVideo();
+        } else if (isApiVideo.value) {
+          console.log('apivideo pause()');
+          embeddedPlayer.destroy();
         } else {
           video.pause();
           video.currentTime = 0;
@@ -68,6 +97,9 @@ export default {
         if (isYoutube.value) {
           embeddedPlayer = await loadYoutube();
           embeddedPlayer.playVideo();
+        } else if (isApiVideo.value) {
+          embeddedPlayer = await loadApiVideo();
+          embeddedPlayer.play();
         } else {
           // Show loading animation.
           var playPromise = video.play();
@@ -97,6 +129,17 @@ export default {
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
         v-if="isYoutube"
+        id="hero-embedded-video"
+        class="absolute hidden md:rounded-lg"
+        ref="heroVideo"
+        tabindex="-1"
+      >
+        <div class="embedded-wrapper">
+          <div id="hero-embedded-placeholder"></div>
+        </div>
+      </div>
+      <div
+        v-else-if="isApiVideo"
         id="hero-embedded-video"
         class="absolute hidden md:rounded-lg"
         ref="heroVideo"
@@ -164,7 +207,6 @@ export default {
         <div class="img-gradient rounded-lg flex items-center justify-center">
           <button
             class="btn-primary rounded-full p-4 w-16 absolute md:bottom-16 md:right-4"
-            @click="play"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
