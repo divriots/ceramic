@@ -43,6 +43,7 @@
         "organisms",
         [
           "hero",
+          "new-hero",
           "navbar",
           "starter-card",
           "price"
