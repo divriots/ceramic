@@ -123,7 +123,7 @@ export default {
 </script>
 <template>
   <section
-    class="gradient text-white hero w-full overflow-hidden my-8 sm:my-16 md:my-24 lg:my-28 xl:my-32"
+    class="gradient text-white hero w-full overflow-hidden my-8 sm:my-16 md:my-24"
   >
     <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
@@ -333,7 +333,6 @@ export default {
 
 .z-img {
   z-index: -1;
-  display: block;
 }
 
 .img-gradient {
