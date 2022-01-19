@@ -28,14 +28,7 @@
           placeholder="Enter your e-mail"
           required
           autocomplete="off"
-          class="
-            bg-transparent
-            border-b-1 border-gray-light
-            focus:border-white
-            text-white
-            outline-none
-            flex-grow
-          "
+          class="bg-transparent border-b-1 border-gray-light focus:border-white text-white outline-none flex-grow"
         />
         <input
           type="submit"
@@ -99,6 +92,14 @@
         <div class="col">
           <label>CONTACT</label>
           <a :href="`mailto:${contact}`">{{ contact }}</a>
+          <a
+            href="https://calendly.com/backlight_"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            class="btn-outline demo"
+          >
+            Book a demo
+          </a>
         </div>
       </div>
     </div>
@@ -161,6 +162,9 @@ footer.gradient::before {
 
     a {
       margin-bottom: 3px;
+    }
+    .demo {
+      margin-top: 16px;
     }
   }
 }
