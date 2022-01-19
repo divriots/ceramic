@@ -122,9 +122,7 @@ export default {
 };
 </script>
 <template>
-  <section
-    class="gradient text-white hero w-full overflow-hidden my-8 sm:my-16"
-  >
+  <section class="gradient text-white hero w-full overflow-hidden my-8">
     <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
