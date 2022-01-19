@@ -54,3 +54,26 @@ export const active_mobile = () => ({
   }),
   template: `<NavMenuItem :route="route" :isActive="isActive"/>`,
 });
+
+export const external_link = () => ({
+  components: { NavMenuItem },
+  data: () => ({
+    route: {
+      pathname: 'https://google.com',
+      label: 'Google',
+    },
+  }),
+  template: `<NavMenuItem :route="route" />`,
+});
+
+export const external_link_in_current_tab = () => ({
+  components: { NavMenuItem },
+  data: () => ({
+    route: {
+      pathname: 'https://google.com',
+      label: 'Google',
+      external: false,
+    },
+  }),
+  template: `<NavMenuItem :route="route" />`,
+});
