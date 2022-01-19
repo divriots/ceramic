@@ -11,8 +11,10 @@ export default {
   setup({ videoType, videoSrc }) {
     const heroVideo = ref(null);
     const isYoutube = computed(() => videoType === 'youtube');
+    const isApiVideo = computed(() => videoType === 'apivideo');
     let embeddedPlayer;
     let youtubeScript;
+    let apiScript;
 
     const loadYoutube = () => {
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -34,16 +36,40 @@ export default {
       }
     };
 
+    const loadApiVideo = () => {
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+        return new Promise((resolve) => {
+          apiScript = document.createElement('script');
+          apiScript.src = 'https://unpkg.com/@api.video/player-sdk';
+          const firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(apiScript, firstScriptTag);
+
+          apiScript.onload = () => {
+            const sdk = new PlayerSdk('#hero-embedded-placeholder', {
+              id: videoSrc,
+              // ... other optional options, see https://docs.api.video/docs/video-player-sdk#method-2-typescript
+            });
+            resolve(sdk);
+          };
+        });
+      }
+    };
+
     onBeforeUnmount(() => {
       if (embeddedPlayer && youtubeScript) {
         embeddedPlayer.destroy();
         youtubeScript.parentNode.removeChild(youtubeScript);
+      }
+      if (embeddedPlayer && apiScript) {
+        embeddedPlayer.destroy();
+        apiScript.parentNode.removeChild(apiScript);
       }
     });
 
     return {
       heroVideo,
       isYoutube,
+      isApiVideo,
       stop: () => {
         const video = heroVideo.value;
         video.classList.add('hidden');
@@ -53,6 +79,9 @@ export default {
 
         if (isYoutube.value) {
           embeddedPlayer.stopVideo();
+        } else if (isApiVideo.value) {
+          console.log('apivideo pause()');
+          embeddedPlayer.destroy();
         } else {
           video.pause();
           video.currentTime = 0;
@@ -68,8 +97,24 @@ export default {
         if (isYoutube.value) {
           embeddedPlayer = await loadYoutube();
           embeddedPlayer.playVideo();
+        } else if (isApiVideo.value) {
+          embeddedPlayer = await loadApiVideo();
+          embeddedPlayer.play();
         } else {
-          video.play();
+          // Show loading animation.
+          var playPromise = video.play();
+
+          if (playPromise !== undefined) {
+            playPromise
+              .then((_) => {
+                // Automatic playback started!
+                // Show playing UI.
+              })
+              .catch((error) => {
+                // Auto-play was prevented
+                // Show paused UI.
+              });
+          }
         }
       },
     };
@@ -84,6 +129,17 @@ export default {
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
         v-if="isYoutube"
+        id="hero-embedded-video"
+        class="absolute hidden md:rounded-lg"
+        ref="heroVideo"
+        tabindex="-1"
+      >
+        <div class="embedded-wrapper">
+          <div id="hero-embedded-placeholder"></div>
+        </div>
+      </div>
+      <div
+        v-else-if="isApiVideo"
         id="hero-embedded-video"
         class="absolute hidden md:rounded-lg"
         ref="heroVideo"
@@ -108,7 +164,7 @@ export default {
       <div
         class="z-10 lg:max-w-2xl lg:w-full self-center py-8 sm:py-12 md:py-16 lg:py-20 xl:py-28"
       >
-        <div class="flex justify-center px-4 md:px-16">
+        <div class="flex justify-center px-4 md:pl-4 md:pr-16">
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
               <span class="text-primary whitespace-nowrap">
@@ -135,43 +191,46 @@ export default {
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
-              <button
-                class="action inline-flex items-center text-primary pr-3"
-                @click="play"
+              <a
+                href="https://calendly.com/backlight_"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="btn-outline demo"
               >
-                <svg
-                  class="text-primary stroke-current h-8 inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 490 490"
-                >
-                  <polygon
-                    points="181.062,336.575 343.938,242.5 181.062,148.425"
-                    fill="currentColor"
-                  />
-                </svg>
-                Watch video
-              </button>
+                Book a demo
+              </a>
             </div>
-            <component
-              :is="DoubleCtaVue"
-              :primaryText="'Request early access'"
-              :primaryHref="'/request-earlyaccess'"
-              :secondaryText="'Book a demo'"
-              :secondaryHref="'https://calendly.com/gg_/backlight'"
-            ></component>
           </div>
         </div>
       </div>
-      <div
-        class="img-video relative hidden md:block cursor-pointer"
-        @click="play"
-      >
-        <img
-          class="md:rounded-lg absolute max-w-none h-full"
-          :src="imgSrc"
-          loading="lazy"
-        />
+      <div class="cursor-pointer px-4" @click="play">
+        <div class="img-gradient rounded-lg flex items-center justify-center">
+          <button
+            class="btn-primary rounded-full p-4 w-16 absolute md:bottom-16 md:right-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              class="ml-1"
+              width="32"
+              height="32"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+            >
+              <g fill="#FFFFFF">
+                <path
+                  d="M3.78 2L3 2.41v12l.78.42l9-6V8l-9-6zM4 13.48V3.35l7.6 5.07L4 13.48z"
+                ></path>
+              </g>
+            </svg>
+          </button>
+          <img
+            class="rounded-lg md:w-max relative md:max-w-none md:h-full z-img"
+            :src="imgSrc"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -270,5 +329,27 @@ export default {
 
 .gradient.hero::before {
   height: 1200px;
+}
+
+.z-img {
+  z-index: -1;
+  display: block;
+}
+
+.img-gradient {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+@media (min-width: 768px) {
+  .img-gradient {
+    background: linear-gradient(
+      290deg,
+      rgba(0, 0, 0, 0.8) 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
 }
 </style>
