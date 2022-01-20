@@ -26,7 +26,7 @@ export default {
             Get Started
           </a>
           <a
-            href="https://calendly.com/backlight_"
+            href="https://calendly.com/backlight_/demo"
             target="_blank"
             rel="noopener noreferrer nofollow"
             class="btn-outline rounded-sm text-center"
