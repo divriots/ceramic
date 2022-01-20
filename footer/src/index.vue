@@ -93,7 +93,7 @@
           <label>CONTACT</label>
           <a :href="`mailto:${contact}`">{{ contact }}</a>
           <a
-            href="https://calendly.com/backlight_"
+            href="https://calendly.com/backlight_/demo"
             target="_blank"
             rel="noopener noreferrer nofollow"
             class="btn-outline demo"
