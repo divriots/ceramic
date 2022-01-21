@@ -16,20 +16,13 @@ export default {
           You can start today with getting to know Backlight, or we can show all
           its features to you and your team, no strings attached.
         </p>
-        <div
-          class="flex flex-col sm:flex-row mt-6 sm:space-x-8 text-sm sm:text-normal lg:text-lg whitespace-nowrap"
-        >
-          <a
-            class="btn-primary rounded-sm text-center mb-4 sm:mb-0"
-            href="/get-started"
-          >
-            Get Started
-          </a>
+        <div class="flex mt-8 space-x-8">
+          <a class="btn-primary" href="/get-started">Get Started</a>
           <a
             href="https://calendly.com/backlight_/demo"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            class="btn-outline rounded-sm text-center"
+            class="btn-outline"
           >
             Book a demo
           </a>
