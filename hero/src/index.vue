@@ -202,9 +202,11 @@ export default {
         </div>
       </div>
       <div class="cursor-pointer px-4" @click="play">
-        <div class="img-gradient rounded-lg flex items-center justify-center">
+        <div
+          class="img-gradient rounded-lg flex items-center justify-center relative"
+        >
           <button
-            class="btn-primary rounded-full p-4 w-16 absolute md:bottom-16 md:right-4"
+            class="btn-primary rounded-full p-4 w-16 absolute lg:left-1/4 xl:left-1/2 hover-fix"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +218,7 @@ export default {
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 16 16"
             >
-              <g fill="#FFFFFF">
+              <g fill="#000000">
                 <path
                   d="M3.78 2L3 2.41v12l.78.42l9-6V8l-9-6zM4 13.48V3.35l7.6 5.07L4 13.48z"
                 ></path>
@@ -270,6 +272,13 @@ export default {
     border-radius: 0.5rem;
     overflow: hidden;
     top: auto;
+    max-width: 768px;
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
   }
 
   .embedded-wrapper {
@@ -313,6 +322,13 @@ export default {
   @media only screen and (min-width: 768px) {
     transform: translateX(-50%);
     top: auto;
+    max-width: 768px;
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
   }
 }
 
@@ -337,16 +353,23 @@ export default {
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 80%
+    rgba(255, 255, 255, 0) 100%
   );
 }
 @media (min-width: 768px) {
   .img-gradient {
     background: linear-gradient(
-      290deg,
-      rgba(0, 0, 0, 0.8) 40%,
+      270deg,
+      rgba(0, 0, 0, 1) 0%,
       rgba(255, 255, 255, 0) 100%
     );
   }
+}
+.hover-fix:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+.hover-fix:hover::before {
+  opacity: 0;
 }
 </style>
