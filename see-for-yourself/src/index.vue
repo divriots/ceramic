@@ -19,17 +19,14 @@ export default {
         <div
           class="flex flex-col sm:flex-row mt-6 sm:space-x-8 text-sm sm:text-normal lg:text-lg whitespace-nowrap"
         >
-          <a
-            class="btn-primary rounded-sm text-center mb-4 sm:mb-0"
-            href="/get-started"
-          >
+          <a class="btn-primary text-center mb-4 sm:mb-0" href="/get-started">
             Get Started
           </a>
           <a
             href="https://calendly.com/backlight_/demo"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            class="btn-outline rounded-sm text-center"
+            class="btn-outline text-center"
           >
             Book a demo
           </a>
