@@ -7,19 +7,26 @@ export const groups = {
 };
 
 export const features = {
+  users: {
+    group: groups.collaboration,
+    label: 'Users',
+  },
   projects: {
     group: groups.collaboration,
     label: 'Design Systems',
     labelSingular: 'Design System',
   },
-  editors: {
+  editor: {
     group: groups.collaboration,
-    label: 'Editors',
+    label: 'Command-line and online-IDE',
   },
-  viewers: {
+  share: {
     group: groups.collaboration,
-    restriction: 'Unlimited',
-    label: 'Viewers',
+    label: 'Instand share',
+  },
+  preview: {
+    group: groups.source_control,
+    label: 'Pull Requests Visual review',
   },
   github: {
     group: groups.source_control,
@@ -65,14 +72,10 @@ export const features = {
     group: groups.premium,
     label: 'Test matrix automation',
   },
-  advanced_user_management: {
-    group: groups.premium,
-    label: 'Advanced user management (RBAC, SSO)',
-  },
-  advanced_features: {
-    group: groups.premium,
-    label: 'Advanced features',
-  },
+  // advanced_user_management: {
+  //   group: groups.premium,
+  //   label: 'Advanced user management (RBAC, SSO)',
+  // },
   consulting: {
     group: groups.premium,
     label: 'Design system consulting',
@@ -89,22 +92,21 @@ export const Free = {
   },
   additionalFeatures: [
     {
-      restriction: 'Up to 3',
-      ...features.editors,
+      restriction: 'Unlimited',
+      ...features.users,
       highlight: true,
     },
     {
-      restriction: '1',
+      restriction: 'Up to 2',
       ...features.projects,
       highlight: true,
     },
-    {
-      ...features.viewers,
-      highlight: true,
-    },
+    features.editor,
+    features.share,
     features.github,
     features.gitlab,
     features.bitbucket,
+    features.preview,
     features.publish_public,
     features.support_community,
   ],
@@ -118,22 +120,18 @@ export const Free = {
 export const Pro = {
   title: 'Pro',
   price: {
-    value: '29',
-    symbol: '€',
-    currency: 'EUR',
-    unit: 'Editor',
-    style: 'text-decoration: line-through',
+    value: '149',
+    symbol: '$',
+    currency: 'USD',
   },
   inherits: Free,
   additionalFeatures: [
     {
-      restriction: 'Unlimited',
-      ...features.editors,
-    },
-    {
       restriction: 'Up to 5',
       ...features.projects,
+      highlight: true,
     },
+    features.ci_cd,
     features.publish_custom_registry,
     features.publish_private,
     features.support_email,
@@ -150,19 +148,17 @@ export const Enterprise = {
   inherits: Pro,
   additionalFeatures: [
     {
-      restriction: 'Unlimited',
-      ...features.projects,
+      ...features.support_sla,
       highlight: true,
     },
-    features.advanced_features,
     features.matrix_testing,
-    features.ci_cd,
-    features.advanced_user_management,
     features.consulting,
-    features.support_sla,
   ],
   price: {
-    value: 'On demand',
+    value: '499',
+    symbol: '$',
+    currency: 'USD',
+    style: 'text-decoration: line-through',
   },
   action: {
     label: 'Contact us',
