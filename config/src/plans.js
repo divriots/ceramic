@@ -1,9 +1,9 @@
 export const groups = {
   collaboration: 'Collaboration',
-  source_control: 'Source control',
-  package_registry: 'Package registry',
+  source_control: 'Git and CI',
+  package_registry: 'npm Package',
+  // premium: 'Premium',
   support: 'Support',
-  premium: 'Premium',
 };
 
 export const features = {
@@ -18,67 +18,51 @@ export const features = {
   },
   editor: {
     group: groups.collaboration,
-    label: 'Command-line and online-IDE',
+    label: 'Online IDE and Command-line',
   },
   share: {
     group: groups.collaboration,
     label: 'Instand share',
   },
-  preview: {
+  git: {
     group: groups.source_control,
-    label: 'Pull Requests Visual review',
+    label: 'GitHub & GitLab integrations',
   },
-  github: {
+  pr: {
     group: groups.source_control,
-    label: 'Github integration',
+    label: 'Visual review of Pull Requests',
   },
-  gitlab: {
+  visual_regressions: {
     group: groups.source_control,
-    label: 'Gitlab integration',
-  },
-  bitbucket: {
-    group: groups.source_control,
-    label: 'BitBucket (coming soon)',
+    label: 'Visual regression reports',
   },
   publish_public: {
     group: groups.package_registry,
-    label: 'Publish NPM @backlight-dev',
+    label: 'Publish on scope <code>@backlight-dev</code>',
+  },
+  publish_custom_scope: {
+    group: groups.package_registry,
+    label: 'Publish to any scope',
   },
   publish_custom_registry: {
     group: groups.package_registry,
-    label: 'Publish to any package registry',
+    label: 'Publish to any registry',
   },
   publish_private: {
     group: groups.package_registry,
-    label: 'Publish private/public packages',
+    label: 'Publish private packages',
   },
   support_community: {
     group: groups.support,
-    label: `<a class='icon' href='https://discord.gg/z7JUzhn' target="_blank">Community support</a>`,
+    label: `<a style="text-decoration: underline" href='https://discord.gg/z7JUzhn' target="_blank">Community support on Discord</a>`,
   },
   support_email: {
     group: groups.support,
     label: `Email support`,
   },
-  support_sla: {
+  support_premiumemail: {
     group: groups.support,
-    label: `Premium email support`,
-  },
-  ci_cd: {
-    group: groups.premium,
-    label: 'Continuous integration/delivery',
-  },
-  matrix_testing: {
-    group: groups.premium,
-    label: 'Test matrix automation',
-  },
-  // advanced_user_management: {
-  //   group: groups.premium,
-  //   label: 'Advanced user management (RBAC, SSO)',
-  // },
-  consulting: {
-    group: groups.premium,
-    label: 'Design system consulting',
+    label: `Email support with SLA`,
   },
 };
 
@@ -103,10 +87,12 @@ export const Free = {
     },
     features.editor,
     features.share,
-    features.github,
-    features.gitlab,
-    features.bitbucket,
-    features.preview,
+    features.git,
+    features.pr,
+    {
+      ...features.visual_regressions,
+      restriction: '100',
+    },
     features.publish_public,
     features.support_community,
   ],
@@ -131,8 +117,12 @@ export const Pro = {
       ...features.projects,
       highlight: true,
     },
-    features.ci_cd,
+    {
+      ...features.visual_regressions,
+      restriction: '1000',
+    },
     features.publish_custom_registry,
+    features.publish_custom_scope,
     features.publish_private,
     features.support_email,
   ],
@@ -148,11 +138,15 @@ export const Enterprise = {
   inherits: Pro,
   additionalFeatures: [
     {
-      ...features.support_sla,
+      restriction: 'Unlimited',
+      ...features.projects,
       highlight: true,
     },
-    features.matrix_testing,
-    features.consulting,
+    {
+      ...features.visual_regressions,
+      restriction: '∞',
+    },
+    features.support_premiumemail,
   ],
   price: {
     value: '499',
