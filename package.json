@@ -1,6 +1,6 @@
 {
   "name": "@divriots/lcd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "GPLV3",
   "scripts": {
     "serve": "npx backlight@latest serve 1SuMaEt5uxgp62VC8WVP --open"
