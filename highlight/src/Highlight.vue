@@ -52,7 +52,7 @@
           <!--"... and many more" card (LOTS of SVGs in here)-->
           <component
             :is="Card"
-            url="/starterkits"
+            url="/signin?redirect=/starterkits"
             style="background-color: #212121; z-index: 4"
             actionDescription="Explore"
           >

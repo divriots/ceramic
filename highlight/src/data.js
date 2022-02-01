@@ -9,7 +9,7 @@ export default [
     <li>Adaptive color system</li>
     <li>Dark mode support</li>
     </ul>`,
-    url: '/edit/xS11aQmjMLIvr5PU5Mru',
+    url: '/signin?redirect=/edit/xS11aQmjMLIvr5PU5Mru',
     bgImg: 'https://backlight.dev/assets/lib-white/fast.svg',
     highlighted: true,
     frameworks: new Map([
@@ -30,7 +30,7 @@ export default [
     <li>Style inspired by TailwindCSS</li>
     <li>Dark mode out-of-the-box</li>
     </ul>`,
-    url: '/edit/5vtJtbY04aoD1dGKcsu1',
+    url: '/signin?redirect=/edit/5vtJtbY04aoD1dGKcsu1',
     bgImg: 'https://backlight.dev/assets/lib-white/lit.svg',
     highlighted: true,
     frameworks: new Map([
@@ -51,7 +51,7 @@ export default [
     <li>40+ Components</li>
     <li>Stories and documentation sourced from Chakra directly</li>
     </ul>`,
-    url: '/edit/sNbJipmRTmslL3f8RZaO',
+    url: '/signin?redirect=/edit/sNbJipmRTmslL3f8RZaO',
     bgImg: 'https://backlight.dev/assets/lib-white/react.svg',
     highlighted: true,
     frameworks: new Map([
