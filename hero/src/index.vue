@@ -47,6 +47,7 @@ export default {
           apiScript.onload = () => {
             const sdk = new PlayerSdk('#hero-embedded-placeholder', {
               id: videoSrc,
+              hideControls: true,
               // ... other optional options, see https://docs.api.video/docs/video-player-sdk#method-2-typescript
             });
             resolve(sdk);
@@ -80,8 +81,7 @@ export default {
         if (isYoutube.value) {
           embeddedPlayer.stopVideo();
         } else if (isApiVideo.value) {
-          console.log('apivideo pause()');
-          embeddedPlayer.destroy();
+          embeddedPlayer.pause();
         } else {
           video.pause();
           video.currentTime = 0;
@@ -127,8 +127,7 @@ export default {
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
         v-if="isYoutube"
-        id="hero-embedded-video"
-        class="absolute hidden md:rounded-lg"
+        class="hero-embedded-video absolute hidden md:rounded-lg"
         ref="heroVideo"
         tabindex="-1"
       >
@@ -138,8 +137,7 @@ export default {
       </div>
       <div
         v-else-if="isApiVideo"
-        id="hero-embedded-video"
-        class="absolute hidden md:rounded-lg"
+        class="hero-embedded-video absolute hidden md:rounded-lg spinner"
         ref="heroVideo"
         tabindex="-1"
       >
@@ -236,6 +234,30 @@ export default {
   </section>
 </template>
 <style lang="scss" scoped>
+.spinner:before {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: spinner 1.2s linear infinite;
+  position: absolute;
+  left: 50%;
+  margin-left: -32px;
+  top: 50%;
+  margin-top: -32px;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .gradient .wrapper {
   min-height: 400px;
 
@@ -256,7 +278,7 @@ export default {
   z-index: 10;
 }
 
-#hero-embedded-video {
+.hero-embedded-video {
   width: 100%;
   max-width: 640px;
   z-index: 11;

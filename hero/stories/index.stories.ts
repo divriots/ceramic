@@ -20,5 +20,5 @@ export const youtubeVideo = () => ({
 //The id here is in a sandbox, will lead to nothing in 24 hours
 export const apiVideo = () => ({
   components: { Hero },
-  template: `<Hero videoType="apivideo" videoSrc="viAN7ZAGQDQu8QdXKnAlcjA" imgSrc="/img/landing/hero.png"/>`,
+  template: `<Hero videoType="apivideo" videoSrc="vi5SjuJEAtvnXFOSMzCp5gxC" imgSrc="/img/landing/hero.png"/>`,
 });
