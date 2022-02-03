@@ -18,11 +18,11 @@ export const pricingFAQ = [
   },
   {
     question: 'Does Backlight work in every browser?',
-    answer: `Backlight works on MSEdge/Safari/Firefox/Chrome and others chromium-based browsers`,
+    answer: `Backlight works on MSEdge/Safari/Firefox/Chrome and other chromium-based browsers.`,
   },
   {
     question:
       'Can I export or serve my components in every environment via the CLI?',
-    answer: `Yes. Our CLI works in Windows/MacOS/Linux`,
+    answer: `Yes. Our CLI works in Windows/MacOS/Linux.`,
   },
 ];
