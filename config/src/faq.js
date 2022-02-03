@@ -17,7 +17,7 @@ export const pricingFAQ = [
     answer: `Yes. We don't like lock-in. Your Design System is on your Git repository and you can always continue outside of Backlight.`,
   },
   {
-    question: 'Does the Backlight works in every browsers?',
+    question: 'Does Backlight work in every browser?',
     answer: `Backlight works on MSEdge/Safari/Firefox/Chrome and others chromium-based browsers`,
   },
   {
