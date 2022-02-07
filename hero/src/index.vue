@@ -47,9 +47,9 @@ export default {
           apiScript.onload = () => {
             const sdk = new PlayerSdk('#hero-embedded-placeholder', {
               id: videoSrc,
-              hideControls: true,
               // ... other optional options, see https://docs.api.video/docs/video-player-sdk#method-2-typescript
             });
+            sdk.setVolume(0.1);
             resolve(sdk);
           };
         });
