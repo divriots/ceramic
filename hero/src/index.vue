@@ -48,7 +48,6 @@ export default {
             const sdk = new PlayerSdk('#hero-embedded-placeholder', {
               id: videoSrc,
               hideControls: true,
-              muted: true,
               // ... other optional options, see https://docs.api.video/docs/video-player-sdk#method-2-typescript
             });
             sdk.mute();
