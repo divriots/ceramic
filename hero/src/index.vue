@@ -50,10 +50,10 @@ export default {
               hideControls: true,
               // ... other optional options, see https://docs.api.video/docs/video-player-sdk#method-2-typescript
             });
-            sdk.mute();
-            sdk.addEventListener('play', () =>
-              sdk.showControls(['volume', 'progressBar'])
-            );
+            sdk.addEventListener('ready', () => {
+              sdk.setVolume(0.2);
+              sdk.showControls(['volume', 'progressBar', 'fullscreen']);
+            });
             resolve(sdk);
           };
         });
