@@ -24,7 +24,7 @@ export default () => (
           in one click with one of our starter-kits
         </h2>
         <div className="flex mt-8 space-x-4">
-          <a href="/get-started" className="btn-primary" target="_blank">
+          <a href="/get-started" className="btn-primary">
             Get Started
           </a>
         </div>
