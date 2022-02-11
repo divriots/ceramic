@@ -6,6 +6,8 @@ export default {
     videoType: String,
     videoSrc: String,
     imgSrc: String,
+    imgHeight: String,
+    imgWidth: String,
   },
 
   setup({ videoType, videoSrc }) {
@@ -127,7 +129,7 @@ export default {
 </script>
 <template>
   <section class="gradient text-white hero w-full overflow-hidden my-8">
-    <div class="relative wrapper max-w-6xl mx-auto" style="height: 50rem">
+    <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
         v-if="isYoutube"
@@ -231,6 +233,8 @@ export default {
             class="rounded-lg md:w-max relative md:max-w-none md:h-full z-img"
             :src="imgSrc"
             loading="lazy"
+            :width="imgWidth"
+            :height="imgHeight"
           />
         </div>
       </div>
