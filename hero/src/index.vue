@@ -127,7 +127,7 @@ export default {
 </script>
 <template>
   <section class="gradient text-white hero w-full overflow-hidden my-8">
-    <div class="relative wrapper max-w-6xl mx-auto">
+    <div class="relative wrapper max-w-6xl mx-auto" style="height: 50rem">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
         v-if="isYoutube"
