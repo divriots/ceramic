@@ -25,4 +25,10 @@ export const pricingFAQ = [
       'Can I export or serve my components in every environment via the CLI?',
     answer: `Yes. Our CLI works in Windows/MacOS/Linux.`,
   },
+  {
+    question:
+      'How visual regressions are calculated',
+    answer: `Backlight counts the number of PRs and updates that are visually tested. It's independent of the number of components and stories. It resets every month.
+    Example: If you open 50 PRs and then update each PR 2x with new commits, Backlight counts these as 150 visual regression reports (50 + 50x2).`,
+  },
 ];
