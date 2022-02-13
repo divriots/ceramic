@@ -212,7 +212,7 @@ export default {
           :height="imgHeight"
         />
         <button
-          class="absolute btn-primary rounded-full p-4 w-16 left-1/2 top-1/2 hover-fix"
+          class="absolute btn-primary rounded-full p-4 w-16 left-1/2 md:left-1/4 lg:left-1/3 top-1/2 hover-fix"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
