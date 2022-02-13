@@ -1,22 +1,12 @@
 <script>
   import technologies from './technologies.js';
-
-  let rows, containerHeight;
-  const boxSize = 128;
-  function resize() {
-    rows = window.innerWidth > 600 ? 2 : 3; // 3 rows for mobile
-    containerHeight = rows * boxSize;
-  }
-
-  window.addEventListener('resize', resize);
-  resize();
 </script>
 
 <section class="text-center text-white bg-black-divriots px-8 pt-24 pb-16 relative">
   <h2 class="text-4xl sm:text-5xl lg:text-6xl">Bring your own <span class="text-primary">stack</span>
   </h2>
   <div class="infini-wrapper text-black-divriots mx-auto max-w-4xl my-32">
-    <infini-scroll drag-speed="1" scroll-interval="15" container-height={containerHeight} box-width={boxSize} row-amount="{rows}"
+    <infini-scroll drag-speed="1" scroll-interval="15" container-height="270" box-width="128" row-amount="2"
       follow-user-direction>
       {#each technologies as t, i}
       <figure class="technology relative p-6">
