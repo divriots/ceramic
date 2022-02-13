@@ -128,7 +128,7 @@ export default {
 };
 </script>
 <template>
-  <section class="gradient text-white hero w-full overflow-hidden my-8">
+  <section class="text-white hero w-full overflow-hidden">
     <div class="relative wrapper max-w-6xl mx-auto">
       <div id="hero-video-overlay" class="hidden" @click="stop"></div>
       <div
@@ -164,7 +164,7 @@ export default {
         <source :src="videoSrc" type="video/mp4" />
       </video>
       <div
-        class="z-10 lg:max-w-2xl lg:w-full self-center py-8 sm:py-12 md:py-16 lg:py-20 xl:py-28"
+        class="z-10 lg:max-w-2xl lg:w-full self-center my-8 sm:my-12 md:my-16 lg:my-20 xl:my-28"
       >
         <div class="flex justify-center px-4 md:pl-4 md:pr-16">
           <div class="text-left">
@@ -180,10 +180,9 @@ export default {
               and ship great Design Systems.
             </p>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
-              From code to documentation and npm package, Backlight is the
-              all-in-one devtool for Design Systems that empowers developers and
-              improves collaboration with designers, UX writers and product
-              owners.
+              Backlight helps you edit the code, review visually, instantly
+              collaborate with all team members, create a documentation sites
+              and release your package to npm.
             </p>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               Now, every team can afford a
@@ -205,38 +204,33 @@ export default {
           </div>
         </div>
       </div>
-      <div class="cursor-pointer px-4" @click="play">
-        <div
-          class="img-gradient rounded-lg flex items-center justify-center relative"
+      <div class="relative cursor-pointer px-4 mb-12 md:my-12" @click="play">
+        <img
+          class="rounded-lg md:w-max md:max-w-none md:h-full z-img"
+          :src="imgSrc"
+          :width="imgWidth"
+          :height="imgHeight"
+        />
+        <button
+          class="absolute btn-primary rounded-full p-4 w-16 left-1/2 top-1/2 hover-fix"
         >
-          <button
-            class="btn-primary rounded-full p-4 w-16 absolute lg:left-1/4 xl:left-1/2 hover-fix"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            class="ml-1"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 16 16"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true"
-              class="ml-1"
-              width="32"
-              height="32"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 16 16"
-            >
-              <g fill="#000000">
-                <path
-                  d="M3.78 2L3 2.41v12l.78.42l9-6V8l-9-6zM4 13.48V3.35l7.6 5.07L4 13.48z"
-                ></path>
-              </g>
-            </svg>
-          </button>
-          <img
-            class="rounded-lg md:w-max relative md:max-w-none md:h-full z-img"
-            :src="imgSrc"
-            loading="lazy"
-            :width="imgWidth"
-            :height="imgHeight"
-          />
-        </div>
+            <g fill="#000000">
+              <path
+                d="M3.78 2L3 2.41v12l.78.42l9-6V8l-9-6zM4 13.48V3.35l7.6 5.07L4 13.48z"
+              ></path>
+            </g>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -263,17 +257,6 @@ export default {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-.gradient .wrapper {
-  min-height: 400px;
-
-  display: grid;
-  grid-template-columns: 1fr;
-
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: 6fr 4fr;
   }
 }
 
@@ -332,6 +315,17 @@ export default {
   }
 }
 
+.wrapper {
+  min-height: 400px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 6fr 4fr;
+  }
+}
+
 #hero-video {
   left: 50%;
   outline: none;
@@ -362,44 +356,16 @@ export default {
   }
 }
 
-.img-video {
-  margin: 4px;
-
-  &:hover {
-    transform: scale(1.02);
-    transition: transform 0.2s;
-  }
-}
-
-.gradient.hero::before {
-  height: 1200px;
-}
-
 .z-img {
   z-index: -1;
 }
 
-.img-gradient {
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-@media (min-width: 768px) {
-  .img-gradient {
-    background: linear-gradient(
-      270deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-}
-.hover-fix:hover {
-  transform: scale(1.2);
+.hover-fix {
+  transform: translate(-50%, -50%);
   transition: transform 0.2s;
 }
-.hover-fix:hover::before {
-  opacity: 0;
+
+.hover-fix:hover {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 </style>
