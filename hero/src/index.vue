@@ -212,16 +212,14 @@ export default {
           :height="imgHeight"
         />
         <button
-          class="absolute btn-primary rounded-full p-4 w-16 left-1/2 md:left-1/4 lg:left-1/3 top-1/2 hover-fix"
+          class="absolute btn-primary rounded-full w-20 h-20 left-1/2 top-1/2 primary-btn-fix"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
-            class="ml-1"
-            width="32"
-            height="32"
-            preserveAspectRatio="xMidYMid meet"
+            class="m-auto"
+            width="40"
             viewBox="0 0 16 16"
           >
             <g fill="#000000">
@@ -236,6 +234,19 @@ export default {
   </section>
 </template>
 <style lang="scss" scoped>
+.hero {
+  background-image: #242424;
+  background-image: radial-gradient(
+      at 71% 77%,
+      hsla(0, 0%, 10%, 1) 0,
+      transparent 70%
+    ),
+    radial-gradient(at 69% 26%, hsla(47, 100%, 50%, 0.3) 0, transparent 50%),
+    radial-gradient(at 23% 28%, hsla(355, 90%, 60%, 0.3) 0, transparent 44%),
+    radial-gradient(at 36% 60%, hsla(295, 100%, 50%, 0.3) 0, transparent 41%),
+    radial-gradient(at 84% 48%, hsla(261, 100%, 50%, 0.3) 0, transparent 41%);
+}
+
 .spinner:before {
   content: ' ';
   display: block;
@@ -360,12 +371,23 @@ export default {
   z-index: -1;
 }
 
-.hover-fix {
+.primary-btn-fix {
   transform: translate(-50%, -50%);
   transition: transform 0.2s;
+  padding: 0;
+  padding-left: 5px;
+  @media only screen and (min-width: 768px) {
+    left: 30%;
+  }
+  @media only screen and (min-width: 1024px) {
+    left: 45%;
+  }
+  @media only screen and (min-width: 1280px) {
+    left: 60%;
+  }
 }
 
-.hover-fix:hover {
+.primary-btn-fix:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
 </style>
