@@ -187,7 +187,7 @@ export default {
             </svg>
           </button>
         </div>
-        <div class="extra-div" v-show="playing">
+        <div class="set-height" v-show="playing">
           <div class="video-players rounded-lg relative mx-auto">
             <div
               v-if="isYoutube"
@@ -323,7 +323,7 @@ export default {
     opacity: 0;
   }
 }
-.extra-div {
+.set-height {
   @media only screen and (min-width: 1024px) {
     min-height: 784px;
     display: flex;
