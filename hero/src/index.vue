@@ -129,7 +129,7 @@ export default {
       <div
         class="left-side z-10 lg:max-w-2xl lg:w-full my-8 sm:my-12 md:my-16 lg:my-20 xl:my-28"
       >
-        <div class="flex justify-start px-4 lg:mr-12">
+        <div class="flex justify-start px-4 lg:mr-24">
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
               <span class="text-primary whitespace-nowrap">
