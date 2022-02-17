@@ -16,10 +16,10 @@
     "vue": "^3.0.7"
   },
   "devDependencies": {
-    "@divriots/dockit-core": "^0.2.1",
-    "@mdx-js/vue": "^1.6.22",
+    "@divriots/dockit-core": "^0.6.7",
+    "vue-jsx-runtime": "^0.1.0",
     "@types/react": "^17.0.19",
     "aos": "^2.3.4",
-    "lit": "^2.0.0-rc.4"
+    "lit": "^2.1.4"
   }
 }
