@@ -47,7 +47,7 @@ export default [
         title: 'Live documentation',
         description: `<p>Create a live design system documentation. Showcase the components directly in the documentation, with playgrounds, properties and events directly from code.</p>
         <p>Everyone can contribute directly to documentation with instant online preview.</p>
-        <p>Backlight has built-in support for Markdown, MDX, MD Vue, and Nunjunk for documentation.</p>`,
+        <p>Backlight has built-in support for Markdown, MDX, MD Vue, and Nunjucks for documentation.</p>`,
         img: {
           src: imgLanding('referencesite.png'),
         },
