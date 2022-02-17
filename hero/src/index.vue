@@ -14,6 +14,7 @@ export default {
     const heroVideo = ref(null);
     const isYoutube = computed(() => videoType === 'youtube');
     const isApiVideo = computed(() => videoType === 'apivideo');
+    const playing = ref(false);
     let embeddedPlayer;
     let youtubeScript;
     let apiScript;
@@ -77,12 +78,10 @@ export default {
       heroVideo,
       isYoutube,
       isApiVideo,
+      playing,
       stop: () => {
+        playing.value = false;
         const video = heroVideo.value;
-        video.classList.add('hidden');
-        video.previousElementSibling.classList.add('hidden');
-        video.nextElementSibling.classList.remove('hidden');
-        video.blur();
 
         if (isYoutube.value) {
           embeddedPlayer.stopVideo();
@@ -95,10 +94,7 @@ export default {
       },
       play: async () => {
         const video = heroVideo.value;
-        video.classList.remove('hidden');
-        video.previousElementSibling.classList.remove('hidden');
-        video.nextElementSibling.classList.add('hidden');
-        video.focus();
+        playing.value = true;
 
         if (isYoutube.value) {
           embeddedPlayer = await loadYoutube();
@@ -129,44 +125,11 @@ export default {
 </script>
 <template>
   <section class="text-white hero w-full overflow-hidden">
-    <div class="relative wrapper max-w-6xl mx-auto">
-      <div id="hero-video-overlay" class="hidden" @click="stop"></div>
+    <div class="wrapper">
       <div
-        v-if="isYoutube"
-        class="hero-embedded-video absolute hidden md:rounded-lg"
-        ref="heroVideo"
-        tabindex="-1"
+        class="left-side z-10 lg:max-w-2xl lg:w-full my-8 sm:my-12 md:my-16 lg:my-20 xl:my-28"
       >
-        <div class="embedded-wrapper">
-          <div id="hero-embedded-placeholder"></div>
-        </div>
-      </div>
-      <div
-        v-else-if="isApiVideo"
-        class="hero-embedded-video absolute hidden md:rounded-lg spinner"
-        ref="heroVideo"
-        tabindex="-1"
-      >
-        <div class="embedded-wrapper">
-          <div id="hero-embedded-placeholder"></div>
-        </div>
-      </div>
-      <video
-        v-else
-        id="hero-video"
-        class="absolute hidden md:rounded-lg"
-        preload="none"
-        volume="0.3"
-        controls
-        @ended="stop"
-        ref="heroVideo"
-      >
-        <source :src="videoSrc" type="video/mp4" />
-      </video>
-      <div
-        class="z-10 lg:max-w-2xl lg:w-full self-center my-8 sm:my-12 md:my-16 lg:my-20 xl:my-28"
-      >
-        <div class="flex justify-center px-4 md:pl-4 md:pr-16">
+        <div class="flex justify-start px-4 lg:mr-24">
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
               <span class="text-primary whitespace-nowrap">
@@ -175,20 +138,8 @@ export default {
               <span class="flex items-center">Code-side</span>
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
-              <a href="/" class="text-primary">Backlight</a>
-              is a collaborative platform empowering front-end teams to build
-              and ship great Design Systems.
-            </p>
-            <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
-              Backlight helps you edit the code, review visually, instantly
-              collaborate with all team members, create a documentation sites
-              and release your package to npm.
-            </p>
-            <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
-              Now, every team can afford a
-              <a href="/mastery/what-is-a-design-system" class="text-primary">
-                Design System.
-              </a>
+              Backlight is a collaborative platform empowering front-end teams
+              to build and ship great Design Systems.
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
@@ -204,38 +155,89 @@ export default {
           </div>
         </div>
       </div>
-      <div class="relative cursor-pointer px-4 mb-12 md:my-12" @click="play">
-        <img
-          class="rounded-lg md:w-max md:max-w-none md:h-full z-img"
-          :src="imgSrc"
-          :width="imgWidth"
-          :height="imgHeight"
-        />
-        <button
-          class="absolute btn-primary rounded-full p-4 w-16 left-1/2 md:left-1/4 lg:left-1/3 top-1/2 hover-fix"
+
+      <div class="right-side">
+        <div
+          class="cursor-pointer relative px-4 mb-12 md:my-12"
+          @click="play"
+          v-show="!playing"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            class="ml-1"
-            width="32"
-            height="32"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
+          <img
+            class="rounded-lg lg:w-max lg:max-w-none lg:h-full z-img"
+            :src="imgSrc"
+            :width="imgWidth"
+            :height="imgHeight"
+          />
+          <button
+            class="absolute btn-primary rounded-full w-20 h-20 lg:w-28 lg:h-28 left-1/2 top-1/2 primary-btn-fix"
           >
-            <g fill="#000000">
-              <path
-                d="M3.78 2L3 2.41v12l.78.42l9-6V8l-9-6zM4 13.48V3.35l7.6 5.07L4 13.48z"
-              ></path>
-            </g>
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              class="m-auto w-10 lg:w-14"
+              viewBox="0 0 16 16"
+            >
+              <g fill="#000000">
+                <path
+                  d="M3.78 2L3 2.41v12l.78.42l9-6V8l-9-6zM4 13.48V3.35l7.6 5.07L4 13.48z"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="set-height" v-show="playing">
+          <div class="video-players rounded-lg relative mx-auto">
+            <div
+              v-if="isYoutube"
+              class="hero-embedded-video"
+              ref="heroVideo"
+              tabindex="-1"
+            >
+              <div class="embedded-wrapper">
+                <div id="hero-embedded-placeholder"></div>
+              </div>
+            </div>
+            <div
+              v-else-if="isApiVideo"
+              class="hero-embedded-video spinner"
+              ref="heroVideo"
+              tabindex="-1"
+            >
+              <div class="embedded-wrapper">
+                <div id="hero-embedded-placeholder"></div>
+              </div>
+            </div>
+            <video
+              v-else
+              id="hero-video"
+              preload="none"
+              volume="0.3"
+              controls
+              @ended="stop"
+              ref="heroVideo"
+            >
+              <source :src="videoSrc" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 <style lang="scss" scoped>
+.hero {
+  background-image: radial-gradient(
+      at 65% 75%,
+      hsla(0, 0%, 10%, 1) 0,
+      transparent 100%
+    ),
+    radial-gradient(at 65% 42%, hsla(47, 100%, 50%, 0.6) 0, transparent 50%),
+    radial-gradient(at 30% 35%, hsla(355, 90%, 60%, 0.4) 0, transparent 35%),
+    radial-gradient(at 34% 57%, hsla(295, 100%, 50%, 0.4) 0, transparent 50%),
+    radial-gradient(at 76% 53%, hsla(261, 100%, 50%, 0.6) 0, transparent 64%);
+}
+
 .spinner:before {
   content: ' ';
   display: block;
@@ -260,39 +262,24 @@ export default {
   }
 }
 
-#hero-video-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
+.wrapper {
+  min-height: 400px;
+  max-width: 90rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: 6fr 4fr;
+  }
 }
 
 .hero-embedded-video {
-  width: 100%;
-  max-width: 640px;
-  z-index: 11;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @media only screen and (min-width: 768px) {
-    left: 50%;
-    outline: none;
-    transform: translateX(-50%);
-    transition: display 0.1s ease-out;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    top: auto;
-    max-width: 768px;
-  }
-  @media only screen and (min-width: 1024px) {
-    max-width: 1024px;
-  }
-  @media only screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
+  border-radius: 0.5rem;
+  outline: none;
+  transition: display 0.1s ease-out;
+  overflow: hidden;
 
   .embedded-wrapper {
     width: 100%;
@@ -315,57 +302,61 @@ export default {
   }
 }
 
-.wrapper {
-  min-height: 400px;
-
-  display: grid;
-  grid-template-columns: 1fr;
-
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: 6fr 4fr;
+.right-side {
+  @media only screen and (min-width: 1024px) {
+    display: grid;
+    place-items: center;
   }
 }
 
 #hero-video {
-  left: 50%;
   outline: none;
-  transform: translate(-50%, -50%);
   transition: display 0.1s ease-out;
   z-index: 11;
   border-radius: 0.5rem;
   overflow: hidden;
-  max-width: 640px;
-  width: 100%;
-  top: 50%;
+  width: 36rem;
+  margin: 0 auto;
 
   &:not(.hidden) ~ * {
     transition: opacity 0.1s ease-out;
     opacity: 0;
   }
-
-  @media only screen and (min-width: 768px) {
-    transform: translateX(-50%);
-    top: auto;
-    max-width: 768px;
-  }
+}
+.set-height {
   @media only screen and (min-width: 1024px) {
-    max-width: 1024px;
+    min-height: 784px;
+    display: flex;
+    align-items: center;
+  }
+}
+.video-players {
+  padding: 0.5rem;
+  @media only screen and (min-width: 1024px) {
+    width: 28rem;
   }
   @media only screen and (min-width: 1280px) {
-    max-width: 1280px;
+    width: 42rem;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 50rem;
   }
 }
 
-.z-img {
-  z-index: -1;
-}
-
-.hover-fix {
+.primary-btn-fix {
   transform: translate(-50%, -50%);
   transition: transform 0.2s;
+  padding: 0;
+  padding-left: 5px;
+  @media only screen and (min-width: 1024px) {
+    left: 30%;
+  }
+  @media only screen and (min-width: 1280px) {
+    left: 55%;
+  }
 }
 
-.hover-fix:hover {
+.primary-btn-fix:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
 </style>
