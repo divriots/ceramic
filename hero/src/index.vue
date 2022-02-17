@@ -169,14 +169,13 @@ export default {
             :height="imgHeight"
           />
           <button
-            class="absolute btn-primary rounded-full w-20 h-20 left-1/2 top-1/2 primary-btn-fix"
+            class="absolute btn-primary rounded-full w-20 h-20 lg:w-28 lg:h-28 left-1/2 top-1/2 primary-btn-fix"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               aria-hidden="true"
-              class="m-auto"
-              width="40"
+              class="m-auto w-10 lg:w-14"
               viewBox="0 0 16 16"
             >
               <g fill="#000000">
@@ -350,10 +349,10 @@ export default {
   padding: 0;
   padding-left: 5px;
   @media only screen and (min-width: 1024px) {
-    left: 45%;
+    left: 30%;
   }
   @media only screen and (min-width: 1280px) {
-    left: 60%;
+    left: 55%;
   }
 }
 
