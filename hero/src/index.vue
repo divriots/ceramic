@@ -186,7 +186,7 @@ export default {
             </svg>
           </button>
         </div>
-        <div class="set-height" v-show="playing">
+        <div class="set-size" v-show="playing">
           <div class="video-players rounded-lg relative mx-auto">
             <div
               v-if="isYoutube"
@@ -323,7 +323,7 @@ export default {
     opacity: 0;
   }
 }
-.set-height {
+.set-size {
   @media only screen and (min-width: 1024px) {
     min-height: 784px;
     display: flex;
@@ -355,7 +355,9 @@ export default {
     left: 55%;
   }
 }
-
+.primary-btn-fix:hover::before {
+  display: none;
+}
 .primary-btn-fix:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
