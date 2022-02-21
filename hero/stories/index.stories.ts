@@ -20,5 +20,5 @@ export const youtubeVideo = () => ({
 
 export const apiVideo = () => ({
   components: { Hero },
-  template: `<Hero videoType="apivideo" videoSrc="vi5SjuJEAtvnXFOSMzCp5gxC" imgSrc="/img/landing/hero.png" imgWidth="1280" imgHeight="784"/>`,
+  template: `<Hero videoType="apivideo" videoSrc="vi5SjuJEAtvnXFOSMzCp5gxC" imgSrc="/img/landing/hero.png" highRes="/img/landing/designlink.png 2x" imgWidth="1280" imgHeight="784"/>`,
 });

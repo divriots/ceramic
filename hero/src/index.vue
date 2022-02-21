@@ -6,6 +6,7 @@ export default {
     videoType: String,
     videoSrc: String,
     imgSrc: String,
+    highRes: String,
     imgHeight: String,
     imgWidth: String,
   },
@@ -165,6 +166,7 @@ export default {
           <img
             class="rounded-lg lg:w-max lg:max-w-none lg:h-full z-img"
             :src="imgSrc"
+            :srcset="highRes"
             :width="imgWidth"
             :height="imgHeight"
           />
