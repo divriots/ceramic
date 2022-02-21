@@ -164,7 +164,7 @@ export default {
           v-show="!playing"
         >
           <img
-            class="rounded-lg lg:w-max lg:max-w-none lg:h-full z-img"
+            class="rounded-lg lg:max-w-none"
             :src="imgSrc"
             :srcset="highRes"
             :width="imgWidth"
@@ -189,7 +189,7 @@ export default {
           </button>
         </div>
         <div class="set-size" v-show="playing">
-          <div class="video-players rounded-lg relative mx-auto">
+          <div class="video-players px-4 rounded-lg relative">
             <div
               v-if="isYoutube"
               class="hero-embedded-video"
@@ -318,7 +318,6 @@ export default {
   border-radius: 0.5rem;
   overflow: hidden;
   width: 36rem;
-  margin: 0 auto;
 
   &:not(.hidden) ~ * {
     transition: opacity 0.1s ease-out;
@@ -333,7 +332,6 @@ export default {
   }
 }
 .video-players {
-  padding: 0.5rem;
   @media only screen and (min-width: 1024px) {
     width: 28rem;
   }
