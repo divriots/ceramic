@@ -358,7 +358,7 @@ div.gradient::before {
   }
 }
 .primary-btn-fix:hover::before {
-  display: none;
+  display: none !important;
 }
 .primary-btn-fix:hover {
   transform: translate(-50%, -50%) scale(1.2);
