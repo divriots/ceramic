@@ -3,7 +3,7 @@ import '~/tailwind';
 
 export default {
   parameters: {
-    backgrounds: { default: 'black' },
+    // backgrounds: { default: 'black' },
     layout: 'fullscreen',
   },
 };
