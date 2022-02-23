@@ -124,8 +124,8 @@ export default {
 };
 </script>
 <template>
-  <section class="text-white hero w-full overflow-hidden">
-    <div class="wrapper">
+  <section class="text-white w-full overflow-hidden">
+    <div class="wrapper gradient">
       <div
         class="left-side z-10 lg:max-w-2xl lg:w-full my-8 sm:my-12 md:my-16 lg:my-20 xl:my-28"
       >
@@ -163,7 +163,7 @@ export default {
           v-show="!playing"
         >
           <img
-            class="rounded-lg lg:w-max lg:max-w-none lg:h-full z-img"
+            class="img-size rounded-lg lg:w-max lg:h-full"
             :src="imgSrc"
             :width="imgWidth"
             :height="imgHeight"
@@ -226,16 +226,14 @@ export default {
   </section>
 </template>
 <style lang="scss" scoped>
-.hero {
-  background-image: radial-gradient(
-      at 65% 75%,
-      hsla(0, 0%, 10%, 1) 0,
-      transparent 100%
-    ),
-    radial-gradient(at 65% 42%, hsla(47, 100%, 50%, 0.6) 0, transparent 50%),
-    radial-gradient(at 30% 35%, hsla(355, 90%, 60%, 0.4) 0, transparent 35%),
-    radial-gradient(at 34% 57%, hsla(295, 100%, 50%, 0.4) 0, transparent 50%),
-    radial-gradient(at 76% 53%, hsla(261, 100%, 50%, 0.6) 0, transparent 64%);
+div.gradient::before {
+  height: 100%;
+}
+
+.img-size {
+  @media only screen and (min-width: 1024px) {
+    max-width: 250%;
+  }
 }
 
 .spinner:before {
@@ -349,10 +347,14 @@ export default {
   padding: 0;
   padding-left: 5px;
   @media only screen and (min-width: 1024px) {
-    left: 30%;
+    left: 60%;
+    top: 55%;
   }
   @media only screen and (min-width: 1280px) {
-    left: 55%;
+    left: 70%;
+  }
+  @media only screen and (min-width: 1600px) {
+    left: 90%;
   }
 }
 
