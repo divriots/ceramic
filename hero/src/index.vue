@@ -6,6 +6,7 @@ export default {
     videoType: String,
     videoSrc: String,
     imgSrc: String,
+    highRes: String,
     imgHeight: String,
     imgWidth: String,
   },
@@ -165,6 +166,7 @@ export default {
           <img
             class="img-size rounded-lg lg:w-max lg:h-full"
             :src="imgSrc"
+            :srcset="highRes"
             :width="imgWidth"
             :height="imgHeight"
           />
@@ -186,8 +188,8 @@ export default {
             </svg>
           </button>
         </div>
-        <div class="set-height" v-show="playing">
-          <div class="video-players rounded-lg relative mx-auto">
+        <div class="set-size" v-show="playing">
+          <div class="video-players px-4 rounded-lg relative">
             <div
               v-if="isYoutube"
               class="hero-embedded-video"
@@ -314,14 +316,13 @@ div.gradient::before {
   border-radius: 0.5rem;
   overflow: hidden;
   width: 36rem;
-  margin: 0 auto;
 
   &:not(.hidden) ~ * {
     transition: opacity 0.1s ease-out;
     opacity: 0;
   }
 }
-.set-height {
+.set-size {
   @media only screen and (min-width: 1024px) {
     min-height: 784px;
     display: flex;
@@ -329,7 +330,6 @@ div.gradient::before {
   }
 }
 .video-players {
-  padding: 0.5rem;
   @media only screen and (min-width: 1024px) {
     width: 28rem;
   }
@@ -357,7 +357,9 @@ div.gradient::before {
     left: 90%;
   }
 }
-
+.primary-btn-fix:hover::before {
+  display: none;
+}
 .primary-btn-fix:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
