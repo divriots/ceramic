@@ -153,11 +153,6 @@ export default {
 };
 </script>
 <style lang="scss">
-footer {
-  background-color: #171717;
-  z-index: -10;
-}
-
 .newsletter {
   background-color: #262626;
 }
@@ -181,8 +176,8 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
   margin: 0 -5%;
+  pointer-events: none;
 }
 
 .get-started-img {
@@ -196,7 +191,7 @@ footer {
 
 div.gradient::before {
   height: 150%;
-  margin-top: -15rem;
+  margin-top: -10rem;
 }
 
 .links {
