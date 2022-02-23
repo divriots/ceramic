@@ -1,5 +1,5 @@
 <template>
-  <footer class="gradient text-white relative overflow-hidden">
+  <footer class="text-white relative overflow-hidden">
     <div class="newsletter">
       <form
         :action="subscribe"
@@ -58,73 +58,75 @@
         <img class="get-started-img w-full" :src="imgSrc" />
       </div>
     </div>
-    <div
-      class="max-w-7xl mx-auto my-12 sm:my-20 links flex flex-col sm:flex-row text-white"
-    >
-      <div class="flex flex-col m-4 lg:m-0 mb-8 sm:mb-4">
-        <img
-          class="w-24"
-          src="/assets/logo/bkl.svg"
-          alt="Backlight logo"
-          loading="lazy"
-        />
-        <a class="mt-2" href="https://divRIOTS.com">
-          by
+    <div class="relative w-full">
+      <div
+        class="max-w-7xl mx-auto py-12 sm:py-20 links flex flex-col sm:flex-row text-white"
+      >
+        <div class="gradient flex flex-col m-4 lg:m-0 mb-8 sm:mb-4">
           <img
-            class="h-4 inline"
-            src="/img/divriots.svg"
-            alt="‹div›RIOTS logo"
+            class="w-24"
+            src="/assets/logo/bkl.svg"
+            alt="Backlight logo"
             loading="lazy"
           />
-        </a>
-        <div class="copyright my-8">
-          Copyright © 2021 Backlight. All rights reserved.
-        </div>
-        <div class="flex">
-          <component :is="Discord"></component>
-          <component :is="Twitter"></component>
-          <component :is="LinkedIn"></component>
-          <component :is="Github"></component>
-          <component :is="YouTube"></component>
-          <component :is="Rss"></component>
-        </div>
-      </div>
-      <div class="cols">
-        <div class="col lg:pl-20">
-          <label>Links</label>
-          <template v-for="route in linksRoutes" :key="route.pathname">
-            <a :href="route.pathname">{{ route.label }}</a>
-          </template>
-        </div>
-        <div class="col">
-          <label>Support</label>
-          <template v-for="route in supportRoutes" :key="route.pathname">
-            <a :href="route.pathname">{{ route.label }}</a>
-          </template>
-        </div>
-        <div class="col">
-          <label>Get in touch</label>
-          <a
-            href="https://calendly.com/backlight_/demo"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            class="btn-outline demo"
-          >
-            Book a demo
-          </a>
-          <a
-            href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
-            target="_blank"
-            class="mt-4"
-          >
+          <a class="mt-2" href="https://divRIOTS.com">
+            by
             <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=312123&theme=light"
-              alt="Backlight - Make design systems that front-end teams want to use | Product Hunt"
-              width="250"
-              height="54"
+              class="h-4 inline"
+              src="/img/divriots.svg"
+              alt="‹div›RIOTS logo"
               loading="lazy"
             />
           </a>
+          <div class="copyright my-8">
+            Copyright © 2021 Backlight. All rights reserved.
+          </div>
+          <div class="flex">
+            <component :is="Discord"></component>
+            <component :is="Twitter"></component>
+            <component :is="LinkedIn"></component>
+            <component :is="Github"></component>
+            <component :is="YouTube"></component>
+            <component :is="Rss"></component>
+          </div>
+        </div>
+        <div class="cols">
+          <div class="col lg:pl-20">
+            <label>Links</label>
+            <template v-for="route in linksRoutes" :key="route.pathname">
+              <a :href="route.pathname">{{ route.label }}</a>
+            </template>
+          </div>
+          <div class="col">
+            <label>Support</label>
+            <template v-for="route in supportRoutes" :key="route.pathname">
+              <a :href="route.pathname">{{ route.label }}</a>
+            </template>
+          </div>
+          <div class="col">
+            <label>Get in touch</label>
+            <a
+              href="https://calendly.com/backlight_/demo"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="btn-outline demo"
+            >
+              Book a demo
+            </a>
+            <a
+              href="https://www.producthunt.com/posts/backlight?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-backlight"
+              target="_blank"
+              class="mt-4"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=312123&theme=light"
+                alt="Backlight - Make design systems that front-end teams want to use | Product Hunt"
+                width="250"
+                height="54"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -151,6 +153,11 @@ export default {
 };
 </script>
 <style lang="scss">
+footer {
+  background-color: #171717;
+  z-index: -10;
+}
+
 .newsletter {
   background-color: #262626;
 }
@@ -162,9 +169,9 @@ export default {
 }
 
 .get-started {
-  background-color: #171717;
   overflow: hidden;
   padding: 5rem 1rem 0 1rem;
+  background-color: #171717;
 }
 
 .shadow {
@@ -187,8 +194,9 @@ export default {
   }
 }
 
-footer.gradient::before {
-  height: 125%;
+div.gradient::before {
+  height: 150%;
+  margin-top: -15rem;
 }
 
 .links {
