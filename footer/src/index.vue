@@ -100,7 +100,7 @@
         </div>
         <div class="cols">
           <div class="col lg:pl-20">
-            Links
+            <p>Links</p>
             <ul>
               <template v-for="route in linksRoutes" :key="route.pathname">
                 <li>
@@ -110,7 +110,7 @@
             </ul>
           </div>
           <div class="col">
-            Support
+            <p>Support</p>
             <ul>
               <template v-for="route in supportRoutes" :key="route.pathname">
                 <li>
@@ -120,7 +120,7 @@
             </ul>
           </div>
           <div class="col">
-            Get in touch
+            <p>Get in touch</p>
             <a
               href="https://calendly.com/backlight_/demo"
               target="_blank"
@@ -164,6 +164,7 @@ export default {
     imgSrc: { type: String, required: true },
   },
   setup() {
+    console.log('ehh', linksRoutes);
     return { Twitter, Discord, Logo, YouTube, Rss };
   },
 };
@@ -234,10 +235,13 @@ div.gradient::before {
   .col {
     display: flex;
     flex-direction: column;
-    font-size: 1.25rem;
-    margin-bottom: 16px;
     @media only screen and (max-width: 800px) {
       padding: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
     }
 
     li {
