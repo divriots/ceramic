@@ -164,7 +164,6 @@ export default {
     imgSrc: { type: String, required: true },
   },
   setup() {
-    console.log('ehh', linksRoutes);
     return { Twitter, Discord, Logo, YouTube, Rss };
   },
 };
