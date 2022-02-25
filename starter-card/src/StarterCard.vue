@@ -13,7 +13,7 @@
   >
     <div v-if="wip" class="wip-ribbon"><span>in progress...</span></div>
     <div :class="{ logo: true }">
-      <img :src="versioned(heroImg)" loading="lazy" />
+      <img :src="versioned(heroImg)" loading="lazy" alt="Starter hero image" />
     </div>
     <div class="details">
       <p class="description">
@@ -23,7 +23,7 @@
     <div class="powered-by" v-if="frameworks.size > 0">
       <span>{{ highlighted ? 'powered by' : 'featuring' }}</span>
       <span v-for="[name, logo] in frameworks" :key="name">
-        <img :src="versioned(logo)" />
+        <img :src="versioned(logo)" alt="Powered by technology" />
         {{ name }}
       </span>
     </div>
@@ -33,6 +33,7 @@
         <img
           :src="versioned(ownerPhoto)"
           :style="`opacity: ${ownerPhoto ? '1' : '0'}`"
+          alt="Made by owner photo"
         />
         {{ owner }}
       </span>
