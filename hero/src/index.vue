@@ -165,6 +165,7 @@ export default {
         >
           <img
             class="img-size rounded-lg lg:w-max lg:h-full"
+            alt="Backlight interface image placeholder"
             :src="imgSrc"
             :srcset="highRes"
             :width="imgWidth"
@@ -172,6 +173,7 @@ export default {
           />
           <button
             class="absolute btn-primary rounded-full w-20 h-20 lg:w-28 lg:h-28 left-1/2 top-1/2 primary-btn-fix"
+            aria-label="Play button"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

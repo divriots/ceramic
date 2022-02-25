@@ -15,10 +15,13 @@
             <span class="text-primary">our</span>
             newsletter
           </label>
-          <label class="block text-sm text-gray-light mt-2">
+          <p
+            id="member_email_help_text"
+            class="block text-sm text-gray-light mt-2"
+          >
             Monthly updates on new features, new starter-kits and our latest
             articles about building great Design Systems.
-          </label>
+          </p>
         </div>
         <div
           class="flex flex-col space-y-4 sm:space-y-0 mt-4 sm:flex-row sm:w-1/2 sm:gap-4 sm:items-center"
@@ -27,6 +30,7 @@
             type="email"
             name="member[email]"
             id="member_email"
+            aria-describedby="member_email_help_text"
             placeholder="Enter your e-mail"
             required
             autocomplete="off"
@@ -46,16 +50,20 @@
     <div class="get-started flex-col relative" v-if="version === 'homepage'">
       <div class="shadow"></div>
       <div class="max-w-7xl mx-auto">
-        <p class="text-3xl sm:text-5xl sm:w-1/2 mb-8">
+        <h2 class="text-3xl sm:text-5xl sm:w-1/2 mb-8">
           Get started with Backlight today
-        </p>
+        </h2>
         <a
           class="link text-base text-primary"
           href="https://backlight.dev/studio"
         >
           Sign up for a free account >
         </a>
-        <img class="get-started-img w-full" :src="imgSrc" />
+        <img
+          alt="Backlight interface image"
+          class="get-started-img w-full"
+          :src="imgSrc"
+        />
       </div>
     </div>
     <div class="relative w-full">
@@ -92,19 +100,27 @@
         </div>
         <div class="cols">
           <div class="col lg:pl-20">
-            <label>Links</label>
-            <template v-for="route in linksRoutes" :key="route.pathname">
-              <a :href="route.pathname">{{ route.label }}</a>
-            </template>
+            Links
+            <ul>
+              <template v-for="route in linksRoutes" :key="route.pathname">
+                <li>
+                  <a :href="route.pathname">{{ route.label }}</a>
+                </li>
+              </template>
+            </ul>
           </div>
           <div class="col">
-            <label>Support</label>
-            <template v-for="route in supportRoutes" :key="route.pathname">
-              <a :href="route.pathname">{{ route.label }}</a>
-            </template>
+            Support
+            <ul>
+              <template v-for="route in supportRoutes" :key="route.pathname">
+                <li>
+                  <a :href="route.pathname">{{ route.label }}</a>
+                </li>
+              </template>
+            </ul>
           </div>
           <div class="col">
-            <label>Get in touch</label>
+            Get in touch
             <a
               href="https://calendly.com/backlight_/demo"
               target="_blank"
@@ -218,19 +234,21 @@ div.gradient::before {
   .col {
     display: flex;
     flex-direction: column;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
     @media only screen and (max-width: 800px) {
       padding: 2rem;
     }
 
-    label {
-      font-size: 1.25rem;
-      margin-bottom: 16px;
+    li {
+      margin-top: 1rem;
     }
 
-    a {
-      margin-top: 1rem;
+    li a {
+      font-size: 17px;
       color: #99999b;
     }
+
     .demo {
       margin-top: 16px;
       padding: 0.3rem;

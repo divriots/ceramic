@@ -2,7 +2,12 @@ import React from 'react';
 
 const StarterKit = ({ name, href, imgSrc }) => (
   <a href={href} key={name} className="inline-flex items-center p-2 space-x-2">
-    <img className="w-8 h-8" src={imgSrc} loading="lazy" />
+    <img
+      className="w-8 h-8"
+      src={imgSrc}
+      loading="lazy"
+      alt="Starter kit image"
+    />
     <span>{name}</span>
   </a>
 );
