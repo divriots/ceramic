@@ -76,3 +76,22 @@ short_version.args = {
   ...routes,
   ...baseArgs,
 };
+
+export const picture_sets = Template.bind({});
+picture_sets.args = {
+  ...routes,
+  ...baseArgs,
+  imgSrc: '',
+  version: 'homepage',
+  // Last item should be the fallback, otherwise first supported format is chosen
+  pictureSets: [
+    {
+      type: 'webp',
+      src: '/img/landing/Footer_illustration.webp',
+    },
+    {
+      type: 'png',
+      src: '/img/landing/hero.png',
+    },
+  ],
+};

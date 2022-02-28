@@ -59,7 +59,20 @@
         >
           Sign up for a free account >
         </a>
+        <picture v-if="pictureSets.length > 1">
+          <source
+            v-for="pic of pictureSets.slice(0, pictureSets.length - 1)"
+            :srcset="pic.src"
+            :type="`image/${pic.type}`"
+          />
+          <img
+            class="get-started-img w-full"
+            :src="pictureSets[pictureSets.length - 1].src"
+            alt="Backlight interface image"
+          />
+        </picture>
         <img
+          v-if="imgSrc"
           alt="Backlight interface image"
           class="get-started-img w-full"
           :src="imgSrc"
@@ -162,6 +175,7 @@ export default {
     subscribe: { type: String, required: true },
     version: { type: String, default: '' },
     imgSrc: { type: String, required: true },
+    pictureSets: { type: Array, default: [] },
   },
   setup() {
     return { Twitter, Discord, Logo, YouTube, Rss };
