@@ -50,14 +50,14 @@
     <div class="get-started flex-col relative" v-if="version === 'homepage'">
       <div class="shadow"></div>
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl sm:text-5xl sm:w-1/2 mb-8">
-          Get started with Backlight today
+        <h2 class="text-3xl sm:text-5xl sm:w-3/4 mb-8">
+          Create your design system with Backlight today
         </h2>
         <a
           class="link text-base text-primary"
           href="https://backlight.dev/studio"
         >
-          Sign up for a free account >
+          Sign up >
         </a>
         <picture v-if="pictureSets.length > 1">
           <source
