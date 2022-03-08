@@ -1,4 +1,4 @@
-import { LitElement, html, css, unsafeCSS } from 'lit';
+import { LitElement, ScopedStylesController, html, css } from '@lion/core';
 import '@divriots/infini-scroll/define';
 import technologies from './technologies.js';
 
@@ -78,10 +78,7 @@ export class LcdCompatibility extends LitElement {
     super();
     this.boxSize = 128;
     this.boundResize = this.resize.bind(this);
-    this.scopedClass = `${this.localName}-${Math.floor(Math.random() * 10000)}`;
-    // When Safari finally supports replace/replaceSync on constructable stylesheet,
-    // we can use this instead of imperatively adding a <style> tag
-    this.__styleTag = document.createElement('style');
+    this.scopedStylesController = new ScopedStylesController(this);
   }
 
   createRenderRoot() {
@@ -92,14 +89,11 @@ export class LcdCompatibility extends LitElement {
     super.connectedCallback();
     window.addEventListener('resize', this.boundResize);
     this.resize();
-    this.classList.add(this.scopedClass);
-    this.__setupStyleTag();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     window.removeEventListener('resize', this.boundResize);
-    this.__teardownStyleTag();
   }
 
   render() {
@@ -146,17 +140,6 @@ export class LcdCompatibility extends LitElement {
         </div>
       </section>
     `;
-  }
-
-  __setupStyleTag() {
-    this.__styleTag.textContent = this.constructor
-      .scopedStyles(unsafeCSS(this.scopedClass))
-      .toString();
-    this.insertBefore(this.__styleTag, this.childNodes[0]);
-  }
-
-  __teardownStyleTag() {
-    this.removeChild(this.__styleTag);
   }
 
   resize() {
