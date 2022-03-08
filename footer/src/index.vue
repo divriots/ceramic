@@ -79,7 +79,8 @@
             />
           </a>
           <div class="copyright my-8">
-            Copyright © 2021 Backlight. All rights reserved.
+            Copyright © {{ new Date().getFullYear() }} Backlight. All rights
+            reserved.
           </div>
           <div class="flex">
             <component :is="Discord"></component>

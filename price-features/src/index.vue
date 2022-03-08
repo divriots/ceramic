@@ -1,9 +1,9 @@
 <template>
-  <ul class="flex-grow border-t-2 border-b-2 border-gray-divriots py-8">
+  <ul class="flex-grow border-t-2 text-gray-light py-8">
     <li class="mb-4 flex items-center text-left" v-if="inherits">
       <div class="flex-shrink-0">
         <svg
-          class="h-6 w-6 text-teal-500"
+          class="h-6 w-6 text-primary"
           stroke="currentColor"
           fill="none"
           viewBox="0 0 24 24"
@@ -16,7 +16,9 @@
           ></path>
         </svg>
       </div>
-      <p class="ml-3 text-base font-bold">All {{ inherits.title }} features</p>
+      <p class="ml-3 text-base font-bold text-white">
+        All {{ inherits.title }} features
+      </p>
     </li>
     <li
       class="mb-4 flex items-center text-left"
@@ -25,7 +27,7 @@
     >
       <div class="flex-shrink-0">
         <svg
-          class="h-6 w-6 text-teal-500"
+          class="h-6 w-6 text-primary"
           stroke="currentColor"
           fill="none"
           viewBox="0 0 24 24"
@@ -39,7 +41,7 @@
         </svg>
       </div>
       <p
-        :class="`ml-3 text-base font-medium ${
+        :class="`ml-3 text-base font-light text-white ${
           feature.highlight ? 'font-bold' : ''
         }`"
         v-html="

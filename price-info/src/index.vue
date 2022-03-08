@@ -1,72 +1,75 @@
 <template>
   <div
     :class="`price-info relative flex flex-col ${
-      highlight ? 'highlight' : 'lg:pt-12'
+      highlight ? 'highlight' : 'lg:pb-5'
     }`"
   >
-    <div
-      class="flex bg-secondary rounded-md shadow-inset-control"
-      v-if="highlight"
-    >
-      <button
-        :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
-          period === 'year' ? 'text-secondary bg-white' : ''
-        }`"
-        @click="period = 'year'"
+    <header class="text-4xl flex flex-col py-4">
+      <span
+        class="font-light font-display text-primary text-2xl col-span-2 py-6"
       >
-        Yearly (-20%)
-      </button>
-      <button
-        :class="`flex-grow btn focus:ring-offset-0 focus:ring-0 ${
-          period === 'month' ? 'text-secondary bg-white' : ''
-        }`"
-        @click="period = 'month'"
+        {{ title }}
+      </span>
+      <span class="font-light text-lg pb-6 text-gray-light">{{ legend }}</span>
+      <span
+        class="flex flex-grow items-end tracking-tight font-semibold text-white"
       >
-        Monthly
-      </button>
-    </div>
-    <header class="py-4 text-3xl flex flex-col mx-auto items-center">
-      <span class="font-semibold font-display col-span-2">{{ title }}</span>
-      <span class="flex flex-grow items-center tracking-tight font-medium">
-        <template v-if="price && price.value >= 0">
-          <span class="mr-2">{{ price.symbol }}</span>
+        <template v-if="price && price.value > 0">
+          <span class="mr-2 text-white">{{ price.symbol }}</span>
           <span aria-label="Subscription Price">{{ value * count }}</span>
-          <span class="ml-1 text-sm opacity-50 font-semibold tracking-wide">
-            / month
+          <span class="ml-1 text-white text-sm opacity-50 tracking-wide pb-2">
+            per month
           </span>
         </template>
-        <span v-else class="text-lg mt-2">{{ price.value }}</span>
+        <span v-else class="text-4xl text-white">
+          {{ price.value }}
+        </span>
       </span>
       <div class="flex items-center" v-if="price && price.unit">
         <div class="flex text-sm items-center" v-if="price && price.unit">
-          <button class="btn-secondary m-2 p-2" @click="count > 1 && count--">
+          <button class="btn-primary m-2 p-2" @click="count > 1 && count--">
             -
           </button>
           <span class="tabular-nums">{{ count }}</span>
-          <button class="btn-secondary m-2 p-2" @click="count++">+</button>
+          <button class="btn-primary m-2 p-2" @click="count++">+</button>
         </div>
         <span class="text-sm px-2">{{ price.unit }}</span>
       </div>
+      <div class="flex">
+        <component
+          v-if="highlight"
+          :is="Switch"
+          title=""
+          name=""
+          toggled="true"
+          @click="period === 'year' ? (period = 'month') : (period = 'year')"
+        />
+        <span
+          v-if="highlight && period === 'year'"
+          class="font-light text-sm text-gray-light"
+        >
+          Yearly (save 20%)
+        </span>
+        <span
+          v-if="highlight && period === 'month'"
+          class="font-light text-sm text-gray-light"
+        >
+          Monthly
+        </span>
+      </div>
     </header>
     <p
-      class="
-        bg-black-divriots
-        text-white
-        font-semibold
-        text-center
-        rounded-md
-        py-1
-      "
+      class="bg-black-divriots text-white font-semibold text-center rounded-md py-1"
       v-if="banner"
     >
       {{ banner }}
     </p>
-    <span class="mx-auto">{{ legend }}</span>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue';
+import Switch from '../../switch/src/switch.vue';
 export default {
   props: {
     title: { type: String },
@@ -89,6 +92,7 @@ export default {
     return {
       count,
       period,
+      Switch,
     };
   },
 };

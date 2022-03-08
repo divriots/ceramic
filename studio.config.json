@@ -17,6 +17,7 @@
         "atoms",
         [
           "button",
+          "switch",
           "main-title",
           "main-subtitle",
           "logo",
