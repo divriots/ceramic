@@ -77,7 +77,7 @@ export class LcdCompatibility extends LitElement {
   constructor() {
     super();
     this.boxSize = 128;
-    this.boundResize = this.resize.bind(this);
+    this.boundOnResize = this.onResize.bind(this);
     this.scopedStylesController = new ScopedStylesController(this);
   }
 
@@ -87,13 +87,13 @@ export class LcdCompatibility extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('resize', this.boundResize);
-    this.resize();
+    window.addEventListener('resize', this.boundOnResize);
+    this.onResize();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('resize', this.boundResize);
+    window.removeEventListener('resize', this.boundOnResize);
   }
 
   render() {
@@ -142,7 +142,7 @@ export class LcdCompatibility extends LitElement {
     `;
   }
 
-  resize() {
+  onResize() {
     this.rows = window.innerWidth > 600 ? 2 : 3; // 3 rows for mobile
     this.containerHeight = this.rows * this.boxSize;
   }
