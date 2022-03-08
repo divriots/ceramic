@@ -67,10 +67,10 @@ export const features = {
 };
 
 export const Free = {
-  title: 'Free',
+  title: 'Starter',
   legend: 'Discover Backlight',
   price: {
-    value: '0',
+    value: 'Free',
     currency: 'EUR',
     symbol: '€',
   },
@@ -105,6 +105,7 @@ export const Free = {
 
 export const Pro = {
   title: 'Pro',
+  legend: 'Take it to the next level',
   price: {
     value: '149',
     symbol: '$',
@@ -135,6 +136,12 @@ export const Pro = {
 
 export const Enterprise = {
   title: 'Enterprise',
+  legend: 'Cover all your needs',
+  price: {
+    value: '499',
+    symbol: '$',
+    currency: 'USD',
+  },
   inherits: Pro,
   additionalFeatures: [
     {
@@ -148,15 +155,9 @@ export const Enterprise = {
     },
     features.support_premiumemail,
   ],
-  price: {
-    value: '499',
-    symbol: '$',
-    currency: 'USD',
-    style: 'text-decoration: line-through',
-  },
   action: {
     label: 'Contact us',
     url: 'mailto:hello@backlight.dev',
-    type: 'primary',
+    type: 'outline',
   },
 };

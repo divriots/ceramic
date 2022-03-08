@@ -1,5 +1,8 @@
 <template>
-  <div class="relative rounded-lg shadow-lg p-6 flex flex-col">
+  <div
+    class="relative rounded-lg shadow-lg p-6 flex flex-col"
+    :class="title === 'Pro' ? 'bk-gradient' : 'bg-gray-darker'"
+  >
     <component
       :is="PriceInfo"
       :title="title"
@@ -7,20 +10,22 @@
       :price="price"
       :banner="banner"
     />
-    <component
-      :is="PriceFeatures"
-      :inherits="inherits"
-      :additionalFeatures="additionalFeatures"
-    />
-    <div class="mt-8 flex flex-col items-center gap-4">
+    <div class="my-8 flex flex-col gap-4">
       <a
         :href="action.url"
-        class="btn bg-background text-base font-display text-secondary"
+        class="btn flex-grow text-center font-display"
+        :class="title === 'Pro' ? 'btn-primary' : 'btn-outline'"
       >
         {{ action.label }}
       </a>
       <span class="opacity-75 text-sm">{{ action.legend }}</span>
     </div>
+    <component
+      :is="PriceFeatures"
+      :inherits="inherits"
+      :additionalFeatures="additionalFeatures"
+      style="z-index: 1"
+    />
   </div>
 </template>
 
@@ -49,5 +54,22 @@ export default {
 
 .shadow-inset-control > button {
   border-radius: 0.25rem;
+}
+
+.bk-gradient:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-color: #171717;
+  background-image: radial-gradient(at 65% 75%, #171717 0, transparent 100%),
+    radial-gradient(at 65% 42%, hsla(47, 100%, 50%, 0.7) 0, transparent 50%),
+    radial-gradient(at 30% 35%, hsla(355, 90%, 60%, 0.7) 0, transparent 35%),
+    radial-gradient(at 34% 57%, hsla(295, 100%, 50%, 0.7) 0, transparent 50%),
+    radial-gradient(at 76% 53%, hsla(261, 100%, 50%, 0.7) 0, transparent 64%);
 }
 </style>
