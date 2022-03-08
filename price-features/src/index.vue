@@ -41,8 +41,8 @@
         </svg>
       </div>
       <p
-        :class="`ml-3 text-base font-light text-white ${
-          feature.highlight ? 'font-bold' : ''
+        :class="`ml-3 text-base text-white ${
+          feature.highlight ? 'font-bold' : 'font-light'
         }`"
         v-html="
           (feature.restriction ? `${feature.restriction} ` : '') +

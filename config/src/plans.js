@@ -136,7 +136,7 @@ export const Pro = {
 
 export const Enterprise = {
   title: 'Enterprise',
-  legend: 'On demand',
+  legend: 'Cover all your needs',
   price: {
     value: '499',
     symbol: '$',
