@@ -1,5 +1,8 @@
-import Compatibility from '../src/index.svelte';
+import { html } from 'lit';
 import '~/tailwind';
-import 'https://unpkg.com/@divriots/infini-scroll@0.3.3/infini-scroll.js';
+import '../src/index.js';
 
-export const story1 = () => Compatibility;
+export const story1 = () =>
+  html`
+    <lcd-compatibility></lcd-compatibility>
+  `;

@@ -6,9 +6,11 @@
     "serve": "npx backlight@latest serve 1SuMaEt5uxgp62VC8WVP --open"
   },
   "dependencies": {
+    "@divriots/infini-scroll": "^0.3.6",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
     "@tailwindcss/typography": "^0.4.1",
+    "@lion/core": "^0.21.1",
     "deepmerge": "^4.2.2",
     "tailwindcss": "^2.2.9",
     "react": "^17.0.2",
