@@ -15,10 +15,13 @@
             <span class="text-primary">our</span>
             newsletter
           </label>
-          <label class="block text-sm text-gray-light mt-2">
+          <p
+            id="member_email_help_text"
+            class="block text-sm text-gray-light mt-2"
+          >
             Monthly updates on new features, new starter-kits and our latest
             articles about building great Design Systems.
-          </label>
+          </p>
         </div>
         <div
           class="flex flex-col space-y-4 sm:space-y-0 mt-4 sm:flex-row sm:w-1/2 sm:gap-4 sm:items-center"
@@ -27,6 +30,7 @@
             type="email"
             name="member[email]"
             id="member_email"
+            aria-describedby="member_email_help_text"
             placeholder="Enter your e-mail"
             required
             autocomplete="off"
@@ -46,16 +50,33 @@
     <div class="get-started flex-col relative" v-if="version === 'homepage'">
       <div class="shadow"></div>
       <div class="max-w-7xl mx-auto">
-        <p class="text-3xl sm:text-5xl sm:w-1/2 mb-8">
-          Get started with Backlight today
-        </p>
+        <h2 class="text-3xl sm:text-5xl sm:w-3/4 mb-8">
+          Create your design system with Backlight today
+        </h2>
         <a
           class="link text-base text-primary"
           href="https://backlight.dev/studio"
         >
-          Sign up for a free account >
+          Sign up >
         </a>
-        <img class="get-started-img w-full" :src="imgSrc" />
+        <picture v-if="pictureSets.length > 1">
+          <source
+            v-for="pic of pictureSets.slice(0, pictureSets.length - 1)"
+            :srcset="pic.src"
+            :type="`image/${pic.type}`"
+          />
+          <img
+            class="get-started-img w-full"
+            :src="pictureSets[pictureSets.length - 1].src"
+            alt="Backlight interface image"
+          />
+        </picture>
+        <img
+          v-if="imgSrc"
+          alt="Backlight interface image"
+          class="get-started-img w-full"
+          :src="imgSrc"
+        />
       </div>
     </div>
     <div class="relative w-full">
@@ -93,19 +114,27 @@
         </div>
         <div class="cols">
           <div class="col lg:pl-20">
-            <label>Links</label>
-            <template v-for="route in linksRoutes" :key="route.pathname">
-              <a :href="route.pathname">{{ route.label }}</a>
-            </template>
+            <p>Links</p>
+            <ul>
+              <template v-for="route in linksRoutes" :key="route.pathname">
+                <li>
+                  <a :href="route.pathname">{{ route.label }}</a>
+                </li>
+              </template>
+            </ul>
           </div>
           <div class="col">
-            <label>Support</label>
-            <template v-for="route in supportRoutes" :key="route.pathname">
-              <a :href="route.pathname">{{ route.label }}</a>
-            </template>
+            <p>Support</p>
+            <ul>
+              <template v-for="route in supportRoutes" :key="route.pathname">
+                <li>
+                  <a :href="route.pathname">{{ route.label }}</a>
+                </li>
+              </template>
+            </ul>
           </div>
           <div class="col">
-            <label>Get in touch</label>
+            <p>Get in touch</p>
             <a
               href="https://calendly.com/backlight_/demo"
               target="_blank"
@@ -147,6 +176,7 @@ export default {
     subscribe: { type: String, required: true },
     version: { type: String, default: '' },
     imgSrc: { type: String, required: true },
+    pictureSets: { type: Array, default: [] },
   },
   setup() {
     return { Twitter, Discord, Logo, YouTube, Rss };
@@ -223,15 +253,20 @@ div.gradient::before {
       padding: 2rem;
     }
 
-    label {
+    p {
       font-size: 1.25rem;
       margin-bottom: 16px;
     }
 
-    a {
+    li {
       margin-top: 1rem;
+    }
+
+    li a {
+      font-size: 17px;
       color: #99999b;
     }
+
     .demo {
       margin-top: 16px;
       padding: 0.3rem;

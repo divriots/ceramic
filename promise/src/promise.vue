@@ -23,6 +23,7 @@ export default {
   >
     <div class="h-80 w-80 sm:w-96 sm:h-96 xl:h-128 xl:w-128">
       <img
+        alt="Descriptive image of the promise"
         v-if="img"
         :src="img.src"
         loading="lazy"

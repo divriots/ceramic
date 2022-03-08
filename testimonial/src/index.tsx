@@ -6,7 +6,11 @@ import { setupDragHandling } from '../../highlight/src/drag-handling';
 
 function Testimonial({ title, subtitle, comments }) {
   useEffect(() => {
-    setupScrollArrows('testimonial-left-paddle', 'testimonial-right-paddle', 'testimonial-container');
+    setupScrollArrows(
+      'testimonial-left-paddle',
+      'testimonial-right-paddle',
+      'testimonial-container'
+    );
     setupDragHandling('testimonial-container');
   }, []);
   return (
@@ -39,7 +43,7 @@ function Testimonial({ title, subtitle, comments }) {
 
           {/*Title and subtitle*/}
           <div className="relative z-10 pt-16 max-w-96 sm:w-96 lg:ml-24">
-            <h1 className="text-4xl sm:text-5xl">{title}</h1>
+            <h2 className="text-4xl sm:text-5xl">{title}</h2>
             <p className="my-4">{subtitle}</p>
           </div>
         </div>
@@ -60,7 +64,10 @@ function Testimonial({ title, subtitle, comments }) {
               d="M5.928 7.976l4.357 4.357-.618.62L5 8.284v-.618L9.667 3l.618.619-4.357 4.357z"
             />
           </svg>
-          <article id="testimonial-container" className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible">
+          <article
+            id="testimonial-container"
+            className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible"
+          >
             {/*Column 1*/}
             <div className="flex lg:block lg:ml-24">
               {/*Testimonial 1*/}
@@ -89,7 +96,7 @@ function Testimonial({ title, subtitle, comments }) {
             <div className="lg:hidden w-0"></div>
           </article>
           <svg
-          id="testimonial-right-paddle"
+            id="testimonial-right-paddle"
             className="lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="16"

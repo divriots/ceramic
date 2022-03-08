@@ -5,7 +5,7 @@ function DoubtRemovers() {
   return (
     <section className="bg-black-divriots text-white px-8 py-12 -my-2">
       <article className="md:px-20 overflow-hidden">
-        <h3
+        <h2
           data-aos="fade-left"
           className="main-title text-center my-10 sm:my-20"
           dangerouslySetInnerHTML={{ __html: content.data.title }}
