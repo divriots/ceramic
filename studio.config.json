@@ -17,6 +17,7 @@
         "atoms",
         [
           "button",
+          "link",
           "main-title",
           "main-subtitle",
           "logo",
@@ -26,7 +27,6 @@
           "navmenu-item",
           "card",
           "dropdown",
-          "testimonial-card",
           "rss"
         ]
       ],
@@ -45,6 +45,7 @@
           "hero",
           "navbar",
           "starter-card",
+          "testimonial-card",
           "price"
         ]
       ],
