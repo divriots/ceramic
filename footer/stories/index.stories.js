@@ -63,6 +63,12 @@ const routes = {
   ],
 };
 
+export const base_version = Template.bind({});
+base_version.args = {
+  ...routes,
+  ...baseArgs,
+};
+
 export const home_version = Template.bind({});
 home_version.args = {
   ...routes,
@@ -71,10 +77,12 @@ home_version.args = {
   version: 'homepage',
 };
 
-export const short_version = Template.bind({});
-short_version.args = {
+export const plain_version = Template.bind({});
+plain_version.args = {
   ...routes,
   ...baseArgs,
+  imgSrc: '/img/landing/hero.png',
+  version: 'plain',
 };
 
 export const picture_sets = Template.bind({});

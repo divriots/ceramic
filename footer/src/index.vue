@@ -1,6 +1,6 @@
 <template>
   <footer class="text-white relative overflow-hidden">
-    <div class="newsletter">
+    <div v-if="version !== 'plain'" class="newsletter">
       <form
         :action="subscribe"
         method="post"
