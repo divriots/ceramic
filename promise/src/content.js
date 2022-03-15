@@ -12,7 +12,7 @@ export default [
       //   everything is in one place, visually accessible by anyone.</p>
       //   <p>Developers and designers can work together on the Design System code-side.</p>`,
       //   img: {
-      //     src: imgLanding('promise_visual.png'),
+      //     src: imgLanding('promise_visual.webp'),
       //   },
       //   // action: {
       //   //   label: 'Look at one of the starter-kits',
@@ -25,7 +25,7 @@ export default [
         It's easy for anyone to discover the component catalog and contribute
         to the Design System right away.</p>`,
         img: {
-          src: imgLanding('code-and-stories.png'),
+          src: imgLanding('code-and-stories.webp'),
         },
         // action: {
         //   label: 'Look at one of the starter-kits',
@@ -36,7 +36,7 @@ export default [
         title: 'Storybook stories',
         description: `<p>Backlight support Storybook stories out-of-the-box. Display your stories next to your code for perfect Developers / Designers alignment.</p>`,
         img: {
-          src: imgLanding('storybook_integration.png'),
+          src: imgLanding('storybook_integration.webp'),
         },
         // action: {
         //   label: 'Look at one of the starter-kits',
@@ -49,7 +49,7 @@ export default [
         <p>Everyone can contribute directly to documentation with instant online preview.</p>
         <p>Backlight has built-in support for Markdown, MDX, MD Vue, and Nunjucks for documentation.</p>`,
         img: {
-          src: imgLanding('referencesite.png'),
+          src: imgLanding('referencesite.webp'),
         },
         // action: {
         //   label: 'Reference site demo',
@@ -61,7 +61,7 @@ export default [
         description: `<p>Keep the preview of the design next to the components. Streamline collaboration between developers and designers.</p>
         <p>Figma, Sketch and Adobe Xd supported.</p>`,
         img: {
-          src: imgLanding('designlink.png'),
+          src: imgLanding('designlink.webp'),
         },
         // action: {
         //   label: 'Reference site demo',
@@ -73,7 +73,7 @@ export default [
         description: `<p>Create and run test sets. Ensure quality and accessibility over time.</p>
         <p>Backlight has a built-in test runner and reporter for effortless test checks and contributions.</p>`,
         img: {
-          src: imgLanding('tests.png'),
+          src: imgLanding('tests.webp'),
         },
         // action: {
         //   label: 'Look at one of the starter-kits',
