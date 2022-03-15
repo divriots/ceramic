@@ -40,25 +40,30 @@ function padLeftHandler() {
   });
 }
 
+function computeMenuItemWidth() {
+  menuFullSize = menuContainer.scrollWidth;
+  menuItemWidth = menuFullSize / menuContainer.childElementCount;
+}
+
 function setupListeners() {
+  window.addEventListener('resize', computeMenuItemWidth);
   window.addEventListener('resize', handlePaddleButtons);
   menuContainer.addEventListener('scroll', handlePaddleButtons);
   rightPaddle.addEventListener('click', padRightHandler);
   leftPaddle.addEventListener('click', padLeftHandler);
 }
 
-export function setupScrollArrows( leftId, rightId, containerId) {
+export function setupScrollArrows(leftId, rightId, containerId) {
   leftPaddle = document.getElementById(leftId);
   rightPaddle = document.getElementById(rightId);
   menuContainer = document.getElementById(containerId);
-  menuFullSize = menuContainer.scrollWidth;
-  menuItemWidth = menuFullSize / menuContainer.childElementCount;
-
+  computeMenuItemWidth();
   setupListeners();
   handlePaddleButtons();
 }
 
 export function teardownScrollArrows() {
+  window.removeEventListener('resize', computeMenuItemWidth);
   window.removeEventListener('resize', handlePaddleButtons);
   menuContainer.removeEventListener('scroll', handlePaddleButtons);
   rightPaddle.removeEventListener('click', padRightHandler);
