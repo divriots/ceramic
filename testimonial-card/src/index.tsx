@@ -1,8 +1,9 @@
 import React from 'react';
+import './styles.scss';
 
 function TestimonialCard({ comment }) {
   return (
-    <div className="bg-gray-darker font-light text-lg text-white rounded-lg px-4 lg:px-8 py-5 flex flex-col lg:flex-row my-6 w-64 lg:w-96">
+    <div className="box-shadow bg-gray-darker font-light text-lg text-white rounded-lg px-4 lg:px-8 py-5 flex flex-col lg:flex-row my-6 w-64 lg:w-96">
       <svg
         width="18"
         height="18"

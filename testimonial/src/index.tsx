@@ -14,11 +14,11 @@ function Testimonial({ comments, featured }) {
     setupDragHandling('testimonial-container');
   }, []);
   return (
-    <section className="bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg py-12 -my-2">
+    <section className="top-box-shadow bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg py-12 -my-2">
       <div className="w-full">
         <div className="relative flex justify-center">
           {/*Title and subtitle*/}
-          <div className="relative z-10 pt-16 sm:w-96 text-center">
+          <div className="relative z-10 pt-16 px-8 text-center">
             <h2 className="text-5xl font-semibold">
               Real <span className="text-primary">people</span>, great feedback
             </h2>
@@ -45,8 +45,8 @@ function Testimonial({ comments, featured }) {
           </svg>
           <article
             id="testimonial-container"
-            className={`flex items-center max-w-full overflow-x-scroll ml-4 ${
-              comments.length <= 4 ? '2xl:justify-center' : ''
+            className={`flex items-center max-w-full overflow-x-scroll pl-8 pr-4 ${
+              comments.length <= 5 ? '2xl:justify-center' : ''
             }`}
           >
             {comments.map((comment, index: number) => (
