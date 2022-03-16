@@ -3,14 +3,14 @@ const imgLanding = (asset) => `https://backlight.dev/img/landing/${asset}?v1`;
 export default [
   {
     classes: 'text-primary',
-    title: '<span class="text-secondary">All-in-one</span> Design System tool',
+    title: '<span class="text-secondary">All-in-one</span> design system tool',
     layout: 'vertical',
     promises: [
       // {
       //   title: 'Visual component library',
       //   description: `<p>From design tokens to complex components,
       //   everything is in one place, visually accessible by anyone.</p>
-      //   <p>Developers and designers can work together on the Design System code-side.</p>`,
+      //   <p>Developers and designers can work together on the design system code-side.</p>`,
       //   img: {
       //     src: imgLanding('promise_visual.webp'),
       //   },
@@ -23,7 +23,7 @@ export default [
         title: 'Code and preview',
         description: `<p>Your component library is visually organized.
         It's easy for anyone to discover the component catalog and contribute
-        to the Design System right away.</p>`,
+        to the design system right away.</p>`,
         img: {
           src: imgLanding('code-and-stories.webp'),
         },

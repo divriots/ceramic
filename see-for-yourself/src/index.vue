@@ -7,11 +7,11 @@ export default {
   <section class="font-space-grotesk">
     <div class="sm:flex md:justify-center sm:px-16 bg-gray-darker text-white">
       <div class="flex-col md:max-w-lg xl:max-w-md p-4 sm:my-auto">
-        <h2 class="font-light mb-4 text-2xl md:text-2xl lg:text-4xl">
+        <h2 class="font-semibold mb-4 text-3xl lg:text-5xl">
           See it for yourself
         </h2>
         <p
-          class="text-gray-light text-sm sm:text-normal lg:text-lg leading-normal"
+          class="font-light text-gray-light text-sm sm:text-normal lg:text-lg leading-normal"
         >
           You can start today with getting to know Backlight, or we can show all
           its features to you and your team, no strings attached.
