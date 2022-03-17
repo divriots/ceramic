@@ -77,23 +77,14 @@ export class LcdCompatibility extends LitElement {
   constructor() {
     super();
     this.boxSize = 128;
-    this.boundOnResize = this.onResize.bind(this);
+    this.rows = 3;
+    // 7 is some extra spacing for the hover text that goes underneath the figure
+    this.containerHeight = this.rows * this.boxSize + 7;
     this.scopedStylesController = new ScopedStylesController(this);
   }
 
   createRenderRoot() {
     return this;
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
-    window.addEventListener('resize', this.boundOnResize);
-    this.onResize();
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-    window.removeEventListener('resize', this.boundOnResize);
   }
 
   render() {
@@ -140,11 +131,6 @@ export class LcdCompatibility extends LitElement {
         </div>
       </section>
     `;
-  }
-
-  onResize() {
-    this.rows = window.innerWidth > 600 ? 2 : 3; // 3 rows for mobile
-    this.containerHeight = this.rows * this.boxSize;
   }
 }
 
