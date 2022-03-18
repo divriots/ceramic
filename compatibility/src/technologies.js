@@ -101,7 +101,6 @@ export default [
     name: 'Open Props',
     logo: assetRef('lib/open-props.svg'),
   },
-  ,
   {
     name: 'Twind',
     logo: assetRef('lib/twind.png'),
