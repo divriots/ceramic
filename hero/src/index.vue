@@ -145,12 +145,12 @@ export default {
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
               <a
-                href="https://calendly.com/backlight_/demo"
+                href="https://calendly.com/backlight_/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 class="btn-outline demo"
               >
-                Book a demo
+                Book a call
               </a>
             </div>
           </div>
