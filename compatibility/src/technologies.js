@@ -10,12 +10,24 @@ export default [
     logo: assetRef('lang/ts.svg'),
   },
   {
+    name: 'Alpine',
+    logo: assetRef('lib/alpine.png'),
+  },
+  {
     name: 'Angular',
     logo: assetRef('lib/angular.svg'),
   },
   {
+    name: 'Astro',
+    logo: assetRef('lib/astro.svg'),
+  },
+  {
     name: 'React',
     logo: assetRef('lib/react.svg'),
+  },
+  {
+    name: 'React Native',
+    logo: assetRef('lib/react-native.png'),
   },
   {
     name: 'Vue',
@@ -72,6 +84,50 @@ export default [
   {
     name: 'Storybook',
     logo: assetRef('lib/storybook.svg'),
+  },
+  {
+    name: 'System UI',
+    logo: assetRef('lib/system-ui.svg'),
+  },
+  {
+    name: 'Style Dictionary',
+    logo: assetRef('lib/style-dictionary.png'),
+  },
+  {
+    name: 'Styled Components',
+    logo: assetRef('lib/styled-components.png'),
+  },
+  {
+    name: 'Open Props',
+    logo: assetRef('lib/open-props.svg'),
+  },
+  {
+    name: 'Twind',
+    logo: assetRef('lib/twind.png'),
+  },
+  {
+    name: 'CSS Modules',
+    logo: assetRef('lib/css-modules.png'),
+  },
+  {
+    name: 'Emotion',
+    logo: assetRef('lib/emotion.png'),
+  },
+  {
+    name: 'Mithril',
+    logo: assetRef('lib/mithril.svg'),
+  },
+  {
+    name: 'NextJS',
+    logo: assetRef('lib/nextjs.svg'),
+  },
+  {
+    name: 'Nuxt',
+    logo: assetRef('lib/nuxt.svg'),
+  },
+  {
+    name: 'Nunjucks',
+    logo: assetRef('lib/nunjucks.svg'),
   },
   {
     name: 'LWC',
