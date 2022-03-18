@@ -297,6 +297,10 @@ div.gradient::before {
   }
 }
 
+.left-side {
+  justify-self: center;
+}
+
 .right-side {
   height: auto;
 
