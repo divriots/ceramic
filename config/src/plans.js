@@ -13,8 +13,8 @@ export const features = {
   },
   projects: {
     group: groups.collaboration,
-    label: 'Design Systems',
-    labelSingular: 'Design System',
+    label: 'design systems',
+    labelSingular: 'design system',
   },
   editor: {
     group: groups.collaboration,

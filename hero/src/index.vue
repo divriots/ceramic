@@ -134,13 +134,13 @@ export default {
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
               <span class="text-primary whitespace-nowrap">
-                Design Systems,
+                Design systems,
               </span>
               <span class="flex items-center">Code-side</span>
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               Backlight is a collaborative platform empowering front-end teams
-              to build and ship great Design Systems.
+              to build and ship great design systems.
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>

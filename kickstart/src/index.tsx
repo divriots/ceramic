@@ -25,7 +25,7 @@ export default () => (
       <div className="w-64 sm:w-80 xl:w-96 text-left">
         <h2 className="font-semibold mx-auto text-3xl">
           Kickstart your{' '}
-          <span className="text-primary whitespace-nowrap">Design System</span>{' '}
+          <span className="text-primary whitespace-nowrap">design system</span>{' '}
           in one click with one of our starter-kits
         </h2>
         <div className="flex mt-8 space-x-4">
