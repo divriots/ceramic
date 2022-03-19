@@ -134,37 +134,37 @@ export default {
           <div class="text-left">
             <h1 class="main-title font-semibold leading-normal">
               <span class="text-primary whitespace-nowrap">
-                Design Systems,
+                Design systems,
               </span>
               <span class="flex items-center">Code-side</span>
             </h1>
             <p class="main-subtitle mt-3 sm:mt-5 sm:mx-auto md:mt-5 lg:mx-0">
               Backlight is a collaborative platform empowering front-end teams
-              to build and ship great Design Systems.
+              to build and ship great design systems.
             </p>
             <div class="flex mt-8 space-x-8">
               <a class="btn-primary" href="/get-started">Get Started</a>
               <a
-                href="https://calendly.com/backlight_/demo"
+                href="https://calendly.com/backlight_/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 class="btn-outline demo"
               >
-                Book a demo
+                Book a call
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="right-side">
+      <div class="right-side lg:py-12">
         <div
-          class="cursor-pointer relative px-4 mb-12 md:my-12"
+          class="red cursor-pointer relative h-full"
           @click="play"
           v-show="!playing"
         >
           <img
-            class="img-size rounded-lg lg:w-max lg:h-full"
+            class="img-size rounded-lg"
             alt="Backlight interface image placeholder"
             :src="imgSrc"
             :srcset="highRes"
@@ -234,12 +234,6 @@ div.gradient::before {
   height: 100%;
 }
 
-.img-size {
-  @media only screen and (min-width: 1024px) {
-    max-width: 250%;
-  }
-}
-
 .spinner:before {
   content: ' ';
   display: block;
@@ -265,8 +259,7 @@ div.gradient::before {
 }
 
 .wrapper {
-  min-height: 400px;
-  max-width: 90rem;
+  height: auto;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -304,10 +297,23 @@ div.gradient::before {
   }
 }
 
+.left-side {
+  justify-self: center;
+}
+
 .right-side {
+  height: auto;
+
   @media only screen and (min-width: 1024px) {
     display: grid;
     place-items: center;
+    height: 720px;
+
+    .img-size {
+      width: 960px;
+      max-width: 960px;
+      height: auto;
+    }
   }
 }
 
@@ -349,14 +355,14 @@ div.gradient::before {
   padding: 0;
   padding-left: 5px;
   @media only screen and (min-width: 1024px) {
-    left: 60%;
+    left: 30%;
     top: 55%;
   }
   @media only screen and (min-width: 1280px) {
-    left: 70%;
+    left: 40%;
   }
   @media only screen and (min-width: 1600px) {
-    left: 90%;
+    left: 50%;
   }
 }
 .primary-btn-fix:hover::before {

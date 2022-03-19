@@ -3,19 +3,19 @@
     <!--Section Title-->
     <h2 class="main-title text-white px-4">
       Kickstart your
-      <span class="text-primary whitespace-nowrap">Design System</span>
+      <span class="text-primary whitespace-nowrap">design system</span>
     </h2>
     <!--Section Subtitle-->
     <p class="text-lg text-white p-4 mb-4 leading-relaxed">
       <a class="text-primary" href="/">Backlight</a>
-      provides Design System examples to help you jump in.
+      provides design system examples to help you jump in.
       <br />
       Select the one with your preferred technology or
       <a href="/edit/dsPyB9DWNnBvDP17EMGC" class="text-primary">
         start from scratch
       </a>
     </p>
-    <!--Design system cards container-->
+    <!--design system cards container-->
     <div class="bg-black-divriots py-40 mt-64"></div>
     <div id="highlight-wrapper">
       <!--Paddles for horizontal scrolling, will not show if all cards are already visible on screen-->
@@ -36,7 +36,7 @@
       </svg>
 
       <div id="highlight-container">
-        <!--Design system cards (data.js)-->
+        <!--design system cards (data.js)-->
         <component
           :is="StarterCard"
           v-for="kit of kits.filter(({ highlight }) => !highlight)"
