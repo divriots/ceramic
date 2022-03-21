@@ -4,7 +4,7 @@ import './styles.scss';
 import { setupScrollArrows } from '../../highlight/src/scroll-arrows';
 import { setupDragHandling } from '../../highlight/src/drag-handling';
 
-// foo
+// foo bar qux
 
 function Testimonial({ comments, featured }) {
   useEffect(() => {
