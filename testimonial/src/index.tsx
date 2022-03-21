@@ -4,7 +4,7 @@ import './styles.scss';
 import { setupScrollArrows } from '../../highlight/src/scroll-arrows';
 import { setupDragHandling } from '../../highlight/src/drag-handling';
 
-function Testimonial({ title, subtitle, comments }) {
+function Testimonial({ comments, featured }) {
   useEffect(() => {
     setupScrollArrows(
       'testimonial-left-paddle',
@@ -14,47 +14,26 @@ function Testimonial({ title, subtitle, comments }) {
     setupDragHandling('testimonial-container');
   }, []);
   return (
-    <section className="bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg px-8 py-12 -my-2 flex justify-center">
-      <div className="w-full lg:w-auto">
-        <div className="relative lg:w-920">
-          {/*Big quote mark*/}
-          <svg
-            width="143"
-            height="120"
-            viewBox="0 0 143 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute"
-          >
-            <g opacity="0.3" clipPath="url(#clip0)">
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M142.373 18.7419C121.049 29.1541 110.387 41.3882 110.387 55.4447C119.476 56.4859 126.992 60.1735 132.934 66.5076C138.877 72.8417 141.849 80.1735 141.849 88.5033C141.849 97.3536 138.965 104.816 133.197 110.889C127.428 116.963 120.175 120 111.435 120C101.647 120 93.1701 116.052 86.0037 108.156C78.8374 100.26 75.2542 90.6725 75.2542 79.3926C75.2542 45.553 94.306 19.089 132.41 0L142.373 18.7419ZM67.1186 18.7419C45.6196 29.1541 34.8702 41.3882 34.8702 55.4447C44.134 56.4859 51.7373 60.1735 57.6801 66.5076C63.6229 72.8417 66.5943 80.1735 66.5943 88.5033C66.5943 97.3536 63.6666 104.816 57.8112 110.889C51.9557 116.963 44.6584 120 35.919 120C26.1308 120 17.6973 116.052 10.6184 108.156C3.53942 100.26 0 90.6725 0 79.3926C0 45.553 18.9643 19.089 56.8935 0L67.1186 18.7419Z"
-                fill="#008594"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="143" height="120" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-
+    <section className="top-box-shadow bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg py-12 -my-2">
+      <div className="w-full">
+        <div className="relative flex justify-center">
           {/*Title and subtitle*/}
-          <div className="relative z-10 pt-16 max-w-96 sm:w-96 lg:ml-24">
-            <h2 className="text-4xl sm:text-5xl">{title}</h2>
-            <p className="my-4">{subtitle}</p>
+          <div className="relative z-10 pt-16 px-8 text-center">
+            <h2 className="text-5xl font-semibold">
+              Real <span className="text-primary">people</span>, great feedback
+            </h2>
+            <p className="my-4 text-lg font-light text-gray-light">
+              This is what our users think
+            </p>
           </div>
         </div>
-
+        {/*Wrapper for horizontal scroll and scroll arrows*/}
         <div id="testimonial-wrapper">
           <svg
             id="testimonial-left-paddle"
-            className="lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="20"
+            height="20"
             viewBox="0 0 16 16"
             fill="currentColor"
           >
@@ -66,41 +45,22 @@ function Testimonial({ title, subtitle, comments }) {
           </svg>
           <article
             id="testimonial-container"
-            className="flex lg:grid lg:grid-cols-2 max-w-full lg:w-920 overflow-x-scroll lg:overflow-visible"
+            className={`flex items-center max-w-full overflow-x-scroll pl-8 pr-4 ${
+              comments.length <= 5 ? '2xl:justify-center' : ''
+            }`}
           >
-            {/*Column 1*/}
-            <div className="flex lg:block lg:ml-24">
-              {/*Testimonial 1*/}
-              <div className="w-64">
-                <TestimonialCard comment={comments[0]} />
+            {/*Testimonials*/}
+            {comments.map((comment, index: number) => (
+              <div className="w-64 mr-4 lg:mr-40">
+                <TestimonialCard comment={comment} />
               </div>
-              {/*Testimonial 2*/}
-              <div className="mx-4 lg:mx-0 w-64">
-                <TestimonialCard comment={comments[1]} />
-              </div>
-            </div>
-            {/*Trick div to make scroll-arrows scroll the right amount*/}
-            <div className="lg:hidden w-0"></div>
-            {/*Column 2*/}
-            <div className="flex lg:block negative-top-margin lg:ml-12">
-              {/*Testimonial 3*/}
-              <div className="mr-4 lg:mr-0 w-64">
-                <TestimonialCard comment={comments[2]} />
-              </div>
-              {/*Testimonial 4*/}
-              <div className="w-64">
-                <TestimonialCard comment={comments[3]} />
-              </div>
-            </div>
-            {/*Trick div to make scroll-arrows scroll the right amount*/}
-            <div className="lg:hidden w-0"></div>
+            ))}
           </article>
           <svg
             id="testimonial-right-paddle"
-            className="lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="20"
+            height="20"
             viewBox="0 0 16 16"
             fill="currentColor"
           >
@@ -110,6 +70,39 @@ function Testimonial({ title, subtitle, comments }) {
               d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
             />
           </svg>
+        </div>
+        {/*Featured in section*/}
+        <div className="flex flex-col sm:flex-row justify-around items-center my-6 sm:my-12 sm:my-20 max-w-5xl m-auto">
+          {featured.map((item, index: number) => (
+            <div className="flex flex-col items-center max-w-xs text-sm my-4 sm:my-0">
+              <img className="opacity-70 white" src={item.logo} />
+              <p className="opacity-50 font-light uppercase my-2">
+                {item.featured_type}
+              </p>
+              <a
+                className="text-primary font-light py-1.5 my-2"
+                href={item.featured_url}
+              >
+                {item.link_text}{' '}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  className="iconify iconify--codicon inline"
+                  width="14"
+                  height="14"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                >
+                  <g fill="currentColor">
+                    <path d="m8.08 5.369l2.14 2.14H4.468v1h5.68L8.08 10.574l.707.707l2.956-2.957v-.707L8.788 4.662l-.707.707Z"></path>
+                    <path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12Zm0-1A5 5 0 1 0 8 3a5 5 0 0 0 0 10Z"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

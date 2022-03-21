@@ -2,12 +2,9 @@ import React from 'react';
 
 import Testimonial from '../src/index';
 import '~/tailwind';
-import comments from './content';
+import comments from './comments';
+import featured from './featured';
 
 export const story1 = () => (
-  <Testimonial
-    title="Real Stories from Design System Enthusiats"
-    subtitle="Get inspired by these stories."
-    comments={comments}
-  ></Testimonial>
+  <Testimonial comments={comments} featured={featured}></Testimonial>
 );

@@ -26,7 +26,6 @@
           "navmenu-item",
           "card",
           "dropdown",
-          "testimonial-card",
           "rss"
         ]
       ],
@@ -45,6 +44,7 @@
           "hero",
           "navbar",
           "starter-card",
+          "testimonial-card",
           "price"
         ]
       ],
