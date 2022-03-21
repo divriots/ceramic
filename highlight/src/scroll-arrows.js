@@ -57,6 +57,12 @@ export function setupScrollArrows(leftId, rightId, containerId) {
   leftPaddle = document.getElementById(leftId);
   rightPaddle = document.getElementById(rightId);
   menuContainer = document.getElementById(containerId);
+  if (!leftPaddle || !rightPaddle || !menuContainer) {
+    console.warn(
+      'Tried setting up scroll arrows, but could not find one of the paddles or the container element.'
+    );
+    return;
+  }
   computeMenuItemWidth();
   setupListeners();
   handlePaddleButtons();

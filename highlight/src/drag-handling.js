@@ -46,6 +46,12 @@ function preventAnchorClickDuringDrag(ev) {
 
 export function setupDragHandling(containerId) {
   target = document.getElementById(containerId);
+  if (!target) {
+    console.warn(
+      `Error setting up drag handling, cannot find container element ${containerId}.`
+    );
+    return;
+  }
   target.addEventListener('mousedown', mouseDownHandler);
   target.addEventListener('mousemove', mouseMoveHandler);
   target.addEventListener('mouseup', mouseUpHandler);
