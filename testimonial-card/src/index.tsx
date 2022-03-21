@@ -28,7 +28,11 @@ function TestimonialCard({ comment }) {
         <p>{comment.text}</p>
         <div className="flex align-start mt-6">
           {comment.author_logo && (
-            <img className="w-16 mr-2" src={comment.author_logo} alt="logo" />
+            <img
+              className="w-16 mr-2"
+              src={comment.author_logo}
+              alt={comment.author_logo_alt}
+            />
           )}
           <div>
             <p className="font-semibold">{comment.author}</p>

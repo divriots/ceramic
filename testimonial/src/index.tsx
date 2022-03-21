@@ -76,7 +76,11 @@ function Testimonial({ comments, featured }) {
         <div className="flex flex-col sm:flex-row justify-around items-center my-6 sm:my-12 sm:my-20 max-w-5xl m-auto">
           {featured.map((item, index: number) => (
             <div className="flex flex-col items-center max-w-xs text-sm my-4 sm:my-0">
-              <img className="opacity-70 white" src={item.logo} />
+              <img
+                className="opacity-70 white"
+                src={item.logo}
+                alt={item.logo_alt}
+              />
               <p className="opacity-50 font-light uppercase my-2">
                 {item.featured_type}
               </p>
