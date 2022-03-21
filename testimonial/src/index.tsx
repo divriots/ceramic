@@ -91,7 +91,7 @@ function Testimonial({ comments, featured }) {
                 {item.link_text}{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
                   className="iconify iconify--codicon inline"
@@ -100,10 +100,12 @@ function Testimonial({ comments, featured }) {
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 16 16"
                 >
-                  <g fill="currentColor">
-                    <path d="m8.08 5.369l2.14 2.14H4.468v1h5.68L8.08 10.574l.707.707l2.956-2.957v-.707L8.788 4.662l-.707.707Z"></path>
-                    <path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12Zm0-1A5 5 0 1 0 8 3a5 5 0 0 0 0 10Z"></path>
-                  </g>
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619l4.357-4.357z"
+                    clip-rule="evenodd"
+                  ></path>
                 </svg>
               </a>
             </div>

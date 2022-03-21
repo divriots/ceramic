@@ -7,6 +7,7 @@ function TestimonialCard({ comment }) {
       <svg
         width="18"
         height="18"
+        aria-hidden="true"
         viewBox="0 0 143 120"
         xmlns="http://www.w3.org/2000/svg"
         className="flex-shrink-0 custom-fill"
