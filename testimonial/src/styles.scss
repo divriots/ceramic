@@ -32,13 +32,11 @@
   border-radius: 100%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  padding-left: 0.65rem;
-  padding-top: 0.65rem;
+  padding: 0.65rem;
   @media (min-width: 1024px) {
     width: 90px;
     height: 90px;
-    padding-left: 0.8rem;
-    padding-top: 0.8rem;
+    padding: 0.8rem;
   }
 }
 
@@ -56,11 +54,11 @@
 }
 
 #testimonial-left-paddle {
-  left: 2rem;
+  left: 32px;
 }
 
 #testimonial-right-paddle {
-  right: 2rem;
+  right: 32px;
 }
 
 @media (min-width: 1024px) {
