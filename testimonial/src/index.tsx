@@ -20,10 +20,11 @@ function Testimonial({ comments, featured }) {
           {/*Title and subtitle*/}
           <div className="relative z-10 pt-16 px-8 text-center">
             <h2 className="text-5xl font-semibold">
-              Real <span className="text-primary">people</span>, great feedback
+              Don't take our <span className="text-primary">word</span> for
+              it...
             </h2>
             <p className="my-4 text-lg font-light text-gray-light">
-              This is what our users think
+              Check out what our users think.
             </p>
           </div>
         </div>
