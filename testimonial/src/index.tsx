@@ -52,7 +52,7 @@ function Testimonial({ comments, featured }) {
           >
             {/*Testimonials*/}
             {comments.map((comment, index: number) => (
-              <div className="w-64 mr-4 lg:mr-40">
+              <div key={index} className="w-64 mr-4 lg:mr-40">
                 <TestimonialCard comment={comment} />
               </div>
             ))}
@@ -75,7 +75,10 @@ function Testimonial({ comments, featured }) {
         {/*Featured in section*/}
         <div className="flex flex-col sm:flex-row justify-around items-center my-6 sm:my-12 sm:my-20 max-w-5xl m-auto">
           {featured.map((item, index: number) => (
-            <div className="flex flex-col items-center max-w-xs text-sm my-4 sm:my-0">
+            <div
+              key={index}
+              className="flex flex-col items-center max-w-xs text-sm my-4 sm:my-0"
+            >
               <img
                 className="opacity-70 white"
                 src={item.logo}
@@ -102,9 +105,9 @@ function Testimonial({ comments, featured }) {
                 >
                   <path
                     fill="currentColor"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619l4.357-4.357z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </a>
