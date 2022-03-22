@@ -26,7 +26,8 @@ export const navbar = () => ({
         },
       ],
       pathname: '/get-started',
+      studioRoute: 'https://studio.foobar',
     };
   },
-  template: `<NavBar :routes="routes" :pathname="pathname" :appRoute="appRoute"/>`,
+  template: `<NavBar :routes="routes" :pathname="pathname" :studioRoute="studioRoute"/>`,
 });
