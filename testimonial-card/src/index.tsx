@@ -7,6 +7,7 @@ function TestimonialCard({ comment }) {
       <svg
         width="18"
         height="18"
+        aria-hidden="true"
         viewBox="0 0 143 120"
         xmlns="http://www.w3.org/2000/svg"
         className="flex-shrink-0 custom-fill"
@@ -28,7 +29,11 @@ function TestimonialCard({ comment }) {
         <p>{comment.text}</p>
         <div className="flex align-start mt-6">
           {comment.author_logo && (
-            <img className="w-16 mr-2" src={comment.author_logo} alt="logo" />
+            <img
+              className="w-16 mr-2"
+              src={comment.author_logo}
+              alt={comment.author_logo_alt}
+            />
           )}
           <div>
             <p className="font-semibold">{comment.author}</p>

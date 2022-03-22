@@ -20,10 +20,11 @@ function Testimonial({ comments, featured }) {
           {/*Title and subtitle*/}
           <div className="relative z-10 pt-16 px-8 text-center">
             <h2 className="text-5xl font-semibold">
-              Real <span className="text-primary">people</span>, great feedback
+              Don't take our <span className="text-primary">word</span> for
+              it...
             </h2>
             <p className="my-4 text-lg font-light text-gray-light">
-              This is what our users think
+              Check out what our users think.
             </p>
           </div>
         </div>
@@ -75,7 +76,11 @@ function Testimonial({ comments, featured }) {
         <div className="flex flex-col sm:flex-row justify-around items-center my-6 sm:my-12 sm:my-20 max-w-5xl m-auto">
           {featured.map((item, index: number) => (
             <div className="flex flex-col items-center max-w-xs text-sm my-4 sm:my-0">
-              <img className="opacity-70 white" src={item.logo} />
+              <img
+                className="opacity-70 white"
+                src={item.logo}
+                alt={item.logo_alt}
+              />
               <p className="opacity-50 font-light uppercase my-2">
                 {item.featured_type}
               </p>
@@ -86,7 +91,7 @@ function Testimonial({ comments, featured }) {
                 {item.link_text}{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
                   className="iconify iconify--codicon inline"
@@ -95,10 +100,12 @@ function Testimonial({ comments, featured }) {
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 16 16"
                 >
-                  <g fill="currentColor">
-                    <path d="m8.08 5.369l2.14 2.14H4.468v1h5.68L8.08 10.574l.707.707l2.956-2.957v-.707L8.788 4.662l-.707.707Z"></path>
-                    <path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12Zm0-1A5 5 0 1 0 8 3a5 5 0 0 0 0 10Z"></path>
-                  </g>
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619l4.357-4.357z"
+                    clip-rule="evenodd"
+                  ></path>
                 </svg>
               </a>
             </div>

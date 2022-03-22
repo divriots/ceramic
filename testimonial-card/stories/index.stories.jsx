@@ -8,6 +8,7 @@ const comment = {
   author: 'Lorem ipsum dolor',
   author_title: 'Lorem ipsum dolor sit amet',
   author_logo: 'https://backlight.dev/assets/lib-white/sass.svg',
+  author_logo_alt: 'test',
 };
 
 export const story1 = () => (
