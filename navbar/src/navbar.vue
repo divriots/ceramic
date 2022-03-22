@@ -7,7 +7,7 @@
         <slot name="search" />
         <div class="hidden md:block md:ml-6">
           <div class="flex items-baseline justify-end">
-            <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
+            <component :is="NavMenu" :pathname="pathname" :routes="routes" :studioRoute="studioRoute"></component>
           </div>
         </div>
         <div class="inset-y-0 right-0 flex items-center md:hidden">
@@ -42,7 +42,7 @@
     <input class="hidden" type="checkbox" id="navexpander" checked />
     <div id="mobile-menu" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 text-left">
-        <component :is="NavMenu" :pathname="pathname" :routes="routes"></component>
+        <component :is="NavMenu" :pathname="pathname" :routes="routes" :studioRoute="studioRoute"></component>
       </div>
     </div>
   </nav>
@@ -60,6 +60,7 @@ export default {
   props: {
     routes: { type: Array, required: true },
     pathname: { type: String, default: '' },
+    studioRoute: { type: String, required: true },
   },
   setup() {
     return { Logo, NavMenu };

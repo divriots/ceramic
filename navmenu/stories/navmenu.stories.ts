@@ -22,7 +22,8 @@ export const nav_menu = () => ({
         },
       ],
       pathname: '/get-started/abc/',
+      studioRoute: 'https://studio.foobar',
     };
   },
-  template: `<NavMenu :routes="routes" :pathname="pathname" />`,
+  template: `<NavMenu :routes="routes" :pathname="pathname" :studioRoute="studioRoute"/>`,
 });

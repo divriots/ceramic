@@ -7,7 +7,7 @@
     :isMobile="true"
     :isActive="current === route"
   ></component>
-  <a href="/studio" class="btn-outline ml-2 inline-block">Log in</a>
+  <a :href="studioRoute" class="btn-outline ml-2 inline-block">Log in</a>
 </template>
 <style scoped>
 #navexpander:checked ~ #mobile-menu {
@@ -19,6 +19,7 @@ import NavMenuItem from '../../navmenu-item/src/navmenu-item.vue';
 export default {
   props: {
     routes: { type: Array, required: true },
+    studioRoute: { type: String, required: true },
     pathname: { type: String, default: '' },
     isMobile: { type: Boolean, default: false },
   },
