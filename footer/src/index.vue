@@ -106,8 +106,6 @@
           <div class="flex">
             <component :is="Discord"></component>
             <component :is="Twitter"></component>
-            <component :is="LinkedIn"></component>
-            <component :is="Github"></component>
             <component :is="YouTube"></component>
             <component :is="Rss"></component>
           </div>
@@ -175,7 +173,7 @@ export default {
     supportRoutes: { type: Array, default: [] },
     subscribe: { type: String, required: true },
     version: { type: String, default: '' },
-    imgSrc: { type: String, required: true },
+    imgSrc: { type: String },
     pictureSets: { type: Array, default: [] },
   },
   setup() {
