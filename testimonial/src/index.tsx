@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import TestimonialCard from '../../testimonial-card/src/index';
+import TestimonialCard from '../../testimonial-card/src/index.tsx';
 import './styles.scss';
-import { setupScrollArrows } from '../../highlight/src/scroll-arrows';
-import { setupDragHandling } from '../../highlight/src/drag-handling';
+import { setupScrollArrows } from '../../highlight/src/scroll-arrows.js';
+import { setupDragHandling } from '../../highlight/src/drag-handling.js';
 
 function Testimonial({ comments, featured }) {
   useEffect(() => {
