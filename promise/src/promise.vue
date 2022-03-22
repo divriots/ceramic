@@ -4,7 +4,7 @@ export default {
     classes: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-    action: { type: Object, required: true },
+    action: { type: Object },
     img: { type: Object, required: false },
     video: { type: Object, required: false },
     reverse: { type: Boolean, default: false },
