@@ -14,7 +14,7 @@ function Testimonial({ comments, featured }) {
     setupDragHandling('testimonial-container');
   }, []);
   return (
-    <section className="top-box-shadow bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg py-12 -my-2">
+    <section className="top-box-shadow bg-black-divriots overflow-hidden text-white leading-normal text-base sm:text-lg py-12">
       <div className="w-full">
         <div className="relative flex justify-center">
           {/*Title and subtitle*/}
