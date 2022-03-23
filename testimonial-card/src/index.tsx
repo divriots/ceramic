@@ -27,7 +27,7 @@ function TestimonialCard({ comment }) {
       </svg>
       <div className="flex-col mt-2 mb-4 mx-3 max-w-3/4 sm:leading-relaxed sm:tracking-wide">
         <p>{comment.text}</p>
-        <div className="flex align-start mt-6">
+        <div className="flex items-start mt-6">
           {comment.author_logo && (
             <img
               className="w-16 mr-2"
